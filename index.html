@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="单词小达人" />
+  <title>单词小达人 · 课本词汇</title>
+  <link rel="stylesheet" href="style.css?v=5" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="logo">
+      <div class="logo-badge" aria-hidden="true">📚</div>
+      <div>
+        <h1>单词小达人</h1>
+        <div class="small muted" id="app-status">加载中…</div>
+      </div>
+    </div>
+    <button type="button" class="profile-chip" id="btn-profile-chip" hidden>Alex ▾</button>
+  </header>
+
+  <!-- PROFILE SELECT -->
+  <section id="screen-profiles" class="screen active">
+    <div class="card">
+      <h2>谁来练习？</h2>
+      <p class="muted small">每个人有自己的进度、星星和听写最好成绩。</p>
+      <div class="profile-grid" id="profile-grid"></div>
+    </div>
+  </section>
+
+  <nav class="nav-tabs" id="main-nav" aria-label="主导航" hidden>
+    <button type="button" data-nav="home" class="active">学习</button>
+    <button type="button" data-nav="words">单词表</button>
+    <button type="button" data-nav="progress">进度</button>
+  </nav>
+
+  <!-- HOME -->
+  <section id="screen-home" class="screen">
+    <div class="card">
+      <h2>选单元</h2>
+      <p class="muted small">可以选一个，也可以一次选多个单元一起练。</p>
+      <div class="action-row" style="margin-bottom:10px">
+        <button type="button" class="secondary" id="btn-select-all">全选</button>
+        <button type="button" class="ghost" id="btn-select-none">清空</button>
+      </div>
+      <div class="unit-grid" id="unit-grid"></div>
+      <p class="muted" id="selected-count" style="margin-top:10px">请先点选单元</p>
+      <div class="action-row">
+        <button type="button" id="btn-guided">🌟 闯关练习（推荐）</button>
+        <button type="button" class="secondary" id="btn-start-modes">只选模式 ↓</button>
+      </div>
+    </div>
+
+    <div class="card" id="modes-card">
+      <h2>练习模式</h2>
+      <p class="muted small">大约 12 题一小关。听写会计时，冲击最好成绩！</p>
+      <div class="advance-mode" role="group" aria-label="翻页方式">
+        <span class="advance-label">翻页</span>
+        <button type="button" class="advance-opt active" id="btn-advance-auto">Auto 自动</button>
+        <button type="button" class="advance-opt" id="btn-advance-manual">Manual 手动</button>
+      </div>
+      <p class="muted small" id="advance-hint">Auto：读完后自动下一题 · Manual：要点「下一题」</p>
+
+      <div class="mode-grid">
+        <button type="button" class="mode-btn" data-mode="en2zh">
+          <span class="emoji">🔤</span>
+          <span class="label">英 → 中</span>
+          <span class="desc">看英文选中文意思</span>
+        </button>
+        <button type="button" class="mode-btn" data-mode="zh2en">
+          <span class="emoji">🀄</span>
+          <span class="label">中 → 英</span>
+          <span class="desc">看中文选英文单词</span>
+        </button>
+        <button type="button" class="mode-btn" data-mode="fill">
+          <span class="emoji">✏️</span>
+          <span class="label">句子填空</span>
+          <span class="desc">把单词放进简单句子</span>
+        </button>
+        <button type="button" class="mode-btn" data-mode="spell">
+          <span class="emoji">🔠</span>
+          <span class="label">拼写游戏</span>
+          <span class="desc">打乱字母拼出单词</span>
+        </button>
+        <button type="button" class="mode-btn" data-mode="dictation">
+          <span class="emoji">⏱️</span>
+          <span class="label">听写挑战</span>
+          <span class="desc">计时比赛 · 冲击纪录</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAY -->
+  <section id="screen-play" class="screen">
+    <div class="card">
+      <div class="stats-row">
+        <span id="play-mode-label">练习</span>
+        <span id="play-count">1 / 12</span>
+        <span id="play-timer" class="timer-badge" hidden>0:00</span>
+        <span id="play-score" class="stars">★ 0</span>
+      </div>
+      <div class="progress-bar"><span id="play-progress"></span></div>
+      <div id="play-area"></div>
+      <div id="feedback" class="feedback"></div>
+      <div class="action-row" id="next-row" hidden>
+        <button type="button" id="btn-next-q">下一题 →</button>
+      </div>
+      <div class="action-row">
+        <button type="button" class="ghost" id="btn-quit-play">结束并看成绩</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCORE -->
+  <section id="screen-score" class="screen">
+    <div class="card score-card" style="text-align:center">
+      <div class="cele" id="score-cele">🎉</div>
+      <div class="star-row" id="score-stars" aria-label="星星评分"></div>
+      <h2 id="score-title">本关完成！</h2>
+      <p id="score-pb" class="pb-banner" hidden>🏆 新纪录！</p>
+      <div class="score-big" id="score-big">100%</div>
+      <p id="score-detail" class="muted"></p>
+      <p id="score-best" class="best-line muted small"></p>
+      <p id="score-msg" style="font-weight:700;margin:12px 0"></p>
+      <div class="action-row">
+        <button type="button" id="btn-again">再来一关</button>
+        <button type="button" class="secondary" id="btn-back-home">回首页</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORDS -->
+  <section id="screen-words" class="screen">
+    <div class="card">
+      <h2>单词表</h2>
+      <p class="muted small">点英文或 🔊 听发音。</p>
+      <div class="word-list" id="word-list"></div>
+    </div>
+  </section>
+
+  <!-- PROGRESS -->
+  <section id="screen-progress" class="screen">
+    <div class="card">
+      <h2>我的进度</h2>
+      <p>认识过的词：<strong id="prog-known">0</strong> / <span id="prog-total">0</span></p>
+      <div class="progress-bar"><span id="prog-bar"></span></div>
+
+      <h3 style="margin-top:18px">听写最好成绩</h3>
+      <div id="dictation-best" class="best-box muted">还没有听写纪录，去挑战一次吧！</div>
+
+      <h3 style="margin-top:18px">最近练习</h3>
+      <div id="history-list"></div>
+      <div class="action-row">
+        <button type="button" class="ghost" id="btn-clear-progress">清空本档案进度（家长）</button>
+      </div>
+    </div>
+  </section>
+
+  <p class="footer-note">离线可用 · 进度按档案保存在本机 · 适合 iPad</p>
+  <script src="app.js?v=5"></script>
+</body>
+</html>

@@ -1,0 +1,5505 @@
+{
+  "title": "Emma · PET 词汇",
+  "source": "emma-pet curated A2–B1; + T1B U1–U6 Class1–4 from Yan xlsx",
+  "units": [
+    {
+      "id": "school",
+      "title": "School",
+      "titleZh": "学校与学习",
+      "words": [
+        {
+          "en": "subject",
+          "zh": "科目"
+        },
+        {
+          "en": "homework",
+          "zh": "家庭作业"
+        },
+        {
+          "en": "exam",
+          "zh": "考试"
+        },
+        {
+          "en": "test",
+          "zh": "测验"
+        },
+        {
+          "en": "grade",
+          "zh": "年级；成绩"
+        },
+        {
+          "en": "classroom",
+          "zh": "教室"
+        },
+        {
+          "en": "teacher",
+          "zh": "老师"
+        },
+        {
+          "en": "student",
+          "zh": "学生"
+        },
+        {
+          "en": "lesson",
+          "zh": "课"
+        },
+        {
+          "en": "break",
+          "zh": "课间休息"
+        },
+        {
+          "en": "library",
+          "zh": "图书馆"
+        },
+        {
+          "en": "dictionary",
+          "zh": "词典"
+        },
+        {
+          "en": "notebook",
+          "zh": "笔记本"
+        },
+        {
+          "en": "project",
+          "zh": "项目；专题"
+        },
+        {
+          "en": "uniform",
+          "zh": "校服"
+        },
+        {
+          "en": "timetable",
+          "zh": "课程表"
+        },
+        {
+          "en": "absent",
+          "zh": "缺席的"
+        },
+        {
+          "en": "present",
+          "zh": "出席的；现在"
+        },
+        {
+          "en": "revise",
+          "zh": "复习"
+        },
+        {
+          "en": "practise",
+          "zh": "练习"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I do my homework every day.",
+          "zh": "我每天做家庭作业。"
+        },
+        {
+          "en": "The teacher is in the classroom.",
+          "zh": "老师在教室里。"
+        },
+        {
+          "en": "Please open your notebook.",
+          "zh": "请打开你的笔记本。"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "I do my ____ every day.",
+          "answer": "homework",
+          "zh": "我每天做家庭作业。"
+        },
+        {
+          "template": "The ____ is in the classroom.",
+          "answer": "teacher",
+          "zh": "老师在教室里。"
+        },
+        {
+          "template": "Please open your ____.",
+          "answer": "notebook",
+          "zh": "请打开你的笔记本。"
+        },
+        {
+          "template": "We have an ____ tomorrow.",
+          "answer": "exam",
+          "zh": "我们明天有考试。"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "Home",
+      "titleZh": "家与日常生活",
+      "words": [
+        {
+          "en": "flat",
+          "zh": "公寓"
+        },
+        {
+          "en": "neighbour",
+          "zh": "邻居"
+        },
+        {
+          "en": "upstairs",
+          "zh": "楼上"
+        },
+        {
+          "en": "downstairs",
+          "zh": "楼下"
+        },
+        {
+          "en": "balcony",
+          "zh": "阳台"
+        },
+        {
+          "en": "fridge",
+          "zh": "冰箱"
+        },
+        {
+          "en": "cupboard",
+          "zh": "橱柜"
+        },
+        {
+          "en": "mirror",
+          "zh": "镜子"
+        },
+        {
+          "en": "carpet",
+          "zh": "地毯"
+        },
+        {
+          "en": "curtain",
+          "zh": "窗帘"
+        },
+        {
+          "en": "shelf",
+          "zh": "架子"
+        },
+        {
+          "en": "sofa",
+          "zh": "沙发"
+        },
+        {
+          "en": "housework",
+          "zh": "家务"
+        },
+        {
+          "en": "tidy",
+          "zh": "整洁的"
+        },
+        {
+          "en": "messy",
+          "zh": "凌乱的"
+        },
+        {
+          "en": "quiet",
+          "zh": "安静的"
+        },
+        {
+          "en": "noisy",
+          "zh": "吵闹的"
+        },
+        {
+          "en": "comfortable",
+          "zh": "舒适的"
+        },
+        {
+          "en": "furniture",
+          "zh": "家具"
+        },
+        {
+          "en": "garden",
+          "zh": "花园"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Please keep your room tidy.",
+          "zh": "请保持房间整洁。"
+        },
+        {
+          "en": "The milk is in the fridge.",
+          "zh": "牛奶在冰箱里。"
+        },
+        {
+          "en": "Our neighbour is quiet.",
+          "zh": "我们的邻居很安静。"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "Please keep your room ____.",
+          "answer": "tidy",
+          "zh": "请保持房间整洁。"
+        },
+        {
+          "template": "The milk is in the ____.",
+          "answer": "fridge",
+          "zh": "牛奶在冰箱里。"
+        },
+        {
+          "template": "Our ____ is quiet.",
+          "answer": "neighbour",
+          "zh": "我们的邻居很安静。"
+        },
+        {
+          "template": "Sit on the ____.",
+          "answer": "sofa",
+          "zh": "坐在沙发上。"
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Food",
+      "titleZh": "食物与饮食",
+      "words": [
+        {
+          "en": "breakfast",
+          "zh": "早餐"
+        },
+        {
+          "en": "lunch",
+          "zh": "午餐"
+        },
+        {
+          "en": "dinner",
+          "zh": "晚餐"
+        },
+        {
+          "en": "snack",
+          "zh": "零食"
+        },
+        {
+          "en": "vegetable",
+          "zh": "蔬菜"
+        },
+        {
+          "en": "fruit",
+          "zh": "水果"
+        },
+        {
+          "en": "meat",
+          "zh": "肉"
+        },
+        {
+          "en": "chicken",
+          "zh": "鸡肉；鸡"
+        },
+        {
+          "en": "fish",
+          "zh": "鱼；鱼肉"
+        },
+        {
+          "en": "bread",
+          "zh": "面包"
+        },
+        {
+          "en": "butter",
+          "zh": "黄油"
+        },
+        {
+          "en": "cheese",
+          "zh": "奶酪"
+        },
+        {
+          "en": "salad",
+          "zh": "沙拉"
+        },
+        {
+          "en": "soup",
+          "zh": "汤"
+        },
+        {
+          "en": "dessert",
+          "zh": "甜点"
+        },
+        {
+          "en": "hungry",
+          "zh": "饥饿的"
+        },
+        {
+          "en": "thirsty",
+          "zh": "口渴的"
+        },
+        {
+          "en": "delicious",
+          "zh": "美味的"
+        },
+        {
+          "en": "menu",
+          "zh": "菜单"
+        },
+        {
+          "en": "order",
+          "zh": "点餐；订单"
+        },
+        {
+          "en": "recipe",
+          "zh": "食谱"
+        },
+        {
+          "en": "boil",
+          "zh": "煮沸"
+        },
+        {
+          "en": "fry",
+          "zh": "煎；炸"
+        },
+        {
+          "en": "bake",
+          "zh": "烘烤"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I eat breakfast in the morning.",
+          "zh": "我早上吃早餐。"
+        },
+        {
+          "en": "This soup is delicious.",
+          "zh": "这汤很好喝。"
+        },
+        {
+          "en": "I am very hungry.",
+          "zh": "我很饿。"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "I eat ____ in the morning.",
+          "answer": "breakfast",
+          "zh": "我早上吃早餐。"
+        },
+        {
+          "template": "This soup is ____.",
+          "answer": "delicious",
+          "zh": "这汤很好喝。"
+        },
+        {
+          "template": "I am very ____.",
+          "answer": "hungry",
+          "zh": "我很饿。"
+        },
+        {
+          "template": "Please pass the ____.",
+          "answer": "bread",
+          "zh": "请把面包递给我。"
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "title": "Travel",
+      "titleZh": "旅行与交通",
+      "words": [
+        {
+          "en": "journey",
+          "zh": "旅程"
+        },
+        {
+          "en": "trip",
+          "zh": "短途旅行"
+        },
+        {
+          "en": "ticket",
+          "zh": "票"
+        },
+        {
+          "en": "passport",
+          "zh": "护照"
+        },
+        {
+          "en": "airport",
+          "zh": "机场"
+        },
+        {
+          "en": "station",
+          "zh": "车站"
+        },
+        {
+          "en": "platform",
+          "zh": "站台"
+        },
+        {
+          "en": "luggage",
+          "zh": "行李"
+        },
+        {
+          "en": "suitcase",
+          "zh": "手提箱"
+        },
+        {
+          "en": "map",
+          "zh": "地图"
+        },
+        {
+          "en": "direction",
+          "zh": "方向"
+        },
+        {
+          "en": "passenger",
+          "zh": "乘客"
+        },
+        {
+          "en": "delay",
+          "zh": "延误"
+        },
+        {
+          "en": "arrive",
+          "zh": "到达"
+        },
+        {
+          "en": "depart",
+          "zh": "出发"
+        },
+        {
+          "en": "abroad",
+          "zh": "在国外"
+        },
+        {
+          "en": "hotel",
+          "zh": "酒店"
+        },
+        {
+          "en": "tourist",
+          "zh": "游客"
+        },
+        {
+          "en": "guide",
+          "zh": "导游；指南"
+        },
+        {
+          "en": "sightseeing",
+          "zh": "观光"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "We need a train ticket.",
+          "zh": "我们需要一张火车票。"
+        },
+        {
+          "en": "The plane will depart soon.",
+          "zh": "飞机很快就要起飞了。"
+        },
+        {
+          "en": "Put your clothes in the suitcase.",
+          "zh": "把衣服放进手提箱。"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "We need a train ____.",
+          "answer": "ticket",
+          "zh": "我们需要一张火车票。"
+        },
+        {
+          "template": "The plane will ____ soon.",
+          "answer": "depart",
+          "zh": "飞机很快就要起飞了。"
+        },
+        {
+          "template": "Put your clothes in the ____.",
+          "answer": "suitcase",
+          "zh": "把衣服放进手提箱。"
+        },
+        {
+          "template": "We stay in a ____.",
+          "answer": "hotel",
+          "zh": "我们住在酒店。"
+        }
+      ]
+    },
+    {
+      "id": "feelings",
+      "title": "Feelings",
+      "titleZh": "情感与性格",
+      "words": [
+        {
+          "en": "excited",
+          "zh": "兴奋的"
+        },
+        {
+          "en": "bored",
+          "zh": "无聊的"
+        },
+        {
+          "en": "worried",
+          "zh": "担心的"
+        },
+        {
+          "en": "surprised",
+          "zh": "惊讶的"
+        },
+        {
+          "en": "proud",
+          "zh": "骄傲的"
+        },
+        {
+          "en": "lonely",
+          "zh": "孤独的"
+        },
+        {
+          "en": "angry",
+          "zh": "生气的"
+        },
+        {
+          "en": "calm",
+          "zh": "平静的"
+        },
+        {
+          "en": "confident",
+          "zh": "自信的"
+        },
+        {
+          "en": "shy",
+          "zh": "害羞的"
+        },
+        {
+          "en": "kind",
+          "zh": "善良的"
+        },
+        {
+          "en": "friendly",
+          "zh": "友好的"
+        },
+        {
+          "en": "polite",
+          "zh": "有礼貌的"
+        },
+        {
+          "en": "honest",
+          "zh": "诚实的"
+        },
+        {
+          "en": "brave",
+          "zh": "勇敢的"
+        },
+        {
+          "en": "patient",
+          "zh": "有耐心的"
+        },
+        {
+          "en": "nervous",
+          "zh": "紧张的"
+        },
+        {
+          "en": "relaxed",
+          "zh": "放松的"
+        },
+        {
+          "en": "curious",
+          "zh": "好奇的"
+        },
+        {
+          "en": "grateful",
+          "zh": "感激的"
+        },
+        {
+          "en": "happy",
+          "zh": "高兴的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I feel nervous before the test.",
+          "zh": "考试前我感到紧张。"
+        },
+        {
+          "en": "She is very kind to everyone.",
+          "zh": "她对每个人都很友善。"
+        },
+        {
+          "en": "I am proud of my little brother.",
+          "zh": "我为弟弟感到骄傲。"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "I feel ____ before the test.",
+          "answer": "nervous",
+          "zh": "考试前我感到紧张。"
+        },
+        {
+          "template": "She is very ____ to everyone.",
+          "answer": "kind",
+          "zh": "她对每个人都很友善。"
+        },
+        {
+          "template": "I am ____ of my little brother.",
+          "answer": "proud",
+          "zh": "我为弟弟感到骄傲。"
+        },
+        {
+          "template": "He looks ____ today.",
+          "answer": "happy",
+          "zh": "他今天看起来很高兴。"
+        }
+      ]
+    },
+    {
+      "id": "daily",
+      "title": "Daily life",
+      "titleZh": "日常活动",
+      "words": [
+        {
+          "en": "wake",
+          "zh": "醒来"
+        },
+        {
+          "en": "brush",
+          "zh": "刷"
+        },
+        {
+          "en": "wash",
+          "zh": "洗"
+        },
+        {
+          "en": "dress",
+          "zh": "穿衣；连衣裙"
+        },
+        {
+          "en": "catch",
+          "zh": "赶上；抓住"
+        },
+        {
+          "en": "miss",
+          "zh": "错过；想念"
+        },
+        {
+          "en": "queue",
+          "zh": "排队"
+        },
+        {
+          "en": "hurry",
+          "zh": "匆忙"
+        },
+        {
+          "en": "invite",
+          "zh": "邀请"
+        },
+        {
+          "en": "visit",
+          "zh": "拜访"
+        },
+        {
+          "en": "chat",
+          "zh": "聊天"
+        },
+        {
+          "en": "message",
+          "zh": "消息；发消息"
+        },
+        {
+          "en": "hobby",
+          "zh": "爱好"
+        },
+        {
+          "en": "collect",
+          "zh": "收集"
+        },
+        {
+          "en": "prefer",
+          "zh": "更喜欢"
+        },
+        {
+          "en": "decide",
+          "zh": "决定"
+        },
+        {
+          "en": "plan",
+          "zh": "计划"
+        },
+        {
+          "en": "prepare",
+          "zh": "准备"
+        },
+        {
+          "en": "remember",
+          "zh": "记住"
+        },
+        {
+          "en": "forget",
+          "zh": "忘记"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Don't forget your keys!",
+          "zh": "别忘了你的钥匙！"
+        },
+        {
+          "en": "I prefer reading to watching TV.",
+          "zh": "比起看电视我更喜欢阅读。"
+        },
+        {
+          "en": "Please invite your friend.",
+          "zh": "请邀请你的朋友。"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "Don't ____ your keys!",
+          "answer": "forget",
+          "zh": "别忘了你的钥匙！"
+        },
+        {
+          "template": "I ____ reading to watching TV.",
+          "answer": "prefer",
+          "zh": "比起看电视我更喜欢阅读。"
+        },
+        {
+          "template": "Please ____ your friend.",
+          "answer": "invite",
+          "zh": "请邀请你的朋友。"
+        },
+        {
+          "template": "I ____ up at seven.",
+          "answer": "wake",
+          "zh": "我七点起床。"
+        }
+      ]
+    },
+    {
+      "id": "nature",
+      "title": "Nature",
+      "titleZh": "自然与天气",
+      "words": [
+        {
+          "en": "weather",
+          "zh": "天气"
+        },
+        {
+          "en": "cloudy",
+          "zh": "多云的"
+        },
+        {
+          "en": "sunny",
+          "zh": "晴朗的"
+        },
+        {
+          "en": "rainy",
+          "zh": "下雨的"
+        },
+        {
+          "en": "storm",
+          "zh": "暴风雨"
+        },
+        {
+          "en": "temperature",
+          "zh": "温度"
+        },
+        {
+          "en": "season",
+          "zh": "季节"
+        },
+        {
+          "en": "spring",
+          "zh": "春天"
+        },
+        {
+          "en": "summer",
+          "zh": "夏天"
+        },
+        {
+          "en": "autumn",
+          "zh": "秋天"
+        },
+        {
+          "en": "winter",
+          "zh": "冬天"
+        },
+        {
+          "en": "forest",
+          "zh": "森林"
+        },
+        {
+          "en": "river",
+          "zh": "河"
+        },
+        {
+          "en": "mountain",
+          "zh": "山"
+        },
+        {
+          "en": "beach",
+          "zh": "海滩"
+        },
+        {
+          "en": "island",
+          "zh": "岛"
+        },
+        {
+          "en": "animal",
+          "zh": "动物"
+        },
+        {
+          "en": "insect",
+          "zh": "昆虫"
+        },
+        {
+          "en": "plant",
+          "zh": "植物"
+        },
+        {
+          "en": "environment",
+          "zh": "环境"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "It is a sunny day.",
+          "zh": "今天是晴天。"
+        },
+        {
+          "en": "We walk in the forest.",
+          "zh": "我们在森林里散步。"
+        },
+        {
+          "en": "Summer is my favourite season.",
+          "zh": "夏天是我最喜欢的季节。"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "It is a ____ day.",
+          "answer": "sunny",
+          "zh": "今天是晴天。"
+        },
+        {
+          "template": "We walk in the ____.",
+          "answer": "forest",
+          "zh": "我们在森林里散步。"
+        },
+        {
+          "template": "Summer is my favourite ____.",
+          "answer": "season",
+          "zh": "夏天是我最喜欢的季节。"
+        },
+        {
+          "template": "Look at the high ____.",
+          "answer": "mountain",
+          "zh": "看那座高山。"
+        }
+      ]
+    },
+    {
+      "id": "tech",
+      "title": "Technology",
+      "titleZh": "科技与媒体",
+      "words": [
+        {
+          "en": "computer",
+          "zh": "电脑"
+        },
+        {
+          "en": "laptop",
+          "zh": "笔记本电脑"
+        },
+        {
+          "en": "screen",
+          "zh": "屏幕"
+        },
+        {
+          "en": "keyboard",
+          "zh": "键盘"
+        },
+        {
+          "en": "mouse",
+          "zh": "鼠标；老鼠"
+        },
+        {
+          "en": "internet",
+          "zh": "互联网"
+        },
+        {
+          "en": "website",
+          "zh": "网站"
+        },
+        {
+          "en": "download",
+          "zh": "下载"
+        },
+        {
+          "en": "upload",
+          "zh": "上传"
+        },
+        {
+          "en": "password",
+          "zh": "密码"
+        },
+        {
+          "en": "email",
+          "zh": "电子邮件"
+        },
+        {
+          "en": "app",
+          "zh": "应用程序"
+        },
+        {
+          "en": "camera",
+          "zh": "相机"
+        },
+        {
+          "en": "video",
+          "zh": "视频"
+        },
+        {
+          "en": "online",
+          "zh": "在线的"
+        },
+        {
+          "en": "offline",
+          "zh": "离线的"
+        },
+        {
+          "en": "battery",
+          "zh": "电池"
+        },
+        {
+          "en": "charge",
+          "zh": "充电"
+        },
+        {
+          "en": "search",
+          "zh": "搜索"
+        },
+        {
+          "en": "click",
+          "zh": "点击"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Open the app on your phone.",
+          "zh": "打开手机上的应用程序。"
+        },
+        {
+          "en": "I sent an email to my teacher.",
+          "zh": "我给老师发了一封电子邮件。"
+        },
+        {
+          "en": "Please search the word online.",
+          "zh": "请在网上搜索这个词。"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "Open the ____ on your phone.",
+          "answer": "app",
+          "zh": "打开手机上的应用程序。"
+        },
+        {
+          "template": "I sent an ____ to my teacher.",
+          "answer": "email",
+          "zh": "我给老师发了一封电子邮件。"
+        },
+        {
+          "template": "Please ____ the word online.",
+          "answer": "search",
+          "zh": "请在网上搜索这个词。"
+        },
+        {
+          "template": "My phone needs to ____.",
+          "answer": "charge",
+          "zh": "我的手机需要充电。"
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "title": "Health",
+      "titleZh": "健康与运动",
+      "words": [
+        {
+          "en": "healthy",
+          "zh": "健康的"
+        },
+        {
+          "en": "ill",
+          "zh": "生病的"
+        },
+        {
+          "en": "pain",
+          "zh": "疼痛"
+        },
+        {
+          "en": "fever",
+          "zh": "发烧"
+        },
+        {
+          "en": "cough",
+          "zh": "咳嗽"
+        },
+        {
+          "en": "medicine",
+          "zh": "药"
+        },
+        {
+          "en": "doctor",
+          "zh": "医生"
+        },
+        {
+          "en": "nurse",
+          "zh": "护士"
+        },
+        {
+          "en": "hospital",
+          "zh": "医院"
+        },
+        {
+          "en": "appointment",
+          "zh": "预约"
+        },
+        {
+          "en": "exercise",
+          "zh": "锻炼"
+        },
+        {
+          "en": "sport",
+          "zh": "运动"
+        },
+        {
+          "en": "football",
+          "zh": "足球"
+        },
+        {
+          "en": "swimming",
+          "zh": "游泳"
+        },
+        {
+          "en": "running",
+          "zh": "跑步"
+        },
+        {
+          "en": "team",
+          "zh": "队；团队"
+        },
+        {
+          "en": "win",
+          "zh": "赢"
+        },
+        {
+          "en": "lose",
+          "zh": "输；丢失"
+        },
+        {
+          "en": "score",
+          "zh": "得分"
+        },
+        {
+          "en": "fit",
+          "zh": "健康的；合适的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I go to the doctor when I am ill.",
+          "zh": "生病时我去看医生。"
+        },
+        {
+          "en": "Exercise is good for you.",
+          "zh": "锻炼对你有好处。"
+        },
+        {
+          "en": "Our team won the match.",
+          "zh": "我们队赢了比赛。"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "I go to the ____ when I am ill.",
+          "answer": "doctor",
+          "zh": "生病时我去看医生。"
+        },
+        {
+          "template": "____ is good for you.",
+          "answer": "Exercise",
+          "zh": "锻炼对你有好处。",
+          "answerNorm": "exercise"
+        },
+        {
+          "template": "Our ____ won the match.",
+          "answer": "team",
+          "zh": "我们队赢了比赛。"
+        },
+        {
+          "template": "Drink water and stay ____.",
+          "answer": "healthy",
+          "zh": "多喝水，保持健康。"
+        }
+      ]
+    },
+    {
+      "id": "town",
+      "title": "Work & town",
+      "titleZh": "城镇与工作",
+      "words": [
+        {
+          "en": "town",
+          "zh": "城镇"
+        },
+        {
+          "en": "city",
+          "zh": "城市"
+        },
+        {
+          "en": "village",
+          "zh": "村庄"
+        },
+        {
+          "en": "street",
+          "zh": "街道"
+        },
+        {
+          "en": "shop",
+          "zh": "商店"
+        },
+        {
+          "en": "market",
+          "zh": "市场"
+        },
+        {
+          "en": "bank",
+          "zh": "银行"
+        },
+        {
+          "en": "post",
+          "zh": "邮局；邮寄"
+        },
+        {
+          "en": "police",
+          "zh": "警察"
+        },
+        {
+          "en": "fire",
+          "zh": "火；火灾"
+        },
+        {
+          "en": "job",
+          "zh": "工作"
+        },
+        {
+          "en": "office",
+          "zh": "办公室"
+        },
+        {
+          "en": "manager",
+          "zh": "经理"
+        },
+        {
+          "en": "customer",
+          "zh": "顾客"
+        },
+        {
+          "en": "price",
+          "zh": "价格"
+        },
+        {
+          "en": "cheap",
+          "zh": "便宜的"
+        },
+        {
+          "en": "expensive",
+          "zh": "昂贵的"
+        },
+        {
+          "en": "busy",
+          "zh": "忙碌的"
+        },
+        {
+          "en": "crowded",
+          "zh": "拥挤的"
+        },
+        {
+          "en": "safe",
+          "zh": "安全的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The market is very crowded today.",
+          "zh": "今天市场很拥挤。"
+        },
+        {
+          "en": "This bag is too expensive.",
+          "zh": "这个包太贵了。"
+        },
+        {
+          "en": "She works in an office.",
+          "zh": "她在办公室工作。"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "The ____ is very crowded today.",
+          "answer": "market",
+          "zh": "今天市场很拥挤。"
+        },
+        {
+          "template": "This bag is too ____.",
+          "answer": "expensive",
+          "zh": "这个包太贵了。"
+        },
+        {
+          "template": "She works in an ____.",
+          "answer": "office",
+          "zh": "她在办公室工作。"
+        },
+        {
+          "template": "Cross the ____ carefully.",
+          "answer": "street",
+          "zh": "过马路要小心。"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u1-c1",
+      "title": "T1B Unit 1 Class 1",
+      "titleZh": "T1B 第1单元 · Class 1",
+      "words": [
+        {
+          "en": "digital",
+          "zh": "数字的；数码的"
+        },
+        {
+          "en": "flat screen TV",
+          "zh": "平板电视"
+        },
+        {
+          "en": "tablet",
+          "zh": "平板电脑"
+        },
+        {
+          "en": "laptop",
+          "zh": "笔记本电脑"
+        },
+        {
+          "en": "desktop",
+          "zh": "台式电脑"
+        },
+        {
+          "en": "invent",
+          "zh": "发明；创造"
+        },
+        {
+          "en": "shocking",
+          "zh": "令人震惊的"
+        },
+        {
+          "en": "research",
+          "zh": "研究；调查"
+        },
+        {
+          "en": "huge",
+          "zh": "巨大的；庞大的"
+        },
+        {
+          "en": "eye infection",
+          "zh": "眼部感染"
+        },
+        {
+          "en": "gel",
+          "zh": "凝胶；冻胶"
+        },
+        {
+          "en": "situation",
+          "zh": "情况；形势；处境"
+        },
+        {
+          "en": "illness",
+          "zh": "疾病"
+        },
+        {
+          "en": "blind",
+          "zh": "瞎的；失明的；使失明"
+        },
+        {
+          "en": "success",
+          "zh": "成功"
+        },
+        {
+          "en": "take a bath",
+          "zh": "洗澡"
+        },
+        {
+          "en": "mobile",
+          "zh": "移动电话；可移动的"
+        },
+        {
+          "en": "thousands of",
+          "zh": "成千上万的"
+        },
+        {
+          "en": "medication",
+          "zh": "药物治疗；药物"
+        },
+        {
+          "en": "pill",
+          "zh": "药丸；药片"
+        },
+        {
+          "en": "injection",
+          "zh": "注射；注射剂"
+        },
+        {
+          "en": "formula",
+          "zh": "公式；配方"
+        },
+        {
+          "en": "university",
+          "zh": "大学"
+        },
+        {
+          "en": "prize",
+          "zh": "奖品；奖赏；奖金"
+        },
+        {
+          "en": "come true",
+          "zh": "实现"
+        },
+        {
+          "en": "inventor",
+          "zh": "发明家；创造者"
+        },
+        {
+          "en": "environment",
+          "zh": "环境"
+        },
+        {
+          "en": "quality",
+          "zh": "质量；品质"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "We live in a ____ age.",
+          "answer": "digital",
+          "zh": "数字的；数码的"
+        },
+        {
+          "template": "The ____ is very popular.",
+          "answer": "flat screen TV",
+          "zh": "平板电视"
+        },
+        {
+          "template": "She uses a ____ to read e-books.",
+          "answer": "tablet",
+          "zh": "平板电脑"
+        },
+        {
+          "template": "He takes his ____ to work every day.",
+          "answer": "laptop",
+          "zh": "笔记本电脑"
+        },
+        {
+          "template": "I prefer using a ____ for gaming.",
+          "answer": "desktop",
+          "zh": "台式电脑"
+        },
+        {
+          "template": "Edison ____ed the light bulb.",
+          "answer": "invent",
+          "zh": "发明；创造"
+        },
+        {
+          "template": "The news is really ____.",
+          "answer": "shocking",
+          "zh": "令人震惊的"
+        },
+        {
+          "template": "Scientists are doing ____ on this disease.",
+          "answer": "research",
+          "zh": "研究；调查"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "We live in a digital age.",
+          "zh": "数字的；数码的"
+        },
+        {
+          "en": "The flat screen TV is very popular.",
+          "zh": "平板电视"
+        },
+        {
+          "en": "She uses a tablet to read e-books.",
+          "zh": "平板电脑"
+        },
+        {
+          "en": "He takes his laptop to work every day.",
+          "zh": "笔记本电脑"
+        },
+        {
+          "en": "I prefer using a desktop for gaming.",
+          "zh": "台式电脑"
+        },
+        {
+          "en": "Edison invented the light bulb.",
+          "zh": "发明；创造"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u1-c2",
+      "title": "T1B Unit 1 Class 2",
+      "titleZh": "T1B 第1单元 · Class 2",
+      "words": [
+        {
+          "en": "umbrella",
+          "zh": "雨伞"
+        },
+        {
+          "en": "jumper",
+          "zh": "毛衣；跳线"
+        },
+        {
+          "en": "outside",
+          "zh": "外面；在…… 外面"
+        },
+        {
+          "en": "mess",
+          "zh": "混乱；脏乱"
+        },
+        {
+          "en": "shout",
+          "zh": "呼喊；喊叫"
+        },
+        {
+          "en": "satnav",
+          "zh": "卫星导航仪"
+        },
+        {
+          "en": "MP3 player",
+          "zh": "MP3 播放器"
+        },
+        {
+          "en": "torch",
+          "zh": "手电筒"
+        },
+        {
+          "en": "games console",
+          "zh": "游戏机"
+        },
+        {
+          "en": "remote control",
+          "zh": "遥控器"
+        },
+        {
+          "en": "coffee machine",
+          "zh": "咖啡机"
+        },
+        {
+          "en": "calculator",
+          "zh": "计算器"
+        },
+        {
+          "en": "docking station",
+          "zh": "扩展坞；插接站"
+        },
+        {
+          "en": "hair dryer",
+          "zh": "吹风机"
+        },
+        {
+          "en": "headphones",
+          "zh": "耳机"
+        },
+        {
+          "en": "gadget",
+          "zh": "小工具；小玩意儿"
+        },
+        {
+          "en": "rarely",
+          "zh": "很少；难得"
+        },
+        {
+          "en": "robot",
+          "zh": "机器人"
+        },
+        {
+          "en": "teenager",
+          "zh": "青少年"
+        },
+        {
+          "en": "invention",
+          "zh": "发明；创造"
+        },
+        {
+          "en": "poster",
+          "zh": "海报；招贴画"
+        },
+        {
+          "en": "present",
+          "zh": "礼物；现在；呈现"
+        },
+        {
+          "en": "rabbit",
+          "zh": "兔子"
+        },
+        {
+          "en": "cinema",
+          "zh": "电影院；电影艺术"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "I always take an ____ when it rains.",
+          "answer": "umbrella",
+          "zh": "雨伞"
+        },
+        {
+          "template": "She wore a warm ____ in winter.",
+          "answer": "jumper",
+          "zh": "毛衣；跳线"
+        },
+        {
+          "template": "The kids are playing ____.",
+          "answer": "outside",
+          "zh": "外面；在…… 外面"
+        },
+        {
+          "template": "Your room is in a ____.",
+          "answer": "mess",
+          "zh": "混乱；脏乱"
+        },
+        {
+          "template": "Don't ____ at me.",
+          "answer": "shout",
+          "zh": "呼喊；喊叫"
+        },
+        {
+          "template": "The ____ helps us find the way.",
+          "answer": "satnav",
+          "zh": "卫星导航仪"
+        },
+        {
+          "template": "He always listens to music on his ____.",
+          "answer": "MP3 player",
+          "zh": "MP3 播放器"
+        },
+        {
+          "template": "We need a ____ when we go camping at night.",
+          "answer": "torch",
+          "zh": "手电筒"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I always take an umbrella when it rains.",
+          "zh": "雨伞"
+        },
+        {
+          "en": "She wore a warm jumper in winter.",
+          "zh": "毛衣；跳线"
+        },
+        {
+          "en": "The kids are playing outside.",
+          "zh": "外面；在…… 外面"
+        },
+        {
+          "en": "Your room is in a mess.",
+          "zh": "混乱；脏乱"
+        },
+        {
+          "en": "Don't shout at me.",
+          "zh": "呼喊；喊叫"
+        },
+        {
+          "en": "The satnav helps us find the way.",
+          "zh": "卫星导航仪"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u1-c3",
+      "title": "T1B Unit 1 Class 3",
+      "titleZh": "T1B 第1单元 · Class 3",
+      "words": [
+        {
+          "en": "product",
+          "zh": "产品；产物"
+        },
+        {
+          "en": "review",
+          "zh": "回顾；复习；评论"
+        },
+        {
+          "en": "machine",
+          "zh": "机器；机械"
+        },
+        {
+          "en": "all-new",
+          "zh": "全新的"
+        },
+        {
+          "en": "Trendy-wise",
+          "zh": "从时尚角度看"
+        },
+        {
+          "en": "trendy",
+          "zh": "时髦的；流行的"
+        },
+        {
+          "en": "however",
+          "zh": "然而；可是"
+        },
+        {
+          "en": "wardrobe",
+          "zh": "衣柜；衣橱"
+        },
+        {
+          "en": "forget",
+          "zh": "忘记；遗忘"
+        },
+        {
+          "en": "click",
+          "zh": "点击；使发出咔哒声"
+        },
+        {
+          "en": "outfit",
+          "zh": "全套服装"
+        },
+        {
+          "en": "occasion",
+          "zh": "场合；时机；某次"
+        },
+        {
+          "en": "microphone",
+          "zh": "麦克风；话筒"
+        },
+        {
+          "en": "imagine",
+          "zh": "想象；设想"
+        },
+        {
+          "en": "shark",
+          "zh": "鲨鱼"
+        },
+        {
+          "en": "vacuum the floor",
+          "zh": "用吸尘器清洁地板"
+        },
+        {
+          "en": "tidy up",
+          "zh": "整理；收拾"
+        },
+        {
+          "en": "do the ironing",
+          "zh": "熨烫衣物"
+        },
+        {
+          "en": "set the table",
+          "zh": "摆放餐具"
+        },
+        {
+          "en": "do the washing-up",
+          "zh": "洗餐具"
+        },
+        {
+          "en": "make the beds",
+          "zh": "铺床"
+        },
+        {
+          "en": "load/empty the dishwasher",
+          "zh": "把碗碟放入/取出洗碗机"
+        },
+        {
+          "en": "housework",
+          "zh": "家务劳动"
+        },
+        {
+          "en": "necessary",
+          "zh": "必要的；必需的"
+        },
+        {
+          "en": "hurry",
+          "zh": "匆忙；赶紧"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "This new ____ is very popular.",
+          "answer": "product",
+          "zh": "产品；产物"
+        },
+        {
+          "template": "Please ____ the lesson after class.",
+          "answer": "review",
+          "zh": "回顾；复习；评论"
+        },
+        {
+          "template": "This ____ can help us work more efficiently.",
+          "answer": "machine",
+          "zh": "机器；机械"
+        },
+        {
+          "template": "They launched an ____ car model.",
+          "answer": "all-new",
+          "zh": "全新的"
+        },
+        {
+          "template": "____, this design is very appealing.",
+          "answer": "Trendy-wise",
+          "zh": "从时尚角度看"
+        },
+        {
+          "template": "She always wears ____ clothes.",
+          "answer": "trendy",
+          "zh": "时髦的；流行的"
+        },
+        {
+          "template": "He is very smart. ____, he is a bit lazy.",
+          "answer": "however",
+          "zh": "然而；可是"
+        },
+        {
+          "template": "My clothes are all in the ____.",
+          "answer": "wardrobe",
+          "zh": "衣柜；衣橱"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "This new product is very popular.",
+          "zh": "产品；产物"
+        },
+        {
+          "en": "Please review the lesson after class.",
+          "zh": "回顾；复习；评论"
+        },
+        {
+          "en": "This machine can help us work more efficiently.",
+          "zh": "机器；机械"
+        },
+        {
+          "en": "They launched an all-new car model.",
+          "zh": "全新的"
+        },
+        {
+          "en": "Trendy-wise, this design is very appealing.",
+          "zh": "从时尚角度看"
+        },
+        {
+          "en": "She always wears trendy clothes.",
+          "zh": "时髦的；流行的"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u1-c4",
+      "title": "T1B Unit 1 Class 4",
+      "titleZh": "T1B 第1单元 · Class 4",
+      "words": [
+        {
+          "en": "upset",
+          "zh": "使心烦；扰乱；心烦的"
+        },
+        {
+          "en": "wash up",
+          "zh": "洗（餐具等）"
+        },
+        {
+          "en": "for a start",
+          "zh": "首先；一开始"
+        },
+        {
+          "en": "no chance",
+          "zh": "不可能；没机会"
+        },
+        {
+          "en": "go out",
+          "zh": "出去；熄灭；过时"
+        },
+        {
+          "en": "stuff",
+          "zh": "东西；材料；填满"
+        },
+        {
+          "en": "never mind",
+          "zh": "没关系；不用担心"
+        },
+        {
+          "en": "client",
+          "zh": "客户；委托人"
+        },
+        {
+          "en": "absolutely",
+          "zh": "绝对地；完全地"
+        },
+        {
+          "en": "perhaps",
+          "zh": "也许；可能"
+        },
+        {
+          "en": "right now",
+          "zh": "现在；立刻"
+        },
+        {
+          "en": "stream",
+          "zh": "溪流；流动；涌进"
+        },
+        {
+          "en": "sink",
+          "zh": "下沉；使下沉；水槽"
+        },
+        {
+          "en": "United",
+          "zh": "联合的；统一的"
+        },
+        {
+          "en": "dialogue",
+          "zh": "对话；对白"
+        },
+        {
+          "en": "example",
+          "zh": "例子；榜样"
+        },
+        {
+          "en": "possibility",
+          "zh": "可能性"
+        },
+        {
+          "en": "hang on",
+          "zh": "坚持；稍等；紧紧抓住"
+        },
+        {
+          "en": "solution",
+          "zh": "解决方案；溶液"
+        },
+        {
+          "en": "single",
+          "zh": "单一的；单身的"
+        },
+        {
+          "en": "important",
+          "zh": "重要的"
+        },
+        {
+          "en": "lesson",
+          "zh": "课；教训"
+        },
+        {
+          "en": "bulb",
+          "zh": "电灯泡；球状物"
+        },
+        {
+          "en": "medium",
+          "zh": "中等的；媒介；"
+        },
+        {
+          "en": "decide",
+          "zh": "决定；下决心"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "The bad news ____ him.",
+          "answer": "upset",
+          "zh": "使心烦；扰乱；心烦的"
+        },
+        {
+          "template": "You should ____ before dinner.",
+          "answer": "wash up",
+          "zh": "洗（餐具等）"
+        },
+        {
+          "template": "____, we need to make a plan.",
+          "answer": "for a start",
+          "zh": "首先；一开始"
+        },
+        {
+          "template": "There is ____ that he will come today.",
+          "answer": "no chance",
+          "zh": "不可能；没机会"
+        },
+        {
+          "template": "Let's ____ for a walk.",
+          "answer": "go out",
+          "zh": "出去；熄灭；过时"
+        },
+        {
+          "template": "What's that ____ in the box?",
+          "answer": "stuff",
+          "zh": "东西；材料；填满"
+        },
+        {
+          "template": "____, I can do it myself.",
+          "answer": "never mind",
+          "zh": "没关系；不用担心"
+        },
+        {
+          "template": "Our company has many ____s.",
+          "answer": "client",
+          "zh": "客户；委托人"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The bad news upset him.",
+          "zh": "使心烦；扰乱；心烦的"
+        },
+        {
+          "en": "You should wash up before dinner.",
+          "zh": "洗（餐具等）"
+        },
+        {
+          "en": "For a start, we need to make a plan.",
+          "zh": "首先；一开始"
+        },
+        {
+          "en": "There is no chance that he will come today.",
+          "zh": "不可能；没机会"
+        },
+        {
+          "en": "Let's go out for a walk.",
+          "zh": "出去；熄灭；过时"
+        },
+        {
+          "en": "What's that stuff in the box?",
+          "zh": "东西；材料；填满"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u2-c1",
+      "title": "T1B Unit 2 Class 1",
+      "titleZh": "T1B 第2单元 · Class 1",
+      "words": [
+        {
+          "en": "horse racing",
+          "zh": "赛马"
+        },
+        {
+          "en": "gymnastics",
+          "zh": "体操"
+        },
+        {
+          "en": "athletics",
+          "zh": "田径运动"
+        },
+        {
+          "en": "race",
+          "zh": "比赛；竞赛"
+        },
+        {
+          "en": "track",
+          "zh": "跑道；轨道"
+        },
+        {
+          "en": "net",
+          "zh": "网"
+        },
+        {
+          "en": "rider",
+          "zh": "骑手"
+        },
+        {
+          "en": "match",
+          "zh": "比赛；竞赛"
+        },
+        {
+          "en": "bars",
+          "zh": "杠；酒吧"
+        },
+        {
+          "en": "gold medal",
+          "zh": "金牌"
+        },
+        {
+          "en": "gun",
+          "zh": "枪"
+        },
+        {
+          "en": "suddenly",
+          "zh": "突然地"
+        },
+        {
+          "en": "achievement",
+          "zh": "成就"
+        },
+        {
+          "en": "champion",
+          "zh": "冠军"
+        },
+        {
+          "en": "championship",
+          "zh": "锦标赛"
+        },
+        {
+          "en": "currently",
+          "zh": "当前；目前"
+        },
+        {
+          "en": "hold the record",
+          "zh": "保持纪录"
+        },
+        {
+          "en": "triple",
+          "zh": "三倍的；使成三倍"
+        },
+        {
+          "en": "double",
+          "zh": "两倍的；使加倍"
+        },
+        {
+          "en": "sprinter",
+          "zh": "短跑运动员"
+        },
+        {
+          "en": "confused",
+          "zh": "困惑的"
+        },
+        {
+          "en": "judge",
+          "zh": "法官；裁判员；判断"
+        },
+        {
+          "en": "score",
+          "zh": "得分；分数"
+        },
+        {
+          "en": "impossible",
+          "zh": "不可能的"
+        },
+        {
+          "en": "organiser",
+          "zh": "组织者"
+        },
+        {
+          "en": "mile",
+          "zh": "英里"
+        },
+        {
+          "en": "lap",
+          "zh": "一圈"
+        },
+        {
+          "en": "exhausted",
+          "zh": "疲惫的"
+        },
+        {
+          "en": "announcement",
+          "zh": "公告"
+        },
+        {
+          "en": "exactly",
+          "zh": "确切地"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "____ is an exciting sport.",
+          "answer": "horse racing",
+          "zh": "赛马"
+        },
+        {
+          "template": "____ needs great balance.",
+          "answer": "gymnastics",
+          "zh": "体操"
+        },
+        {
+          "template": "____ includes many track and field events.",
+          "answer": "athletics",
+          "zh": "田径运动"
+        },
+        {
+          "template": "They had a 100-meter ____ yesterday.",
+          "answer": "race",
+          "zh": "比赛；竞赛"
+        },
+        {
+          "template": "Runners ran along the ____.",
+          "answer": "track",
+          "zh": "跑道；轨道"
+        },
+        {
+          "template": "The tennis ____ needs fixing.",
+          "answer": "net",
+          "zh": "网"
+        },
+        {
+          "template": "The ____ controlled the horse well.",
+          "answer": "rider",
+          "zh": "骑手"
+        },
+        {
+          "template": "There's a basketball ____ tonight.",
+          "answer": "match",
+          "zh": "比赛；竞赛"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Horse racing is an exciting sport.",
+          "zh": "赛马"
+        },
+        {
+          "en": "Gymnastics needs great balance.",
+          "zh": "体操"
+        },
+        {
+          "en": "Athletics includes many track and field events.",
+          "zh": "田径运动"
+        },
+        {
+          "en": "They had a 100-meter race yesterday.",
+          "zh": "比赛；竞赛"
+        },
+        {
+          "en": "Runners ran along the track.",
+          "zh": "跑道；轨道"
+        },
+        {
+          "en": "The tennis net needs fixing.",
+          "zh": "网"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u2-c2",
+      "title": "T1B Unit 2 Class 2",
+      "titleZh": "T1B 第2单元 · Class 2",
+      "words": [
+        {
+          "en": "completed",
+          "zh": "完成的"
+        },
+        {
+          "en": "action",
+          "zh": "行动；动作"
+        },
+        {
+          "en": "in progress",
+          "zh": "在进行中"
+        },
+        {
+          "en": "in the past",
+          "zh": "在过去"
+        },
+        {
+          "en": "a certain time",
+          "zh": "某一时刻"
+        },
+        {
+          "en": "rope",
+          "zh": "绳子"
+        },
+        {
+          "en": "horrible",
+          "zh": "可怕的；极坏的"
+        },
+        {
+          "en": "goal",
+          "zh": "目标；球门"
+        },
+        {
+          "en": "sailing",
+          "zh": "帆船运动；航行"
+        },
+        {
+          "en": "diving",
+          "zh": "跳水；潜水"
+        },
+        {
+          "en": "golf",
+          "zh": "高尔夫球运动"
+        },
+        {
+          "en": "gymnastics",
+          "zh": "体操运动"
+        },
+        {
+          "en": "rock climbing",
+          "zh": "攀岩"
+        },
+        {
+          "en": "rugby",
+          "zh": "橄榄球运动"
+        },
+        {
+          "en": "snowboarding",
+          "zh": "单板滑雪"
+        },
+        {
+          "en": "skiing",
+          "zh": "滑雪运动"
+        },
+        {
+          "en": "volleyball",
+          "zh": "排球运动"
+        },
+        {
+          "en": "windsurfing",
+          "zh": "帆板运动"
+        },
+        {
+          "en": "do athletics",
+          "zh": "做田径运动"
+        },
+        {
+          "en": "do gymnastics",
+          "zh": "做体操运动"
+        },
+        {
+          "en": "skateboarding",
+          "zh": "滑板运动"
+        },
+        {
+          "en": "dangerous",
+          "zh": "危险的"
+        },
+        {
+          "en": "Olympics",
+          "zh": "奥林匹克运动会"
+        },
+        {
+          "en": "prefer",
+          "zh": "更喜欢；宁愿"
+        },
+        {
+          "en": "individual",
+          "zh": "个人的；个体"
+        },
+        {
+          "en": "interest",
+          "zh": "兴趣；爱好"
+        },
+        {
+          "en": "surfing",
+          "zh": "冲浪运动"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "The project was ____ last week.",
+          "answer": "completed",
+          "zh": "完成的"
+        },
+        {
+          "template": "His ____ was very brave.",
+          "answer": "action",
+          "zh": "行动；动作"
+        },
+        {
+          "template": "The construction is ____.",
+          "answer": "in progress",
+          "zh": "在进行中"
+        },
+        {
+          "template": "____, I lived in a small town.",
+          "answer": "in the past",
+          "zh": "在过去"
+        },
+        {
+          "template": "He will come back at ____.",
+          "answer": "a certain time",
+          "zh": "某一时刻"
+        },
+        {
+          "template": "Hold the ____ tightly.",
+          "answer": "rope",
+          "zh": "绳子"
+        },
+        {
+          "template": "That was a ____ accident.",
+          "answer": "horrible",
+          "zh": "可怕的；极坏的"
+        },
+        {
+          "template": "My ____ is to be a doctor.",
+          "answer": "goal",
+          "zh": "目标；球门"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The project was completed last week.",
+          "zh": "完成的"
+        },
+        {
+          "en": "His action was very brave.",
+          "zh": "行动；动作"
+        },
+        {
+          "en": "The construction is in progress.",
+          "zh": "在进行中"
+        },
+        {
+          "en": "In the past, I lived in a small town.",
+          "zh": "在过去"
+        },
+        {
+          "en": "He will come back at a certain time.",
+          "zh": "某一时刻"
+        },
+        {
+          "en": "Hold the rope tightly.",
+          "zh": "绳子"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u2-c3",
+      "title": "T1B Unit 2 Class 3",
+      "titleZh": "T1B 第2单元 · Class 3",
+      "words": [
+        {
+          "en": "professional",
+          "zh": "专业的；专业人员"
+        },
+        {
+          "en": "condition",
+          "zh": "条件；状况；环境"
+        },
+        {
+          "en": "achieve",
+          "zh": "实现；达到；取得"
+        },
+        {
+          "en": "spoil",
+          "zh": "破坏；宠坏；变质"
+        },
+        {
+          "en": "celebrate",
+          "zh": "庆祝；歌颂"
+        },
+        {
+          "en": "profession",
+          "zh": "职业；行业"
+        },
+        {
+          "en": "net",
+          "zh": "网；净的；用网捕"
+        },
+        {
+          "en": "bruise",
+          "zh": "瘀伤；擦伤；使受瘀伤"
+        },
+        {
+          "en": "rugby",
+          "zh": "橄榄球运动"
+        },
+        {
+          "en": "celebration",
+          "zh": "庆祝活动；庆典"
+        },
+        {
+          "en": "stage",
+          "zh": "舞台；阶段；上演"
+        },
+        {
+          "en": "headmistress",
+          "zh": "女校长"
+        },
+        {
+          "en": "medal",
+          "zh": "奖章；勋章"
+        },
+        {
+          "en": "embarrassed",
+          "zh": "尴尬的；窘迫的"
+        },
+        {
+          "en": "lamppost",
+          "zh": "路灯柱"
+        },
+        {
+          "en": "ambulance",
+          "zh": "救护车"
+        },
+        {
+          "en": "local",
+          "zh": "当地的；本地人"
+        },
+        {
+          "en": "golfer",
+          "zh": "高尔夫球手"
+        },
+        {
+          "en": "skier",
+          "zh": "滑雪者"
+        },
+        {
+          "en": "kick-off",
+          "zh": "开球；开始"
+        },
+        {
+          "en": "first half",
+          "zh": "上半场"
+        },
+        {
+          "en": "half-time",
+          "zh": "中场休息"
+        },
+        {
+          "en": "second half",
+          "zh": "下半场"
+        },
+        {
+          "en": "photographer",
+          "zh": "摄影师"
+        },
+        {
+          "en": "fire the gun",
+          "zh": "开枪；发射信号枪"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "He is a ____ athlete.",
+          "answer": "professional",
+          "zh": "专业的；专业人员"
+        },
+        {
+          "template": "The car is in good ____.",
+          "answer": "condition",
+          "zh": "条件；状况；环境"
+        },
+        {
+          "template": "He ____d his goal of winning the race.",
+          "answer": "achieve",
+          "zh": "实现；达到；取得"
+        },
+        {
+          "template": "Don't let the bad weather ____ our picnic.",
+          "answer": "spoil",
+          "zh": "破坏；宠坏；变质"
+        },
+        {
+          "template": "We ____ Christmas every year.",
+          "answer": "celebrate",
+          "zh": "庆祝；歌颂"
+        },
+        {
+          "template": "She is in the medical ____.",
+          "answer": "profession",
+          "zh": "职业；行业"
+        },
+        {
+          "template": "The fisherman cast his ____ into the sea.",
+          "answer": "net",
+          "zh": "网；净的；用网捕"
+        },
+        {
+          "template": "He got a ____ on his leg from the fall.",
+          "answer": "bruise",
+          "zh": "瘀伤；擦伤；使受瘀伤"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "He is a professional athlete.",
+          "zh": "专业的；专业人员"
+        },
+        {
+          "en": "The car is in good condition.",
+          "zh": "条件；状况；环境"
+        },
+        {
+          "en": "He achieved his goal of winning the race.",
+          "zh": "实现；达到；取得"
+        },
+        {
+          "en": "Don't let the bad weather spoil our picnic.",
+          "zh": "破坏；宠坏；变质"
+        },
+        {
+          "en": "We celebrate Christmas every year.",
+          "zh": "庆祝；歌颂"
+        },
+        {
+          "en": "She is in the medical profession.",
+          "zh": "职业；行业"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u2-c4",
+      "title": "T1B Unit 2 Class 4",
+      "titleZh": "T1B 第2单元 · Class 4",
+      "words": [
+        {
+          "en": "chess",
+          "zh": "国际象棋"
+        },
+        {
+          "en": "camel",
+          "zh": "骆驼"
+        },
+        {
+          "en": "popular",
+          "zh": "受欢迎的；流行的"
+        },
+        {
+          "en": "million",
+          "zh": "百万"
+        },
+        {
+          "en": "event",
+          "zh": "事件；活动"
+        },
+        {
+          "en": "highlight",
+          "zh": "亮点；突出；强调"
+        },
+        {
+          "en": "race",
+          "zh": "比赛；种族"
+        },
+        {
+          "en": "bun",
+          "zh": "小圆面包"
+        },
+        {
+          "en": "metal",
+          "zh": "金属"
+        },
+        {
+          "en": "spectator",
+          "zh": "观众"
+        },
+        {
+          "en": "compete",
+          "zh": "竞争；比赛"
+        },
+        {
+          "en": "especially",
+          "zh": "尤其；特别"
+        },
+        {
+          "en": "take place",
+          "zh": "发生；举行"
+        },
+        {
+          "en": "sandy",
+          "zh": "多沙的；沙地的"
+        },
+        {
+          "en": "desert",
+          "zh": "沙漠"
+        },
+        {
+          "en": "track",
+          "zh": "轨道；跑道；跟踪"
+        },
+        {
+          "en": "owner",
+          "zh": "所有者；物主"
+        },
+        {
+          "en": "invention",
+          "zh": "发明；发明物"
+        },
+        {
+          "en": "original",
+          "zh": "最初的；原始的；原件"
+        },
+        {
+          "en": "performance",
+          "zh": "表演；表现"
+        },
+        {
+          "en": "contestant",
+          "zh": "参赛者；竞争者"
+        },
+        {
+          "en": "take off",
+          "zh": "起飞；脱下；突然成功"
+        },
+        {
+          "en": "glove",
+          "zh": "手套"
+        },
+        {
+          "en": "competition",
+          "zh": "比赛；竞争"
+        },
+        {
+          "en": "court",
+          "zh": "球场；法庭；宫廷"
+        },
+        {
+          "en": "stadium",
+          "zh": "体育场"
+        },
+        {
+          "en": "brilliant",
+          "zh": "精彩的；杰出的"
+        },
+        {
+          "en": "clap",
+          "zh": "鼓掌；拍手"
+        },
+        {
+          "en": "cheer",
+          "zh": "欢呼；喝彩；使高兴"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "I like playing ____ with my father.",
+          "answer": "chess",
+          "zh": "国际象棋"
+        },
+        {
+          "template": "____s are useful animals in the desert.",
+          "answer": "camel",
+          "zh": "骆驼"
+        },
+        {
+          "template": "This song is very ____.",
+          "answer": "popular",
+          "zh": "受欢迎的；流行的"
+        },
+        {
+          "template": "He made ____s of dollars in business.",
+          "answer": "million",
+          "zh": "百万"
+        },
+        {
+          "template": "The school sports ____ is very exciting.",
+          "answer": "event",
+          "zh": "事件；活动"
+        },
+        {
+          "template": "The goal was the ____ of the game.",
+          "answer": "highlight",
+          "zh": "亮点；突出；强调"
+        },
+        {
+          "template": "He won the 100-meter ____.",
+          "answer": "race",
+          "zh": "比赛；种族"
+        },
+        {
+          "template": "She ate a ____ for breakfast.",
+          "answer": "bun",
+          "zh": "小圆面包"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I like playing chess with my father.",
+          "zh": "国际象棋"
+        },
+        {
+          "en": "Camels are useful animals in the desert.",
+          "zh": "骆驼"
+        },
+        {
+          "en": "This song is very popular.",
+          "zh": "受欢迎的；流行的"
+        },
+        {
+          "en": "He made millions of dollars in business.",
+          "zh": "百万"
+        },
+        {
+          "en": "The school sports event is very exciting.",
+          "zh": "事件；活动"
+        },
+        {
+          "en": "The goal was the highlight of the game.",
+          "zh": "亮点；突出；强调"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u3-c1",
+      "title": "T1B Unit 3 Class 1",
+      "titleZh": "T1B 第3单元 · Class 1",
+      "words": [
+        {
+          "en": "natural",
+          "zh": "自然的；天然的"
+        },
+        {
+          "en": "wonder",
+          "zh": "奇迹；想知道"
+        },
+        {
+          "en": "fox",
+          "zh": "狐狸"
+        },
+        {
+          "en": "eagle",
+          "zh": "鹰"
+        },
+        {
+          "en": "reindeer",
+          "zh": "驯鹿"
+        },
+        {
+          "en": "bush",
+          "zh": "灌木丛"
+        },
+        {
+          "en": "tribe",
+          "zh": "部落"
+        },
+        {
+          "en": "wild animals",
+          "zh": "野生动物"
+        },
+        {
+          "en": "hunter",
+          "zh": "猎人"
+        },
+        {
+          "en": "population",
+          "zh": "人口；种群"
+        },
+        {
+          "en": "urban",
+          "zh": "城市的"
+        },
+        {
+          "en": "however",
+          "zh": "然而"
+        },
+        {
+          "en": "planet",
+          "zh": "行星"
+        },
+        {
+          "en": "wildest",
+          "zh": "最野生的；最狂热的"
+        },
+        {
+          "en": "southern",
+          "zh": "南方的"
+        },
+        {
+          "en": "northern",
+          "zh": "北方的"
+        },
+        {
+          "en": "hut",
+          "zh": "小屋"
+        },
+        {
+          "en": "berry",
+          "zh": "浆果"
+        },
+        {
+          "en": "bow",
+          "zh": "弓；鞠躬"
+        },
+        {
+          "en": "province",
+          "zh": "省份"
+        },
+        {
+          "en": "remote",
+          "zh": "遥远的；偏僻的"
+        },
+        {
+          "en": "several",
+          "zh": "几个；若干"
+        },
+        {
+          "en": "valley",
+          "zh": "山谷"
+        },
+        {
+          "en": "skeleton",
+          "zh": "骨骼；骨架"
+        },
+        {
+          "en": "frighten",
+          "zh": "使害怕；使惊恐"
+        },
+        {
+          "en": "temperature",
+          "zh": "温度"
+        },
+        {
+          "en": "nomadic",
+          "zh": "游牧的；流浪的"
+        },
+        {
+          "en": "frequently",
+          "zh": "频繁地"
+        },
+        {
+          "en": "recent",
+          "zh": "最近的"
+        },
+        {
+          "en": "discovery",
+          "zh": "发现"
+        },
+        {
+          "en": "gas",
+          "zh": "气体；汽油"
+        },
+        {
+          "en": "contact",
+          "zh": "接触；联系"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "This is a ____ phenomenon.",
+          "answer": "natural",
+          "zh": "自然的；天然的"
+        },
+        {
+          "template": "The Great Wall is a ____ of the world.",
+          "answer": "wonder",
+          "zh": "奇迹；想知道"
+        },
+        {
+          "template": "A ____ is running in the forest.",
+          "answer": "fox",
+          "zh": "狐狸"
+        },
+        {
+          "template": "The ____ is flying high in the sky.",
+          "answer": "eagle",
+          "zh": "鹰"
+        },
+        {
+          "template": "____ are often seen in the Arctic region.",
+          "answer": "reindeer",
+          "zh": "驯鹿"
+        },
+        {
+          "template": "There is a ____ near the house.",
+          "answer": "bush",
+          "zh": "灌木丛"
+        },
+        {
+          "template": "The ____ has its own unique culture.",
+          "answer": "tribe",
+          "zh": "部落"
+        },
+        {
+          "template": "____ need a natural habitat.",
+          "answer": "wild animals",
+          "zh": "野生动物"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "This is a natural phenomenon.",
+          "zh": "自然的；天然的"
+        },
+        {
+          "en": "The Great Wall is a wonder of the world.",
+          "zh": "奇迹；想知道"
+        },
+        {
+          "en": "A fox is running in the forest.",
+          "zh": "狐狸"
+        },
+        {
+          "en": "The eagle is flying high in the sky.",
+          "zh": "鹰"
+        },
+        {
+          "en": "Reindeer are often seen in the Arctic region.",
+          "zh": "驯鹿"
+        },
+        {
+          "en": "There is a bush near the house.",
+          "zh": "灌木丛"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u3-c2",
+      "title": "T1B Unit 3 Class 2",
+      "titleZh": "T1B 第3单元 · Class 2",
+      "words": [
+        {
+          "en": "attractive",
+          "zh": "有吸引力的；迷人的"
+        },
+        {
+          "en": "further",
+          "zh": "更远的；进一步的"
+        },
+        {
+          "en": "spider",
+          "zh": "蜘蛛"
+        },
+        {
+          "en": "seaside",
+          "zh": "海边；海滨"
+        },
+        {
+          "en": "wildlife",
+          "zh": "野生动物；野生生物"
+        },
+        {
+          "en": "musician",
+          "zh": "音乐家"
+        },
+        {
+          "en": "desert",
+          "zh": "沙漠；遗弃"
+        },
+        {
+          "en": "forest",
+          "zh": "森林"
+        },
+        {
+          "en": "jungle",
+          "zh": "丛林；密林"
+        },
+        {
+          "en": "mountain",
+          "zh": "山；山脉"
+        },
+        {
+          "en": "ocean",
+          "zh": "海洋；大海"
+        },
+        {
+          "en": "river",
+          "zh": "河；江"
+        },
+        {
+          "en": "get married",
+          "zh": "结婚"
+        },
+        {
+          "en": "bushman",
+          "zh": "丛林居民；布须曼人"
+        },
+        {
+          "en": "attack",
+          "zh": "攻击；袭击；抨击"
+        },
+        {
+          "en": "surprise",
+          "zh": "使惊奇；惊奇；惊喜"
+        },
+        {
+          "en": "ability",
+          "zh": "能力；才能"
+        },
+        {
+          "en": "courage",
+          "zh": "勇气；胆量"
+        },
+        {
+          "en": "future",
+          "zh": "未来；将来；未来的"
+        },
+        {
+          "en": "task",
+          "zh": "任务"
+        },
+        {
+          "en": "lie around",
+          "zh": "躺着"
+        },
+        {
+          "en": "shock",
+          "zh": "使...害怕"
+        },
+        {
+          "en": "mustn‘t",
+          "zh": "禁止"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "She has an ____ personality.",
+          "answer": "attractive",
+          "zh": "有吸引力的；迷人的"
+        },
+        {
+          "template": "We need to do ____ research.",
+          "answer": "further",
+          "zh": "更远的；进一步的"
+        },
+        {
+          "template": "A ____ is spinning a web.",
+          "answer": "spider",
+          "zh": "蜘蛛"
+        },
+        {
+          "template": "We often go to the ____ in summer.",
+          "answer": "seaside",
+          "zh": "海边；海滨"
+        },
+        {
+          "template": "We should protect ____.",
+          "answer": "wildlife",
+          "zh": "野生动物；野生生物"
+        },
+        {
+          "template": "He is a famous ____.",
+          "answer": "musician",
+          "zh": "音乐家"
+        },
+        {
+          "template": "The Sahara is a large ____.",
+          "answer": "desert",
+          "zh": "沙漠；遗弃"
+        },
+        {
+          "template": "There are many trees in the ____.",
+          "answer": "forest",
+          "zh": "森林"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "She has an attractive personality.",
+          "zh": "有吸引力的；迷人的"
+        },
+        {
+          "en": "We need to do further research.",
+          "zh": "更远的；进一步的"
+        },
+        {
+          "en": "A spider is spinning a web.",
+          "zh": "蜘蛛"
+        },
+        {
+          "en": "We often go to the seaside in summer.",
+          "zh": "海边；海滨"
+        },
+        {
+          "en": "We should protect wildlife.",
+          "zh": "野生动物；野生生物"
+        },
+        {
+          "en": "He is a famous musician.",
+          "zh": "音乐家"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u3-c3",
+      "title": "T1B Unit 3 Class 3",
+      "titleZh": "T1B 第3单元 · Class 3",
+      "words": [
+        {
+          "en": "extreme",
+          "zh": "极端的；极度的"
+        },
+        {
+          "en": "nature",
+          "zh": "自然；大自然"
+        },
+        {
+          "en": "snowfall",
+          "zh": "降雪；降雪量"
+        },
+        {
+          "en": "freezing",
+          "zh": "极冷的；冰冻的"
+        },
+        {
+          "en": "continue",
+          "zh": "继续；持续"
+        },
+        {
+          "en": "go up",
+          "zh": "上升；增长"
+        },
+        {
+          "en": "back down",
+          "zh": "放弃；让步"
+        },
+        {
+          "en": "resident",
+          "zh": "居民；定居者"
+        },
+        {
+          "en": "inhabitant",
+          "zh": "居民；居住者"
+        },
+        {
+          "en": "dramatic",
+          "zh": "戏剧性的；引人注目的"
+        },
+        {
+          "en": "village",
+          "zh": "村庄；乡村"
+        },
+        {
+          "en": "coast",
+          "zh": "海岸；海滨"
+        },
+        {
+          "en": "shake hand",
+          "zh": "握手"
+        },
+        {
+          "en": "through",
+          "zh": "通过；穿过；凭借"
+        },
+        {
+          "en": "daylight",
+          "zh": "日光；白昼"
+        },
+        {
+          "en": "hardly ever",
+          "zh": "几乎从不"
+        },
+        {
+          "en": "rise",
+          "zh": "上升；升起；增长"
+        },
+        {
+          "en": "go down",
+          "zh": "下降；减少；下沉"
+        },
+        {
+          "en": "react",
+          "zh": "反应；作出反应"
+        },
+        {
+          "en": "foggy",
+          "zh": "有雾的；雾气茫茫的"
+        },
+        {
+          "en": "headache",
+          "zh": "头痛"
+        },
+        {
+          "en": "social media",
+          "zh": "社交媒体"
+        },
+        {
+          "en": "sum",
+          "zh": "总数；总和；金额"
+        },
+        {
+          "en": "humid",
+          "zh": "潮湿的；湿润的"
+        },
+        {
+          "en": "wet",
+          "zh": "湿的；潮湿的"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "The ____ weather made travel difficult.",
+          "answer": "extreme",
+          "zh": "极端的；极度的"
+        },
+        {
+          "template": "We should protect ____.",
+          "answer": "nature",
+          "zh": "自然；大自然"
+        },
+        {
+          "template": "There was a heavy ____ last night.",
+          "answer": "snowfall",
+          "zh": "降雪；降雪量"
+        },
+        {
+          "template": "It's ____ outside. Put on your coat.",
+          "answer": "freezing",
+          "zh": "极冷的；冰冻的"
+        },
+        {
+          "template": "Please ____ with your work.",
+          "answer": "continue",
+          "zh": "继续；持续"
+        },
+        {
+          "template": "He refused to ____ in the argument.",
+          "answer": "back down",
+          "zh": "放弃；让步"
+        },
+        {
+          "template": "The ____s of this area are friendly.",
+          "answer": "resident",
+          "zh": "居民；定居者"
+        },
+        {
+          "template": "The island has few ____s.",
+          "answer": "inhabitant",
+          "zh": "居民；居住者"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The extreme weather made travel difficult.",
+          "zh": "极端的；极度的"
+        },
+        {
+          "en": "We should protect nature.",
+          "zh": "自然；大自然"
+        },
+        {
+          "en": "There was a heavy snowfall last night.",
+          "zh": "降雪；降雪量"
+        },
+        {
+          "en": "It's freezing outside. Put on your coat.",
+          "zh": "极冷的；冰冻的"
+        },
+        {
+          "en": "Please continue with your work.",
+          "zh": "继续；持续"
+        },
+        {
+          "en": "The price of gas is going up.",
+          "zh": "上升；增长"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u3-c4",
+      "title": "T1B Unit 3 Class 4",
+      "titleZh": "T1B 第3单元 · Class 4",
+      "words": [
+        {
+          "en": "lovely",
+          "zh": "可爱的；令人愉快的"
+        },
+        {
+          "en": "garden",
+          "zh": "花园；菜园"
+        },
+        {
+          "en": "wonderful",
+          "zh": "精彩的；绝妙的"
+        },
+        {
+          "en": "perhaps",
+          "zh": "也许；大概"
+        },
+        {
+          "en": "moment",
+          "zh": "片刻；瞬间"
+        },
+        {
+          "en": "in a minute",
+          "zh": "马上；一会儿"
+        },
+        {
+          "en": "fantastic",
+          "zh": "极好的；了不起的"
+        },
+        {
+          "en": "well done",
+          "zh": "做得好"
+        },
+        {
+          "en": "community",
+          "zh": "社区；社群"
+        },
+        {
+          "en": "homeless",
+          "zh": "无家可归的"
+        },
+        {
+          "en": "rubbish",
+          "zh": "垃圾；废弃物"
+        },
+        {
+          "en": "spirit",
+          "zh": "精神；心灵"
+        },
+        {
+          "en": "be involved in",
+          "zh": "参与；卷入"
+        },
+        {
+          "en": "identify",
+          "zh": "识别；认出"
+        },
+        {
+          "en": "improve",
+          "zh": "改进；改善"
+        },
+        {
+          "en": "above",
+          "zh": "在…… 上面；超过"
+        },
+        {
+          "en": "personal",
+          "zh": "个人的；私人的"
+        },
+        {
+          "en": "be afraid to",
+          "zh": "害怕做……"
+        },
+        {
+          "en": "consider",
+          "zh": "考虑；认为"
+        },
+        {
+          "en": "suggestion",
+          "zh": "建议；提议"
+        },
+        {
+          "en": "organisation",
+          "zh": "组织；机构"
+        },
+        {
+          "en": "probably",
+          "zh": "很可能；大概"
+        },
+        {
+          "en": "response",
+          "zh": "回应；答复"
+        },
+        {
+          "en": "receive",
+          "zh": "收到；接到"
+        },
+        {
+          "en": "advice",
+          "zh": "建议；劝告"
+        },
+        {
+          "en": "project",
+          "zh": "项目；工程"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "She has a ____ smile.",
+          "answer": "lovely",
+          "zh": "可爱的；令人愉快的"
+        },
+        {
+          "template": "There are many flowers in the ____.",
+          "answer": "garden",
+          "zh": "花园；菜园"
+        },
+        {
+          "template": "We had a ____ time at the party.",
+          "answer": "wonderful",
+          "zh": "精彩的；绝妙的"
+        },
+        {
+          "template": "____ he will come tomorrow.",
+          "answer": "perhaps",
+          "zh": "也许；大概"
+        },
+        {
+          "template": "Wait a ____, please.",
+          "answer": "moment",
+          "zh": "片刻；瞬间"
+        },
+        {
+          "template": "I'll be back ____.",
+          "answer": "in a minute",
+          "zh": "马上；一会儿"
+        },
+        {
+          "template": "The view from the top is ____.",
+          "answer": "fantastic",
+          "zh": "极好的；了不起的"
+        },
+        {
+          "template": "____! You passed the exam.",
+          "answer": "well done",
+          "zh": "做得好"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "She has a lovely smile.",
+          "zh": "可爱的；令人愉快的"
+        },
+        {
+          "en": "There are many flowers in the garden.",
+          "zh": "花园；菜园"
+        },
+        {
+          "en": "We had a wonderful time at the party.",
+          "zh": "精彩的；绝妙的"
+        },
+        {
+          "en": "Perhaps he will come tomorrow.",
+          "zh": "也许；大概"
+        },
+        {
+          "en": "Wait a moment, please.",
+          "zh": "片刻；瞬间"
+        },
+        {
+          "en": "I'll be back in a minute.",
+          "zh": "马上；一会儿"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u4-c1",
+      "title": "T1B Unit 4 Class 1",
+      "titleZh": "T1B 第4单元 · Class 1",
+      "words": [
+        {
+          "en": "statue",
+          "zh": "雕像"
+        },
+        {
+          "en": "sports stadium",
+          "zh": "体育场"
+        },
+        {
+          "en": "the Great Wall",
+          "zh": "长城"
+        },
+        {
+          "en": "museum",
+          "zh": "博物馆"
+        },
+        {
+          "en": "tourist",
+          "zh": "游客"
+        },
+        {
+          "en": "against",
+          "zh": "反对；靠着"
+        },
+        {
+          "en": "volleyball",
+          "zh": "排球"
+        },
+        {
+          "en": "champion",
+          "zh": "冠军"
+        },
+        {
+          "en": "modern",
+          "zh": "现代的"
+        },
+        {
+          "en": "catch a bus",
+          "zh": "赶公交车"
+        },
+        {
+          "en": "explore",
+          "zh": "探索"
+        },
+        {
+          "en": "view",
+          "zh": "景色；观点"
+        },
+        {
+          "en": "spectacular",
+          "zh": "壮观的"
+        },
+        {
+          "en": "sightsee",
+          "zh": "观光"
+        },
+        {
+          "en": "disappointed",
+          "zh": "失望的"
+        },
+        {
+          "en": "powerful",
+          "zh": "强大的"
+        },
+        {
+          "en": "symbol",
+          "zh": "象征"
+        },
+        {
+          "en": "look forward",
+          "zh": "期待"
+        },
+        {
+          "en": "trombone",
+          "zh": "长号"
+        },
+        {
+          "en": "conduct",
+          "zh": "指挥；进行"
+        },
+        {
+          "en": "record",
+          "zh": "记录；唱片"
+        },
+        {
+          "en": "performance",
+          "zh": "表演；表现"
+        },
+        {
+          "en": "career",
+          "zh": "职业"
+        },
+        {
+          "en": "exchange",
+          "zh": "交换"
+        },
+        {
+          "en": "language",
+          "zh": "语言"
+        },
+        {
+          "en": "programme",
+          "zh": "节目；计划"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "The ____ in the park is very beautiful.",
+          "answer": "statue",
+          "zh": "雕像"
+        },
+        {
+          "template": "The ____ is full of cheering fans.",
+          "answer": "sports stadium",
+          "zh": "体育场"
+        },
+        {
+          "template": "____ is a famous tourist attraction.",
+          "answer": "the Great Wall",
+          "zh": "长城"
+        },
+        {
+          "template": "We visited the ____ last weekend.",
+          "answer": "museum",
+          "zh": "博物馆"
+        },
+        {
+          "template": "There are many ____s in the city.",
+          "answer": "tourist",
+          "zh": "游客"
+        },
+        {
+          "template": "He is ____ the new plan.",
+          "answer": "against",
+          "zh": "反对；靠着"
+        },
+        {
+          "template": "They often play ____ after school.",
+          "answer": "volleyball",
+          "zh": "排球"
+        },
+        {
+          "template": "He became a ____ in the competition.",
+          "answer": "champion",
+          "zh": "冠军"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The statue in the park is very beautiful.",
+          "zh": "雕像"
+        },
+        {
+          "en": "The sports stadium is full of cheering fans.",
+          "zh": "体育场"
+        },
+        {
+          "en": "The Great Wall is a famous tourist attraction.",
+          "zh": "长城"
+        },
+        {
+          "en": "We visited the museum last weekend.",
+          "zh": "博物馆"
+        },
+        {
+          "en": "There are many tourists in the city.",
+          "zh": "游客"
+        },
+        {
+          "en": "He is against the new plan.",
+          "zh": "反对；靠着"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u4-c2",
+      "title": "T1B Unit 4 Class 2",
+      "titleZh": "T1B 第4单元 · Class 2",
+      "words": [
+        {
+          "en": "intention",
+          "zh": "意图；目的"
+        },
+        {
+          "en": "complete",
+          "zh": "完成；使完整；完整的"
+        },
+        {
+          "en": "fight",
+          "zh": "打架；战斗；斗争"
+        },
+        {
+          "en": "visit relatives",
+          "zh": "拜访亲戚"
+        },
+        {
+          "en": "write a blog",
+          "zh": "写博客"
+        },
+        {
+          "en": "have a holiday",
+          "zh": "度假"
+        },
+        {
+          "en": "learn something new",
+          "zh": "学习新事物"
+        },
+        {
+          "en": "concert hall",
+          "zh": "音乐厅"
+        },
+        {
+          "en": "police station",
+          "zh": "警察局"
+        },
+        {
+          "en": "post office",
+          "zh": "邮局"
+        },
+        {
+          "en": "celebrate",
+          "zh": "庆祝"
+        },
+        {
+          "en": "superhero",
+          "zh": "超级英雄"
+        },
+        {
+          "en": "invite",
+          "zh": "邀请"
+        },
+        {
+          "en": "the following weekend",
+          "zh": "接下来的周末"
+        },
+        {
+          "en": "arrangement",
+          "zh": "安排；布置"
+        },
+        {
+          "en": "meet up",
+          "zh": "见面；会合"
+        },
+        {
+          "en": "invitation",
+          "zh": "邀请；邀请函"
+        },
+        {
+          "en": "refuse",
+          "zh": "拒绝"
+        },
+        {
+          "en": "option",
+          "zh": "选择；选项"
+        },
+        {
+          "en": "accept",
+          "zh": "接受"
+        },
+        {
+          "en": "sort",
+          "zh": "分类；整理；种类"
+        },
+        {
+          "en": "loads of",
+          "zh": "许多；大量"
+        },
+        {
+          "en": "final",
+          "zh": "最后的；最终的"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "His ____ is to become a doctor.",
+          "answer": "intention",
+          "zh": "意图；目的"
+        },
+        {
+          "template": "I will ____ my homework tonight.",
+          "answer": "complete",
+          "zh": "完成；使完整；完整的"
+        },
+        {
+          "template": "We will ____ during the Spring Festival.",
+          "answer": "visit relatives",
+          "zh": "拜访亲戚"
+        },
+        {
+          "template": "We should always ____ to improve ourselves.",
+          "answer": "learn something new",
+          "zh": "学习新事物"
+        },
+        {
+          "template": "The concert will be held in the ____.",
+          "answer": "concert hall",
+          "zh": "音乐厅"
+        },
+        {
+          "template": "He went to the ____ to report the accident.",
+          "answer": "police station",
+          "zh": "警察局"
+        },
+        {
+          "template": "I need to go to the ____ to send a letter.",
+          "answer": "post office",
+          "zh": "邮局"
+        },
+        {
+          "template": "We ____ Christmas every year.",
+          "answer": "celebrate",
+          "zh": "庆祝"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "His intention is to become a doctor.",
+          "zh": "意图；目的"
+        },
+        {
+          "en": "I will complete my homework tonight.",
+          "zh": "完成；使完整；完整的"
+        },
+        {
+          "en": "They fought for their freedom.",
+          "zh": "打架；战斗；斗争"
+        },
+        {
+          "en": "We will visit relatives during the Spring Festival.",
+          "zh": "拜访亲戚"
+        },
+        {
+          "en": "She writes a blog every week to share her life.",
+          "zh": "写博客"
+        },
+        {
+          "en": "They are having a holiday in Hawaii.",
+          "zh": "度假"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u4-c3",
+      "title": "T1B Unit 4 Class 3",
+      "titleZh": "T1B 第4单元 · Class 3",
+      "words": [
+        {
+          "en": "council",
+          "zh": "委员会；理事会"
+        },
+        {
+          "en": "million",
+          "zh": "百万"
+        },
+        {
+          "en": "facility",
+          "zh": "设施；设备"
+        },
+        {
+          "en": "forum",
+          "zh": "论坛；讨论会"
+        },
+        {
+          "en": "post",
+          "zh": "岗位；邮件；张贴"
+        },
+        {
+          "en": "below",
+          "zh": "在…… 下面"
+        },
+        {
+          "en": "a pool table",
+          "zh": "一张台球桌"
+        },
+        {
+          "en": "motorist",
+          "zh": "驾车者"
+        },
+        {
+          "en": "cycle lane",
+          "zh": "自行车道"
+        },
+        {
+          "en": "zebra crossing",
+          "zh": "斑马线"
+        },
+        {
+          "en": "citizen",
+          "zh": "公民；市民"
+        },
+        {
+          "en": "playground",
+          "zh": "操场；游乐场"
+        },
+        {
+          "en": "graffiti",
+          "zh": "涂鸦"
+        },
+        {
+          "en": "climbing wall",
+          "zh": "攀岩墙"
+        },
+        {
+          "en": "empty",
+          "zh": "空的；使空；倒空"
+        },
+        {
+          "en": "studio",
+          "zh": "工作室；演播室"
+        },
+        {
+          "en": "billboard",
+          "zh": "广告牌"
+        },
+        {
+          "en": "entrance",
+          "zh": "入口；进入"
+        },
+        {
+          "en": "litter bins",
+          "zh": "垃圾桶"
+        },
+        {
+          "en": "ashamed",
+          "zh": "羞愧的；惭愧的"
+        },
+        {
+          "en": "festival",
+          "zh": "节日"
+        },
+        {
+          "en": "advertise",
+          "zh": "做广告；宣传"
+        },
+        {
+          "en": "chat with friends",
+          "zh": "和朋友聊天"
+        },
+        {
+          "en": "regular",
+          "zh": "定期的；有规律的"
+        },
+        {
+          "en": "ahead",
+          "zh": "在前面；向前；提前"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "The ____ is responsible for local policies.",
+          "answer": "council",
+          "zh": "委员会；理事会"
+        },
+        {
+          "template": "He has ____s of dollars.",
+          "answer": "million",
+          "zh": "百万"
+        },
+        {
+          "template": "They hold a ____ on environmental issues every year.",
+          "answer": "forum",
+          "zh": "论坛；讨论会"
+        },
+        {
+          "template": "He works at a ____ office. (n.)",
+          "answer": "post",
+          "zh": "岗位；邮件；张贴"
+        },
+        {
+          "template": "The book is ____ the table. (prep.)",
+          "answer": "below",
+          "zh": "在…… 下面"
+        },
+        {
+          "template": "There is ____ in the game room.",
+          "answer": "a pool table",
+          "zh": "一张台球桌"
+        },
+        {
+          "template": "The ____ was fined for speeding.",
+          "answer": "motorist",
+          "zh": "驾车者"
+        },
+        {
+          "template": "Cyclists should ride in the ____.",
+          "answer": "cycle lane",
+          "zh": "自行车道"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The council is responsible for local policies.",
+          "zh": "委员会；理事会"
+        },
+        {
+          "en": "He has millions of dollars.",
+          "zh": "百万"
+        },
+        {
+          "en": "The school has excellent sports facilities.",
+          "zh": "设施；设备"
+        },
+        {
+          "en": "They hold a forum on environmental issues every year.",
+          "zh": "论坛；讨论会"
+        },
+        {
+          "en": "He works at a post office. (n.)",
+          "zh": "岗位；邮件；张贴"
+        },
+        {
+          "en": "The book is below the table. (prep.)",
+          "zh": "在…… 下面"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u4-c4",
+      "title": "T1B Unit 4 Class 4",
+      "titleZh": "T1B 第4单元 · Class 4",
+      "words": [
+        {
+          "en": "mythical",
+          "zh": "神话的；虚构的"
+        },
+        {
+          "en": "legend",
+          "zh": "传说；传奇人物"
+        },
+        {
+          "en": "education",
+          "zh": "教育"
+        },
+        {
+          "en": "gold",
+          "zh": "金；金色的"
+        },
+        {
+          "en": "dark",
+          "zh": "黑暗的；深色的；黑暗"
+        },
+        {
+          "en": "undiscovered",
+          "zh": "未被发现的"
+        },
+        {
+          "en": "satellite",
+          "zh": "卫星"
+        },
+        {
+          "en": "remote",
+          "zh": "遥远的；偏僻的；远程"
+        },
+        {
+          "en": "exist",
+          "zh": "存在"
+        },
+        {
+          "en": "continent",
+          "zh": "大陆；洲"
+        },
+        {
+          "en": "whatever",
+          "zh": "无论什么"
+        },
+        {
+          "en": "underneath",
+          "zh": "在…… 下面"
+        },
+        {
+          "en": "philosopher",
+          "zh": "哲学家"
+        },
+        {
+          "en": "attack",
+          "zh": "攻击；袭击"
+        },
+        {
+          "en": "society",
+          "zh": "社会"
+        },
+        {
+          "en": "inspiration",
+          "zh": "灵感；鼓舞人心的"
+        },
+        {
+          "en": "traveller",
+          "zh": "旅行者"
+        },
+        {
+          "en": "adventure",
+          "zh": "冒险；奇遇"
+        },
+        {
+          "en": "underground",
+          "zh": "地下的；地铁"
+        },
+        {
+          "en": "originally",
+          "zh": "最初；原来"
+        },
+        {
+          "en": "ruler",
+          "zh": "统治者；尺子"
+        },
+        {
+          "en": "ancient",
+          "zh": "古代的；古老的"
+        },
+        {
+          "en": "completely",
+          "zh": "完全地；彻底地"
+        },
+        {
+          "en": "waterfront",
+          "zh": "滨水区"
+        },
+        {
+          "en": "hand-glider",
+          "zh": "滑翔机"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "The unicorn is a ____ creature.",
+          "answer": "mythical",
+          "zh": "神话的；虚构的"
+        },
+        {
+          "template": "The story of King Arthur is a famous ____.",
+          "answer": "legend",
+          "zh": "传说；传奇人物"
+        },
+        {
+          "template": "____ is important for everyone's future.",
+          "answer": "education",
+          "zh": "教育"
+        },
+        {
+          "template": "She has a ____ necklace. (adj.)",
+          "answer": "gold",
+          "zh": "金；金色的"
+        },
+        {
+          "template": "It's too ____ in the room. (adj.)",
+          "answer": "dark",
+          "zh": "黑暗的；深色的；黑暗"
+        },
+        {
+          "template": "There are still many ____ places in the world.",
+          "answer": "undiscovered",
+          "zh": "未被发现的"
+        },
+        {
+          "template": "The ____ orbits the Earth.",
+          "answer": "satellite",
+          "zh": "卫星"
+        },
+        {
+          "template": "The village is in a ____ area.",
+          "answer": "remote",
+          "zh": "遥远的；偏僻的；远程"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The unicorn is a mythical creature.",
+          "zh": "神话的；虚构的"
+        },
+        {
+          "en": "The story of King Arthur is a famous legend.",
+          "zh": "传说；传奇人物"
+        },
+        {
+          "en": "Education is important for everyone's future.",
+          "zh": "教育"
+        },
+        {
+          "en": "She has a gold necklace. (adj.)",
+          "zh": "金；金色的"
+        },
+        {
+          "en": "It's too dark in the room. (adj.)",
+          "zh": "黑暗的；深色的；黑暗"
+        },
+        {
+          "en": "There are still many undiscovered places in the world.",
+          "zh": "未被发现的"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u5-c1",
+      "title": "T1B Unit 5 Class 1",
+      "titleZh": "T1B 第5单元 · Class 1",
+      "words": [
+        {
+          "en": "muscle",
+          "zh": "肌肉"
+        },
+        {
+          "en": "thumb",
+          "zh": "拇指"
+        },
+        {
+          "en": "toe",
+          "zh": "脚趾；足尖"
+        },
+        {
+          "en": "bone",
+          "zh": "骨头"
+        },
+        {
+          "en": "adapt",
+          "zh": "适应；改编"
+        },
+        {
+          "en": "expect",
+          "zh": "期待；预期"
+        },
+        {
+          "en": "technology",
+          "zh": "技术；工艺"
+        },
+        {
+          "en": "possibility",
+          "zh": "可能性"
+        },
+        {
+          "en": "centimetre",
+          "zh": "厘米"
+        },
+        {
+          "en": "physical",
+          "zh": "身体的；物理的"
+        },
+        {
+          "en": "already",
+          "zh": "已经"
+        },
+        {
+          "en": "tablet",
+          "zh": "平板电脑；药片"
+        },
+        {
+          "en": "technological",
+          "zh": "技术的"
+        },
+        {
+          "en": "improvement",
+          "zh": "改进；改善"
+        },
+        {
+          "en": "disappear",
+          "zh": "消失；失踪"
+        },
+        {
+          "en": "regular",
+          "zh": "定期的；有规律的"
+        },
+        {
+          "en": "in front of",
+          "zh": "在…… 前面"
+        },
+        {
+          "en": "message",
+          "zh": "信息；消息"
+        },
+        {
+          "en": "keep fit",
+          "zh": "保持健康"
+        },
+        {
+          "en": "take the lift",
+          "zh": "乘电梯"
+        },
+        {
+          "en": "stair",
+          "zh": "楼梯；梯级"
+        },
+        {
+          "en": "prediction",
+          "zh": "预测；预言"
+        },
+        {
+          "en": "transform",
+          "zh": "使改变形态"
+        },
+        {
+          "en": "medicine",
+          "zh": "药；医学"
+        },
+        {
+          "en": "microchip",
+          "zh": "微芯片"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "He exercises to build ____.",
+          "answer": "muscle",
+          "zh": "肌肉"
+        },
+        {
+          "template": "She accidentally hurt her ____.",
+          "answer": "thumb",
+          "zh": "拇指"
+        },
+        {
+          "template": "I stubbed my ____ on the table leg.",
+          "answer": "toe",
+          "zh": "脚趾；足尖"
+        },
+        {
+          "template": "The dog loves chewing on a ____.",
+          "answer": "bone",
+          "zh": "骨头"
+        },
+        {
+          "template": "We need to ____ to the new environment.",
+          "answer": "adapt",
+          "zh": "适应；改编"
+        },
+        {
+          "template": "I ____ to see you soon.",
+          "answer": "expect",
+          "zh": "期待；预期"
+        },
+        {
+          "template": "____ has changed our lives a lot.",
+          "answer": "technology",
+          "zh": "技术；工艺"
+        },
+        {
+          "template": "There is a ____ of rain tomorrow.",
+          "answer": "possibility",
+          "zh": "可能性"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "He exercises to build muscle.",
+          "zh": "肌肉"
+        },
+        {
+          "en": "She accidentally hurt her thumb.",
+          "zh": "拇指"
+        },
+        {
+          "en": "I stubbed my toe on the table leg.",
+          "zh": "脚趾；足尖"
+        },
+        {
+          "en": "The dog loves chewing on a bone.",
+          "zh": "骨头"
+        },
+        {
+          "en": "We need to adapt to the new environment.",
+          "zh": "适应；改编"
+        },
+        {
+          "en": "I expect to see you soon.",
+          "zh": "期待；预期"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u5-c2",
+      "title": "T1B Unit 5 Class 2",
+      "titleZh": "T1B 第5单元 · Class 2",
+      "words": [
+        {
+          "en": "ankle",
+          "zh": "脚踝"
+        },
+        {
+          "en": "elbow",
+          "zh": "肘部"
+        },
+        {
+          "en": "knee",
+          "zh": "膝盖"
+        },
+        {
+          "en": "lip",
+          "zh": "嘴唇"
+        },
+        {
+          "en": "neck",
+          "zh": "脖子"
+        },
+        {
+          "en": "stomach",
+          "zh": "胃；腹部"
+        },
+        {
+          "en": "throat",
+          "zh": "喉咙"
+        },
+        {
+          "en": "tongue",
+          "zh": "舌头"
+        },
+        {
+          "en": "broken",
+          "zh": "破碎的；坏掉的；骨折的"
+        },
+        {
+          "en": "earache",
+          "zh": "耳痛"
+        },
+        {
+          "en": "painful",
+          "zh": "疼痛的"
+        },
+        {
+          "en": "upstairs",
+          "zh": "楼上的（地）"
+        },
+        {
+          "en": "have a rest",
+          "zh": "休息一下"
+        },
+        {
+          "en": "lie down",
+          "zh": "躺下"
+        },
+        {
+          "en": "take a seat",
+          "zh": "坐下"
+        },
+        {
+          "en": "bruised",
+          "zh": "青肿的；瘀伤的"
+        },
+        {
+          "en": "silly",
+          "zh": "愚蠢的；傻的"
+        },
+        {
+          "en": "locker",
+          "zh": "储物柜"
+        },
+        {
+          "en": "painkiller",
+          "zh": "止痛药"
+        },
+        {
+          "en": "connection",
+          "zh": "连接；联系"
+        },
+        {
+          "en": "have a look",
+          "zh": "看一看"
+        },
+        {
+          "en": "take off",
+          "zh": "脱下；起飞"
+        },
+        {
+          "en": "bite",
+          "zh": "咬；咬伤"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "He sprained his ____ while running.",
+          "answer": "ankle",
+          "zh": "脚踝"
+        },
+        {
+          "template": "She rested her ____ on the table.",
+          "answer": "elbow",
+          "zh": "肘部"
+        },
+        {
+          "template": "He fell and hurt his ____.",
+          "answer": "knee",
+          "zh": "膝盖"
+        },
+        {
+          "template": "Her ____s were red like roses.",
+          "answer": "lip",
+          "zh": "嘴唇"
+        },
+        {
+          "template": "He wore a scarf around his ____.",
+          "answer": "neck",
+          "zh": "脖子"
+        },
+        {
+          "template": "I have a ____ache.",
+          "answer": "stomach",
+          "zh": "胃；腹部"
+        },
+        {
+          "template": "My ____ hurts when I swallow.",
+          "answer": "throat",
+          "zh": "喉咙"
+        },
+        {
+          "template": "The cat licked its ____.",
+          "answer": "tongue",
+          "zh": "舌头"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "He sprained his ankle while running.",
+          "zh": "脚踝"
+        },
+        {
+          "en": "She rested her elbow on the table.",
+          "zh": "肘部"
+        },
+        {
+          "en": "He fell and hurt his knee.",
+          "zh": "膝盖"
+        },
+        {
+          "en": "Her lips were red like roses.",
+          "zh": "嘴唇"
+        },
+        {
+          "en": "He wore a scarf around his neck.",
+          "zh": "脖子"
+        },
+        {
+          "en": "I have a stomachache.",
+          "zh": "胃；腹部"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u5-c3",
+      "title": "T1B Unit 5 Class 3",
+      "titleZh": "T1B 第5单元 · Class 3",
+      "words": [
+        {
+          "en": "old wives' tale",
+          "zh": "无稽之谈"
+        },
+        {
+          "en": "carrot",
+          "zh": "胡萝卜"
+        },
+        {
+          "en": "vision",
+          "zh": "视力；视觉；幻象"
+        },
+        {
+          "en": "fish oil",
+          "zh": "鱼油"
+        },
+        {
+          "en": "certain",
+          "zh": "确定的；某一；必然的"
+        },
+        {
+          "en": "nonsense",
+          "zh": "胡说；废话"
+        },
+        {
+          "en": "investigate",
+          "zh": "调查；研究"
+        },
+        {
+          "en": "all the time",
+          "zh": "一直；始终"
+        },
+        {
+          "en": "diet",
+          "zh": "饮食；节食"
+        },
+        {
+          "en": "difference",
+          "zh": "差异；不同之处"
+        },
+        {
+          "en": "medical",
+          "zh": "医学的；医疗的"
+        },
+        {
+          "en": "fall out",
+          "zh": "脱落；争吵；解散"
+        },
+        {
+          "en": "guess",
+          "zh": "猜测；推测"
+        },
+        {
+          "en": "scientists",
+          "zh": "科学家（复数）"
+        },
+        {
+          "en": "primary",
+          "zh": "主要的；初级的；基本"
+        },
+        {
+          "en": "prevent",
+          "zh": "预防；阻止"
+        },
+        {
+          "en": "unfortunately",
+          "zh": "不幸地"
+        },
+        {
+          "en": "prove",
+          "zh": "证明；证实"
+        },
+        {
+          "en": "as soon as",
+          "zh": "一…… 就……"
+        },
+        {
+          "en": "gain",
+          "zh": "获得；增加；收益"
+        },
+        {
+          "en": "researcher",
+          "zh": "研究员；调查者"
+        },
+        {
+          "en": "result",
+          "zh": "结果；成绩；导致"
+        },
+        {
+          "en": "saying",
+          "zh": "谚语；格言；话"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "Cracking your knuckles causes arthritis is an ____.",
+          "answer": "old wives' tale",
+          "zh": "无稽之谈"
+        },
+        {
+          "template": "Rabbit likes to eat ____s.",
+          "answer": "carrot",
+          "zh": "胡萝卜"
+        },
+        {
+          "template": "She has good ____.",
+          "answer": "vision",
+          "zh": "视力；视觉；幻象"
+        },
+        {
+          "template": "Many people take ____ supplements for their health.",
+          "answer": "fish oil",
+          "zh": "鱼油"
+        },
+        {
+          "template": "I'm ____ that he will come.",
+          "answer": "certain",
+          "zh": "确定的；某一；必然的"
+        },
+        {
+          "template": "That's just ____. Don't believe it.",
+          "answer": "nonsense",
+          "zh": "胡说；废话"
+        },
+        {
+          "template": "He studies hard ____.",
+          "answer": "all the time",
+          "zh": "一直；始终"
+        },
+        {
+          "template": "I'm trying to go on a ____ to lose weight. (v.)",
+          "answer": "diet",
+          "zh": "饮食；节食"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Cracking your knuckles causes arthritis is an old wives' tale.",
+          "zh": "无稽之谈"
+        },
+        {
+          "en": "Rabbit likes to eat carrots.",
+          "zh": "胡萝卜"
+        },
+        {
+          "en": "She has good vision.",
+          "zh": "视力；视觉；幻象"
+        },
+        {
+          "en": "Many people take fish oil supplements for their health.",
+          "zh": "鱼油"
+        },
+        {
+          "en": "I'm certain that he will come.",
+          "zh": "确定的；某一；必然的"
+        },
+        {
+          "en": "That's just nonsense. Don't believe it.",
+          "zh": "胡说；废话"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u5-c4",
+      "title": "T1B Unit 5 Class 4",
+      "titleZh": "T1B 第5单元 · Class 4",
+      "words": [
+        {
+          "en": "slip",
+          "zh": "滑倒；溜走；失误"
+        },
+        {
+          "en": "fault",
+          "zh": "错误；故障；过错"
+        },
+        {
+          "en": "Poor thing.",
+          "zh": "可怜的人（或物）"
+        },
+        {
+          "en": "shame",
+          "zh": "羞耻；羞愧；憾事"
+        },
+        {
+          "en": "semi-final",
+          "zh": "半决赛"
+        },
+        {
+          "en": "seriously",
+          "zh": "严重地；认真地；严肃"
+        },
+        {
+          "en": "brilliant",
+          "zh": "杰出的；灿烂的；精彩的"
+        },
+        {
+          "en": "sympathise",
+          "zh": "同情；体谅"
+        },
+        {
+          "en": "deal with",
+          "zh": "处理；应对"
+        },
+        {
+          "en": "give sb a ride",
+          "zh": "让某人搭车"
+        },
+        {
+          "en": "basically",
+          "zh": "基本上；从根本上说"
+        },
+        {
+          "en": "cracked",
+          "zh": "破裂的；有裂缝的"
+        },
+        {
+          "en": "negativity",
+          "zh": "消极性；否定性"
+        },
+        {
+          "en": "stuff",
+          "zh": "东西；材料；填满"
+        },
+        {
+          "en": "argument",
+          "zh": "争论；争吵；论点"
+        },
+        {
+          "en": "totally",
+          "zh": "完全地；总共地"
+        },
+        {
+          "en": "react",
+          "zh": "反应；回应"
+        },
+        {
+          "en": "calmly",
+          "zh": "平静地；冷静地"
+        },
+        {
+          "en": "take a break",
+          "zh": "休息一下"
+        },
+        {
+          "en": "especially",
+          "zh": "尤其；特别"
+        },
+        {
+          "en": "mention",
+          "zh": "提到；提及"
+        },
+        {
+          "en": "go for a walk",
+          "zh": "去散步"
+        },
+        {
+          "en": "possibly",
+          "zh": "可能地；也许"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "Be careful not to ____ on the wet floor.",
+          "answer": "slip",
+          "zh": "滑倒；溜走；失误"
+        },
+        {
+          "template": "It's not my ____ that the machine broke down.",
+          "answer": "fault",
+          "zh": "错误；故障；过错"
+        },
+        {
+          "template": "He felt a sense of ____ for his mistake.",
+          "answer": "shame",
+          "zh": "羞耻；羞愧；憾事"
+        },
+        {
+          "template": "Our team reached the ____ of the competition.",
+          "answer": "semi-final",
+          "zh": "半决赛"
+        },
+        {
+          "template": "He was ____ injured in the accident.",
+          "answer": "seriously",
+          "zh": "严重地；认真地；严肃"
+        },
+        {
+          "template": "She gave a ____ performance on the stage.",
+          "answer": "brilliant",
+          "zh": "杰出的；灿烂的；精彩的"
+        },
+        {
+          "template": "I really ____ with you in this situation.",
+          "answer": "sympathise",
+          "zh": "同情；体谅"
+        },
+        {
+          "template": "He knows how to ____ difficult problems.",
+          "answer": "deal with",
+          "zh": "处理；应对"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Be careful not to slip on the wet floor.",
+          "zh": "滑倒；溜走；失误"
+        },
+        {
+          "en": "It's not my fault that the machine broke down.",
+          "zh": "错误；故障；过错"
+        },
+        {
+          "en": "Poor thing! It looks so tired.",
+          "zh": "可怜的人（或物）"
+        },
+        {
+          "en": "He felt a sense of shame for his mistake.",
+          "zh": "羞耻；羞愧；憾事"
+        },
+        {
+          "en": "Our team reached the semi-final of the competition.",
+          "zh": "半决赛"
+        },
+        {
+          "en": "He was seriously injured in the accident.",
+          "zh": "严重地；认真地；严肃"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u6-c1",
+      "title": "T1B Unit 6 Class 1",
+      "titleZh": "T1B 第6单元 · Class 1",
+      "words": [
+        {
+          "en": "ancestor",
+          "zh": "祖先；祖宗"
+        },
+        {
+          "en": "breaker",
+          "zh": "打破者；破碎机"
+        },
+        {
+          "en": "sponsor",
+          "zh": "赞助者；赞助；发起"
+        },
+        {
+          "en": "investor",
+          "zh": "投资者"
+        },
+        {
+          "en": "average",
+          "zh": "平均的;平均数;平均水平"
+        },
+        {
+          "en": "remote",
+          "zh": "遥远的；遥控器"
+        },
+        {
+          "en": "issue",
+          "zh": "问题；发行物；发布"
+        },
+        {
+          "en": "go for a run",
+          "zh": "去跑步"
+        },
+        {
+          "en": "representative",
+          "zh": "代表；代理人；典型的"
+        },
+        {
+          "en": "institute",
+          "zh": "研究所；建立；设立"
+        },
+        {
+          "en": "tourism",
+          "zh": "旅游业；观光"
+        },
+        {
+          "en": "environment",
+          "zh": "环境；自然环境"
+        },
+        {
+          "en": "organisation",
+          "zh": "组织；机构；团体"
+        },
+        {
+          "en": "adventurer",
+          "zh": "冒险家"
+        },
+        {
+          "en": "conservation",
+          "zh": "保护；保存；节约"
+        },
+        {
+          "en": "geographic",
+          "zh": "地理的；地理学的"
+        },
+        {
+          "en": "microplastics",
+          "zh": "微塑料"
+        },
+        {
+          "en": "curious",
+          "zh": "好奇的"
+        },
+        {
+          "en": "expedition",
+          "zh": "探险；探险队；考察队"
+        },
+        {
+          "en": "broaden",
+          "zh": "拓宽；扩大；变宽"
+        },
+        {
+          "en": "comment",
+          "zh": "评论；发表意见"
+        },
+        {
+          "en": "value",
+          "zh": "价值；价值观；重视；"
+        },
+        {
+          "en": "self-improvement",
+          "zh": "自我提升；自我改进"
+        },
+        {
+          "en": "tourist",
+          "zh": "游客；旅游者"
+        },
+        {
+          "en": "economy",
+          "zh": "经济；经济情况；节约"
+        },
+        {
+          "en": "attractive",
+          "zh": "有吸引力的；迷人的"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "My ____s came from Italy.",
+          "answer": "ancestor",
+          "zh": "祖先；祖宗"
+        },
+        {
+          "template": "The wave ____ protects the coast.",
+          "answer": "breaker",
+          "zh": "打破者；破碎机"
+        },
+        {
+          "template": "The company is a ____ of the event. (n.)",
+          "answer": "sponsor",
+          "zh": "赞助者；赞助；发起"
+        },
+        {
+          "template": "The ____ put a lot of money into the startup.",
+          "answer": "investor",
+          "zh": "投资者"
+        },
+        {
+          "template": "The ____ temperature is 20 degrees. (adj.)",
+          "answer": "average",
+          "zh": "平均的;平均数;平均水平"
+        },
+        {
+          "template": "We live in a ____ village.",
+          "answer": "remote",
+          "zh": "遥远的；遥控器"
+        },
+        {
+          "template": "This is a serious ____.",
+          "answer": "issue",
+          "zh": "问题；发行物；发布"
+        },
+        {
+          "template": "I often ____ in the morning.",
+          "answer": "go for a run",
+          "zh": "去跑步"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "My ancestors came from Italy.",
+          "zh": "祖先；祖宗"
+        },
+        {
+          "en": "The wave breaker protects the coast.",
+          "zh": "打破者；破碎机"
+        },
+        {
+          "en": "The company is a sponsor of the event. (n.)",
+          "zh": "赞助者；赞助；发起"
+        },
+        {
+          "en": "The investor put a lot of money into the startup.",
+          "zh": "投资者"
+        },
+        {
+          "en": "The average temperature is 20 degrees. (adj.)",
+          "zh": "平均的;平均数;平均水平"
+        },
+        {
+          "en": "We live in a remote village.",
+          "zh": "遥远的；遥控器"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u6-c2",
+      "title": "T1B Unit 6 Class 2",
+      "titleZh": "T1B 第6单元 · Class 2",
+      "words": [
+        {
+          "en": "teenager",
+          "zh": "青少年"
+        },
+        {
+          "en": "scarf",
+          "zh": "围巾；披巾；头巾"
+        },
+        {
+          "en": "silent film",
+          "zh": "无声电影"
+        },
+        {
+          "en": "hot curry",
+          "zh": "辣咖喱"
+        },
+        {
+          "en": "tried curry",
+          "zh": "炸咖喱"
+        },
+        {
+          "en": "explore",
+          "zh": "探索；考察；探究"
+        },
+        {
+          "en": "wheel",
+          "zh": "轮；车轮；轮子"
+        },
+        {
+          "en": "thousands of",
+          "zh": "数以千计的；成千上万的"
+        },
+        {
+          "en": "publish",
+          "zh": "出版；发行；发表；公布"
+        },
+        {
+          "en": "magazine",
+          "zh": "杂志；期刊"
+        },
+        {
+          "en": "blog",
+          "zh": "博客；写博客"
+        },
+        {
+          "en": "invite",
+          "zh": "邀请；招待；招致"
+        },
+        {
+          "en": "abroad",
+          "zh": "在国外；到国外"
+        },
+        {
+          "en": "interviewer",
+          "zh": "采访者；面试官"
+        },
+        {
+          "en": "interviewee",
+          "zh": "被采访者；被面试者"
+        },
+        {
+          "en": "celebrate",
+          "zh": "庆祝；庆贺；赞美"
+        },
+        {
+          "en": "tip",
+          "zh": "尖端；小费；指点；建议"
+        },
+        {
+          "en": "beaten track",
+          "zh": "常走的路；常规；惯例"
+        },
+        {
+          "en": "wrap",
+          "zh": "包；缠绕；包装材料"
+        },
+        {
+          "en": "journey",
+          "zh": "旅行；行程"
+        },
+        {
+          "en": "different",
+          "zh": "不同的；有区别的"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "The ____ likes to play basketball.",
+          "answer": "teenager",
+          "zh": "青少年"
+        },
+        {
+          "template": "She wears a beautiful ____ in winter.",
+          "answer": "scarf",
+          "zh": "围巾；披巾；头巾"
+        },
+        {
+          "template": "We watched a ____ last night.",
+          "answer": "silent film",
+          "zh": "无声电影"
+        },
+        {
+          "template": "I like to eat ____ with rice.",
+          "answer": "hot curry",
+          "zh": "辣咖喱"
+        },
+        {
+          "template": "We want to ____ the new city.",
+          "answer": "explore",
+          "zh": "探索；考察；探究"
+        },
+        {
+          "template": "The ____ of the car is broken.",
+          "answer": "wheel",
+          "zh": "轮；车轮；轮子"
+        },
+        {
+          "template": "There are ____ stars in the sky.",
+          "answer": "thousands of",
+          "zh": "数以千计的；成千上万的"
+        },
+        {
+          "template": "The company will ____ a new book next month.",
+          "answer": "publish",
+          "zh": "出版；发行；发表；公布"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The teenager likes to play basketball.",
+          "zh": "青少年"
+        },
+        {
+          "en": "She wears a beautiful scarf in winter.",
+          "zh": "围巾；披巾；头巾"
+        },
+        {
+          "en": "We watched a silent film last night.",
+          "zh": "无声电影"
+        },
+        {
+          "en": "I like to eat hot curry with rice.",
+          "zh": "辣咖喱"
+        },
+        {
+          "en": "I had some fried curry at the restaurant.",
+          "zh": "炸咖喱"
+        },
+        {
+          "en": "We want to explore the new city.",
+          "zh": "探索；考察；探究"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u6-c3",
+      "title": "T1B Unit 6 Class 3",
+      "titleZh": "T1B 第6单元 · Class 3",
+      "words": [
+        {
+          "en": "sign",
+          "zh": "标志；迹象；签名"
+        },
+        {
+          "en": "accident",
+          "zh": "事故；意外"
+        },
+        {
+          "en": "alive",
+          "zh": "活着"
+        },
+        {
+          "en": "outdoor",
+          "zh": "户外的"
+        },
+        {
+          "en": "extremely",
+          "zh": "极度地"
+        },
+        {
+          "en": "anxious",
+          "zh": "焦虑的"
+        },
+        {
+          "en": "explore",
+          "zh": "探索"
+        },
+        {
+          "en": "underground train",
+          "zh": "地铁"
+        },
+        {
+          "en": "scooter",
+          "zh": "滑板车"
+        },
+        {
+          "en": "look forward to",
+          "zh": "期待做某事"
+        },
+        {
+          "en": "abroad",
+          "zh": "外国的"
+        },
+        {
+          "en": "terrify",
+          "zh": "使...害怕"
+        },
+        {
+          "en": "remote",
+          "zh": "遥远的"
+        },
+        {
+          "en": "security",
+          "zh": "安全,保安"
+        },
+        {
+          "en": "virtural reality (VR)",
+          "zh": "虚拟现实"
+        },
+        {
+          "en": "geographical",
+          "zh": "地理的；地理学的"
+        },
+        {
+          "en": "feature",
+          "zh": "特点"
+        },
+        {
+          "en": "comfort",
+          "zh": "舒适，安慰"
+        },
+        {
+          "en": "screenshot",
+          "zh": "截图"
+        },
+        {
+          "en": "exhibition",
+          "zh": "展览，展示"
+        },
+        {
+          "en": "eventually",
+          "zh": "最终地"
+        },
+        {
+          "en": "overcome",
+          "zh": "克服"
+        },
+        {
+          "en": "discover",
+          "zh": "探索，发现"
+        },
+        {
+          "en": "determined",
+          "zh": "有决心的, 决定"
+        },
+        {
+          "en": "flight attendant",
+          "zh": "空中乘务员"
+        },
+        {
+          "en": "tour guide",
+          "zh": "导游"
+        },
+        {
+          "en": "minibus",
+          "zh": "迷你公交车"
+        },
+        {
+          "en": "helicopter",
+          "zh": "直升机"
+        },
+        {
+          "en": "tram",
+          "zh": "有轨电车"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "There is a stop ____ at the corner.",
+          "answer": "sign",
+          "zh": "标志；迹象；签名"
+        },
+        {
+          "template": "A car ____ happened this morning.",
+          "answer": "accident",
+          "zh": "事故；意外"
+        },
+        {
+          "template": "If ye had saved them ____, I would not hurt you.",
+          "answer": "alive",
+          "zh": "活着"
+        },
+        {
+          "template": "I did not take so much ____ activities.",
+          "answer": "outdoor",
+          "zh": "户外的"
+        },
+        {
+          "template": "Air pollution is an ____ serious problem.",
+          "answer": "extremely",
+          "zh": "极度地"
+        },
+        {
+          "template": "I am ____.",
+          "answer": "anxious",
+          "zh": "焦虑的"
+        },
+        {
+          "template": "We knew there was more to ____.",
+          "answer": "explore",
+          "zh": "探索"
+        },
+        {
+          "template": "The ____ takes you right to the heart of Singapore.",
+          "answer": "underground train",
+          "zh": "地铁"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "There is a stop sign at the corner.",
+          "zh": "标志；迹象；签名"
+        },
+        {
+          "en": "A car accident happened this morning.",
+          "zh": "事故；意外"
+        },
+        {
+          "en": "If ye had saved them alive, I would not hurt you.",
+          "zh": "活着"
+        },
+        {
+          "en": "I did not take so much outdoor activities.",
+          "zh": "户外的"
+        },
+        {
+          "en": "Air pollution is an extremely serious problem.",
+          "zh": "极度地"
+        },
+        {
+          "en": "I am anxious.",
+          "zh": "焦虑的"
+        }
+      ]
+    },
+    {
+      "id": "t1b-u6-c4",
+      "title": "T1B Unit 6 Class 4",
+      "titleZh": "T1B 第6单元 · Class 4",
+      "words": [
+        {
+          "en": "narrow",
+          "zh": "狭窄的"
+        },
+        {
+          "en": "rail",
+          "zh": "铁路"
+        },
+        {
+          "en": "track",
+          "zh": "轨道，追踪"
+        },
+        {
+          "en": "get to lessons",
+          "zh": "上课"
+        },
+        {
+          "en": "travel",
+          "zh": "出行，旅行"
+        },
+        {
+          "en": "kilometer",
+          "zh": "千米"
+        },
+        {
+          "en": "donkey",
+          "zh": "驴"
+        },
+        {
+          "en": "community",
+          "zh": "社区；社群"
+        },
+        {
+          "en": "meter/ metre",
+          "zh": "米"
+        },
+        {
+          "en": "wide",
+          "zh": "宽的"
+        },
+        {
+          "en": "on time",
+          "zh": "准时"
+        },
+        {
+          "en": "heavy rain",
+          "zh": "大雨"
+        },
+        {
+          "en": "castle",
+          "zh": "城堡"
+        },
+        {
+          "en": "take a risk",
+          "zh": "冒险"
+        },
+        {
+          "en": "over",
+          "zh": "超过"
+        },
+        {
+          "en": "region",
+          "zh": "区域"
+        },
+        {
+          "en": "tiny",
+          "zh": "微小的"
+        },
+        {
+          "en": "village",
+          "zh": "村庄；乡村"
+        },
+        {
+          "en": "railway",
+          "zh": "铁路"
+        },
+        {
+          "en": "case",
+          "zh": "案例，事例"
+        },
+        {
+          "en": "neighbour",
+          "zh": "邻居"
+        },
+        {
+          "en": "danger",
+          "zh": "危险"
+        },
+        {
+          "en": "decide",
+          "zh": "决定"
+        },
+        {
+          "en": "admire",
+          "zh": "欣赏，钦佩"
+        }
+      ],
+      "fillIns": [
+        {
+          "template": "Students cross ____ bridge.",
+          "answer": "narrow",
+          "zh": "狭窄的"
+        },
+        {
+          "template": "They cross ____ tracks.",
+          "answer": "rail",
+          "zh": "铁路"
+        },
+        {
+          "template": "They cross rail ____s.",
+          "answer": "track",
+          "zh": "轨道，追踪"
+        },
+        {
+          "template": "The ____ on time.",
+          "answer": "get to lessons",
+          "zh": "上课"
+        },
+        {
+          "template": "They ____ a kilometer.",
+          "answer": "travel",
+          "zh": "出行，旅行"
+        },
+        {
+          "template": "This place was in a ____-and-a-half from school.",
+          "answer": "kilometer",
+          "zh": "千米"
+        },
+        {
+          "template": "They took ____ to school.",
+          "answer": "donkey",
+          "zh": "驴"
+        },
+        {
+          "template": "China's Internet ____ caught hold of the matters.",
+          "answer": "community",
+          "zh": "社区；社群"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Students cross narrow bridge.",
+          "zh": "狭窄的"
+        },
+        {
+          "en": "They cross rail tracks.",
+          "zh": "铁路"
+        },
+        {
+          "en": "They cross rail tracks.",
+          "zh": "轨道，追踪"
+        },
+        {
+          "en": "The get to lessons on time.",
+          "zh": "上课"
+        },
+        {
+          "en": "They travel a kilometer.",
+          "zh": "出行，旅行"
+        },
+        {
+          "en": "This place was in a kilometer-and-a-half from school.",
+          "zh": "千米"
+        }
+      ]
+    }
+  ]
+}

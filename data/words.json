@@ -1,0 +1,295 @@
+{
+  "title": "小学英语单词本",
+  "source": "son-english-wordlist.pdf",
+  "units": [
+    {
+      "id": "welcome",
+      "title": "Welcome",
+      "titleZh": "欢迎单元",
+      "words": [
+        { "en": "what", "zh": "什么" },
+        { "en": "your", "zh": "你的，你们的" },
+        { "en": "name", "zh": "名字" },
+        { "en": "have", "zh": "有，拥有" },
+        { "en": "day", "zh": "一天" },
+        { "en": "good", "zh": "好的" },
+        { "en": "morning", "zh": "早晨，上午" },
+        { "en": "stand", "zh": "站立" },
+        { "en": "sit", "zh": "坐" },
+        { "en": "open", "zh": "打开" },
+        { "en": "book", "zh": "书" },
+        { "en": "close", "zh": "合上" },
+        { "en": "say", "zh": "说" },
+        { "en": "read", "zh": "阅读" },
+        { "en": "listen", "zh": "听" },
+        { "en": "write", "zh": "写" }
+      ],
+      "sentences": [
+        { "en": "Good morning!", "zh": "早上好！" },
+        { "en": "What is your name?", "zh": "你叫什么名字？" },
+        { "en": "Open your book.", "zh": "打开你的书。" },
+        { "en": "Please sit down.", "zh": "请坐下。" },
+        { "en": "Listen and write.", "zh": "听一听，写一写。" }
+      ],
+      "fillIns": [
+        { "template": "Good ____!", "answer": "morning", "zh": "早上好！" },
+        { "template": "Open your ____.", "answer": "book", "zh": "打开你的书。" },
+        { "template": "Please ____ down.", "answer": "sit", "zh": "请坐下。" },
+        { "template": "____ and write.", "answer": "Listen", "zh": "听一听，写一写。", "answerNorm": "listen" }
+      ]
+    },
+    {
+      "id": "unit1",
+      "title": "Unit 1",
+      "titleZh": "第1单元",
+      "words": [
+        { "en": "friend", "zh": "朋友" },
+        { "en": "meet", "zh": "认识，结识" },
+        { "en": "play", "zh": "玩，玩耍" },
+        { "en": "happy", "zh": "高兴的，快乐的" },
+        { "en": "new", "zh": "新的" },
+        { "en": "welcome", "zh": "欢迎" },
+        { "en": "everyone", "zh": "每个人，人人" },
+        { "en": "nine", "zh": "九" },
+        { "en": "from", "zh": "从" },
+        { "en": "twin", "zh": "双胞胎中的一个" },
+        { "en": "come", "zh": "来；来到" },
+        { "en": "help", "zh": "帮助，帮忙" },
+        { "en": "here", "zh": "在这里" },
+        { "en": "here you are", "zh": "给你" },
+        { "en": "thank", "zh": "感谢" },
+        { "en": "together", "zh": "一起，一块儿" },
+        { "en": "great", "zh": "极棒的，极好的" },
+        { "en": "song", "zh": "歌曲" },
+        { "en": "dear", "zh": "亲爱的" },
+        { "en": "sing with me", "zh": "和我一起唱歌" },
+        { "en": "know", "zh": "认识" },
+        { "en": "make a poster", "zh": "制作海报" }
+      ],
+      "sentences": [
+        { "en": "I'm Sam. I'm nine. She's Amy.", "zh": "我是 Sam。我九岁了。她是 Amy。" },
+        { "en": "We're from the UK. We're twins.", "zh": "我们来自英国。我们是双胞胎。" },
+        { "en": "He's Daming.", "zh": "他是大明。" }
+      ],
+      "fillIns": [
+        { "template": "I am ____.", "answer": "happy", "zh": "我很高兴。" },
+        { "template": "She is my ____.", "answer": "friend", "zh": "她是我的朋友。" },
+        { "template": "Come and ____!", "answer": "play", "zh": "来玩吧！" },
+        { "template": "We sing a ____ together.", "answer": "song", "zh": "我们一起唱一首歌。" },
+        { "template": "Please ____ me.", "answer": "help", "zh": "请帮帮我。" }
+      ]
+    },
+    {
+      "id": "unit2",
+      "title": "Unit 2",
+      "titleZh": "第2单元",
+      "words": [
+        { "en": "school", "zh": "学校" },
+        { "en": "pen", "zh": "钢笔" },
+        { "en": "pencil", "zh": "铅笔" },
+        { "en": "bag", "zh": "袋，包" },
+        { "en": "for", "zh": "为了" },
+        { "en": "ruler", "zh": "尺子，直尺" },
+        { "en": "this", "zh": "这，这个" },
+        { "en": "in", "zh": "在……里" },
+        { "en": "schoolbag", "zh": "书包" },
+        { "en": "it", "zh": "它" },
+        { "en": "not", "zh": "不，不是" },
+        { "en": "that", "zh": "那，那个" },
+        { "en": "yes", "zh": "是，对" },
+        { "en": "find", "zh": "发现" },
+        { "en": "bye", "zh": "再见，拜拜" },
+        { "en": "kid", "zh": "小孩，儿童" },
+        { "en": "there", "zh": "在那里" },
+        { "en": "please", "zh": "请" },
+        { "en": "back", "zh": "回到原处" },
+        { "en": "look", "zh": "看，瞧，望" },
+        { "en": "take care of", "zh": "照顾，照料" },
+        { "en": "come back", "zh": "回来" }
+      ],
+      "sentences": [
+        { "en": "What's this? It's a book.", "zh": "这是什么？这是一本书。" },
+        { "en": "Is it a pen, too?", "zh": "它也是一支钢笔吗？" },
+        { "en": "No, it isn't. It's a pencil.", "zh": "不，它不是。它是一支铅笔。" }
+      ],
+      "fillIns": [
+        { "template": "This is my ____.", "answer": "pen", "zh": "这是我的钢笔。" },
+        { "template": "I have a ____.", "answer": "pencil", "zh": "我有一支铅笔。" },
+        { "template": "My ____ is blue.", "answer": "schoolbag", "zh": "我的书包是蓝色的。" },
+        { "template": "Look at the ____.", "answer": "ruler", "zh": "看这把尺子。" },
+        { "template": "Please come ____.", "answer": "back", "zh": "请回来。" }
+      ]
+    },
+    {
+      "id": "unit3",
+      "title": "Unit 3",
+      "titleZh": "第3单元",
+      "words": [
+        { "en": "colourful", "zh": "颜色鲜艳的" },
+        { "en": "world", "zh": "世界" },
+        { "en": "umbrella", "zh": "伞，雨伞" },
+        { "en": "clothes", "zh": "衣服" },
+        { "en": "red", "zh": "红色（的）" },
+        { "en": "pink", "zh": "粉色（的）" },
+        { "en": "green", "zh": "绿色（的）" },
+        { "en": "yellow", "zh": "黄色（的）" },
+        { "en": "orange", "zh": "橙色（的）" },
+        { "en": "blue", "zh": "蓝色（的）" },
+        { "en": "want", "zh": "想要" },
+        { "en": "colour", "zh": "颜色" },
+        { "en": "can", "zh": "能，会" },
+        { "en": "see", "zh": "看见，看到" },
+        { "en": "right", "zh": "正确的，对的" },
+        { "en": "first", "zh": "第一的，首先" },
+        { "en": "black", "zh": "黑色（的）" },
+        { "en": "so", "zh": "这么，如此" },
+        { "en": "many", "zh": "许多，大量" },
+        { "en": "picture", "zh": "画，图画" },
+        { "en": "today", "zh": "今天" }
+      ],
+      "sentences": [
+        { "en": "What colour is it? It's red.", "zh": "它是什么颜色？它是红色的。" }
+      ],
+      "fillIns": [
+        { "template": "It is ____.", "answer": "red", "zh": "它是红色的。" },
+        { "template": "I want a blue ____.", "answer": "umbrella", "zh": "我想要一把蓝色的伞。" },
+        { "template": "Look at the ____ picture.", "answer": "colourful", "zh": "看看这幅鲜艳的画。" },
+        { "template": "What ____ is it?", "answer": "colour", "zh": "它是什么颜色？" },
+        { "template": "I can ____ a bird.", "answer": "see", "zh": "我能看见一只鸟。" }
+      ]
+    },
+    {
+      "id": "unit4",
+      "title": "Unit 4",
+      "titleZh": "第4单元",
+      "words": [
+        { "en": "how", "zh": "多少；怎样，如何" },
+        { "en": "bird", "zh": "鸟" },
+        { "en": "one", "zh": "一" },
+        { "en": "two", "zh": "二" },
+        { "en": "little", "zh": "小的" },
+        { "en": "three", "zh": "三" },
+        { "en": "four", "zh": "四" },
+        { "en": "five", "zh": "五" },
+        { "en": "six", "zh": "六" },
+        { "en": "seven", "zh": "七" },
+        { "en": "eight", "zh": "八" },
+        { "en": "nine", "zh": "九" },
+        { "en": "ten", "zh": "十" },
+        { "en": "eleven", "zh": "十一" },
+        { "en": "twelve", "zh": "十二" },
+        { "en": "who", "zh": "谁；什么人" },
+        { "en": "make", "zh": "制作" },
+        { "en": "beautiful", "zh": "美丽的" },
+        { "en": "show", "zh": "给……看" },
+        { "en": "baby", "zh": "幼崽；雏鸟" },
+        { "en": "egg", "zh": "蛋" },
+        { "en": "hungry", "zh": "饥饿的" },
+        { "en": "all", "zh": "全部，所有" },
+        { "en": "count with me", "zh": "和我一起数" },
+        { "en": "all around", "zh": "到处" }
+      ],
+      "sentences": [
+        { "en": "How many ropes? Only one rope!", "zh": "有多少绳子？只有一条绳子！" },
+        { "en": "How many birds can you see?", "zh": "你能看见多少只鸟？" }
+      ],
+      "fillIns": [
+        { "template": "I see ____ birds.", "answer": "three", "zh": "我看见三只鸟。" },
+        { "template": "The little ____ is beautiful.", "answer": "bird", "zh": "这只小鸟很美丽。" },
+        { "template": "How ____ eggs?", "answer": "many", "zh": "有多少个蛋？" },
+        { "template": "I am ____.", "answer": "hungry", "zh": "我饿了。" },
+        { "template": "Count with me: one, ____, three!", "answer": "two", "zh": "和我一起数：一、二、三！" }
+      ]
+    },
+    {
+      "id": "unit5",
+      "title": "Unit 5",
+      "titleZh": "第5单元",
+      "words": [
+        { "en": "family", "zh": "家庭；家人" },
+        { "en": "dad", "zh": "爸爸", "note": "father" },
+        { "en": "mum", "zh": "妈妈", "note": "mother" },
+        { "en": "brother", "zh": "哥哥；弟弟" },
+        { "en": "grandpa", "zh": "祖父；外祖父", "note": "grandfather" },
+        { "en": "grandma", "zh": "祖母；外祖母", "note": "grandmother" },
+        { "en": "but", "zh": "但是，然而" },
+        { "en": "people", "zh": "人；人们" },
+        { "en": "story", "zh": "故事" },
+        { "en": "cap", "zh": "帽子" },
+        { "en": "sister", "zh": "姐姐；妹妹" },
+        { "en": "box", "zh": "盒" },
+        { "en": "worry", "zh": "担心" },
+        { "en": "on", "zh": "在……上面" },
+        { "en": "photo", "zh": "照片，相片" },
+        { "en": "love", "zh": "爱，关爱" },
+        { "en": "daddy", "zh": "爸爸" },
+        { "en": "mummy", "zh": "妈妈" },
+        { "en": "where", "zh": "在哪里" },
+        { "en": "dog", "zh": "狗" },
+        { "en": "come back", "zh": "回来" },
+        { "en": "look at", "zh": "看" },
+        { "en": "Don't worry!", "zh": "别担心！" }
+      ],
+      "sentences": [
+        { "en": "Who is that? That is my grandma.", "zh": "那是谁？那是我的祖母。" },
+        { "en": "Oh, this is my grandma.", "zh": "哦，这是我的祖母。" }
+      ],
+      "fillIns": [
+        { "template": "This is my ____.", "answer": "family", "zh": "这是我的家人。" },
+        { "template": "I love my ____.", "answer": "mum", "zh": "我爱我的妈妈。" },
+        { "template": "Look at the ____.", "answer": "photo", "zh": "看这张照片。" },
+        { "template": "Where is the ____?", "answer": "dog", "zh": "狗在哪里？" },
+        { "template": "Don't ____!", "answer": "worry", "zh": "别担心！" }
+      ]
+    },
+    {
+      "id": "unit6",
+      "title": "Unit 6",
+      "titleZh": "第6单元",
+      "words": [
+        { "en": "sweet", "zh": "甜蜜的" },
+        { "en": "home", "zh": "家" },
+        { "en": "game", "zh": "游戏" },
+        { "en": "room", "zh": "房间" },
+        { "en": "living room", "zh": "起居室" },
+        { "en": "door", "zh": "门" },
+        { "en": "kitchen", "zh": "厨房" },
+        { "en": "bathroom", "zh": "浴室" },
+        { "en": "chair", "zh": "椅子" },
+        { "en": "bedroom", "zh": "卧室" },
+        { "en": "think", "zh": "想，认为" },
+        { "en": "under", "zh": "在……下面" },
+        { "en": "sun", "zh": "太阳" },
+        { "en": "bed", "zh": "床" },
+        { "en": "toy", "zh": "玩具" },
+        { "en": "dining room", "zh": "客厅" },
+        { "en": "table", "zh": "桌子" },
+        { "en": "cat", "zh": "猫" },
+        { "en": "ball", "zh": "球" },
+        { "en": "put", "zh": "放" },
+        { "en": "lucky", "zh": "幸运的" },
+        { "en": "run", "zh": "跑" },
+        { "en": "their", "zh": "他们的" },
+        { "en": "apple", "zh": "苹果" },
+        { "en": "share", "zh": "共用；分享" },
+        { "en": "like", "zh": "喜欢" },
+        { "en": "cooking", "zh": "做饭" },
+        { "en": "on the bed", "zh": "在床上" }
+      ],
+      "sentences": [
+        { "en": "This is my dream home. It is orange.", "zh": "这是我梦想的家。它是桔色的。" },
+        { "en": "She's under the bed.", "zh": "她在床的下面。" },
+        { "en": "Susu is in the box.", "zh": "Susu 在盒子里。" },
+        { "en": "Cooking is fun.", "zh": "做饭是有趣的。" },
+        { "en": "She loves the sun.", "zh": "她喜欢太阳。" }
+      ],
+      "fillIns": [
+        { "template": "This is my ____.", "answer": "home", "zh": "这是我的家。" },
+        { "template": "The cat is under the ____.", "answer": "bed", "zh": "猫在床下面。" },
+        { "template": "I like the ____.", "answer": "kitchen", "zh": "我喜欢厨房。" },
+        { "template": "Put the toy on the ____.", "answer": "table", "zh": "把玩具放在桌子上。" },
+        { "template": "I like ____.", "answer": "cooking", "zh": "我喜欢做饭。" }
+      ]
+    }
+  ]
+}
