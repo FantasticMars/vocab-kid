@@ -31,6 +31,8 @@
   let DATA = null;
   let activeProfileId = null;
   let selectedUnitIds = [];
+  let wordsUnitIds = [];
+  let wordsPhase = "pick"; // pick | list
   let session = null;
   let timerInterval = null;
 
@@ -1245,45 +1247,171 @@
             : "今天也努力了，再练一轮会更熟！";
   }
 
+
+  function escapeRegExp(s) {
+    return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function examplesForWord(unit, w) {
+    const en = w.en;
+    const out = [];
+    const re = new RegExp("\\b" + escapeRegExp(en) + "\\b", "i");
+    const low = en.toLowerCase();
+    (unit.sentences || []).forEach((s) => {
+      if (out.length >= 2) return;
+      if (re.test(s.en) || s.en.toLowerCase().includes(low)) {
+        out.push({ en: s.en, zh: s.zh });
+      }
+    });
+    (unit.fillIns || []).forEach((f) => {
+      if (out.length >= 2) return;
+      const ans = String(f.answer || "");
+      if (ans.toLowerCase() === low || re.test(ans)) {
+        const sentence = String(f.template || "").replace("____", ans);
+        if (sentence) out.push({ en: sentence, zh: f.zh || w.zh });
+      }
+    });
+    if (!out.length) {
+      out.push({
+        en: '"' + en + '" means "' + w.zh + '".',
+        zh: "「" + en + "」的意思是「" + w.zh + "」。",
+      });
+    }
+    if (out.length < 2) {
+      out.push({
+        en: "I can use the word \"" + en + "\".",
+        zh: "我会用单词「" + en + "」（" + w.zh + "）。",
+      });
+    }
+    return out.slice(0, 2);
+  }
+
+  function renderWordsPicker() {
+    const grid = $("#words-unit-grid");
+    if (!grid || !DATA) return;
+    grid.innerHTML = "";
+    DATA.units.forEach((u) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "unit-chip" + (wordsUnitIds.includes(u.id) ? " selected" : "");
+      btn.innerHTML =
+        "<strong>" +
+        escapeHtml(u.title) +
+        "</strong><br><span class=\"small muted\">" +
+        escapeHtml(u.titleZh || "") +
+        " · " +
+        u.words.length +
+        " 词</span>";
+      btn.addEventListener("click", () => {
+        if (wordsUnitIds.includes(u.id)) {
+          wordsUnitIds = wordsUnitIds.filter((x) => x !== u.id);
+        } else {
+          wordsUnitIds = wordsUnitIds.concat(u.id);
+        }
+        renderWordsPicker();
+      });
+      grid.appendChild(btn);
+    });
+    const n = wordsUnitIds.length;
+    const wc = allWordsFrom(wordsUnitIds).length;
+    $("#words-selected-count").textContent = n
+      ? "已选 " + n + " 个单元 · " + wc + " 个单词"
+      : "请先点选单元";
+    $("#btn-words-enter").disabled = n === 0;
+  }
+
   function renderWords() {
+    if (!DATA) return;
+    const pickCard = $("#words-pick-card");
+    const listCard = $("#words-list-card");
+    if (wordsPhase !== "list" || !wordsUnitIds.length) {
+      wordsPhase = "pick";
+      if (pickCard) pickCard.hidden = false;
+      if (listCard) listCard.hidden = true;
+      renderWordsPicker();
+      return;
+    }
+    if (pickCard) pickCard.hidden = true;
+    if (listCard) listCard.hidden = false;
     const host = $("#word-list");
     host.innerHTML = "";
     const progress = getProgress();
-    DATA.units.forEach((u) => {
+    const units = DATA.units.filter((u) => wordsUnitIds.includes(u.id));
+    $("#words-list-hint").textContent =
+      "范围：" +
+      units.map((u) => u.title).join("、") +
+      " · 点英文听发音并展开中文/例句";
+    units.forEach((u) => {
       const h = document.createElement("h3");
       h.className = "unit-section-title";
-      h.textContent = `${u.title} · ${u.titleZh || ""}（${u.words.length}）`;
+      h.textContent = u.title + " · " + (u.titleZh || "") + "（" + u.words.length + "）";
       host.appendChild(h);
       u.words.forEach((w) => {
         const row = document.createElement("div");
         row.className = "word-row";
-        const left = document.createElement("div");
-        left.appendChild(makeClickableEn(w.en, "en"));
+        const top = document.createElement("div");
+        top.className = "word-row-top";
+        top.style.display = "flex";
+        top.style.justifyContent = "space-between";
+        top.style.alignItems = "center";
+        top.style.gap = "10px";
+        const en = document.createElement("div");
+        en.className = "en-only";
+        en.textContent = w.en;
         if (w.note) {
           const note = document.createElement("div");
           note.className = "small muted";
           note.textContent = "also: " + w.note;
-          left.appendChild(note);
+          en.appendChild(note);
         }
-        const zh = document.createElement("div");
-        zh.className = "zh";
-        zh.textContent = w.zh;
-        left.appendChild(zh);
         const right = document.createElement("div");
-        right.appendChild(makeSpeakBtn(w.en));
+        right.style.display = "flex";
+        right.style.alignItems = "center";
+        right.style.gap = "6px";
+        const chev = document.createElement("span");
+        chev.className = "muted small";
+        chev.textContent = "▸";
+        right.appendChild(chev);
         const st = progress[w.en.toLowerCase()];
         if (st && st.known > 0) {
-          const star = document.createElement("div");
+          const star = document.createElement("span");
           star.className = "small";
           star.textContent = "★".repeat(Math.min(3, st.known));
           right.appendChild(star);
         }
-        row.appendChild(left);
-        row.appendChild(right);
+        top.appendChild(en);
+        top.appendChild(right);
+        const expand = document.createElement("div");
+        expand.className = "expand";
+        const zhLine = document.createElement("div");
+        zhLine.className = "zh-line";
+        zhLine.textContent = w.zh;
+        expand.appendChild(zhLine);
+        examplesForWord(u, w).forEach((ex) => {
+          const box = document.createElement("div");
+          box.className = "ex";
+          const ee = document.createElement("div");
+          ee.className = "ex-en";
+          ee.textContent = ex.en;
+          const ez = document.createElement("div");
+          ez.className = "ex-zh";
+          ez.textContent = ex.zh;
+          box.appendChild(ee);
+          box.appendChild(ez);
+          expand.appendChild(box);
+        });
+        row.appendChild(top);
+        row.appendChild(expand);
+        row.addEventListener("click", () => {
+          const open = row.classList.toggle("open");
+          chev.textContent = open ? "▾" : "▸";
+          speak(w.en);
+        });
         host.appendChild(row);
       });
     });
   }
+
 
   function renderProgress() {
     const progress = getProgress();

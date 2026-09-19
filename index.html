@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="单词小达人" />
   <title>单词小达人 · 课本词汇</title>
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body>
   <header class="app-header">
@@ -138,9 +138,25 @@
 
   <!-- WORDS -->
   <section id="screen-words" class="screen">
-    <div class="card">
+    <div class="card" id="words-pick-card">
+      <h2>单词表 · 选范围</h2>
+      <p class="muted small">先选要学习的单元，再进入单词表。</p>
+      <div class="action-row" style="margin-bottom:10px">
+        <button type="button" class="secondary" id="btn-words-select-all">全选</button>
+        <button type="button" class="ghost" id="btn-words-select-none">清空</button>
+      </div>
+      <div class="unit-grid" id="words-unit-grid"></div>
+      <p class="muted" id="words-selected-count" style="margin-top:10px">请先点选单元</p>
+      <div class="action-row">
+        <button type="button" id="btn-words-enter" disabled>进入单词表</button>
+      </div>
+    </div>
+    <div class="card" id="words-list-card" hidden>
+      <div class="action-row" style="margin-bottom:10px">
+        <button type="button" class="ghost" id="btn-words-back">← 重选单元</button>
+      </div>
       <h2>单词表</h2>
-      <p class="muted small">点英文或 🔊 听发音。</p>
+      <p class="muted small" id="words-list-hint">先只显示英文。点单词：听发音，并展开中文和例句。</p>
       <div class="word-list" id="word-list"></div>
     </div>
   </section>
@@ -164,6 +180,6 @@
   </section>
 
   <p class="footer-note">离线可用 · 进度按档案保存在本机 · 适合 iPad</p>
-  <script src="app.js?v=6"></script>
+  <script src="app.js?v=7"></script>
 </body>
 </html>

@@ -308,3 +308,37 @@ img.profile-avatar { padding: 0; border: 3px solid #fff; box-shadow: 0 4px 12px 
   width: 100%;
   min-height: 52px;
 }
+
+
+.word-row {
+  cursor: pointer;
+  user-select: none;
+}
+.word-row .en-only {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.word-row .expand {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #eee;
+  display: none;
+}
+.word-row.open .expand { display: block; }
+.word-row .zh-line {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+.word-row .ex {
+  margin: 6px 0;
+  padding: 8px 10px;
+  background: #f8f9ff;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+.word-row .ex .ex-en { font-weight: 700; }
+.word-row .ex .ex-zh { color: var(--muted); margin-top: 2px; }
+.word-row.open { border-color: var(--primary-soft); background: #fafbff; }
