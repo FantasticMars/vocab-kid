@@ -1492,6 +1492,26 @@
       });
     });
 
+    
+    $("#btn-words-select-all").addEventListener("click", () => {
+      if (!DATA) return;
+      wordsUnitIds = DATA.units.map((u) => u.id);
+      renderWordsPicker();
+    });
+    $("#btn-words-select-none").addEventListener("click", () => {
+      wordsUnitIds = [];
+      renderWordsPicker();
+    });
+    $("#btn-words-enter").addEventListener("click", () => {
+      if (!wordsUnitIds.length) return;
+      wordsPhase = "list";
+      renderWords();
+    });
+    $("#btn-words-back").addEventListener("click", () => {
+      wordsPhase = "pick";
+      renderWords();
+    });
+
     $("#btn-select-all").addEventListener("click", () => {
       selectedUnitIds = DATA.units.map((u) => u.id);
       renderHome();
