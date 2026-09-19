@@ -166,7 +166,7 @@
   }
 
   /**
-   * @returns {{ stars: number, accuracy: number, elapsedSec: number|null, secPerItem: number|null, timed: boolean }}
+   * @returns {Object} stars, accuracy, elapsedSec, secPerItem, timed
    */
   function computeStars({ correct, total, elapsedSec, timed }) {
     const t = Math.max(1, total || 1);
