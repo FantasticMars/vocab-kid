@@ -281,3 +281,30 @@ img.profile-avatar { padding: 0; border: 3px solid #fff; box-shadow: 0 4px 12px 
   border-color: var(--primary); background: #f3f0ff; color: var(--primary);
 }
 #btn-next-q { font-size: 1.15rem; min-height: 56px; }
+
+
+.explain-card {
+  margin: 12px 0 8px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #fff8e7;
+  border: 2px solid #ffeaa7;
+  text-align: left;
+}
+.explain-title {
+  font-weight: 800;
+  color: #d68910;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+.explain-body {
+  color: var(--ink);
+  line-height: 1.55;
+  white-space: pre-wrap;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+.explain-card #btn-explain-ok {
+  width: 100%;
+  min-height: 52px;
+}

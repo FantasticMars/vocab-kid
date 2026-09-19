@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="单词小达人" />
   <title>单词小达人 · 课本词汇</title>
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
 <body>
   <header class="app-header">
@@ -104,6 +104,11 @@
       <div class="progress-bar"><span id="play-progress"></span></div>
       <div id="play-area"></div>
       <div id="feedback" class="feedback"></div>
+      <div id="explain-card" class="explain-card" hidden>
+        <div class="explain-title">💡 小讲解</div>
+        <div id="explain-body" class="explain-body"></div>
+        <button type="button" id="btn-explain-ok">明白了，继续</button>
+      </div>
       <div class="action-row" id="next-row" hidden>
         <button type="button" id="btn-next-q">下一题 →</button>
       </div>
@@ -159,6 +164,6 @@
   </section>
 
   <p class="footer-note">离线可用 · 进度按档案保存在本机 · 适合 iPad</p>
-  <script src="app.js?v=5"></script>
+  <script src="app.js?v=6"></script>
 </body>
 </html>

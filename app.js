@@ -572,6 +572,70 @@
     }, ms);
   }
 
+
+  function findWordByEn(en) {
+    const key = String(en || "").toLowerCase().trim();
+    if (!DATA || !DATA.units) return { en: en, zh: "" };
+    for (const u of DATA.units) {
+      for (const w of u.words || []) {
+        if (String(w.en).toLowerCase() === key) return w;
+      }
+    }
+    return { en: en, zh: "" };
+  }
+
+  function buildExplain(opts) {
+    const en = opts.en || "";
+    const zh = opts.zh || findWordByEn(en).zh || "";
+    const chosen = String(opts.chosen || "").trim();
+    const kind = opts.kind || "";
+    const lines = [];
+    lines.push("正确答案：英文「" + en + "」" + (zh ? "＝「" + zh + "」" : "") + "。");
+    if (chosen && chosen.toLowerCase() !== en.toLowerCase()) {
+      if (kind === "en2zh") {
+        lines.push("你选的「" + chosen + "」不是这个词的意思。记住：" + en + " → " + (zh || "看中文释义") + "。");
+      } else if (kind === "zh2en") {
+        lines.push("你选的「" + chosen + "」不对。看到「" + zh + "」要想起单词 " + en + "。");
+      } else if (kind === "fill") {
+        lines.push("空格里要填「" + en + "」。");
+        if (opts.sentence) lines.push("完整句子：" + opts.sentence);
+      } else if (kind === "spell" || kind === "dictation") {
+        lines.push("你写的是「" + chosen + "」，正确拼写是「" + en + "」。可以按字母再念一遍。");
+      } else {
+        lines.push("你选的是「" + chosen + "」，这次记住正确的「" + en + "」就好。");
+      }
+    } else if (kind === "fill" && opts.sentence) {
+      lines.push("完整句子：" + opts.sentence);
+    }
+    lines.push("点「明白了」听正确发音，再继续下一题～");
+    return lines.join("\n");
+  }
+
+  let explainContinue = null;
+
+  function hideExplain() {
+    const card = $("#explain-card");
+    if (card) card.hidden = true;
+    explainContinue = null;
+  }
+
+  function showExplain(opts, continueTexts) {
+    const card = $("#explain-card");
+    const body = $("#explain-body");
+    if (!card || !body) {
+      advanceAfterSpeech(continueTexts);
+      return;
+    }
+    advanceGen++;
+    hideNextButton();
+    body.textContent = buildExplain(opts);
+    card.hidden = false;
+    explainContinue = function () {
+      hideExplain();
+      advanceAfterSpeech(continueTexts);
+    };
+  }
+
   let advanceGen = 0;
 
   /** Forced minimum speak time from word/char counts (Safari onend is unreliable). */
@@ -648,6 +712,7 @@
 
   function renderQuestion() {
     advanceGen++;
+    hideExplain();
     hideNextButton();
     session.locked = false;
     updatePlayChrome();
@@ -727,7 +792,7 @@
       b.type = "button";
       b.className = "choice";
       b.textContent = zh;
-      b.addEventListener("click", () => onChoice(b, zh === w.zh, w.en, w.zh));
+      b.addEventListener("click", () => onChoice(b, zh === w.zh, w.en, w.zh, "en2zh"));
       choices.appendChild(b);
     });
     host.appendChild(choices);
@@ -754,19 +819,20 @@
       // Plain text — makeClickableEn + speak + advanceAfterSpeech was reading 3x
       b.textContent = en;
       b.addEventListener("click", () => {
-        onChoice(b, en === w.en, w.en, w.zh);
+        onChoice(b, en === w.en, w.en, w.zh, "zh2en");
       });
       choices.appendChild(b);
     });
     host.appendChild(choices);
   }
 
-  function onChoice(btn, ok, enSpeak, zhShow) {
+  function onChoice(btn, ok, enSpeak, zhShow, kind) {
     if (session.locked) return;
     session.locked = true;
     session.answered++;
     const siblings = $$(".choice", btn.parentElement);
     siblings.forEach((b) => (b.disabled = true));
+    const chosen = (btn.textContent || "").trim();
     if (ok) {
       btn.classList.add("correct");
       session.correct++;
@@ -777,15 +843,18 @@
       advanceAfterSpeech(enSpeak);
     } else {
       btn.classList.add("wrong-soft");
-      $("#feedback").textContent = `再想想～答案是「${enSpeak}」：${zhShow}`;
+      $("#feedback").textContent = "再想想～先看下面的小讲解哦";
       $("#feedback").className = "feedback gentle";
       siblings.forEach((b) => {
-        const t = b.textContent.trim();
-        if (t === zhShow || t === enSpeak) b.classList.add("correct");
+        const tx = b.textContent.trim();
+        if (tx === zhShow || tx === enSpeak) b.classList.add("correct");
       });
       markSeen(enSpeak);
       updatePlayChrome();
-      advanceAfterSpeech(enSpeak);
+      showExplain(
+        { kind: kind || "choice", en: enSpeak, zh: zhShow, chosen: chosen },
+        enSpeak
+      );
     }
   }
 
@@ -851,15 +920,27 @@
           $("#feedback").textContent = "填对啦！🌟";
           $("#feedback").className = "feedback good";
           markKnown(f.answer);
+          updatePlayChrome();
+          advanceAfterSpeech([f.answer, full]);
         } else {
           b.classList.add("wrong-soft");
-          $("#feedback").textContent = `没关系，正确是「${f.answer}」`;
+          $("#feedback").textContent = "没关系，先看下面的小讲解～";
           $("#feedback").className = "feedback gentle";
           blank.textContent = f.answer;
           markSeen(f.answer);
+          updatePlayChrome();
+          const winfo = findWordByEn(f.answer);
+          showExplain(
+            {
+              kind: "fill",
+              en: f.answer,
+              zh: f.zh || winfo.zh,
+              chosen: en,
+              sentence: full,
+            },
+            [f.answer, full]
+          );
         }
-        updatePlayChrome();
-        advanceAfterSpeech([f.answer, full]);
       });
       bank.appendChild(b);
     });
@@ -981,17 +1062,22 @@
         $("#feedback").className = "feedback good";
         markKnown(w.en);
         $$(".letter-slot", slots).forEach((s) => s.classList.add("correct"));
+        updatePlayChrome();
+        advanceAfterSpeech(w.en);
       } else {
-        $("#feedback").textContent = `再练练～正确拼写是「${w.en}」`;
+        $("#feedback").textContent = "再练练～先看小讲解";
         $("#feedback").className = "feedback gentle";
         markSeen(w.en);
         $$(".letter-slot", slots).forEach((s, i) => {
           s.textContent = letters[i];
           s.classList.add("wrong-soft");
         });
+        updatePlayChrome();
+        showExplain(
+          { kind: "spell", en: w.en, zh: w.zh, chosen: guess },
+          w.en
+        );
       }
-      updatePlayChrome();
-      advanceAfterSpeech(w.en);
     }
   }
 
@@ -1060,14 +1146,19 @@
         $("#feedback").textContent = "写对啦！✨";
         $("#feedback").className = "feedback good";
         markKnown(w.en);
+        updatePlayChrome();
+        advanceAfterSpeech(w.en);
       } else {
-        $("#feedback").textContent = `没关系，正确拼写是「${w.en}」`;
+        $("#feedback").textContent = "没关系，先看小讲解～";
         $("#feedback").className = "feedback gentle";
         input.value = w.en;
         markSeen(w.en);
+        updatePlayChrome();
+        showExplain(
+          { kind: "dictation", en: w.en, zh: w.zh, chosen: guess },
+          w.en
+        );
       }
-      updatePlayChrome();
-      advanceAfterSpeech(w.en);
     }
   }
 
@@ -1289,6 +1380,32 @@
     $("#btn-start-modes").addEventListener("click", () => {
       $("#modes-card").scrollIntoView({ behavior: "smooth", block: "start" });
     });
+
+    $("#btn-explain-ok").addEventListener("click", () => {
+      if (typeof explainContinue === "function") explainContinue();
+    });
+
+    $("#btn-advance-auto") && $("#btn-advance-auto").addEventListener("click", () => {
+      setAdvanceMode("auto");
+      syncAdvanceToggle();
+    });
+    $("#btn-advance-manual") && $("#btn-advance-manual").addEventListener("click", () => {
+      setAdvanceMode("manual");
+      syncAdvanceToggle();
+    });
+    if ($("#btn-next-q")) {
+      $("#btn-next-q").addEventListener("click", () => {
+        if (!session) return;
+        advanceGen++;
+        hideExplain();
+        hideNextButton();
+        try {
+          if (typeof speechSynthesis !== "undefined") speechSynthesis.cancel();
+        } catch (e) {}
+        session.index++;
+        renderQuestion();
+      });
+    }
 
     $("#btn-quit-play").addEventListener("click", () => {
       if (session && session.answered > 0) finishSession();
