@@ -15,6 +15,8 @@
       avatar: "assets/alex.png",
       blurb: "小学课本 · Welcome + Unit 1–6",
       dataUrl: "data/words.json",
+      hanziUrl: "data/alex-hanzi.json",
+      hanziBlurb: "三年级上册 · 四会生字 + 听写词语",
       css: "alex",
     },
     {
@@ -29,7 +31,9 @@
   ];
 
   let DATA = null;
+  let DATA_PROFILE = null;
   let activeProfileId = null;
+  let activeSubject = null; // "en" | "zh" | null
   let selectedUnitIds = [];
   let wordsUnitIds = [];
   let wordsPhase = "pick"; // pick | list
@@ -401,7 +405,8 @@
       grid.appendChild(btn);
     });
     $("#btn-profile-chip").hidden = true;
-    $("#main-nav").hidden = true;
+    if (window.__zh && window.__zh.leave) window.__zh.leave();
+    setSubjectUI(null);
     showScreen("profiles");
     $("#app-status").textContent = "先选一个小朋友档案";
   }
@@ -415,7 +420,58 @@
     $("#btn-profile-chip").innerHTML = def.avatar
       ? `<img class="profile-chip-av" src="${def.avatar}" alt=""/>${escapeHtml(def.name)} ▾`
       : `${escapeHtml(def.name)} ▾`;
-    $("#main-nav").hidden = false;
+    showSubjectPicker();
+  }
+
+  function setSubjectUI(subj) {
+    activeSubject = subj;
+    $("#main-nav").hidden = subj !== "en";
+    const zn = $("#zh-nav");
+    if (zn) zn.hidden = subj !== "zh";
+    const chip = $("#btn-subject-chip");
+    if (chip) {
+      chip.hidden = !subj;
+      chip.textContent = subj === "zh" ? "🀄 语文 ⇄" : "🔤 英文 ⇄";
+    }
+  }
+
+  function showSubjectPicker() {
+    const def = PROFILE_DEFS.find((p) => p.id === activeProfileId);
+    if (!def) return renderProfileSelect();
+    stopTimer();
+    session = null;
+    try {
+      if (typeof speechSynthesis !== "undefined") speechSynthesis.cancel();
+    } catch (e) {}
+    if (window.__zh && window.__zh.leave) window.__zh.leave();
+    setSubjectUI(null);
+    $("#subject-title").textContent = def.name + "，今天学什么？";
+    const zhBtn = $("#btn-subject-zh");
+    const zhDesc = $("#subject-zh-desc");
+    if (def.hanziUrl) {
+      zhBtn.disabled = false;
+      zhBtn.classList.remove("empty");
+      zhDesc.textContent = (def.hanziBlurb ? def.hanziBlurb + " · " : "") + "生字 · 组词 · 写字 · 听写";
+    } else {
+      zhBtn.disabled = true;
+      zhBtn.classList.add("empty");
+      zhDesc.textContent = "还没有中文字库（请家长添加后再来）";
+    }
+    showScreen("subject");
+    $("#app-status").textContent = def.name + " · 选科目";
+  }
+
+  function enterEnglish() {
+    const def = PROFILE_DEFS.find((p) => p.id === activeProfileId);
+    if (!def) return;
+    setSubjectUI("en");
+    if (DATA && DATA_PROFILE === def.id) {
+      showScreen("home");
+      renderHome();
+      const n0 = DATA.units.reduce((a, u) => a + u.words.length, 0);
+      $("#app-status").textContent = `${def.name} · 英文 · ${DATA.units.length} 单元 · ${n0} 词`;
+      return;
+    }
     $("#app-status").textContent = "加载词表…";
     fetch(def.dataUrl)
       .then((r) => {
@@ -424,17 +480,29 @@
       })
       .then((data) => {
         DATA = data;
+        DATA_PROFILE = def.id;
         selectedUnitIds = data.units[0] ? [data.units[0].id] : [];
+        wordsUnitIds = [];
+        wordsPhase = "pick";
         showScreen("home");
         renderHome();
         const n = data.units.reduce((a, u) => a + u.words.length, 0);
-        $("#app-status").textContent = `${def.name} · ${data.units.length} 单元 · ${n} 词`;
+        $("#app-status").textContent = `${def.name} · 英文 · ${data.units.length} 单元 · ${n} 词`;
       })
       .catch((err) => {
         console.error(err);
         $("#app-status").textContent = "词表加载失败";
         $("#app-status").style.color = "#d63031";
       });
+  }
+
+  function enterChinese() {
+    const def = PROFILE_DEFS.find((p) => p.id === activeProfileId);
+    if (!def || !def.hanziUrl) return;
+    stopTimer();
+    session = null;
+    setSubjectUI("zh");
+    if (window.__zh && window.__zh.enter) window.__zh.enter(def);
   }
 
   function renderHome() {
@@ -1470,6 +1538,9 @@
   }
 
   function bindUI() {
+    $("#btn-subject-chip").addEventListener("click", () => showSubjectPicker());
+    $("#btn-subject-en").addEventListener("click", () => enterEnglish());
+    $("#btn-subject-zh").addEventListener("click", () => enterChinese());
     $("#btn-profile-chip").addEventListener("click", () => {
       stopTimer();
       session = null;
@@ -1521,7 +1592,7 @@
       renderHome();
     });
 
-    $$(".mode-btn").forEach((b) => {
+    $$(".mode-btn[data-mode]").forEach((b) => {
       b.addEventListener("click", () => startSession(b.dataset.mode));
     });
     $("#btn-guided").addEventListener("click", () => startSession("guided"));
@@ -1584,7 +1655,24 @@
   }
 
   // expose for quick tests
-  window.__vocabKid = { computeStars, accuracyCap, speedShave, PROFILE_DEFS };
+  window.__vocabKid = {
+    computeStars,
+    accuracyCap,
+    speedShave,
+    PROFILE_DEFS,
+    // shared helpers for the 语文 module (hanzi.js)
+    showScreen,
+    renderStarRow,
+    formatMMSS,
+    starsLabel,
+    shuffle,
+    escapeHtml,
+    updateProfile,
+    profileStore,
+    getAdvanceMode,
+    showSubjectPicker,
+    getActiveProfileId: () => activeProfileId,
+  };
 
   function boot() {
     bindUI();

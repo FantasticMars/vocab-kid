@@ -31,3 +31,13 @@ python3 -m http.server 8765
 
 - `vocabKid.activeProfile` — 当前档案 id（`alex` / `emma`）
 - `vocabKid.profiles.v1` — 各档案的 progress / history / bests（听写 PB）
+
+## 中文 语文（v8）
+- 选档案后先选「英文 English」或「中文 语文」（只有有字库的档案才能进语文；Emma 显示空状态）。
+- 字库：`data/alex-hanzi.json`（三年级上册，按单元/课：四会生字 250 个 + 看拼音写词语 451 个）。
+  源数据与生成脚本在 `tools/hanzi/`（`python3 build.py`，需要 `pip install pypinyin`）。
+- 写字用 [Hanzi Writer](https://hanziwriter.org)（MIT，`lib/hanzi-writer.min.js` v3.7.3），
+  笔画数据来自 hanzi-writer-data（Make Me a Hanzi，Arphic Public License，见 `data/hanzi/ARPHICPL.TXT`），
+  已放在 `data/hanzi/<字>.json`，不依赖 CDN。
+- 模式：认字卡、读音、组词、选词填空、描红、默写、听写挑战（计时+最好成绩）、错字复习。
+- 语文进度保存在同一个 localStorage 档案下的 `hanzi` 字段，与英文进度互不影响。

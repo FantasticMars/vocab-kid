@@ -1,0 +1,7960 @@
+{
+ "subject": "语文",
+ "book": "部编版 三年级上册（2024新版）",
+ "source": "四会生字组词课课贴 + 基础字词每日一练（看拼音写词语）",
+ "units": [
+  {
+   "id": "u1",
+   "title": "第一单元",
+   "lessons": [
+    {
+     "id": "L1",
+     "title": "第1课 大青树下的小学",
+     "chars": [
+      {
+       "char": "坡",
+       "pinyin": "pō",
+       "radical": "土",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "山坡",
+         "py": "shān pō"
+        },
+        {
+         "w": "斜坡",
+         "py": "xié pō"
+        },
+        {
+         "w": "坡度",
+         "py": "pō dù"
+        }
+       ],
+       "sentence": "小山坡上开满了野花。",
+       "sentenceWord": "山坡"
+      },
+      {
+       "char": "球",
+       "pinyin": "qiú",
+       "radical": "王",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "足球",
+         "py": "zú qiú"
+        },
+        {
+         "w": "篮球",
+         "py": "lán qiú"
+        },
+        {
+         "w": "地球",
+         "py": "dì qiú"
+        }
+       ],
+       "sentence": "下课了，我们在操场上踢足球。",
+       "sentenceWord": "足球"
+      },
+      {
+       "char": "招",
+       "pinyin": "zhāo",
+       "radical": "扌",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "招呼",
+         "py": "zhāo hu"
+        },
+        {
+         "w": "招手",
+         "py": "zhāo shǒu"
+        },
+        {
+         "w": "招生",
+         "py": "zhāo shēng"
+        }
+       ],
+       "sentence": "见到老师，我主动打招呼。",
+       "sentenceWord": "招呼"
+      },
+      {
+       "char": "呼",
+       "pinyin": "hū",
+       "radical": "口",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "招呼",
+         "py": "zhāo hu"
+        },
+        {
+         "w": "呼唤",
+         "py": "hū huàn"
+        },
+        {
+         "w": "呼喊",
+         "py": "hū hǎn"
+        }
+       ],
+       "sentence": "妈妈在门口呼唤我回家吃饭。",
+       "sentenceWord": "呼唤"
+      },
+      {
+       "char": "飘",
+       "pinyin": "piāo",
+       "radical": "风",
+       "strokes": 15,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "飘扬",
+         "py": "piāo yáng"
+        },
+        {
+         "w": "飘动",
+         "py": "piāo dòng"
+        },
+        {
+         "w": "飘带",
+         "py": "piāo dài"
+        }
+       ],
+       "sentence": "五星红旗在空中高高飘扬。",
+       "sentenceWord": "飘扬"
+      },
+      {
+       "char": "扬",
+       "pinyin": "yáng",
+       "radical": "扌",
+       "strokes": 6,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "飘扬",
+         "py": "piāo yáng"
+        },
+        {
+         "w": "飞扬",
+         "py": "fēi yáng"
+        },
+        {
+         "w": "扬起",
+         "py": "yáng qǐ"
+        }
+       ],
+       "sentence": "风一吹，地上扬起了一片尘土。",
+       "sentenceWord": "扬起"
+      },
+      {
+       "char": "读",
+       "pinyin": "dú",
+       "radical": "讠",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "读书",
+         "py": "dú shū"
+        },
+        {
+         "w": "阅读",
+         "py": "yuè dú"
+        },
+        {
+         "w": "朗读",
+         "py": "lǎng dú"
+        },
+        {
+         "w": "读本",
+         "py": "dú běn"
+        }
+       ],
+       "sentence": "我每天晚上都读书二十分钟。",
+       "sentenceWord": "读书"
+      },
+      {
+       "char": "热",
+       "pinyin": "rè",
+       "radical": "灬",
+       "strokes": 10,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "热闹",
+         "py": "rè nao"
+        },
+        {
+         "w": "热情",
+         "py": "rè qíng"
+        },
+        {
+         "w": "热水",
+         "py": "rè shuǐ"
+        },
+        {
+         "w": "热身",
+         "py": "rè shēn"
+        }
+       ],
+       "sentence": "过年的时候，街上特别热闹。",
+       "sentenceWord": "热闹"
+      },
+      {
+       "char": "闹",
+       "pinyin": "nào",
+       "radical": "门",
+       "strokes": 8,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "热闹",
+         "py": "rè nao"
+        },
+        {
+         "w": "吵闹",
+         "py": "chǎo nào"
+        },
+        {
+         "w": "闹钟",
+         "py": "nào zhōng"
+        }
+       ],
+       "sentence": "闹钟一响，我就起床了。",
+       "sentenceWord": "闹钟"
+      },
+      {
+       "char": "粗",
+       "pinyin": "cū",
+       "radical": "米",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "粗壮",
+         "py": "cū zhuàng"
+        },
+        {
+         "w": "粗心",
+         "py": "cū xīn"
+        },
+        {
+         "w": "粗细",
+         "py": "cū xì"
+        }
+       ],
+       "sentence": "大树的树干很粗壮。",
+       "sentenceWord": "粗壮"
+      },
+      {
+       "char": "壮",
+       "pinyin": "zhuàng",
+       "radical": "士",
+       "strokes": 6,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "粗壮",
+         "py": "cū zhuàng"
+        },
+        {
+         "w": "壮大",
+         "py": "zhuàng dà"
+        },
+        {
+         "w": "强壮",
+         "py": "qiáng zhuàng"
+        }
+       ],
+       "sentence": "多运动能让身体更强壮。",
+       "sentenceWord": "强壮"
+      },
+      {
+       "char": "洁",
+       "pinyin": "jié",
+       "radical": "氵",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "洁白",
+         "py": "jié bái"
+        },
+        {
+         "w": "清洁",
+         "py": "qīng jié"
+        },
+        {
+         "w": "整洁",
+         "py": "zhěng jié"
+        }
+       ],
+       "sentence": "我的房间收拾得干干净净，很整洁。",
+       "sentenceWord": "整洁"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "粗壮",
+       "py": "cū zhuàng"
+      },
+      {
+       "w": "读本",
+       "py": "dú běn"
+      },
+      {
+       "w": "山坡",
+       "py": "shān pō"
+      },
+      {
+       "w": "足球",
+       "py": "zú qiú"
+      },
+      {
+       "w": "飘扬",
+       "py": "piāo yáng"
+      },
+      {
+       "w": "飘带",
+       "py": "piāo dài"
+      },
+      {
+       "w": "热闹",
+       "py": "rè nao"
+      },
+      {
+       "w": "读书",
+       "py": "dú shū"
+      },
+      {
+       "w": "热身",
+       "py": "rè shēn"
+      },
+      {
+       "w": "吵闹",
+       "py": "chǎo nào"
+      },
+      {
+       "w": "地球",
+       "py": "dì qiú"
+      },
+      {
+       "w": "呼叫",
+       "py": "hū jiào"
+      },
+      {
+       "w": "学校",
+       "py": "xué xiào"
+      },
+      {
+       "w": "课文",
+       "py": "kè wén"
+      },
+      {
+       "w": "招呼",
+       "py": "zhāo hu"
+      }
+     ]
+    },
+    {
+     "id": "L2",
+     "title": "第2课 花的学校",
+     "chars": [
+      {
+       "char": "轰",
+       "pinyin": "hōng",
+       "radical": "车",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "轰响",
+         "py": "hōng xiǎng"
+        },
+        {
+         "w": "轰鸣",
+         "py": "hōng míng"
+        },
+        {
+         "w": "轰隆",
+         "py": "hōng lōng"
+        },
+        {
+         "w": "轰然",
+         "py": "hōng rán"
+        }
+       ],
+       "sentence": "天空中轰隆一声，打雷了。",
+       "sentenceWord": "轰隆"
+      },
+      {
+       "char": "湿",
+       "pinyin": "shī",
+       "radical": "氵",
+       "strokes": 12,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "湿润",
+         "py": "shī rùn"
+        },
+        {
+         "w": "潮湿",
+         "py": "cháo shī"
+        },
+        {
+         "w": "湿气",
+         "py": "shī qì"
+        }
+       ],
+       "sentence": "下过雨，泥土变得很湿润。",
+       "sentenceWord": "湿润"
+      },
+      {
+       "char": "润",
+       "pinyin": "rùn",
+       "radical": "氵",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "湿润",
+         "py": "shī rùn"
+        },
+        {
+         "w": "滋润",
+         "py": "zī rùn"
+        },
+        {
+         "w": "红润",
+         "py": "hóng rùn"
+        }
+       ],
+       "sentence": "跑完步，他的脸红润润的。",
+       "sentenceWord": "红润"
+      },
+      {
+       "char": "笛",
+       "pinyin": "dí",
+       "radical": "⺮",
+       "strokes": 11,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "笛子",
+         "py": "dí zi"
+        },
+        {
+         "w": "竹笛",
+         "py": "zhú dí"
+        },
+        {
+         "w": "风笛",
+         "py": "fēng dí"
+        },
+        {
+         "w": "笛声",
+         "py": "dí shēng"
+        }
+       ],
+       "sentence": "爷爷会吹好听的竹笛。",
+       "sentenceWord": "竹笛"
+      },
+      {
+       "char": "狂",
+       "pinyin": "kuáng",
+       "radical": "犭",
+       "strokes": 7,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "狂风",
+         "py": "kuáng fēng"
+        },
+        {
+         "w": "狂欢",
+         "py": "kuáng huān"
+        },
+        {
+         "w": "疯狂",
+         "py": "fēng kuáng"
+        }
+       ],
+       "sentence": "狂风吹得树枝左右摇摆。",
+       "sentenceWord": "狂风"
+      },
+      {
+       "char": "功",
+       "pinyin": "gōng",
+       "radical": "力",
+       "strokes": 5,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "成功",
+         "py": "chéng gōng"
+        },
+        {
+         "w": "功夫",
+         "py": "gōng fu"
+        },
+        {
+         "w": "用功",
+         "py": "yòng gōng"
+        },
+        {
+         "w": "功劳",
+         "py": "gōng láo"
+        }
+       ],
+       "sentence": "哥哥学习很用功。",
+       "sentenceWord": "用功"
+      },
+      {
+       "char": "罚",
+       "pinyin": "fá",
+       "radical": "罒",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "处罚",
+         "py": "chǔ fá"
+        },
+        {
+         "w": "罚站",
+         "py": "fá zhàn"
+        },
+        {
+         "w": "罚球",
+         "py": "fá qiú"
+        }
+       ],
+       "sentence": "他犯规了，被罚站了一会儿。",
+       "sentenceWord": "罚站"
+      },
+      {
+       "char": "互",
+       "pinyin": "hù",
+       "radical": "二",
+       "strokes": 4,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "互相",
+         "py": "hù xiāng"
+        },
+        {
+         "w": "互动",
+         "py": "hù dòng"
+        },
+        {
+         "w": "互助",
+         "py": "hù zhù"
+        }
+       ],
+       "sentence": "同学们要互相帮助。",
+       "sentenceWord": "互相"
+      },
+      {
+       "char": "碰",
+       "pinyin": "pèng",
+       "radical": "石",
+       "strokes": 13,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "碰撞",
+         "py": "pèng zhuàng"
+        },
+        {
+         "w": "碰到",
+         "py": "pèng dào"
+        },
+        {
+         "w": "碰见",
+         "py": "pèng jiàn"
+        }
+       ],
+       "sentence": "我在路上碰见了好朋友。",
+       "sentenceWord": "碰见"
+      },
+      {
+       "char": "黄",
+       "pinyin": "huáng",
+       "radical": "黄",
+       "strokes": 11,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "黄色",
+         "py": "huáng sè"
+        },
+        {
+         "w": "金黄",
+         "py": "jīn huáng"
+        },
+        {
+         "w": "黄瓜",
+         "py": "huáng guā"
+        },
+        {
+         "w": "黄河",
+         "py": "huáng hé"
+        }
+       ],
+       "sentence": "秋天，稻田一片金黄。",
+       "sentenceWord": "金黄"
+      },
+      {
+       "char": "急",
+       "pinyin": "jí",
+       "radical": "心",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "着急",
+         "py": "zháo jí"
+        },
+        {
+         "w": "急忙",
+         "py": "jí máng"
+        },
+        {
+         "w": "紧急",
+         "py": "jǐn jí"
+        },
+        {
+         "w": "急急忙忙",
+         "py": "jí jí máng máng"
+        }
+       ],
+       "sentence": "他急急忙忙地跑向校门。",
+       "sentenceWord": "急急忙忙"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "轰然",
+       "py": "hōng rán"
+      },
+      {
+       "w": "着急",
+       "py": "zháo jí"
+      },
+      {
+       "w": "黄瓜",
+       "py": "huáng guā"
+      },
+      {
+       "w": "红润",
+       "py": "hóng rùn"
+      },
+      {
+       "w": "风笛",
+       "py": "fēng dí"
+      },
+      {
+       "w": "狂欢",
+       "py": "kuáng huān"
+      },
+      {
+       "w": "觉得",
+       "py": "jué de"
+      },
+      {
+       "w": "处罚",
+       "py": "chǔ fá",
+       "given": [
+        0
+       ]
+      },
+      {
+       "w": "互动",
+       "py": "hù dòng"
+      },
+      {
+       "w": "阵雨",
+       "py": "zhèn yǔ"
+      },
+      {
+       "w": "金黄",
+       "py": "jīn huáng"
+      },
+      {
+       "w": "碰撞",
+       "py": "pèng zhuàng",
+       "given": [
+        1
+       ]
+      },
+      {
+       "w": "碰见",
+       "py": "pèng jiàn"
+      },
+      {
+       "w": "急急忙忙",
+       "py": "jí jí máng máng"
+      }
+     ]
+    },
+    {
+     "id": "L3",
+     "title": "第3课* 不懂就要问",
+     "chars": [],
+     "tingxie": [
+      {
+       "w": "读书",
+       "py": "dú shū"
+      },
+      {
+       "w": "唱歌",
+       "py": "chàng gē"
+      },
+      {
+       "w": "意思",
+       "py": "yì si"
+      },
+      {
+       "w": "值得",
+       "py": "zhí dé"
+      },
+      {
+       "w": "点头",
+       "py": "diǎn tóu"
+      },
+      {
+       "w": "座位",
+       "py": "zuò wèi"
+      },
+      {
+       "w": "道理",
+       "py": "dào lǐ"
+      },
+      {
+       "w": "自然",
+       "py": "zì rán"
+      },
+      {
+       "w": "鸦雀无声",
+       "py": "yā què wú shēng",
+       "given": [
+        0,
+        1
+       ]
+      },
+      {
+       "w": "知道",
+       "py": "zhī dào"
+      },
+      {
+       "w": "认真",
+       "py": "rèn zhēn"
+      },
+      {
+       "w": "从来",
+       "py": "cóng lái"
+      },
+      {
+       "w": "一字不漏",
+       "py": "yí zì bú lòu",
+       "given": [
+        3
+       ]
+      }
+     ]
+    },
+    {
+     "id": "Y1",
+     "title": "语文园地一",
+     "chars": [],
+     "tingxie": [
+      {
+       "w": "热闹",
+       "py": "rè nao"
+      },
+      {
+       "w": "飘扬",
+       "py": "piāo yáng"
+      },
+      {
+       "w": "粗壮",
+       "py": "cū zhuàng"
+      },
+      {
+       "w": "洁白",
+       "py": "jié bái"
+      },
+      {
+       "w": "招呼",
+       "py": "zhāo hu"
+      },
+      {
+       "w": "轰响",
+       "py": "hōng xiǎng"
+      },
+      {
+       "w": "湿润",
+       "py": "shī rùn"
+      },
+      {
+       "w": "风笛",
+       "py": "fēng dí"
+      },
+      {
+       "w": "狂欢",
+       "py": "kuáng huān"
+      },
+      {
+       "w": "用功",
+       "py": "yòng gōng"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "第二单元",
+   "lessons": [
+    {
+     "id": "L4",
+     "title": "第4课 古诗三首",
+     "chars": [
+      {
+       "char": "庭",
+       "pinyin": "tíng",
+       "radical": "广",
+       "strokes": 9,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "家庭",
+         "py": "jiā tíng"
+        },
+        {
+         "w": "庭院",
+         "py": "tíng yuàn"
+        },
+        {
+         "w": "法庭",
+         "py": "fǎ tíng"
+        }
+       ],
+       "sentence": "我有一个幸福的家庭。",
+       "sentenceWord": "家庭"
+      },
+      {
+       "char": "相",
+       "pinyin": "xiāng",
+       "radical": "木",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "互相",
+         "py": "hù xiāng"
+        },
+        {
+         "w": "相信",
+         "py": "xiāng xìn"
+        },
+        {
+         "w": "相同",
+         "py": "xiāng tóng"
+        },
+        {
+         "w": "相互",
+         "py": "xiāng hù"
+        }
+       ],
+       "sentence": "我相信自己一定能做到。",
+       "sentenceWord": "相信"
+      },
+      {
+       "char": "未",
+       "pinyin": "wèi",
+       "radical": "木",
+       "strokes": 5,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "未来",
+         "py": "wèi lái"
+        },
+        {
+         "w": "未知",
+         "py": "wèi zhī"
+        },
+        {
+         "w": "未必",
+         "py": "wèi bì"
+        }
+       ],
+       "sentence": "我们是祖国的未来。",
+       "sentenceWord": "未来"
+      },
+      {
+       "char": "寒",
+       "pinyin": "hán",
+       "radical": "宀",
+       "strokes": 12,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "寒冷",
+         "py": "hán lěng"
+        },
+        {
+         "w": "寒冬",
+         "py": "hán dōng"
+        },
+        {
+         "w": "严寒",
+         "py": "yán hán"
+        },
+        {
+         "w": "寒假",
+         "py": "hán jià"
+        }
+       ],
+       "sentence": "寒假里，我和爸爸去堆雪人。",
+       "sentenceWord": "寒假"
+      },
+      {
+       "char": "径",
+       "pinyin": "jìng",
+       "radical": "彳",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "小径",
+         "py": "xiǎo jìng"
+        },
+        {
+         "w": "路径",
+         "py": "lù jìng"
+        },
+        {
+         "w": "直径",
+         "py": "zhí jìng"
+        }
+       ],
+       "sentence": "一条小径通向树林深处。",
+       "sentenceWord": "小径"
+      },
+      {
+       "char": "斜",
+       "pinyin": "xié",
+       "radical": "斗",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "倾斜",
+         "py": "qīng xié"
+        },
+        {
+         "w": "斜线",
+         "py": "xié xiàn"
+        },
+        {
+         "w": "斜坡",
+         "py": "xié pō"
+        },
+        {
+         "w": "斜阳",
+         "py": "xié yáng"
+        }
+       ],
+       "sentence": "小狗顺着斜坡跑了下去。",
+       "sentenceWord": "斜坡"
+      },
+      {
+       "char": "枫",
+       "pinyin": "fēng",
+       "radical": "木",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "枫叶",
+         "py": "fēng yè"
+        },
+        {
+         "w": "枫树",
+         "py": "fēng shù"
+        },
+        {
+         "w": "枫林",
+         "py": "fēng lín"
+        }
+       ],
+       "sentence": "秋天，枫叶变得红红的。",
+       "sentenceWord": "枫叶"
+      },
+      {
+       "char": "霜",
+       "pinyin": "shuāng",
+       "radical": "雨",
+       "strokes": 17,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "白霜",
+         "py": "bái shuāng"
+        },
+        {
+         "w": "霜雪",
+         "py": "shuāng xuě"
+        },
+        {
+         "w": "霜降",
+         "py": "shuāng jiàng"
+        },
+        {
+         "w": "风霜",
+         "py": "fēng shuāng"
+        }
+       ],
+       "sentence": "秋天的早上，草地上结了一层白霜。",
+       "sentenceWord": "白霜"
+      },
+      {
+       "char": "挑",
+       "pinyin": "tiǎo",
+       "radical": "扌",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "挑战",
+         "py": "tiǎo zhàn"
+        },
+        {
+         "w": "挑明",
+         "py": "tiǎo míng"
+        },
+        {
+         "w": "挑灯",
+         "py": "tiǎo dēng"
+        }
+       ],
+       "sentence": "我要挑战自己，跳绳跳一百下。",
+       "sentenceWord": "挑战"
+      },
+      {
+       "char": "深",
+       "pinyin": "shēn",
+       "radical": "氵",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "深入",
+         "py": "shēn rù"
+        },
+        {
+         "w": "深浅",
+         "py": "shēn qiǎn"
+        },
+        {
+         "w": "深夜",
+         "py": "shēn yè"
+        },
+        {
+         "w": "深厚",
+         "py": "shēn hòu"
+        }
+       ],
+       "sentence": "小河的深浅不一样，不要一个人下水。",
+       "sentenceWord": "深浅"
+      },
+      {
+       "char": "落",
+       "pinyin": "luò",
+       "radical": "艹",
+       "strokes": 12,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "落下",
+         "py": "luò xià"
+        },
+        {
+         "w": "落叶",
+         "py": "luò yè"
+        },
+        {
+         "w": "降落",
+         "py": "jiàng luò"
+        },
+        {
+         "w": "角落",
+         "py": "jiǎo luò"
+        }
+       ],
+       "sentence": "秋风一吹，树上的落叶飘了下来。",
+       "sentenceWord": "落叶"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "寒冷",
+       "py": "hán lěng"
+      },
+      {
+       "w": "枫叶",
+       "py": "fēng yè"
+      },
+      {
+       "w": "家庭",
+       "py": "jiā tíng"
+      },
+      {
+       "w": "相互",
+       "py": "xiāng hù"
+      },
+      {
+       "w": "路径",
+       "py": "lù jìng"
+      },
+      {
+       "w": "未来",
+       "py": "wèi lái"
+      },
+      {
+       "w": "角落",
+       "py": "jiǎo luò"
+      },
+      {
+       "w": "深入",
+       "py": "shēn rù"
+      },
+      {
+       "w": "风霜",
+       "py": "fēng shuāng"
+      },
+      {
+       "w": "斜坡",
+       "py": "xié pō"
+      },
+      {
+       "w": "挑明",
+       "py": "tiǎo míng"
+      },
+      {
+       "w": "霜雪",
+       "py": "shuāng xuě"
+      },
+      {
+       "w": "斜阳",
+       "py": "xié yáng"
+      },
+      {
+       "w": "寒冬",
+       "py": "hán dōng"
+      },
+      {
+       "w": "未知",
+       "py": "wèi zhī"
+      }
+     ]
+    },
+    {
+     "id": "L5",
+     "title": "第5课 铺满金色巴掌的水泥道",
+     "chars": [
+      {
+       "char": "朗",
+       "pinyin": "lǎng",
+       "radical": "月",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "晴朗",
+         "py": "qíng lǎng"
+        },
+        {
+         "w": "朗读",
+         "py": "lǎng dú"
+        },
+        {
+         "w": "开朗",
+         "py": "kāi lǎng"
+        }
+       ],
+       "sentence": "今天天气晴朗，我们去公园玩。",
+       "sentenceWord": "晴朗"
+      },
+      {
+       "char": "晶",
+       "pinyin": "jīng",
+       "radical": "日",
+       "strokes": 12,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "水晶",
+         "py": "shuǐ jīng"
+        },
+        {
+         "w": "晶莹",
+         "py": "jīng yíng"
+        },
+        {
+         "w": "亮晶晶",
+         "py": "liàng jīng jīng"
+        }
+       ],
+       "sentence": "树叶上的露珠亮晶晶的。",
+       "sentenceWord": "亮晶晶"
+      },
+      {
+       "char": "珠",
+       "pinyin": "zhū",
+       "radical": "王",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "珍珠",
+         "py": "zhēn zhū"
+        },
+        {
+         "w": "露珠",
+         "py": "lù zhū"
+        },
+        {
+         "w": "珠子",
+         "py": "zhū zi"
+        },
+        {
+         "w": "明珠",
+         "py": "míng zhū"
+        }
+       ],
+       "sentence": "荷叶上滚着一颗颗露珠。",
+       "sentenceWord": "露珠"
+      },
+      {
+       "char": "粘",
+       "pinyin": "zhān",
+       "radical": "米",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "粘贴",
+         "py": "zhān tiē"
+        },
+        {
+         "w": "粘住",
+         "py": "zhān zhù"
+        },
+        {
+         "w": "粘连",
+         "py": "zhān lián"
+        }
+       ],
+       "sentence": "我把画粘贴在墙上。",
+       "sentenceWord": "粘贴"
+      },
+      {
+       "char": "印",
+       "pinyin": "yìn",
+       "radical": "卩",
+       "strokes": 5,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "印章",
+         "py": "yìn zhāng"
+        },
+        {
+         "w": "打印",
+         "py": "dǎ yìn"
+        },
+        {
+         "w": "脚印",
+         "py": "jiǎo yìn"
+        }
+       ],
+       "sentence": "雪地上留下了一串小脚印。",
+       "sentenceWord": "脚印"
+      },
+      {
+       "char": "案",
+       "pinyin": "àn",
+       "radical": "木",
+       "strokes": 10,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "方案",
+         "py": "fāng àn"
+        },
+        {
+         "w": "图案",
+         "py": "tú àn"
+        },
+        {
+         "w": "答案",
+         "py": "dá àn"
+        }
+       ],
+       "sentence": "这块手帕上有漂亮的图案。",
+       "sentenceWord": "图案"
+      },
+      {
+       "char": "展",
+       "pinyin": "zhǎn",
+       "radical": "尸",
+       "strokes": 10,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "展开",
+         "py": "zhǎn kāi"
+        },
+        {
+         "w": "展示",
+         "py": "zhǎn shì"
+        },
+        {
+         "w": "展览",
+         "py": "zhǎn lǎn"
+        },
+        {
+         "w": "展出",
+         "py": "zhǎn chū"
+        }
+       ],
+       "sentence": "小鸟展开翅膀飞走了。",
+       "sentenceWord": "展开"
+      },
+      {
+       "char": "列",
+       "pinyin": "liè",
+       "radical": "刂",
+       "strokes": 6,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "排列",
+         "py": "pái liè"
+        },
+        {
+         "w": "列队",
+         "py": "liè duì"
+        },
+        {
+         "w": "队列",
+         "py": "duì liè"
+        }
+       ],
+       "sentence": "同学们排列得整整齐齐。",
+       "sentenceWord": "排列"
+      },
+      {
+       "char": "规",
+       "pinyin": "guī",
+       "radical": "见",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "规则",
+         "py": "guī zé"
+        },
+        {
+         "w": "规定",
+         "py": "guī dìng"
+        },
+        {
+         "w": "规范",
+         "py": "guī fàn"
+        }
+       ],
+       "sentence": "玩游戏也要遵守规则。",
+       "sentenceWord": "规则"
+      },
+      {
+       "char": "则",
+       "pinyin": "zé",
+       "radical": "刂",
+       "strokes": 6,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "规则",
+         "py": "guī zé"
+        },
+        {
+         "w": "原则",
+         "py": "yuán zé"
+        },
+        {
+         "w": "法则",
+         "py": "fǎ zé"
+        }
+       ],
+       "sentence": "过马路要遵守交通规则。",
+       "sentenceWord": "规则"
+      },
+      {
+       "char": "凌",
+       "pinyin": "líng",
+       "radical": "冫",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "凌乱",
+         "py": "líng luàn"
+        },
+        {
+         "w": "凌晨",
+         "py": "líng chén"
+        },
+        {
+         "w": "冰凌",
+         "py": "bīng líng"
+        }
+       ],
+       "sentence": "风把桌上的纸吹得很凌乱。",
+       "sentenceWord": "凌乱"
+      },
+      {
+       "char": "乱",
+       "pinyin": "luàn",
+       "radical": "乙",
+       "strokes": 7,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "凌乱",
+         "py": "líng luàn"
+        },
+        {
+         "w": "混乱",
+         "py": "hùn luàn"
+        },
+        {
+         "w": "杂乱",
+         "py": "zá luàn"
+        },
+        {
+         "w": "乱跑",
+         "py": "luàn pǎo"
+        }
+       ],
+       "sentence": "在马路上不能乱跑。",
+       "sentenceWord": "乱跑"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "凌乱",
+       "py": "líng luàn"
+      },
+      {
+       "w": "队列",
+       "py": "duì liè"
+      },
+      {
+       "w": "规则",
+       "py": "guī zé"
+      },
+      {
+       "w": "展出",
+       "py": "zhǎn chū"
+      },
+      {
+       "w": "晴朗",
+       "py": "qíng lǎng"
+      },
+      {
+       "w": "打印",
+       "py": "dǎ yìn"
+      },
+      {
+       "w": "粘贴",
+       "py": "zhān tiē"
+      },
+      {
+       "w": "方案",
+       "py": "fāng àn"
+      },
+      {
+       "w": "露珠",
+       "py": "lù zhū",
+       "given": [
+        0
+       ]
+      },
+      {
+       "w": "印章",
+       "py": "yìn zhāng",
+       "given": [
+        1
+       ]
+      },
+      {
+       "w": "展开",
+       "py": "zhǎn kāi"
+      },
+      {
+       "w": "歌唱",
+       "py": "gē chàng"
+      },
+      {
+       "w": "晶莹",
+       "py": "jīng yíng",
+       "given": [
+        1
+       ]
+      },
+      {
+       "w": "亮晶晶",
+       "py": "liàng jīng jīng"
+      }
+     ]
+    },
+    {
+     "id": "L6",
+     "title": "第6课 秋天的雨",
+     "chars": [
+      {
+       "char": "凉",
+       "pinyin": "liáng",
+       "radical": "冫",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "凉爽",
+         "py": "liáng shuǎng"
+        },
+        {
+         "w": "凉快",
+         "py": "liáng kuai"
+        },
+        {
+         "w": "冰凉",
+         "py": "bīng liáng"
+        },
+        {
+         "w": "清凉",
+         "py": "qīng liáng"
+        }
+       ],
+       "sentence": "秋天到了，天气变得凉爽了。",
+       "sentenceWord": "凉爽"
+      },
+      {
+       "char": "杏",
+       "pinyin": "xìng",
+       "radical": "木",
+       "strokes": 7,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "杏子",
+         "py": "xìng zi"
+        },
+        {
+         "w": "杏树",
+         "py": "xìng shù"
+        },
+        {
+         "w": "银杏",
+         "py": "yín xìng"
+        },
+        {
+         "w": "杏仁",
+         "py": "xìng rén"
+        }
+       ],
+       "sentence": "银杏树的叶子像一把把小扇子。",
+       "sentenceWord": "杏树"
+      },
+      {
+       "char": "枚",
+       "pinyin": "méi",
+       "radical": "木",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "一枚",
+         "py": "yì méi"
+        },
+        {
+         "w": "枚举",
+         "py": "méi jǔ"
+        }
+       ],
+       "sentence": "我收到了一枚漂亮的邮票。",
+       "sentenceWord": "一枚"
+      },
+      {
+       "char": "邮",
+       "pinyin": "yóu",
+       "radical": "阝",
+       "strokes": 7,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "邮票",
+         "py": "yóu piào"
+        },
+        {
+         "w": "邮局",
+         "py": "yóu jú"
+        },
+        {
+         "w": "邮寄",
+         "py": "yóu jì"
+        }
+       ],
+       "sentence": "爸爸去邮局寄了一个包裹。",
+       "sentenceWord": "邮局"
+      },
+      {
+       "char": "票",
+       "pinyin": "piào",
+       "radical": "覀",
+       "strokes": 11,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "邮票",
+         "py": "yóu piào"
+        },
+        {
+         "w": "车票",
+         "py": "chē piào"
+        },
+        {
+         "w": "门票",
+         "py": "mén piào"
+        }
+       ],
+       "sentence": "我们买了两张门票去动物园。",
+       "sentenceWord": "门票"
+      },
+      {
+       "char": "爽",
+       "pinyin": "shuǎng",
+       "radical": "大",
+       "strokes": 11,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "凉爽",
+         "py": "liáng shuǎng"
+        },
+        {
+         "w": "爽快",
+         "py": "shuǎng kuài"
+        },
+        {
+         "w": "清爽",
+         "py": "qīng shuǎng"
+        },
+        {
+         "w": "爽口",
+         "py": "shuǎng kǒu"
+        }
+       ],
+       "sentence": "这个苹果又甜又爽口。",
+       "sentenceWord": "爽口"
+      },
+      {
+       "char": "挤",
+       "pinyin": "jǐ",
+       "radical": "扌",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "拥挤",
+         "py": "yōng jǐ"
+        },
+        {
+         "w": "挤压",
+         "py": "jǐ yā"
+        },
+        {
+         "w": "挤牙膏",
+         "py": "jǐ yá gāo"
+        }
+       ],
+       "sentence": "早上的公交车上很拥挤。",
+       "sentenceWord": "拥挤"
+      },
+      {
+       "char": "争",
+       "pinyin": "zhēng",
+       "radical": "刀",
+       "strokes": 6,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "争取",
+         "py": "zhēng qǔ"
+        },
+        {
+         "w": "争论",
+         "py": "zhēng lùn"
+        },
+        {
+         "w": "竞争",
+         "py": "jìng zhēng"
+        },
+        {
+         "w": "争气",
+         "py": "zhēng qì"
+        }
+       ],
+       "sentence": "我要争取考出好成绩。",
+       "sentenceWord": "争取"
+      },
+      {
+       "char": "菊",
+       "pinyin": "jú",
+       "radical": "艹",
+       "strokes": 11,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "菊花",
+         "py": "jú huā"
+        },
+        {
+         "w": "秋菊",
+         "py": "qiū jú"
+        },
+        {
+         "w": "菊展",
+         "py": "jú zhǎn"
+        }
+       ],
+       "sentence": "秋天，菊花开得五颜六色。",
+       "sentenceWord": "菊花"
+      },
+      {
+       "char": "频",
+       "pinyin": "pín",
+       "radical": "页",
+       "strokes": 13,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "频繁",
+         "py": "pín fán"
+        },
+        {
+         "w": "频率",
+         "py": "pín lǜ"
+        },
+        {
+         "w": "频频",
+         "py": "pín pín"
+        },
+        {
+         "w": "频次",
+         "py": "pín cì"
+        }
+       ],
+       "sentence": "小猫频频回头看它的妈妈。",
+       "sentenceWord": "频频"
+      },
+      {
+       "char": "勾",
+       "pinyin": "gōu",
+       "radical": "勹",
+       "strokes": 4,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "勾画",
+         "py": "gōu huà"
+        },
+        {
+         "w": "勾住",
+         "py": "gōu zhù"
+        },
+        {
+         "w": "勾勒",
+         "py": "gōu lè"
+        }
+       ],
+       "sentence": "小猴子用尾巴勾住了树枝。",
+       "sentenceWord": "勾住"
+      },
+      {
+       "char": "挖",
+       "pinyin": "wā",
+       "radical": "扌",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "挖土",
+         "py": "wā tǔ"
+        },
+        {
+         "w": "挖洞",
+         "py": "wā dòng"
+        },
+        {
+         "w": "挖开",
+         "py": "wā kāi"
+        }
+       ],
+       "sentence": "小兔子在地上挖洞。",
+       "sentenceWord": "挖洞"
+      },
+      {
+       "char": "油",
+       "pinyin": "yóu",
+       "radical": "氵",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "加油",
+         "py": "jiā yóu"
+        },
+        {
+         "w": "石油",
+         "py": "shí yóu"
+        },
+        {
+         "w": "油菜",
+         "py": "yóu cài"
+        },
+        {
+         "w": "汽油",
+         "py": "qì yóu"
+        }
+       ],
+       "sentence": "运动会上，大家都为我们班加油。",
+       "sentenceWord": "加油"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "菊花",
+       "py": "jú huā"
+      },
+      {
+       "w": "加油",
+       "py": "jiā yóu"
+      },
+      {
+       "w": "挖土",
+       "py": "wā tǔ"
+      },
+      {
+       "w": "邮票",
+       "py": "yóu piào"
+      },
+      {
+       "w": "拥挤",
+       "py": "yōng jǐ",
+       "given": [
+        0
+       ]
+      },
+      {
+       "w": "爽口",
+       "py": "shuǎng kǒu"
+      },
+      {
+       "w": "频次",
+       "py": "pín cì"
+      },
+      {
+       "w": "争取",
+       "py": "zhēng qǔ",
+       "given": [
+        1
+       ]
+      },
+      {
+       "w": "勾勒",
+       "py": "gōu lè",
+       "given": [
+        1
+       ]
+      },
+      {
+       "w": "汽油",
+       "py": "qì yóu"
+      },
+      {
+       "w": "松果",
+       "py": "sōng guǒ"
+      },
+      {
+       "w": "杏仁",
+       "py": "xìng rén",
+       "given": [
+        1
+       ]
+      },
+      {
+       "w": "枫树",
+       "py": "fēng shù"
+      },
+      {
+       "w": "清凉",
+       "py": "qīng liáng"
+      },
+      {
+       "w": "银杏",
+       "py": "yín xìng"
+      }
+     ]
+    },
+    {
+     "id": "L7",
+     "title": "第7课* 听听，秋的声音",
+     "chars": [],
+     "tingxie": [
+      {
+       "w": "声音",
+       "py": "shēng yīn"
+      },
+      {
+       "w": "道别",
+       "py": "dào bié"
+      },
+      {
+       "w": "饱满",
+       "py": "bǎo mǎn"
+      },
+      {
+       "w": "阳台",
+       "py": "yáng tái"
+      },
+      {
+       "w": "告别",
+       "py": "gào bié"
+      },
+      {
+       "w": "秋风",
+       "py": "qiū fēng"
+      },
+      {
+       "w": "田野",
+       "py": "tián yě"
+      },
+      {
+       "w": "丰收",
+       "py": "fēng shōu"
+      },
+      {
+       "w": "规则",
+       "py": "guī zé"
+      },
+      {
+       "w": "晴朗",
+       "py": "qíng lǎng"
+      },
+      {
+       "w": "图案",
+       "py": "tú àn"
+      },
+      {
+       "w": "排列",
+       "py": "pái liè"
+      },
+      {
+       "w": "炎热",
+       "py": "yán rè"
+      },
+      {
+       "w": "车票",
+       "py": "chē piào"
+      },
+      {
+       "w": "清凉",
+       "py": "qīng liáng"
+      }
+     ]
+    },
+    {
+     "id": "Y2",
+     "title": "语文园地二",
+     "chars": [],
+     "tingxie": [
+      {
+       "w": "斜坡",
+       "py": "xié pō"
+      },
+      {
+       "w": "挑战",
+       "py": "tiǎo zhàn"
+      },
+      {
+       "w": "明珠",
+       "py": "míng zhū"
+      },
+      {
+       "w": "晴朗",
+       "py": "qíng lǎng"
+      },
+      {
+       "w": "邮票",
+       "py": "yóu piào"
+      },
+      {
+       "w": "图案",
+       "py": "tú àn"
+      },
+      {
+       "w": "规则",
+       "py": "guī zé"
+      },
+      {
+       "w": "落叶",
+       "py": "luò yè"
+      },
+      {
+       "w": "凉爽",
+       "py": "liáng shuǎng"
+      },
+      {
+       "w": "迟到",
+       "py": "chí dào"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "第三单元",
+   "lessons": [
+    {
+     "id": "L8",
+     "title": "第8课 总也倒不了的老屋",
+     "chars": [
+      {
+       "char": "屋",
+       "pinyin": "wū",
+       "radical": "尸",
+       "strokes": 9,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "房屋",
+         "py": "fáng wū"
+        },
+        {
+         "w": "屋子",
+         "py": "wū zi"
+        },
+        {
+         "w": "屋顶",
+         "py": "wū dǐng"
+        }
+       ],
+       "sentence": "小屋的屋顶上落满了雪。",
+       "sentenceWord": "屋顶"
+      },
+      {
+       "char": "板",
+       "pinyin": "bǎn",
+       "radical": "木",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "木板",
+         "py": "mù bǎn"
+        },
+        {
+         "w": "黑板",
+         "py": "hēi bǎn"
+        },
+        {
+         "w": "门板",
+         "py": "mén bǎn"
+        }
+       ],
+       "sentence": "老师在黑板上写字。",
+       "sentenceWord": "黑板"
+      },
+      {
+       "char": "准",
+       "pinyin": "zhǔn",
+       "radical": "冫",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "准备",
+         "py": "zhǔn bèi"
+        },
+        {
+         "w": "准确",
+         "py": "zhǔn què"
+        },
+        {
+         "w": "准时",
+         "py": "zhǔn shí"
+        }
+       ],
+       "sentence": "上学前，我准备好了书包。",
+       "sentenceWord": "准备"
+      },
+      {
+       "char": "备",
+       "pinyin": "bèi",
+       "radical": "夂",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "准备",
+         "py": "zhǔn bèi"
+        },
+        {
+         "w": "备用",
+         "py": "bèi yòng"
+        },
+        {
+         "w": "具备",
+         "py": "jù bèi"
+        }
+       ],
+       "sentence": "妈妈给我带了一支备用的铅笔。",
+       "sentenceWord": "备用"
+      },
+      {
+       "char": "等",
+       "pinyin": "děng",
+       "radical": "⺮",
+       "strokes": 12,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "等待",
+         "py": "děng dài"
+        },
+        {
+         "w": "等于",
+         "py": "děng yú"
+        },
+        {
+         "w": "平等",
+         "py": "píng děng"
+        },
+        {
+         "w": "等级",
+         "py": "děng jí"
+        }
+       ],
+       "sentence": "一加一等于二。",
+       "sentenceWord": "等于"
+      },
+      {
+       "char": "暴",
+       "pinyin": "bào",
+       "radical": "日",
+       "strokes": 15,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "暴雨",
+         "py": "bào yǔ"
+        },
+        {
+         "w": "暴风雨",
+         "py": "bào fēng yǔ"
+        },
+        {
+         "w": "暴躁",
+         "py": "bào zào"
+        }
+       ],
+       "sentence": "暴风雨来了，我们赶紧跑回家。",
+       "sentenceWord": "暴风雨"
+      },
+      {
+       "char": "哦",
+       "pinyin": "ò",
+       "radical": "口",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "哦",
+         "py": "ò"
+        }
+       ],
+       "sentence": "哦，原来是这样啊！"
+      },
+      {
+       "char": "钻",
+       "pinyin": "zuān",
+       "radical": "钅",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "钻进",
+         "py": "zuān jìn"
+        },
+        {
+         "w": "钻孔",
+         "py": "zuān kǒng"
+        },
+        {
+         "w": "钻研",
+         "py": "zuān yán"
+        }
+       ],
+       "sentence": "小老鼠钻进了洞里。",
+       "sentenceWord": "钻进"
+      },
+      {
+       "char": "爬",
+       "pinyin": "pá",
+       "radical": "爪",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "爬行",
+         "py": "pá xíng"
+        },
+        {
+         "w": "爬山",
+         "py": "pá shān"
+        },
+        {
+         "w": "爬树",
+         "py": "pá shù"
+        }
+       ],
+       "sentence": "周末我和爸爸一起去爬山。",
+       "sentenceWord": "爬山"
+      },
+      {
+       "char": "漂",
+       "pinyin": "piào",
+       "radical": "氵",
+       "strokes": 14,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "漂亮",
+         "py": "piào liang"
+        }
+       ],
+       "sentence": "妹妹穿上新裙子，真漂亮！",
+       "sentenceWord": "漂亮"
+      },
+      {
+       "char": "晒",
+       "pinyin": "shài",
+       "radical": "日",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "晾晒",
+         "py": "liàng shài"
+        },
+        {
+         "w": "晒太阳",
+         "py": "shài tài yáng"
+        },
+        {
+         "w": "晒干",
+         "py": "shài gān"
+        }
+       ],
+       "sentence": "小猫躺在窗台上晒太阳。",
+       "sentenceWord": "晒太阳"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "备用",
+       "py": "bèi yòng"
+      },
+      {
+       "w": "门板",
+       "py": "mén bǎn"
+      },
+      {
+       "w": "平等",
+       "py": "píng děng"
+      },
+      {
+       "w": "低头",
+       "py": "dī tóu"
+      },
+      {
+       "w": "母鸡",
+       "py": "mǔ jī"
+      },
+      {
+       "w": "钻研",
+       "py": "zuān yán",
+       "given": [
+        1
+       ]
+      },
+      {
+       "w": "再见",
+       "py": "zài jiàn"
+      },
+      {
+       "w": "爬行",
+       "py": "pá xíng"
+      },
+      {
+       "w": "暴风雨",
+       "py": "bào fēng yǔ"
+      },
+      {
+       "w": "漂亮",
+       "py": "piào liang"
+      },
+      {
+       "w": "因此",
+       "py": "yīn cǐ"
+      },
+      {
+       "w": "吃力",
+       "py": "chī lì"
+      },
+      {
+       "w": "晒太阳",
+       "py": "shài tài yáng"
+      }
+     ]
+    },
+    {
+     "id": "L9",
+     "title": "第9课* 犟龟",
+     "chars": [],
+     "tingxie": [
+      {
+       "w": "美丽",
+       "py": "měi lì"
+      },
+      {
+       "w": "主意",
+       "py": "zhǔ yi"
+      },
+      {
+       "w": "告诉",
+       "py": "gào su"
+      },
+      {
+       "w": "热闹",
+       "py": "rè nao"
+      },
+      {
+       "w": "古老",
+       "py": "gǔ lǎo"
+      },
+      {
+       "w": "赶路",
+       "py": "gǎn lù"
+      },
+      {
+       "w": "准时",
+       "py": "zhǔn shí"
+      },
+      {
+       "w": "通知",
+       "py": "tōng zhī"
+      },
+      {
+       "w": "突然",
+       "py": "tū rán"
+      },
+      {
+       "w": "回答",
+       "py": "huí dá"
+      },
+      {
+       "w": "同情",
+       "py": "tóng qíng"
+      },
+      {
+       "w": "决定",
+       "py": "jué dìng"
+      },
+      {
+       "w": "原因",
+       "py": "yuán yīn"
+      },
+      {
+       "w": "难过",
+       "py": "nán guò"
+      },
+      {
+       "w": "动身",
+       "py": "dòng shēn"
+      }
+     ]
+    },
+    {
+     "id": "L10",
+     "title": "第10课* 小狗学叫",
+     "chars": [],
+     "tingxie": [
+      {
+       "w": "从前",
+       "py": "cóng qián"
+      },
+      {
+       "w": "毛病",
+       "py": "máo bìng"
+      },
+      {
+       "w": "终于",
+       "py": "zhōng yú"
+      },
+      {
+       "w": "寻思",
+       "py": "xún si"
+      },
+      {
+       "w": "难道",
+       "py": "nán dào"
+      },
+      {
+       "w": "高兴",
+       "py": "gāo xìng"
+      },
+      {
+       "w": "经过",
+       "py": "jīng guò"
+      },
+      {
+       "w": "树林",
+       "py": "shù lín"
+      },
+      {
+       "w": "特别",
+       "py": "tè bié"
+      },
+      {
+       "w": "美味",
+       "py": "měi wèi"
+      },
+      {
+       "w": "容易",
+       "py": "róng yì"
+      },
+      {
+       "w": "成功",
+       "py": "chéng gōng"
+      },
+      {
+       "w": "自由",
+       "py": "zì yóu"
+      },
+      {
+       "w": "奇怪",
+       "py": "qí guài"
+      },
+      {
+       "w": "泪水",
+       "py": "lèi shuǐ"
+      }
+     ]
+    },
+    {
+     "id": "Y3",
+     "title": "语文园地三",
+     "chars": [
+      {
+       "char": "恒",
+       "pinyin": "héng",
+       "radical": "忄",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "永恒",
+         "py": "yǒng héng"
+        },
+        {
+         "w": "恒心",
+         "py": "héng xīn"
+        },
+        {
+         "w": "恒定",
+         "py": "héng dìng"
+        }
+       ],
+       "sentence": "做事要有恒心，不能半途而废。",
+       "sentenceWord": "恒心"
+      },
+      {
+       "char": "圣",
+       "pinyin": "shèng",
+       "radical": "土",
+       "strokes": 5,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "神圣",
+         "py": "shén shèng"
+        },
+        {
+         "w": "圣人",
+         "py": "shèng rén"
+        },
+        {
+         "w": "圣诞",
+         "py": "shèng dàn"
+        }
+       ],
+       "sentence": "五星红旗是神圣的。",
+       "sentenceWord": "神圣"
+      },
+      {
+       "char": "萌",
+       "pinyin": "méng",
+       "radical": "艹",
+       "strokes": 11,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "萌芽",
+         "py": "méng yá"
+        },
+        {
+         "w": "萌生",
+         "py": "méng shēng"
+        },
+        {
+         "w": "萌发",
+         "py": "méng fā"
+        }
+       ],
+       "sentence": "春天来了，小草萌发出嫩芽。",
+       "sentenceWord": "萌发"
+      },
+      {
+       "char": "妥",
+       "pinyin": "tuǒ",
+       "radical": "女",
+       "strokes": 7,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "妥当",
+         "py": "tuǒ dàng"
+        },
+        {
+         "w": "妥善",
+         "py": "tuǒ shàn"
+        }
+       ],
+       "sentence": "这件事他安排得很妥当。",
+       "sentenceWord": "妥当"
+      },
+      {
+       "char": "轴",
+       "pinyin": "zhóu",
+       "radical": "车",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "车轴",
+         "py": "chē zhóu"
+        },
+        {
+         "w": "轴心",
+         "py": "zhóu xīn"
+        },
+        {
+         "w": "画轴",
+         "py": "huà zhóu"
+        }
+       ],
+       "sentence": "自行车的车轴要常常上油。",
+       "sentenceWord": "车轴"
+      },
+      {
+       "char": "阁",
+       "pinyin": "gé",
+       "radical": "门",
+       "strokes": 9,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "阁楼",
+         "py": "gé lóu"
+        },
+        {
+         "w": "楼阁",
+         "py": "lóu gé"
+        }
+       ],
+       "sentence": "奶奶家有一个小阁楼。",
+       "sentenceWord": "阁楼"
+      },
+      {
+       "char": "培",
+       "pinyin": "péi",
+       "radical": "土",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "培养",
+         "py": "péi yǎng"
+        },
+        {
+         "w": "培育",
+         "py": "péi yù"
+        },
+        {
+         "w": "培土",
+         "py": "péi tǔ"
+        },
+        {
+         "w": "培植",
+         "py": "péi zhí"
+        }
+       ],
+       "sentence": "农民伯伯在培育新的稻种。",
+       "sentenceWord": "培育"
+      },
+      {
+       "char": "厘",
+       "pinyin": "lí",
+       "radical": "厂",
+       "strokes": 9,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "厘米",
+         "py": "lí mǐ"
+        },
+        {
+         "w": "毫厘",
+         "py": "háo lí"
+        }
+       ],
+       "sentence": "我的铅笔长十五厘米。",
+       "sentenceWord": "厘米"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "门板",
+       "py": "mén bǎn"
+      },
+      {
+       "w": "准备",
+       "py": "zhǔn bèi"
+      },
+      {
+       "w": "车轴",
+       "py": "chē zhóu"
+      },
+      {
+       "w": "恒心",
+       "py": "héng xīn"
+      },
+      {
+       "w": "阁楼",
+       "py": "gé lóu"
+      },
+      {
+       "w": "厘米",
+       "py": "lí mǐ"
+      },
+      {
+       "w": "神圣",
+       "py": "shén shèng"
+      },
+      {
+       "w": "萌发",
+       "py": "méng fā"
+      },
+      {
+       "w": "平等",
+       "py": "píng děng"
+      },
+      {
+       "w": "妥当",
+       "py": "tuǒ dàng"
+      },
+      {
+       "w": "培植",
+       "py": "péi zhí"
+      },
+      {
+       "w": "永恒",
+       "py": "yǒng héng"
+      },
+      {
+       "w": "晒干",
+       "py": "shài gān"
+      },
+      {
+       "w": "萌生",
+       "py": "méng shēng"
+      },
+      {
+       "w": "屋子",
+       "py": "wū zi"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "第四单元",
+   "lessons": [
+    {
+     "id": "L11",
+     "title": "第11课 宝葫芦的秘密（节选）",
+     "chars": [
+      {
+       "char": "葫",
+       "pinyin": "hú",
+       "radical": "艹",
+       "strokes": 12,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "葫芦",
+         "py": "hú lu"
+        },
+        {
+         "w": "宝葫芦",
+         "py": "bǎo hú lu"
+        }
+       ],
+       "sentence": "爷爷的院子里种着葫芦。",
+       "sentenceWord": "葫芦"
+      },
+      {
+       "char": "芦",
+       "pinyin": "lú",
+       "radical": "艹",
+       "strokes": 7,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "葫芦",
+         "py": "hú lu"
+        },
+        {
+         "w": "芦苇",
+         "py": "lú wěi"
+        },
+        {
+         "w": "芦花",
+         "py": "lú huā"
+        }
+       ],
+       "sentence": "河边长着一大片芦苇。",
+       "sentenceWord": "芦苇"
+      },
+      {
+       "char": "错",
+       "pinyin": "cuò",
+       "radical": "钅",
+       "strokes": 13,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "错误",
+         "py": "cuò wù"
+        },
+        {
+         "w": "对错",
+         "py": "duì cuò"
+        },
+        {
+         "w": "错过",
+         "py": "cuò guò"
+        },
+        {
+         "w": "不错",
+         "py": "bú cuò"
+        }
+       ],
+       "sentence": "你的字写得真不错！",
+       "sentenceWord": "不错"
+      },
+      {
+       "char": "普",
+       "pinyin": "pǔ",
+       "radical": "日",
+       "strokes": 12,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "普通",
+         "py": "pǔ tōng"
+        },
+        {
+         "w": "普遍",
+         "py": "pǔ biàn"
+        },
+        {
+         "w": "普及",
+         "py": "pǔ jí"
+        },
+        {
+         "w": "科普",
+         "py": "kē pǔ"
+        }
+       ],
+       "sentence": "我喜欢看科普书。",
+       "sentenceWord": "科普"
+      },
+      {
+       "char": "宫",
+       "pinyin": "gōng",
+       "radical": "宀",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "宫殿",
+         "py": "gōng diàn"
+        },
+        {
+         "w": "皇宫",
+         "py": "huáng gōng"
+        },
+        {
+         "w": "故宫",
+         "py": "gù gōng"
+        },
+        {
+         "w": "龙宫",
+         "py": "lóng gōng"
+        }
+       ],
+       "sentence": "我们去北京参观了故宫。",
+       "sentenceWord": "故宫"
+      },
+      {
+       "char": "肯",
+       "pinyin": "kěn",
+       "radical": "止",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "肯定",
+         "py": "kěn dìng"
+        },
+        {
+         "w": "不肯",
+         "py": "bù kěn"
+        }
+       ],
+       "sentence": "我肯定能学会游泳。",
+       "sentenceWord": "肯定"
+      },
+      {
+       "char": "冒",
+       "pinyin": "mào",
+       "radical": "冂",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "冒险",
+         "py": "mào xiǎn"
+        },
+        {
+         "w": "冒出",
+         "py": "mào chū"
+        },
+        {
+         "w": "感冒",
+         "py": "gǎn mào"
+        },
+        {
+         "w": "冒充",
+         "py": "mào chōng"
+        }
+       ],
+       "sentence": "天冷了，要多穿衣服，别感冒。",
+       "sentenceWord": "感冒"
+      },
+      {
+       "char": "式",
+       "pinyin": "shì",
+       "radical": "弋",
+       "strokes": 6,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "方式",
+         "py": "fāng shì"
+        },
+        {
+         "w": "公式",
+         "py": "gōng shì"
+        },
+        {
+         "w": "样式",
+         "py": "yàng shì"
+        }
+       ],
+       "sentence": "这件衣服的样式很好看。",
+       "sentenceWord": "样式"
+      },
+      {
+       "char": "怜",
+       "pinyin": "lián",
+       "radical": "忄",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "可怜",
+         "py": "kě lián"
+        },
+        {
+         "w": "怜惜",
+         "py": "lián xī"
+        },
+        {
+         "w": "怜爱",
+         "py": "lián ài"
+        }
+       ],
+       "sentence": "这只小猫淋了雨，真可怜。",
+       "sentenceWord": "可怜"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "科普",
+       "py": "kē pǔ"
+      },
+      {
+       "w": "得到",
+       "py": "dé dào"
+      },
+      {
+       "w": "葫芦",
+       "py": "hú lu"
+      },
+      {
+       "w": "错过",
+       "py": "cuò guò"
+      },
+      {
+       "w": "龙宫",
+       "py": "lóng gōng"
+      },
+      {
+       "w": "肯定",
+       "py": "kěn dìng"
+      },
+      {
+       "w": "衣服",
+       "py": "yī fu"
+      },
+      {
+       "w": "方式",
+       "py": "fāng shì"
+      },
+      {
+       "w": "科学",
+       "py": "kē xué"
+      },
+      {
+       "w": "声明",
+       "py": "shēng míng"
+      },
+      {
+       "w": "让步",
+       "py": "ràng bù"
+      },
+      {
+       "w": "条件",
+       "py": "tiáo jiàn"
+      },
+      {
+       "w": "可怜",
+       "py": "kě lián"
+      },
+      {
+       "w": "冒充",
+       "py": "mào chōng"
+      },
+      {
+       "w": "所以",
+       "py": "suǒ yǐ"
+      }
+     ]
+    },
+    {
+     "id": "L12",
+     "title": "第12课 在牛肚子里旅行",
+     "chars": [
+      {
+       "char": "旅",
+       "pinyin": "lǚ",
+       "radical": "方",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "旅行",
+         "py": "lǚ xíng"
+        },
+        {
+         "w": "旅游",
+         "py": "lǚ yóu"
+        },
+        {
+         "w": "旅途",
+         "py": "lǚ tú"
+        }
+       ],
+       "sentence": "暑假我们全家去海边旅行。",
+       "sentenceWord": "旅行"
+      },
+      {
+       "char": "另",
+       "pinyin": "lìng",
+       "radical": "口",
+       "strokes": 5,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "另外",
+         "py": "lìng wài"
+        },
+        {
+         "w": "另一个",
+         "py": "lìng yí gè"
+        }
+       ],
+       "sentence": "我有两支笔，另外一支是蓝色的。",
+       "sentenceWord": "另外"
+      },
+      {
+       "char": "睛",
+       "pinyin": "jīng",
+       "radical": "目",
+       "strokes": 13,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "眼睛",
+         "py": "yǎn jing"
+        },
+        {
+         "w": "定睛",
+         "py": "dìng jīng"
+        },
+        {
+         "w": "画龙点睛",
+         "py": "huà lóng diǎn jīng"
+        }
+       ],
+       "sentence": "小白兔有一双红红的眼睛。",
+       "sentenceWord": "眼睛"
+      },
+      {
+       "char": "及",
+       "pinyin": "jí",
+       "radical": "丿",
+       "strokes": 3,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "及时",
+         "py": "jí shí"
+        },
+        {
+         "w": "及格",
+         "py": "jí gé"
+        },
+        {
+         "w": "以及",
+         "py": "yǐ jí"
+        }
+       ],
+       "sentence": "下雨了，幸好我及时回到了家。",
+       "sentenceWord": "及时"
+      },
+      {
+       "char": "卷",
+       "pinyin": "juǎn",
+       "radical": "⺋",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "卷发",
+         "py": "juǎn fà"
+        },
+        {
+         "w": "花卷",
+         "py": "huā juǎn"
+        },
+        {
+         "w": "卷起",
+         "py": "juǎn qǐ"
+        },
+        {
+         "w": "卷尺",
+         "py": "juǎn chǐ"
+        }
+       ],
+       "sentence": "妈妈早上蒸了香喷喷的花卷。",
+       "sentenceWord": "花卷"
+      },
+      {
+       "char": "救",
+       "pinyin": "jiù",
+       "radical": "攵",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "救命",
+         "py": "jiù mìng"
+        },
+        {
+         "w": "救助",
+         "py": "jiù zhù"
+        },
+        {
+         "w": "救援",
+         "py": "jiù yuán"
+        }
+       ],
+       "sentence": "消防员叔叔救助了被困的小猫。",
+       "sentenceWord": "救助"
+      },
+      {
+       "char": "命",
+       "pinyin": "mìng",
+       "radical": "人",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "生命",
+         "py": "shēng mìng"
+        },
+        {
+         "w": "命令",
+         "py": "mìng lìng"
+        },
+        {
+         "w": "救命",
+         "py": "jiù mìng"
+        }
+       ],
+       "sentence": "我们要爱护每一个小生命。",
+       "sentenceWord": "生命"
+      },
+      {
+       "char": "尾",
+       "pinyin": "wěi",
+       "radical": "尸",
+       "strokes": 7,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "尾巴",
+         "py": "wěi ba"
+        },
+        {
+         "w": "结尾",
+         "py": "jié wěi"
+        },
+        {
+         "w": "尾声",
+         "py": "wěi shēng"
+        }
+       ],
+       "sentence": "小狗高兴地摇着尾巴。",
+       "sentenceWord": "尾巴"
+      },
+      {
+       "char": "齿",
+       "pinyin": "chǐ",
+       "radical": "齿",
+       "strokes": 8,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "牙齿",
+         "py": "yá chǐ"
+        },
+        {
+         "w": "齿轮",
+         "py": "chǐ lún"
+        }
+       ],
+       "sentence": "每天早晚都要刷牙齿。",
+       "sentenceWord": "牙齿"
+      },
+      {
+       "char": "胃",
+       "pinyin": "wèi",
+       "radical": "月",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "胃口",
+         "py": "wèi kǒu"
+        },
+        {
+         "w": "肠胃",
+         "py": "cháng wèi"
+        }
+       ],
+       "sentence": "今天的饭菜真香，我胃口大开。",
+       "sentenceWord": "胃口"
+      },
+      {
+       "char": "管",
+       "pinyin": "guǎn",
+       "radical": "⺮",
+       "strokes": 14,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "管理",
+         "py": "guǎn lǐ"
+        },
+        {
+         "w": "水管",
+         "py": "shuǐ guǎn"
+        },
+        {
+         "w": "管道",
+         "py": "guǎn dào"
+        }
+       ],
+       "sentence": "班长帮老师管理图书角。",
+       "sentenceWord": "管理"
+      },
+      {
+       "char": "刚",
+       "pinyin": "gāng",
+       "radical": "刂",
+       "strokes": 6,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "刚才",
+         "py": "gāng cái"
+        },
+        {
+         "w": "刚好",
+         "py": "gāng hǎo"
+        },
+        {
+         "w": "刚强",
+         "py": "gāng qiáng"
+        }
+       ],
+       "sentence": "我刚才看见一只小鸟飞过。",
+       "sentenceWord": "刚才"
+      },
+      {
+       "char": "咬",
+       "pinyin": "yǎo",
+       "radical": "口",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "咬住",
+         "py": "yǎo zhù"
+        },
+        {
+         "w": "咬牙",
+         "py": "yǎo yá"
+        },
+        {
+         "w": "咬破",
+         "py": "yǎo pò"
+        }
+       ],
+       "sentence": "小狗咬住了我的鞋带。",
+       "sentenceWord": "咬住"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "及格",
+       "py": "jí gé"
+      },
+      {
+       "w": "咬破",
+       "py": "yǎo pò"
+      },
+      {
+       "w": "救命",
+       "py": "jiù mìng"
+      },
+      {
+       "w": "另外",
+       "py": "lìng wài"
+      },
+      {
+       "w": "旅游",
+       "py": "lǚ yóu"
+      },
+      {
+       "w": "齿轮",
+       "py": "chǐ lún",
+       "given": [
+        1
+       ]
+      },
+      {
+       "w": "结尾",
+       "py": "jié wěi"
+      },
+      {
+       "w": "胃口",
+       "py": "wèi kǒu"
+      },
+      {
+       "w": "管理",
+       "py": "guǎn lǐ"
+      },
+      {
+       "w": "眼睛",
+       "py": "yǎn jing"
+      },
+      {
+       "w": "知觉",
+       "py": "zhī jué"
+      },
+      {
+       "w": "刚才",
+       "py": "gāng cái"
+      },
+      {
+       "w": "卷尺",
+       "py": "juǎn chǐ"
+      },
+      {
+       "w": "大吃一惊",
+       "py": "dà chī yì jīng"
+      }
+     ]
+    },
+    {
+     "id": "L13",
+     "title": "第13课* 一块奶酪",
+     "chars": [],
+     "tingxie": [
+      {
+       "w": "凉快",
+       "py": "liáng kuai"
+      },
+      {
+       "w": "丢掉",
+       "py": "diū diào"
+      },
+      {
+       "w": "消失",
+       "py": "xiāo shī"
+      },
+      {
+       "w": "分散",
+       "py": "fēn sàn"
+      },
+      {
+       "w": "草丛",
+       "py": "cǎo cóng"
+      },
+      {
+       "w": "重新",
+       "py": "chóng xīn"
+      },
+      {
+       "w": "注意",
+       "py": "zhù yì"
+      },
+      {
+       "w": "趁机",
+       "py": "chèn jī"
+      },
+      {
+       "w": "终于",
+       "py": "zhōng yú"
+      },
+      {
+       "w": "尽管",
+       "py": "jǐn guǎn"
+      },
+      {
+       "w": "味道",
+       "py": "wèi dào"
+      },
+      {
+       "w": "旅游",
+       "py": "lǚ yóu"
+      },
+      {
+       "w": "助手",
+       "py": "zhù shǒu"
+      },
+      {
+       "w": "处罚",
+       "py": "chǔ fá"
+      },
+      {
+       "w": "命令",
+       "py": "mìng lìng"
+      }
+     ]
+    },
+    {
+     "id": "Y4",
+     "title": "语文园地四",
+     "chars": [
+      {
+       "char": "申",
+       "pinyin": "shēn",
+       "radical": "田",
+       "strokes": 5,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "申请",
+         "py": "shēn qǐng"
+        },
+        {
+         "w": "申明",
+         "py": "shēn míng"
+        }
+       ],
+       "sentence": "哥哥申请参加学校的合唱团。",
+       "sentenceWord": "申请"
+      },
+      {
+       "char": "介",
+       "pinyin": "jiè",
+       "radical": "人",
+       "strokes": 4,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "介绍",
+         "py": "jiè shào"
+        },
+        {
+         "w": "中介",
+         "py": "zhōng jiè"
+        },
+        {
+         "w": "介意",
+         "py": "jiè yì"
+        }
+       ],
+       "sentence": "我向大家介绍我的新朋友。",
+       "sentenceWord": "介绍"
+      },
+      {
+       "char": "绍",
+       "pinyin": "shào",
+       "radical": "纟",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "介绍",
+         "py": "jiè shào"
+        },
+        {
+         "w": "绍兴",
+         "py": "shào xīng"
+        }
+       ],
+       "sentence": "老师给我们介绍了一本好书。",
+       "sentenceWord": "介绍"
+      },
+      {
+       "char": "宗",
+       "pinyin": "zōng",
+       "radical": "宀",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "宗旨",
+         "py": "zōng zhǐ"
+        },
+        {
+         "w": "祖宗",
+         "py": "zǔ zōng"
+        }
+       ],
+       "sentence": "为大家服务是我们小队的宗旨。",
+       "sentenceWord": "宗旨"
+      },
+      {
+       "char": "旨",
+       "pinyin": "zhǐ",
+       "radical": "匕",
+       "strokes": 6,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "宗旨",
+         "py": "zōng zhǐ"
+        },
+        {
+         "w": "圣旨",
+         "py": "shèng zhǐ"
+        },
+        {
+         "w": "旨意",
+         "py": "zhǐ yì"
+        }
+       ],
+       "sentence": "这次活动的宗旨是保护环境。",
+       "sentenceWord": "宗旨"
+      },
+      {
+       "char": "占",
+       "pinyin": "zhàn",
+       "radical": "卜",
+       "strokes": 5,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "占领",
+         "py": "zhàn lǐng"
+        },
+        {
+         "w": "占有",
+         "py": "zhàn yǒu"
+        },
+        {
+         "w": "占据",
+         "py": "zhàn jù"
+        },
+        {
+         "w": "占地",
+         "py": "zhàn dì"
+        }
+       ],
+       "sentence": "小蚂蚁占领了一块饼干。",
+       "sentenceWord": "占领"
+      },
+      {
+       "char": "乏",
+       "pinyin": "fá",
+       "radical": "丿",
+       "strokes": 4,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "缺乏",
+         "py": "quē fá"
+        },
+        {
+         "w": "乏力",
+         "py": "fá lì"
+        },
+        {
+         "w": "乏味",
+         "py": "fá wèi"
+        }
+       ],
+       "sentence": "缺乏睡眠会让人没精神。",
+       "sentenceWord": "缺乏"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "宗旨",
+       "py": "zōng zhǐ"
+      },
+      {
+       "w": "普及",
+       "py": "pǔ jí"
+      },
+      {
+       "w": "乏力",
+       "py": "fá lì"
+      },
+      {
+       "w": "申请",
+       "py": "shēn qǐng"
+      },
+      {
+       "w": "介绍",
+       "py": "jiè shào"
+      },
+      {
+       "w": "救命",
+       "py": "jiù mìng"
+      },
+      {
+       "w": "另外",
+       "py": "lìng wài"
+      },
+      {
+       "w": "及时",
+       "py": "jí shí"
+      },
+      {
+       "w": "占领",
+       "py": "zhàn lǐng"
+      },
+      {
+       "w": "答应",
+       "py": "dā ying"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "第五单元",
+   "lessons": [
+    {
+     "id": "L14",
+     "title": "第14课 搭船的鸟",
+     "chars": [
+      {
+       "char": "搭",
+       "pinyin": "dā",
+       "radical": "扌",
+       "strokes": 12,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "搭配",
+         "py": "dā pèi"
+        },
+        {
+         "w": "搭建",
+         "py": "dā jiàn"
+        },
+        {
+         "w": "搭车",
+         "py": "dā chē"
+        },
+        {
+         "w": "搭船",
+         "py": "dā chuán"
+        }
+       ],
+       "sentence": "我们用积木搭建了一座城堡。",
+       "sentenceWord": "搭建"
+      },
+      {
+       "char": "亲",
+       "pinyin": "qīn",
+       "radical": "立",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "亲人",
+         "py": "qīn rén"
+        },
+        {
+         "w": "亲爱",
+         "py": "qīn ài"
+        },
+        {
+         "w": "母亲",
+         "py": "mǔ qīn"
+        },
+        {
+         "w": "亲情",
+         "py": "qīn qíng"
+        }
+       ],
+       "sentence": "母亲节那天，我给妈妈画了一张卡片。",
+       "sentenceWord": "母亲"
+      },
+      {
+       "char": "祖",
+       "pinyin": "zǔ",
+       "radical": "礻",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "祖国",
+         "py": "zǔ guó"
+        },
+        {
+         "w": "祖先",
+         "py": "zǔ xiān"
+        },
+        {
+         "w": "外祖父",
+         "py": "wài zǔ fù"
+        }
+       ],
+       "sentence": "我爱我的祖国。",
+       "sentenceWord": "祖国"
+      },
+      {
+       "char": "披",
+       "pinyin": "pī",
+       "radical": "扌",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "披风",
+         "py": "pī fēng"
+        },
+        {
+         "w": "披着",
+         "py": "pī zhe"
+        }
+       ],
+       "sentence": "小超人披着红色的披风。",
+       "sentenceWord": "披风"
+      },
+      {
+       "char": "摇",
+       "pinyin": "yáo",
+       "radical": "扌",
+       "strokes": 13,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "摇晃",
+         "py": "yáo huàng"
+        },
+        {
+         "w": "摇动",
+         "py": "yáo dòng"
+        },
+        {
+         "w": "摇头",
+         "py": "yáo tóu"
+        },
+        {
+         "w": "摇摆",
+         "py": "yáo bǎi"
+        }
+       ],
+       "sentence": "小船在水面上轻轻摇晃。",
+       "sentenceWord": "摇晃"
+      },
+      {
+       "char": "停",
+       "pinyin": "tíng",
+       "radical": "亻",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "停止",
+         "py": "tíng zhǐ"
+        },
+        {
+         "w": "停下",
+         "py": "tíng xià"
+        },
+        {
+         "w": "停车",
+         "py": "tíng chē"
+        }
+       ],
+       "sentence": "红灯亮了，汽车都停下了。",
+       "sentenceWord": "停下"
+      },
+      {
+       "char": "羽",
+       "pinyin": "yǔ",
+       "radical": "羽",
+       "strokes": 6,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "羽毛",
+         "py": "yǔ máo"
+        },
+        {
+         "w": "羽绒",
+         "py": "yǔ róng"
+        },
+        {
+         "w": "羽扇",
+         "py": "yǔ shàn"
+        }
+       ],
+       "sentence": "小鸟的羽毛五颜六色。",
+       "sentenceWord": "羽毛"
+      },
+      {
+       "char": "翠",
+       "pinyin": "cuì",
+       "radical": "羽",
+       "strokes": 14,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "翠绿",
+         "py": "cuì lǜ"
+        },
+        {
+         "w": "翠鸟",
+         "py": "cuì niǎo"
+        },
+        {
+         "w": "青翠",
+         "py": "qīng cuì"
+        }
+       ],
+       "sentence": "雨后的竹林一片青翠。",
+       "sentenceWord": "青翠"
+      },
+      {
+       "char": "蓝",
+       "pinyin": "lán",
+       "radical": "艹",
+       "strokes": 13,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "蓝色",
+         "py": "lán sè"
+        },
+        {
+         "w": "蓝天",
+         "py": "lán tiān"
+        },
+        {
+         "w": "蓝图",
+         "py": "lán tú"
+        }
+       ],
+       "sentence": "蓝天上飘着几朵白云。",
+       "sentenceWord": "蓝天"
+      },
+      {
+       "char": "静",
+       "pinyin": "jìng",
+       "radical": "青",
+       "strokes": 14,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "安静",
+         "py": "ān jìng"
+        },
+        {
+         "w": "平静",
+         "py": "píng jìng"
+        },
+        {
+         "w": "静止",
+         "py": "jìng zhǐ"
+        },
+        {
+         "w": "宁静",
+         "py": "níng jìng"
+        }
+       ],
+       "sentence": "图书馆里很安静。",
+       "sentenceWord": "安静"
+      },
+      {
+       "char": "悄",
+       "pinyin": "qiāo",
+       "radical": "忄",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "悄悄",
+         "py": "qiāo qiāo"
+        },
+        {
+         "w": "静悄悄",
+         "py": "jìng qiāo qiāo"
+        },
+        {
+         "w": "悄悄话",
+         "py": "qiāo qiāo huà"
+        }
+       ],
+       "sentence": "夜里，四周静悄悄的。",
+       "sentenceWord": "静悄悄"
+      },
+      {
+       "char": "吞",
+       "pinyin": "tūn",
+       "radical": "口",
+       "strokes": 7,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "吞下",
+         "py": "tūn xià"
+        },
+        {
+         "w": "吞咽",
+         "py": "tūn yàn"
+        },
+        {
+         "w": "吞没",
+         "py": "tūn mò"
+        }
+       ],
+       "sentence": "大鱼一口吞下了小虾。",
+       "sentenceWord": "吞下"
+      },
+      {
+       "char": "捕",
+       "pinyin": "bǔ",
+       "radical": "扌",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "捕捉",
+         "py": "bǔ zhuō"
+        },
+        {
+         "w": "捕鱼",
+         "py": "bǔ yú"
+        },
+        {
+         "w": "捕获",
+         "py": "bǔ huò"
+        }
+       ],
+       "sentence": "翠鸟飞下来捕鱼。",
+       "sentenceWord": "捕鱼"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "宁静",
+       "py": "níng jìng"
+      },
+      {
+       "w": "搭车",
+       "py": "dā chē"
+      },
+      {
+       "w": "母亲",
+       "py": "mǔ qīn"
+      },
+      {
+       "w": "羽扇",
+       "py": "yǔ shàn"
+      },
+      {
+       "w": "翠鸟",
+       "py": "cuì niǎo"
+      },
+      {
+       "w": "披风",
+       "py": "pī fēng"
+      },
+      {
+       "w": "吞下",
+       "py": "tūn xià"
+      },
+      {
+       "w": "捕鱼",
+       "py": "bǔ yú"
+      },
+      {
+       "w": "蓝色",
+       "py": "lán sè"
+      },
+      {
+       "w": "船夫",
+       "py": "chuán fū"
+      },
+      {
+       "w": "摇头",
+       "py": "yáo tóu"
+      },
+      {
+       "w": "停车",
+       "py": "tíng chē"
+      },
+      {
+       "w": "外祖父",
+       "py": "wài zǔ fù"
+      },
+      {
+       "w": "悄悄话",
+       "py": "qiāo qiāo huà"
+      }
+     ]
+    },
+    {
+     "id": "L15",
+     "title": "第15课 金色的草地",
+     "chars": [
+      {
+       "char": "蒲",
+       "pinyin": "pú",
+       "radical": "艹",
+       "strokes": 13,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "蒲公英",
+         "py": "pú gōng yīng"
+        },
+        {
+         "w": "蒲扇",
+         "py": "pú shàn"
+        }
+       ],
+       "sentence": "我轻轻一吹，蒲公英飞走了。",
+       "sentenceWord": "蒲公英"
+      },
+      {
+       "char": "英",
+       "pinyin": "yīng",
+       "radical": "艹",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "英雄",
+         "py": "yīng xióng"
+        },
+        {
+         "w": "英语",
+         "py": "yīng yǔ"
+        },
+        {
+         "w": "蒲公英",
+         "py": "pú gōng yīng"
+        }
+       ],
+       "sentence": "解放军叔叔是我心中的英雄。",
+       "sentenceWord": "英雄"
+      },
+      {
+       "char": "盛",
+       "pinyin": "shèng",
+       "radical": "皿",
+       "strokes": 11,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "盛开",
+         "py": "shèng kāi"
+        },
+        {
+         "w": "茂盛",
+         "py": "mào shèng"
+        },
+        {
+         "w": "盛大",
+         "py": "shèng dà"
+        }
+       ],
+       "sentence": "公园里的花儿都盛开了。",
+       "sentenceWord": "盛开"
+      },
+      {
+       "char": "耍",
+       "pinyin": "shuǎ",
+       "radical": "而",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "玩耍",
+         "py": "wán shuǎ"
+        },
+        {
+         "w": "杂耍",
+         "py": "zá shuǎ"
+        }
+       ],
+       "sentence": "孩子们在草地上开心地玩耍。",
+       "sentenceWord": "玩耍"
+      },
+      {
+       "char": "使",
+       "pinyin": "shǐ",
+       "radical": "亻",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "使劲",
+         "py": "shǐ jìn"
+        },
+        {
+         "w": "使用",
+         "py": "shǐ yòng"
+        },
+        {
+         "w": "天使",
+         "py": "tiān shǐ"
+        }
+       ],
+       "sentence": "我使劲一推，门开了。",
+       "sentenceWord": "使劲"
+      },
+      {
+       "char": "劲",
+       "pinyin": "jìn",
+       "radical": "力",
+       "strokes": 7,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "使劲",
+         "py": "shǐ jìn"
+        },
+        {
+         "w": "劲头",
+         "py": "jìn tóu"
+        },
+        {
+         "w": "后劲",
+         "py": "hòu jìn"
+        }
+       ],
+       "sentence": "他干活的劲头可足了。",
+       "sentenceWord": "劲头"
+      },
+      {
+       "char": "脸",
+       "pinyin": "liǎn",
+       "radical": "月",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "脸蛋",
+         "py": "liǎn dàn"
+        },
+        {
+         "w": "笑脸",
+         "py": "xiào liǎn"
+        },
+        {
+         "w": "脸色",
+         "py": "liǎn sè"
+        }
+       ],
+       "sentence": "妹妹的小脸蛋红红的。",
+       "sentenceWord": "脸蛋"
+      },
+      {
+       "char": "欠",
+       "pinyin": "qiàn",
+       "radical": "欠",
+       "strokes": 4,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "欠缺",
+         "py": "qiàn quē"
+        },
+        {
+         "w": "哈欠",
+         "py": "hā qian"
+        },
+        {
+         "w": "亏欠",
+         "py": "kuī qiàn"
+        }
+       ],
+       "sentence": "他困得直打哈欠。",
+       "sentenceWord": "哈欠"
+      },
+      {
+       "char": "朝",
+       "pinyin": "cháo",
+       "radical": "月",
+       "strokes": 12,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "朝代",
+         "py": "cháo dài"
+        },
+        {
+         "w": "朝向",
+         "py": "cháo xiàng"
+        },
+        {
+         "w": "朝廷",
+         "py": "cháo tíng"
+        }
+       ],
+       "sentence": "我家的窗户朝向南边。",
+       "sentenceWord": "朝向"
+      },
+      {
+       "char": "钓",
+       "pinyin": "diào",
+       "radical": "钅",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "钓鱼",
+         "py": "diào yú"
+        },
+        {
+         "w": "垂钓",
+         "py": "chuí diào"
+        },
+        {
+         "w": "钓竿",
+         "py": "diào gān"
+        }
+       ],
+       "sentence": "爷爷喜欢去河边钓鱼。",
+       "sentenceWord": "钓鱼"
+      },
+      {
+       "char": "察",
+       "pinyin": "chá",
+       "radical": "宀",
+       "strokes": 14,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "观察",
+         "py": "guān chá"
+        },
+        {
+         "w": "察觉",
+         "py": "chá jué"
+        },
+        {
+         "w": "考察",
+         "py": "kǎo chá"
+        }
+       ],
+       "sentence": "我每天观察豆芽长高了多少。",
+       "sentenceWord": "观察"
+      },
+      {
+       "char": "拢",
+       "pinyin": "lǒng",
+       "radical": "扌",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "合拢",
+         "py": "hé lǒng"
+        },
+        {
+         "w": "聚拢",
+         "py": "jù lǒng"
+        },
+        {
+         "w": "拉拢",
+         "py": "lā lǒng"
+        }
+       ],
+       "sentence": "晚上，花瓣慢慢合拢了。",
+       "sentenceWord": "合拢"
+      },
+      {
+       "char": "喜",
+       "pinyin": "xǐ",
+       "radical": "士",
+       "strokes": 12,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "喜欢",
+         "py": "xǐ huān"
+        },
+        {
+         "w": "欢喜",
+         "py": "huān xǐ"
+        },
+        {
+         "w": "喜悦",
+         "py": "xǐ yuè"
+        }
+       ],
+       "sentence": "我最喜欢春天。",
+       "sentenceWord": "喜欢"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "朝代",
+       "py": "cháo dài"
+      },
+      {
+       "w": "察觉",
+       "py": "chá jué"
+      },
+      {
+       "w": "欢喜",
+       "py": "huān xǐ"
+      },
+      {
+       "w": "哈欠",
+       "py": "hā qian"
+      },
+      {
+       "w": "钓鱼",
+       "py": "diào yú"
+      },
+      {
+       "w": "盛开",
+       "py": "shèng kāi"
+      },
+      {
+       "w": "朝向",
+       "py": "cháo xiàng"
+      },
+      {
+       "w": "合拢",
+       "py": "hé lǒng"
+      },
+      {
+       "w": "使劲",
+       "py": "shǐ jìn"
+      },
+      {
+       "w": "观察",
+       "py": "guān chá"
+      },
+      {
+       "w": "笑脸",
+       "py": "xiào liǎn"
+      },
+      {
+       "w": "蒲公英",
+       "py": "pú gōng yīng"
+      },
+      {
+       "w": "一本正经",
+       "py": "yì běn zhèng jīng"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "第六单元",
+   "lessons": [
+    {
+     "id": "L16",
+     "title": "第16课 富饶的西沙群岛",
+     "chars": [
+      {
+       "char": "景",
+       "pinyin": "jǐng",
+       "radical": "日",
+       "strokes": 12,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "景色",
+         "py": "jǐng sè"
+        },
+        {
+         "w": "风景",
+         "py": "fēng jǐng"
+        },
+        {
+         "w": "美景",
+         "py": "měi jǐng"
+        }
+       ],
+       "sentence": "西沙群岛的景色真美。",
+       "sentenceWord": "景色"
+      },
+      {
+       "char": "优",
+       "pinyin": "yōu",
+       "radical": "亻",
+       "strokes": 6,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "优秀",
+         "py": "yōu xiù"
+        },
+        {
+         "w": "优美",
+         "py": "yōu měi"
+        },
+        {
+         "w": "优点",
+         "py": "yōu diǎn"
+        }
+       ],
+       "sentence": "每个人都有自己的优点。",
+       "sentenceWord": "优点"
+      },
+      {
+       "char": "淡",
+       "pinyin": "dàn",
+       "radical": "氵",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "清淡",
+         "py": "qīng dàn"
+        },
+        {
+         "w": "淡水",
+         "py": "dàn shuǐ"
+        },
+        {
+         "w": "平淡",
+         "py": "píng dàn"
+        }
+       ],
+       "sentence": "生病的时候要吃清淡的饭菜。",
+       "sentenceWord": "清淡"
+      },
+      {
+       "char": "浅",
+       "pinyin": "qiǎn",
+       "radical": "氵",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "深浅",
+         "py": "shēn qiǎn"
+        },
+        {
+         "w": "浅水",
+         "py": "qiǎn shuǐ"
+        },
+        {
+         "w": "浅滩",
+         "py": "qiǎn tān"
+        }
+       ],
+       "sentence": "小鸭子在浅水里游来游去。",
+       "sentenceWord": "浅水"
+      },
+      {
+       "char": "底",
+       "pinyin": "dǐ",
+       "radical": "广",
+       "strokes": 8,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "海底",
+         "py": "hǎi dǐ"
+        },
+        {
+         "w": "底部",
+         "py": "dǐ bù"
+        },
+        {
+         "w": "到底",
+         "py": "dào dǐ"
+        }
+       ],
+       "sentence": "海底有很多漂亮的珊瑚。",
+       "sentenceWord": "海底"
+      },
+      {
+       "char": "岩",
+       "pinyin": "yán",
+       "radical": "山",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "岩石",
+         "py": "yán shí"
+        },
+        {
+         "w": "岩洞",
+         "py": "yán dòng"
+        }
+       ],
+       "sentence": "海浪拍打着岸边的岩石。",
+       "sentenceWord": "岩石"
+      },
+      {
+       "char": "鹿",
+       "pinyin": "lù",
+       "radical": "鹿",
+       "strokes": 11,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "小鹿",
+         "py": "xiǎo lù"
+        },
+        {
+         "w": "鹿角",
+         "py": "lù jiǎo"
+        },
+        {
+         "w": "梅花鹿",
+         "py": "méi huā lù"
+        }
+       ],
+       "sentence": "梅花鹿身上有白色的斑点。",
+       "sentenceWord": "梅花鹿"
+      },
+      {
+       "char": "划",
+       "pinyin": "huá",
+       "radical": "刂",
+       "strokes": 6,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "划船",
+         "py": "huá chuán"
+        },
+        {
+         "w": "划水",
+         "py": "huá shuǐ"
+        },
+        {
+         "w": "划开",
+         "py": "huá kāi"
+        }
+       ],
+       "sentence": "我们在湖上划船。",
+       "sentenceWord": "划船"
+      },
+      {
+       "char": "布",
+       "pinyin": "bù",
+       "radical": "巾",
+       "strokes": 5,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "布料",
+         "py": "bù liào"
+        },
+        {
+         "w": "分布",
+         "py": "fēn bù"
+        },
+        {
+         "w": "布置",
+         "py": "bù zhì"
+        },
+        {
+         "w": "帆布",
+         "py": "fān bù"
+        }
+       ],
+       "sentence": "同学们一起布置教室。",
+       "sentenceWord": "布置"
+      },
+      {
+       "char": "茂",
+       "pinyin": "mào",
+       "radical": "艹",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "茂盛",
+         "py": "mào shèng"
+        },
+        {
+         "w": "茂密",
+         "py": "mào mì"
+        },
+        {
+         "w": "繁茂",
+         "py": "fán mào"
+        }
+       ],
+       "sentence": "山上的树林很茂密。",
+       "sentenceWord": "茂密"
+      },
+      {
+       "char": "密",
+       "pinyin": "mì",
+       "radical": "宀",
+       "strokes": 11,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "茂密",
+         "py": "mào mì"
+        },
+        {
+         "w": "秘密",
+         "py": "mì mì"
+        },
+        {
+         "w": "紧密",
+         "py": "jǐn mì"
+        },
+        {
+         "w": "密码",
+         "py": "mì mǎ"
+        }
+       ],
+       "sentence": "这是我和小狗之间的秘密。",
+       "sentenceWord": "秘密"
+      },
+      {
+       "char": "厚",
+       "pinyin": "hòu",
+       "radical": "厂",
+       "strokes": 9,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "厚度",
+         "py": "hòu dù"
+        },
+        {
+         "w": "深厚",
+         "py": "shēn hòu"
+        },
+        {
+         "w": "厚实",
+         "py": "hòu shi"
+        }
+       ],
+       "sentence": "奶奶给我织了一件厚实的毛衣。",
+       "sentenceWord": "厚实"
+      },
+      {
+       "char": "料",
+       "pinyin": "liào",
+       "radical": "米",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "材料",
+         "py": "cái liào"
+        },
+        {
+         "w": "布料",
+         "py": "bù liào"
+        },
+        {
+         "w": "饮料",
+         "py": "yǐn liào"
+        },
+        {
+         "w": "预料",
+         "py": "yù liào"
+        }
+       ],
+       "sentence": "做手工需要准备好材料。",
+       "sentenceWord": "材料"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "优点",
+       "py": "yōu diǎn"
+      },
+      {
+       "w": "平淡",
+       "py": "píng dàn"
+      },
+      {
+       "w": "深浅",
+       "py": "shēn qiǎn"
+      },
+      {
+       "w": "美景",
+       "py": "měi jǐng"
+      },
+      {
+       "w": "海底",
+       "py": "hǎi dǐ"
+      },
+      {
+       "w": "岩石",
+       "py": "yán shí"
+      },
+      {
+       "w": "茂密",
+       "py": "mào mì"
+      },
+      {
+       "w": "布料",
+       "py": "bù liào"
+      },
+      {
+       "w": "划开",
+       "py": "huá kāi"
+      },
+      {
+       "w": "景色",
+       "py": "jǐng sè"
+      },
+      {
+       "w": "划船",
+       "py": "huá chuán"
+      },
+      {
+       "w": "深厚",
+       "py": "shēn hòu"
+      },
+      {
+       "w": "鹿角",
+       "py": "lù jiǎo"
+      },
+      {
+       "w": "梅花鹿",
+       "py": "méi huā lù",
+       "given": [
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "id": "L17",
+     "title": "第17课 海滨小城",
+     "chars": [
+      {
+       "char": "滨",
+       "pinyin": "bīn",
+       "radical": "氵",
+       "strokes": 13,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "海滨",
+         "py": "hǎi bīn"
+        },
+        {
+         "w": "湖滨",
+         "py": "hú bīn"
+        },
+        {
+         "w": "滨江",
+         "py": "bīn jiāng"
+        }
+       ],
+       "sentence": "海滨小城的空气很清新。",
+       "sentenceWord": "海滨"
+      },
+      {
+       "char": "棕",
+       "pinyin": "zōng",
+       "radical": "木",
+       "strokes": 12,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "棕色",
+         "py": "zōng sè"
+        },
+        {
+         "w": "棕树",
+         "py": "zōng shù"
+        },
+        {
+         "w": "棕熊",
+         "py": "zōng xióng"
+        }
+       ],
+       "sentence": "小熊有一身棕色的毛。",
+       "sentenceWord": "棕色"
+      },
+      {
+       "char": "帆",
+       "pinyin": "fān",
+       "radical": "巾",
+       "strokes": 6,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "帆船",
+         "py": "fān chuán"
+        },
+        {
+         "w": "帆布",
+         "py": "fān bù"
+        },
+        {
+         "w": "风帆",
+         "py": "fēng fān"
+        },
+        {
+         "w": "孤帆",
+         "py": "gū fān"
+        }
+       ],
+       "sentence": "海上有几只白色的帆船。",
+       "sentenceWord": "帆船"
+      },
+      {
+       "char": "灰",
+       "pinyin": "huī",
+       "radical": "火",
+       "strokes": 6,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "灰色",
+         "py": "huī sè"
+        },
+        {
+         "w": "灰尘",
+         "py": "huī chén"
+        },
+        {
+         "w": "灰心",
+         "py": "huī xīn"
+        }
+       ],
+       "sentence": "考得不好别灰心，下次再努力。",
+       "sentenceWord": "灰心"
+      },
+      {
+       "char": "跟",
+       "pinyin": "gēn",
+       "radical": "⻊",
+       "strokes": 13,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "跟随",
+         "py": "gēn suí"
+        },
+        {
+         "w": "跟着",
+         "py": "gēn zhe"
+        },
+        {
+         "w": "脚跟",
+         "py": "jiǎo gēn"
+        },
+        {
+         "w": "跟从",
+         "py": "gēn cóng"
+        }
+       ],
+       "sentence": "小鸭子跟着鸭妈妈去游泳。",
+       "sentenceWord": "跟着"
+      },
+      {
+       "char": "渔",
+       "pinyin": "yú",
+       "radical": "氵",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "渔民",
+         "py": "yú mín"
+        },
+        {
+         "w": "渔船",
+         "py": "yú chuán"
+        },
+        {
+         "w": "渔业",
+         "py": "yú yè"
+        }
+       ],
+       "sentence": "渔民伯伯开着渔船出海了。",
+       "sentenceWord": "渔民"
+      },
+      {
+       "char": "壳",
+       "pinyin": "ké",
+       "radical": "士",
+       "strokes": 7,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "贝壳",
+         "py": "bèi ké"
+        },
+        {
+         "w": "外壳",
+         "py": "wài ké"
+        },
+        {
+         "w": "蛋壳",
+         "py": "dàn ké"
+        }
+       ],
+       "sentence": "我在沙滩上捡到了一枚贝壳。",
+       "sentenceWord": "贝壳"
+      },
+      {
+       "char": "院",
+       "pinyin": "yuàn",
+       "radical": "阝",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "院子",
+         "py": "yuàn zi"
+        },
+        {
+         "w": "庭院",
+         "py": "tíng yuàn"
+        },
+        {
+         "w": "医院",
+         "py": "yī yuàn"
+        },
+        {
+         "w": "学院",
+         "py": "xué yuàn"
+        }
+       ],
+       "sentence": "院子里种着一棵大树。",
+       "sentenceWord": "院子"
+      },
+      {
+       "char": "亚",
+       "pinyin": "yà",
+       "radical": "二",
+       "strokes": 6,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "亚洲",
+         "py": "yà zhōu"
+        },
+        {
+         "w": "亚军",
+         "py": "yà jūn"
+        }
+       ],
+       "sentence": "我们中国在亚洲。",
+       "sentenceWord": "亚洲"
+      },
+      {
+       "char": "透",
+       "pinyin": "tòu",
+       "radical": "辶",
+       "strokes": 10,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "透明",
+         "py": "tòu míng"
+        },
+        {
+         "w": "透气",
+         "py": "tòu qì"
+        },
+        {
+         "w": "透过",
+         "py": "tòu guò"
+        },
+        {
+         "w": "穿透",
+         "py": "chuān tòu"
+        }
+       ],
+       "sentence": "阳光透过窗户照进教室。",
+       "sentenceWord": "透过"
+      },
+      {
+       "char": "除",
+       "pinyin": "chú",
+       "radical": "阝",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "除去",
+         "py": "chú qù"
+        },
+        {
+         "w": "除法",
+         "py": "chú fǎ"
+        },
+        {
+         "w": "除非",
+         "py": "chú fēi"
+        },
+        {
+         "w": "消除",
+         "py": "xiāo chú"
+        }
+       ],
+       "sentence": "我学会了做除法题。",
+       "sentenceWord": "除法"
+      },
+      {
+       "char": "踩",
+       "pinyin": "cǎi",
+       "radical": "⻊",
+       "strokes": 15,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "踩水",
+         "py": "cǎi shuǐ"
+        },
+        {
+         "w": "踩踏",
+         "py": "cǎi tà"
+        },
+        {
+         "w": "踩坏",
+         "py": "cǎi huài"
+        }
+       ],
+       "sentence": "不要踩坏了草地上的小花。",
+       "sentenceWord": "踩坏"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "海滨",
+       "py": "hǎi bīn"
+      },
+      {
+       "w": "棕色",
+       "py": "zōng sè"
+      },
+      {
+       "w": "跟从",
+       "py": "gēn cóng"
+      },
+      {
+       "w": "帆布",
+       "py": "fān bù"
+      },
+      {
+       "w": "灰尘",
+       "py": "huī chén",
+       "given": [
+        1
+       ]
+      },
+      {
+       "w": "灰心",
+       "py": "huī xīn"
+      },
+      {
+       "w": "贝壳",
+       "py": "bèi ké"
+      },
+      {
+       "w": "亚军",
+       "py": "yà jūn"
+      },
+      {
+       "w": "渔船",
+       "py": "yú chuán"
+      },
+      {
+       "w": "学院",
+       "py": "xué yuàn"
+      },
+      {
+       "w": "透明",
+       "py": "tòu míng"
+      },
+      {
+       "w": "消除",
+       "py": "xiāo chú"
+      },
+      {
+       "w": "除非",
+       "py": "chú fēi"
+      },
+      {
+       "w": "踩水",
+       "py": "cǎi shuǐ"
+      },
+      {
+       "w": "穿透",
+       "py": "chuān tòu"
+      }
+     ]
+    },
+    {
+     "id": "L18",
+     "title": "第18课 美丽的小兴安岭",
+     "chars": [
+      {
+       "char": "抽",
+       "pinyin": "chōu",
+       "radical": "扌",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "抽水",
+         "py": "chōu shuǐ"
+        },
+        {
+         "w": "抽出",
+         "py": "chōu chū"
+        },
+        {
+         "w": "抽空",
+         "py": "chōu kòng"
+        },
+        {
+         "w": "抽屉",
+         "py": "chōu ti"
+        }
+       ],
+       "sentence": "周末爸爸抽空陪我看书。",
+       "sentenceWord": "抽空"
+      },
+      {
+       "char": "封",
+       "pinyin": "fēng",
+       "radical": "寸",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "封闭",
+         "py": "fēng bì"
+        },
+        {
+         "w": "封面",
+         "py": "fēng miàn"
+        },
+        {
+         "w": "信封",
+         "py": "xìn fēng"
+        }
+       ],
+       "sentence": "我把信装进信封里。",
+       "sentenceWord": "信封"
+      },
+      {
+       "char": "严",
+       "pinyin": "yán",
+       "radical": "一",
+       "strokes": 7,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "严格",
+         "py": "yán gé"
+        },
+        {
+         "w": "严肃",
+         "py": "yán sù"
+        },
+        {
+         "w": "严寒",
+         "py": "yán hán"
+        }
+       ],
+       "sentence": "老师对我们要求很严格。",
+       "sentenceWord": "严格"
+      },
+      {
+       "char": "挡",
+       "pinyin": "dǎng",
+       "radical": "扌",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "挡住",
+         "py": "dǎng zhù"
+        },
+        {
+         "w": "阻挡",
+         "py": "zǔ dǎng"
+        },
+        {
+         "w": "遮挡",
+         "py": "zhē dǎng"
+        }
+       ],
+       "sentence": "一棵大树挡住了炎热的阳光。",
+       "sentenceWord": "挡住"
+      },
+      {
+       "char": "坛",
+       "pinyin": "tán",
+       "radical": "土",
+       "strokes": 7,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "花坛",
+         "py": "huā tán"
+        },
+        {
+         "w": "天坛",
+         "py": "tiān tán"
+        },
+        {
+         "w": "讲坛",
+         "py": "jiǎng tán"
+        }
+       ],
+       "sentence": "花坛里的花开得真好看。",
+       "sentenceWord": "花坛"
+      },
+      {
+       "char": "显",
+       "pinyin": "xiǎn",
+       "radical": "日",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "明显",
+         "py": "míng xiǎn"
+        },
+        {
+         "w": "显示",
+         "py": "xiǎn shì"
+        },
+        {
+         "w": "显眼",
+         "py": "xiǎn yǎn"
+        }
+       ],
+       "sentence": "他穿着红衣服，在人群中很显眼。",
+       "sentenceWord": "显眼"
+      },
+      {
+       "char": "苍",
+       "pinyin": "cāng",
+       "radical": "艹",
+       "strokes": 7,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "苍白",
+         "py": "cāng bái"
+        },
+        {
+         "w": "苍天",
+         "py": "cāng tiān"
+        },
+        {
+         "w": "苍翠",
+         "py": "cāng cuì"
+        },
+        {
+         "w": "苍老",
+         "py": "cāng lǎo"
+        }
+       ],
+       "sentence": "远处的山林一片苍翠。",
+       "sentenceWord": "苍翠"
+      },
+      {
+       "char": "药",
+       "pinyin": "yào",
+       "radical": "艹",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "药材",
+         "py": "yào cái"
+        },
+        {
+         "w": "药品",
+         "py": "yào pǐn"
+        },
+        {
+         "w": "药水",
+         "py": "yào shuǐ"
+        }
+       ],
+       "sentence": "小兴安岭有很多名贵的药材。",
+       "sentenceWord": "药材"
+      },
+      {
+       "char": "材",
+       "pinyin": "cái",
+       "radical": "木",
+       "strokes": 7,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "材料",
+         "py": "cái liào"
+        },
+        {
+         "w": "木材",
+         "py": "mù cái"
+        },
+        {
+         "w": "药材",
+         "py": "yào cái"
+        }
+       ],
+       "sentence": "小兴安岭出产很多木材。",
+       "sentenceWord": "木材"
+      },
+      {
+       "char": "软",
+       "pinyin": "ruǎn",
+       "radical": "车",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "柔软",
+         "py": "róu ruǎn"
+        },
+        {
+         "w": "软绵绵",
+         "py": "ruǎn mián mián"
+        },
+        {
+         "w": "松软",
+         "py": "sōng ruǎn"
+        }
+       ],
+       "sentence": "小猫的毛又柔软又暖和。",
+       "sentenceWord": "柔软"
+      },
+      {
+       "char": "刮",
+       "pinyin": "guā",
+       "radical": "刂",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "刮风",
+         "py": "guā fēng"
+        },
+        {
+         "w": "刮开",
+         "py": "guā kāi"
+        }
+       ],
+       "sentence": "外面刮风了，快关上窗户。",
+       "sentenceWord": "刮风"
+      },
+      {
+       "char": "捉",
+       "pinyin": "zhuō",
+       "radical": "扌",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "捕捉",
+         "py": "bǔ zhuō"
+        },
+        {
+         "w": "捉住",
+         "py": "zhuō zhù"
+        },
+        {
+         "w": "捉迷藏",
+         "py": "zhuō mí cáng"
+        }
+       ],
+       "sentence": "下课后我们一起玩捉迷藏。",
+       "sentenceWord": "捉迷藏"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "抽空",
+       "py": "chōu kòng"
+      },
+      {
+       "w": "抽水",
+       "py": "chōu shuǐ"
+      },
+      {
+       "w": "严格",
+       "py": "yán gé"
+      },
+      {
+       "w": "挡住",
+       "py": "dǎng zhù"
+      },
+      {
+       "w": "药材",
+       "py": "yào cái"
+      },
+      {
+       "w": "捉弄",
+       "py": "zhuō nòng",
+       "given": [
+        1
+       ]
+      },
+      {
+       "w": "花坛",
+       "py": "huā tán"
+      },
+      {
+       "w": "讲坛",
+       "py": "jiǎng tán"
+      },
+      {
+       "w": "明显",
+       "py": "míng xiǎn"
+      },
+      {
+       "w": "苍凉",
+       "py": "cāng liáng"
+      },
+      {
+       "w": "封闭",
+       "py": "fēng bì"
+      },
+      {
+       "w": "木材",
+       "py": "mù cái"
+      },
+      {
+       "w": "松软",
+       "py": "sōng ruǎn"
+      },
+      {
+       "w": "刮风",
+       "py": "guā fēng"
+      },
+      {
+       "w": "苍白",
+       "py": "cāng bái"
+      }
+     ]
+    },
+    {
+     "id": "L19",
+     "title": "第19课* 香港，璀璨的明珠",
+     "chars": [],
+     "tingxie": [
+      {
+       "w": "明珠",
+       "py": "míng zhū"
+      },
+      {
+       "w": "南海",
+       "py": "nán hǎi"
+      },
+      {
+       "w": "面积",
+       "py": "miàn jī"
+      },
+      {
+       "w": "美食",
+       "py": "měi shí"
+      },
+      {
+       "w": "文化",
+       "py": "wén huà"
+      },
+      {
+       "w": "风味",
+       "py": "fēng wèi"
+      },
+      {
+       "w": "海洋",
+       "py": "hǎi yáng"
+      },
+      {
+       "w": "祖国",
+       "py": "zǔ guó"
+      },
+      {
+       "w": "应有尽有",
+       "py": "yīng yǒu jìn yǒu"
+      },
+      {
+       "w": "礼物",
+       "py": "lǐ wù"
+      },
+      {
+       "w": "交织",
+       "py": "jiāo zhī"
+      },
+      {
+       "w": "未来",
+       "py": "wèi lái"
+      },
+      {
+       "w": "美不胜收",
+       "py": "měi bú shèng shōu"
+      }
+     ]
+    },
+    {
+     "id": "Y6",
+     "title": "语文园地六",
+     "chars": [],
+     "tingxie": [
+      {
+       "w": "风景",
+       "py": "fēng jǐng"
+      },
+      {
+       "w": "发布",
+       "py": "fā bù"
+      },
+      {
+       "w": "茂密",
+       "py": "mào mì"
+      },
+      {
+       "w": "棕色",
+       "py": "zōng sè"
+      },
+      {
+       "w": "贝壳",
+       "py": "bèi ké"
+      },
+      {
+       "w": "透亮",
+       "py": "tòu liang"
+      },
+      {
+       "w": "除法",
+       "py": "chú fǎ"
+      },
+      {
+       "w": "封顶",
+       "py": "fēng dǐng"
+      },
+      {
+       "w": "苍翠",
+       "py": "cāng cuì"
+      },
+      {
+       "w": "药材",
+       "py": "yào cái"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u7",
+   "title": "第七单元",
+   "lessons": [
+    {
+     "id": "L20",
+     "title": "第20课 古诗三首",
+     "chars": [
+      {
+       "char": "返",
+       "pinyin": "fǎn",
+       "radical": "辶",
+       "strokes": 7,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "返回",
+         "py": "fǎn huí"
+        },
+        {
+         "w": "往返",
+         "py": "wǎng fǎn"
+        }
+       ],
+       "sentence": "春天，燕子从南方返回了北方。",
+       "sentenceWord": "返回"
+      },
+      {
+       "char": "望",
+       "pinyin": "wàng",
+       "radical": "月",
+       "strokes": 11,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "希望",
+         "py": "xī wàng"
+        },
+        {
+         "w": "盼望",
+         "py": "pàn wàng"
+        },
+        {
+         "w": "望见",
+         "py": "wàng jiàn"
+        },
+        {
+         "w": "远望",
+         "py": "yuǎn wàng"
+        }
+       ],
+       "sentence": "我盼望着暑假快点到来。",
+       "sentenceWord": "盼望"
+      },
+      {
+       "char": "断",
+       "pinyin": "duàn",
+       "radical": "斤",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "断开",
+         "py": "duàn kāi"
+        },
+        {
+         "w": "中断",
+         "py": "zhōng duàn"
+        },
+        {
+         "w": "不断",
+         "py": "bú duàn"
+        }
+       ],
+       "sentence": "他不断地练习，终于学会了骑车。",
+       "sentenceWord": "不断"
+      },
+      {
+       "char": "楚",
+       "pinyin": "chǔ",
+       "radical": "木",
+       "strokes": 13,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "清楚",
+         "py": "qīng chu"
+        },
+        {
+         "w": "楚国",
+         "py": "chǔ guó"
+        }
+       ],
+       "sentence": "老师讲得清清楚楚。",
+       "sentenceWord": "清楚"
+      },
+      {
+       "char": "至",
+       "pinyin": "zhì",
+       "radical": "至",
+       "strokes": 6,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "至少",
+         "py": "zhì shǎo"
+        },
+        {
+         "w": "至今",
+         "py": "zhì jīn"
+        },
+        {
+         "w": "至于",
+         "py": "zhì yú"
+        }
+       ],
+       "sentence": "我每天至少喝六杯水。",
+       "sentenceWord": "至少"
+      },
+      {
+       "char": "岸",
+       "pinyin": "àn",
+       "radical": "山",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "岸边",
+         "py": "àn biān"
+        },
+        {
+         "w": "河岸",
+         "py": "hé àn"
+        },
+        {
+         "w": "海岸",
+         "py": "hǎi àn"
+        }
+       ],
+       "sentence": "小船慢慢靠近了岸边。",
+       "sentenceWord": "岸边"
+      },
+      {
+       "char": "孤",
+       "pinyin": "gū",
+       "radical": "子",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "孤独",
+         "py": "gū dú"
+        },
+        {
+         "w": "孤单",
+         "py": "gū dān"
+        },
+        {
+         "w": "孤帆",
+         "py": "gū fān"
+        }
+       ],
+       "sentence": "有了好朋友，我一点也不孤单。",
+       "sentenceWord": "孤单"
+      },
+      {
+       "char": "饮",
+       "pinyin": "yǐn",
+       "radical": "饣",
+       "strokes": 7,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "饮水",
+         "py": "yǐn shuǐ"
+        },
+        {
+         "w": "饮食",
+         "py": "yǐn shí"
+        },
+        {
+         "w": "饮料",
+         "py": "yǐn liào"
+        }
+       ],
+       "sentence": "少喝饮料，多喝白开水。",
+       "sentenceWord": "饮料"
+      },
+      {
+       "char": "亦",
+       "pinyin": "yì",
+       "radical": "亠",
+       "strokes": 6,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "亦可",
+         "py": "yì kě"
+        },
+        {
+         "w": "人云亦云",
+         "py": "rén yún yì yún"
+        }
+       ],
+       "sentence": "自己要动脑筋，不能人云亦云。",
+       "sentenceWord": "人云亦云"
+      },
+      {
+       "char": "欲",
+       "pinyin": "yù",
+       "radical": "欠",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "欲望",
+         "py": "yù wàng"
+        },
+        {
+         "w": "食欲",
+         "py": "shí yù"
+        }
+       ],
+       "sentence": "闻到饭菜香，我的食欲一下子就来了。",
+       "sentenceWord": "食欲"
+      },
+      {
+       "char": "抹",
+       "pinyin": "mǒ",
+       "radical": "扌",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "涂抹",
+         "py": "tú mǒ"
+        },
+        {
+         "w": "抹掉",
+         "py": "mǒ diào"
+        }
+       ],
+       "sentence": "妈妈在面包上涂抹了果酱。",
+       "sentenceWord": "涂抹"
+      },
+      {
+       "char": "宜",
+       "pinyin": "yí",
+       "radical": "宀",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "适宜",
+         "py": "shì yí"
+        },
+        {
+         "w": "相宜",
+         "py": "xiāng yí"
+        },
+        {
+         "w": "宜人",
+         "py": "yí rén"
+        }
+       ],
+       "sentence": "春天的天气温暖宜人。",
+       "sentenceWord": "宜人"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "孤帆",
+       "py": "gū fān"
+      },
+      {
+       "w": "涂抹",
+       "py": "tú mǒ",
+       "given": [
+        0
+       ]
+      },
+      {
+       "w": "清楚",
+       "py": "qīng chu"
+      },
+      {
+       "w": "至此",
+       "py": "zhì cǐ"
+      },
+      {
+       "w": "饮料",
+       "py": "yǐn liào"
+      },
+      {
+       "w": "远望",
+       "py": "yuǎn wàng"
+      },
+      {
+       "w": "返回",
+       "py": "fǎn huí"
+      },
+      {
+       "w": "岸边",
+       "py": "àn biān"
+      },
+      {
+       "w": "相宜",
+       "py": "xiāng yí"
+      },
+      {
+       "w": "中断",
+       "py": "zhōng duàn"
+      },
+      {
+       "w": "欲望",
+       "py": "yù wàng"
+      },
+      {
+       "w": "观望",
+       "py": "guān wàng"
+      },
+      {
+       "w": "饮水",
+       "py": "yǐn shuǐ"
+      },
+      {
+       "w": "人云亦云",
+       "py": "rén yún yì yún"
+      }
+     ]
+    },
+    {
+     "id": "L21",
+     "title": "第21课 大自然的声音",
+     "chars": [
+      {
+       "char": "妙",
+       "pinyin": "miào",
+       "radical": "女",
+       "strokes": 7,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "美妙",
+         "py": "měi miào"
+        },
+        {
+         "w": "奇妙",
+         "py": "qí miào"
+        },
+        {
+         "w": "妙计",
+         "py": "miào jì"
+        }
+       ],
+       "sentence": "大自然的声音真美妙。",
+       "sentenceWord": "美妙"
+      },
+      {
+       "char": "奏",
+       "pinyin": "zòu",
+       "radical": "大",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "演奏",
+         "py": "yǎn zòu"
+        },
+        {
+         "w": "奏乐",
+         "py": "zòu yuè"
+        },
+        {
+         "w": "节奏",
+         "py": "jié zòu"
+        }
+       ],
+       "sentence": "音乐会上，姐姐演奏了一首钢琴曲。",
+       "sentenceWord": "演奏"
+      },
+      {
+       "char": "琴",
+       "pinyin": "qín",
+       "radical": "王",
+       "strokes": 12,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "钢琴",
+         "py": "gāng qín"
+        },
+        {
+         "w": "琴声",
+         "py": "qín shēng"
+        },
+        {
+         "w": "小提琴",
+         "py": "xiǎo tí qín"
+        }
+       ],
+       "sentence": "我每天练习弹钢琴。",
+       "sentenceWord": "钢琴"
+      },
+      {
+       "char": "柔",
+       "pinyin": "róu",
+       "radical": "木",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "温柔",
+         "py": "wēn róu"
+        },
+        {
+         "w": "柔和",
+         "py": "róu hé"
+        },
+        {
+         "w": "柔软",
+         "py": "róu ruǎn"
+        }
+       ],
+       "sentence": "妈妈温柔地对我笑。",
+       "sentenceWord": "温柔"
+      },
+      {
+       "char": "感",
+       "pinyin": "gǎn",
+       "radical": "心",
+       "strokes": 13,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "感动",
+         "py": "gǎn dòng"
+        },
+        {
+         "w": "感受",
+         "py": "gǎn shòu"
+        },
+        {
+         "w": "感谢",
+         "py": "gǎn xiè"
+        },
+        {
+         "w": "感情",
+         "py": "gǎn qíng"
+        }
+       ],
+       "sentence": "这个故事让我很感动。",
+       "sentenceWord": "感动"
+      },
+      {
+       "char": "充",
+       "pinyin": "chōng",
+       "radical": "亠",
+       "strokes": 6,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "充满",
+         "py": "chōng mǎn"
+        },
+        {
+         "w": "充足",
+         "py": "chōng zú"
+        },
+        {
+         "w": "充实",
+         "py": "chōng shí"
+        }
+       ],
+       "sentence": "教室里充满了欢声笑语。",
+       "sentenceWord": "充满"
+      },
+      {
+       "char": "威",
+       "pinyin": "wēi",
+       "radical": "戈",
+       "strokes": 9,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "威风",
+         "py": "wēi fēng"
+        },
+        {
+         "w": "威严",
+         "py": "wēi yán"
+        },
+        {
+         "w": "威力",
+         "py": "wēi lì"
+        }
+       ],
+       "sentence": "大狮子看起来真威风。",
+       "sentenceWord": "威风"
+      },
+      {
+       "char": "器",
+       "pinyin": "qì",
+       "radical": "口",
+       "strokes": 16,
+       "structure": "上中下",
+       "words": [
+        {
+         "w": "乐器",
+         "py": "yuè qì"
+        },
+        {
+         "w": "机器",
+         "py": "jī qì"
+        },
+        {
+         "w": "器具",
+         "py": "qì jù"
+        }
+       ],
+       "sentence": "我最喜欢的乐器是小提琴。",
+       "sentenceWord": "乐器"
+      },
+      {
+       "char": "汇",
+       "pinyin": "huì",
+       "radical": "氵",
+       "strokes": 5,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "汇合",
+         "py": "huì hé"
+        },
+        {
+         "w": "汇集",
+         "py": "huì jí"
+        },
+        {
+         "w": "汇报",
+         "py": "huì bào"
+        },
+        {
+         "w": "汇总",
+         "py": "huì zǒng"
+        }
+       ],
+       "sentence": "小溪流汇合成了一条大河。",
+       "sentenceWord": "汇合"
+      },
+      {
+       "char": "鸣",
+       "pinyin": "míng",
+       "radical": "口",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "鸣叫",
+         "py": "míng jiào"
+        },
+        {
+         "w": "鸟鸣",
+         "py": "niǎo míng"
+        },
+        {
+         "w": "虫鸣",
+         "py": "chóng míng"
+        }
+       ],
+       "sentence": "清晨，树林里传来阵阵鸟鸣。",
+       "sentenceWord": "鸟鸣"
+      },
+      {
+       "char": "塘",
+       "pinyin": "táng",
+       "radical": "土",
+       "strokes": 13,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "池塘",
+         "py": "chí táng"
+        },
+        {
+         "w": "鱼塘",
+         "py": "yú táng"
+        },
+        {
+         "w": "荷塘",
+         "py": "hé táng"
+        },
+        {
+         "w": "水塘",
+         "py": "shuǐ táng"
+        }
+       ],
+       "sentence": "池塘里的荷花开了。",
+       "sentenceWord": "池塘"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "感动",
+       "py": "gǎn dòng"
+      },
+      {
+       "w": "充满",
+       "py": "chōng mǎn"
+      },
+      {
+       "w": "奇妙",
+       "py": "qí miào"
+      },
+      {
+       "w": "琴声",
+       "py": "qín shēng"
+      },
+      {
+       "w": "威严",
+       "py": "wēi yán"
+      },
+      {
+       "w": "鸟鸣",
+       "py": "niǎo míng"
+      },
+      {
+       "w": "汇总",
+       "py": "huì zǒng"
+      },
+      {
+       "w": "奏乐",
+       "py": "zòu yuè"
+      },
+      {
+       "w": "威力",
+       "py": "wēi lì"
+      },
+      {
+       "w": "虫鸣",
+       "py": "chóng míng"
+      },
+      {
+       "w": "温柔",
+       "py": "wēn róu"
+      },
+      {
+       "w": "充足",
+       "py": "chōng zú"
+      },
+      {
+       "w": "水塘",
+       "py": "shuǐ táng"
+      },
+      {
+       "w": "柔和",
+       "py": "róu hé"
+      },
+      {
+       "w": "机器",
+       "py": "jī qì"
+      }
+     ]
+    },
+    {
+     "id": "L22",
+     "title": "第22课 读不完的大书",
+     "chars": [
+      {
+       "char": "虾",
+       "pinyin": "xiā",
+       "radical": "虫",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "鱼虾",
+         "py": "yú xiā"
+        },
+        {
+         "w": "虾米",
+         "py": "xiā mǐ"
+        },
+        {
+         "w": "大虾",
+         "py": "dà xiā"
+        },
+        {
+         "w": "小虾",
+         "py": "xiǎo xiā"
+        }
+       ],
+       "sentence": "小河里有许多鱼虾。",
+       "sentenceWord": "鱼虾"
+      },
+      {
+       "char": "昆",
+       "pinyin": "kūn",
+       "radical": "日",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "昆虫",
+         "py": "kūn chóng"
+        },
+        {
+         "w": "昆明",
+         "py": "kūn míng"
+        },
+        {
+         "w": "昆曲",
+         "py": "kūn qǔ"
+        }
+       ],
+       "sentence": "蜜蜂是一种会采蜜的昆虫。",
+       "sentenceWord": "昆虫"
+      },
+      {
+       "char": "仅",
+       "pinyin": "jǐn",
+       "radical": "亻",
+       "strokes": 4,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "仅仅",
+         "py": "jǐn jǐn"
+        },
+        {
+         "w": "不仅",
+         "py": "bù jǐn"
+        },
+        {
+         "w": "仅有",
+         "py": "jǐn yǒu"
+        }
+       ],
+       "sentence": "他不仅学习好，还乐于助人。",
+       "sentenceWord": "不仅"
+      },
+      {
+       "char": "序",
+       "pinyin": "xù",
+       "radical": "广",
+       "strokes": 7,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "顺序",
+         "py": "shùn xù"
+        },
+        {
+         "w": "序号",
+         "py": "xù hào"
+        },
+        {
+         "w": "有序",
+         "py": "yǒu xù"
+        },
+        {
+         "w": "秩序",
+         "py": "zhì xù"
+        }
+       ],
+       "sentence": "同学们有序地走出教室。",
+       "sentenceWord": "有序"
+      },
+      {
+       "char": "荣",
+       "pinyin": "róng",
+       "radical": "艹",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "光荣",
+         "py": "guāng róng"
+        },
+        {
+         "w": "繁荣",
+         "py": "fán róng"
+        },
+        {
+         "w": "荣誉",
+         "py": "róng yù"
+        },
+        {
+         "w": "枯荣",
+         "py": "kū róng"
+        }
+       ],
+       "sentence": "戴上红领巾，我感到很光荣。",
+       "sentenceWord": "光荣"
+      },
+      {
+       "char": "枯",
+       "pinyin": "kū",
+       "radical": "木",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "枯萎",
+         "py": "kū wěi"
+        },
+        {
+         "w": "干枯",
+         "py": "gān kū"
+        },
+        {
+         "w": "枯黄",
+         "py": "kū huáng"
+        },
+        {
+         "w": "枯草",
+         "py": "kū cǎo"
+        }
+       ],
+       "sentence": "几天没浇水，花儿都枯萎了。",
+       "sentenceWord": "枯萎"
+      },
+      {
+       "char": "姿",
+       "pinyin": "zī",
+       "radical": "女",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "姿态",
+         "py": "zī tài"
+        },
+        {
+         "w": "姿势",
+         "py": "zī shì"
+        },
+        {
+         "w": "英姿",
+         "py": "yīng zī"
+        }
+       ],
+       "sentence": "写字的时候要保持正确的姿势。",
+       "sentenceWord": "姿势"
+      },
+      {
+       "char": "态",
+       "pinyin": "tài",
+       "radical": "心",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "姿态",
+         "py": "zī tài"
+        },
+        {
+         "w": "状态",
+         "py": "zhuàng tài"
+        },
+        {
+         "w": "态度",
+         "py": "tài dù"
+        }
+       ],
+       "sentence": "他学习的态度很认真。",
+       "sentenceWord": "态度"
+      },
+      {
+       "char": "刺",
+       "pinyin": "cì",
+       "radical": "刂",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "刺猬",
+         "py": "cì wei"
+        },
+        {
+         "w": "冲刺",
+         "py": "chōng cì"
+        },
+        {
+         "w": "刺眼",
+         "py": "cì yǎn"
+        }
+       ],
+       "sentence": "小刺猬背上长满了尖尖的刺。",
+       "sentenceWord": "刺猬"
+      },
+      {
+       "char": "梨",
+       "pinyin": "lí",
+       "radical": "木",
+       "strokes": 11,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "梨子",
+         "py": "lí zi"
+        },
+        {
+         "w": "梨花",
+         "py": "lí huā"
+        },
+        {
+         "w": "梨树",
+         "py": "lí shù"
+        }
+       ],
+       "sentence": "这个大梨子又甜又多汁。",
+       "sentenceWord": "梨子"
+      },
+      {
+       "char": "部",
+       "pinyin": "bù",
+       "radical": "立",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "部分",
+         "py": "bù fèn"
+        },
+        {
+         "w": "部门",
+         "py": "bù mén"
+        },
+        {
+         "w": "全部",
+         "py": "quán bù"
+        }
+       ],
+       "sentence": "我把作业全部做完了。",
+       "sentenceWord": "全部"
+      },
+      {
+       "char": "奥",
+       "pinyin": "ào",
+       "radical": "大",
+       "strokes": 12,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "奥秘",
+         "py": "ào mì"
+        },
+        {
+         "w": "奥运",
+         "py": "ào yùn"
+        },
+        {
+         "w": "深奥",
+         "py": "shēn ào"
+        }
+       ],
+       "sentence": "大自然有许多奥秘等着我们去发现。",
+       "sentenceWord": "奥秘"
+      },
+      {
+       "char": "秘",
+       "pinyin": "mì",
+       "radical": "禾",
+       "strokes": 10,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "奥秘",
+         "py": "ào mì"
+        },
+        {
+         "w": "秘密",
+         "py": "mì mì"
+        },
+        {
+         "w": "神秘",
+         "py": "shén mì"
+        }
+       ],
+       "sentence": "我有一个小秘密。",
+       "sentenceWord": "秘密"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "大虾",
+       "py": "dà xiā"
+      },
+      {
+       "w": "不仅",
+       "py": "bù jǐn"
+      },
+      {
+       "w": "序号",
+       "py": "xù hào"
+      },
+      {
+       "w": "枯荣",
+       "py": "kū róng"
+      },
+      {
+       "w": "梨树",
+       "py": "lí shù"
+      },
+      {
+       "w": "姿态",
+       "py": "zī tài"
+      },
+      {
+       "w": "冲刺",
+       "py": "chōng cì"
+      },
+      {
+       "w": "鱼虾",
+       "py": "yú xiā"
+      },
+      {
+       "w": "部门",
+       "py": "bù mén"
+      },
+      {
+       "w": "神秘",
+       "py": "shén mì"
+      },
+      {
+       "w": "枯草",
+       "py": "kū cǎo"
+      },
+      {
+       "w": "英姿",
+       "py": "yīng zī"
+      },
+      {
+       "w": "沉思",
+       "py": "chén sī"
+      },
+      {
+       "w": "深奥",
+       "py": "shēn ào"
+      },
+      {
+       "w": "昆曲",
+       "py": "kūn qǔ"
+      }
+     ]
+    },
+    {
+     "id": "Y7",
+     "title": "语文园地七",
+     "chars": [
+      {
+       "char": "螺",
+       "pinyin": "luó",
+       "radical": "虫",
+       "strokes": 17,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "螺丝",
+         "py": "luó sī"
+        },
+        {
+         "w": "海螺",
+         "py": "hǎi luó"
+        },
+        {
+         "w": "田螺",
+         "py": "tián luó"
+        }
+       ],
+       "sentence": "我把海螺放在耳边，好像听到了大海的声音。",
+       "sentenceWord": "海螺"
+      },
+      {
+       "char": "螃",
+       "pinyin": "páng",
+       "radical": "虫",
+       "strokes": 16,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "螃蟹",
+         "py": "páng xiè"
+        }
+       ],
+       "sentence": "螃蟹横着走路，真有趣。",
+       "sentenceWord": "螃蟹"
+      },
+      {
+       "char": "蟹",
+       "pinyin": "xiè",
+       "radical": "虫",
+       "strokes": 19,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "螃蟹",
+         "py": "páng xiè"
+        },
+        {
+         "w": "海蟹",
+         "py": "hǎi xiè"
+        },
+        {
+         "w": "蟹钳",
+         "py": "xiè qián"
+        }
+       ],
+       "sentence": "螃蟹举着两只大钳子。",
+       "sentenceWord": "螃蟹"
+      },
+      {
+       "char": "鲤",
+       "pinyin": "lǐ",
+       "radical": "鱼",
+       "strokes": 15,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "鲤鱼",
+         "py": "lǐ yú"
+        },
+        {
+         "w": "锦鲤",
+         "py": "jǐn lǐ"
+        }
+       ],
+       "sentence": "池塘里有几条红色的鲤鱼。",
+       "sentenceWord": "鲤鱼"
+      },
+      {
+       "char": "鲫",
+       "pinyin": "jì",
+       "radical": "鱼",
+       "strokes": 15,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "鲫鱼",
+         "py": "jì yú"
+        }
+       ],
+       "sentence": "妈妈做的鲫鱼汤很鲜美。",
+       "sentenceWord": "鲫鱼"
+      },
+      {
+       "char": "鲨",
+       "pinyin": "shā",
+       "radical": "鱼",
+       "strokes": 15,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "鲨鱼",
+         "py": "shā yú"
+        },
+        {
+         "w": "大白鲨",
+         "py": "dà bái shā"
+        }
+       ],
+       "sentence": "鲨鱼是大海里的游泳高手。",
+       "sentenceWord": "鲨鱼"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "田螺",
+       "py": "tián luó"
+      },
+      {
+       "w": "感动",
+       "py": "gǎn dòng"
+      },
+      {
+       "w": "充足",
+       "py": "chōng zú"
+      },
+      {
+       "w": "小虾",
+       "py": "xiǎo xiā"
+      },
+      {
+       "w": "鲨鱼",
+       "py": "shā yú"
+      },
+      {
+       "w": "有序",
+       "py": "yǒu xù"
+      },
+      {
+       "w": "鲫鱼",
+       "py": "jì yú"
+      },
+      {
+       "w": "果断",
+       "py": "guǒ duàn"
+      },
+      {
+       "w": "楚国",
+       "py": "chǔ guó"
+      },
+      {
+       "w": "姿态",
+       "py": "zī tài"
+      },
+      {
+       "w": "孤单",
+       "py": "gū dān"
+      },
+      {
+       "w": "饮料",
+       "py": "yǐn liào"
+      },
+      {
+       "w": "昆虫",
+       "py": "kūn chóng"
+      },
+      {
+       "w": "光荣",
+       "py": "guāng róng"
+      },
+      {
+       "w": "琴声",
+       "py": "qín shēng"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u8",
+   "title": "第八单元",
+   "lessons": [
+    {
+     "id": "L23",
+     "title": "第23课 司马光",
+     "chars": [
+      {
+       "char": "司",
+       "pinyin": "sī",
+       "radical": "口",
+       "strokes": 5,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "司机",
+         "py": "sī jī"
+        },
+        {
+         "w": "公司",
+         "py": "gōng sī"
+        },
+        {
+         "w": "司马光",
+         "py": "sī mǎ guāng"
+        }
+       ],
+       "sentence": "公交车司机叔叔开车很稳。",
+       "sentenceWord": "司机"
+      },
+      {
+       "char": "登",
+       "pinyin": "dēng",
+       "radical": "癶",
+       "strokes": 12,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "登山",
+         "py": "dēng shān"
+        },
+        {
+         "w": "登高",
+         "py": "dēng gāo"
+        },
+        {
+         "w": "登记",
+         "py": "dēng jì"
+        }
+       ],
+       "sentence": "重阳节，爷爷带我去登高。",
+       "sentenceWord": "登高"
+      },
+      {
+       "char": "跌",
+       "pinyin": "diē",
+       "radical": "⻊",
+       "strokes": 12,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "跌倒",
+         "py": "diē dǎo"
+        },
+        {
+         "w": "跌落",
+         "py": "diē luò"
+        }
+       ],
+       "sentence": "他跌倒了，马上又爬了起来。",
+       "sentenceWord": "跌倒"
+      },
+      {
+       "char": "皆",
+       "pinyin": "jiē",
+       "radical": "白",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "皆是",
+         "py": "jiē shì"
+        },
+        {
+         "w": "比比皆是",
+         "py": "bǐ bǐ jiē shì"
+        },
+        {
+         "w": "人人皆知",
+         "py": "rén rén jiē zhī"
+        }
+       ],
+       "sentence": "春天的公园里，花儿比比皆是。",
+       "sentenceWord": "比比皆是"
+      },
+      {
+       "char": "弃",
+       "pinyin": "qì",
+       "radical": "廾",
+       "strokes": 7,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "放弃",
+         "py": "fàng qì"
+        },
+        {
+         "w": "丢弃",
+         "py": "diū qì"
+        },
+        {
+         "w": "舍弃",
+         "py": "shě qì"
+        }
+       ],
+       "sentence": "遇到困难，我不会放弃。",
+       "sentenceWord": "放弃"
+      },
+      {
+       "char": "持",
+       "pinyin": "chí",
+       "radical": "扌",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "坚持",
+         "py": "jiān chí"
+        },
+        {
+         "w": "保持",
+         "py": "bǎo chí"
+        },
+        {
+         "w": "支持",
+         "py": "zhī chí"
+        }
+       ],
+       "sentence": "我坚持每天跳绳。",
+       "sentenceWord": "坚持"
+      },
+      {
+       "char": "击",
+       "pinyin": "jī",
+       "radical": "一",
+       "strokes": 5,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "打击",
+         "py": "dǎ jī"
+        },
+        {
+         "w": "攻击",
+         "py": "gōng jī"
+        },
+        {
+         "w": "击中",
+         "py": "jī zhòng"
+        }
+       ],
+       "sentence": "他一球击中了目标。",
+       "sentenceWord": "击中"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "司机",
+       "py": "sī jī"
+      },
+      {
+       "w": "打击",
+       "py": "dǎ jī"
+      },
+      {
+       "w": "游击",
+       "py": "yóu jī"
+      },
+      {
+       "w": "跌倒",
+       "py": "diē dǎo"
+      },
+      {
+       "w": "跌落",
+       "py": "diē luò"
+      },
+      {
+       "w": "丢弃",
+       "py": "diū qì"
+      },
+      {
+       "w": "登高",
+       "py": "dēng gāo"
+      },
+      {
+       "w": "舍弃",
+       "py": "shě qì"
+      },
+      {
+       "w": "比比皆是",
+       "py": "bǐ bǐ jiē shì"
+      },
+      {
+       "w": "登山",
+       "py": "dēng shān"
+      },
+      {
+       "w": "支持",
+       "py": "zhī chí"
+      },
+      {
+       "w": "保持",
+       "py": "bǎo chí"
+      },
+      {
+       "w": "人人皆知",
+       "py": "rén rén jiē zhī"
+      }
+     ]
+    },
+    {
+     "id": "L24",
+     "title": "第24课 一定要争气",
+     "chars": [
+      {
+       "char": "念",
+       "pinyin": "niàn",
+       "radical": "心",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "想念",
+         "py": "xiǎng niàn"
+        },
+        {
+         "w": "思念",
+         "py": "sī niàn"
+        },
+        {
+         "w": "念书",
+         "py": "niàn shū"
+        },
+        {
+         "w": "念头",
+         "py": "niàn tou"
+        }
+       ],
+       "sentence": "我很想念远方的奶奶。",
+       "sentenceWord": "想念"
+      },
+      {
+       "char": "差",
+       "pinyin": "chà",
+       "radical": "⺌",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "差一点",
+         "py": "chà yì diǎn"
+        },
+        {
+         "w": "差不多",
+         "py": "chà bu duō"
+        }
+       ],
+       "sentence": "我差一点就赶不上校车了。",
+       "sentenceWord": "差一点"
+      },
+      {
+       "char": "考",
+       "pinyin": "kǎo",
+       "radical": "耂",
+       "strokes": 6,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "考试",
+         "py": "kǎo shì"
+        },
+        {
+         "w": "考查",
+         "py": "kǎo chá"
+        },
+        {
+         "w": "思考",
+         "py": "sī kǎo"
+        }
+       ],
+       "sentence": "遇到难题要认真思考。",
+       "sentenceWord": "思考"
+      },
+      {
+       "char": "试",
+       "pinyin": "shì",
+       "radical": "讠",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "考试",
+         "py": "kǎo shì"
+        },
+        {
+         "w": "尝试",
+         "py": "cháng shì"
+        },
+        {
+         "w": "试验",
+         "py": "shì yàn"
+        }
+       ],
+       "sentence": "我想尝试自己做早饭。",
+       "sentenceWord": "尝试"
+      },
+      {
+       "char": "均",
+       "pinyin": "jūn",
+       "radical": "土",
+       "strokes": 7,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "均匀",
+         "py": "jūn yún"
+        },
+        {
+         "w": "平均",
+         "py": "píng jūn"
+        },
+        {
+         "w": "均等",
+         "py": "jūn děng"
+        }
+       ],
+       "sentence": "妈妈把蛋糕平均分给了我们。",
+       "sentenceWord": "平均"
+      },
+      {
+       "char": "退",
+       "pinyin": "tuì",
+       "radical": "辶",
+       "strokes": 9,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "后退",
+         "py": "hòu tuì"
+        },
+        {
+         "w": "退步",
+         "py": "tuì bù"
+        },
+        {
+         "w": "退出",
+         "py": "tuì chū"
+        }
+       ],
+       "sentence": "只要每天练习，就不会退步。",
+       "sentenceWord": "退步"
+      },
+      {
+       "char": "努",
+       "pinyin": "nǔ",
+       "radical": "力",
+       "strokes": 7,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "努力",
+         "py": "nǔ lì"
+        }
+       ],
+       "sentence": "只要努力，就会有进步。",
+       "sentenceWord": "努力"
+      },
+      {
+       "char": "单",
+       "pinyin": "dān",
+       "radical": "丷",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "单独",
+         "py": "dān dú"
+        },
+        {
+         "w": "简单",
+         "py": "jiǎn dān"
+        },
+        {
+         "w": "床单",
+         "py": "chuáng dān"
+        }
+       ],
+       "sentence": "这道题很简单，我一下就做出来了。",
+       "sentenceWord": "简单"
+      },
+      {
+       "char": "留",
+       "pinyin": "liú",
+       "radical": "田",
+       "strokes": 10,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "留下",
+         "py": "liú xià"
+        },
+        {
+         "w": "停留",
+         "py": "tíng liú"
+        },
+        {
+         "w": "保留",
+         "py": "bǎo liú"
+        },
+        {
+         "w": "留学",
+         "py": "liú xué"
+        }
+       ],
+       "sentence": "雪地上留下了小狗的脚印。",
+       "sentenceWord": "留下"
+      },
+      {
+       "char": "度",
+       "pinyin": "dù",
+       "radical": "广",
+       "strokes": 9,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "温度",
+         "py": "wēn dù"
+        },
+        {
+         "w": "长度",
+         "py": "cháng dù"
+        },
+        {
+         "w": "度过",
+         "py": "dù guò"
+        }
+       ],
+       "sentence": "我们度过了一个快乐的周末。",
+       "sentenceWord": "度过"
+      },
+      {
+       "char": "奋",
+       "pinyin": "fèn",
+       "radical": "大",
+       "strokes": 8,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "奋斗",
+         "py": "fèn dòu"
+        },
+        {
+         "w": "勤奋",
+         "py": "qín fèn"
+        },
+        {
+         "w": "兴奋",
+         "py": "xīng fèn"
+        },
+        {
+         "w": "奋发",
+         "py": "fèn fā"
+        }
+       ],
+       "sentence": "要去春游了，大家都很兴奋。",
+       "sentenceWord": "兴奋"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "念书",
+       "py": "niàn shū"
+      },
+      {
+       "w": "差劲",
+       "py": "chà jìn"
+      },
+      {
+       "w": "考试",
+       "py": "kǎo shì"
+      },
+      {
+       "w": "均等",
+       "py": "jūn děng"
+      },
+      {
+       "w": "后退",
+       "py": "hòu tuì"
+      },
+      {
+       "w": "努力",
+       "py": "nǔ lì"
+      },
+      {
+       "w": "床单",
+       "py": "chuáng dān"
+      },
+      {
+       "w": "留学",
+       "py": "liú xué"
+      },
+      {
+       "w": "兴奋",
+       "py": "xīng fèn"
+      },
+      {
+       "w": "长度",
+       "py": "cháng dù"
+      },
+      {
+       "w": "思念",
+       "py": "sī niàn"
+      },
+      {
+       "w": "难得",
+       "py": "nán dé"
+      },
+      {
+       "w": "值班",
+       "py": "zhí bān"
+      },
+      {
+       "w": "奋发图强",
+       "py": "fèn fā tú qiáng",
+       "given": [
+        3
+       ]
+      }
+     ]
+    },
+    {
+     "id": "L25",
+     "title": "第25课 手术台就是阵地",
+     "chars": [
+      {
+       "char": "棒",
+       "pinyin": "bàng",
+       "radical": "木",
+       "strokes": 12,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "木棒",
+         "py": "mù bàng"
+        },
+        {
+         "w": "棒球",
+         "py": "bàng qiú"
+        },
+        {
+         "w": "真棒",
+         "py": "zhēn bàng"
+        }
+       ],
+       "sentence": "你做得真棒！",
+       "sentenceWord": "真棒"
+      },
+      {
+       "char": "伤",
+       "pinyin": "shāng",
+       "radical": "亻",
+       "strokes": 6,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "受伤",
+         "py": "shòu shāng"
+        },
+        {
+         "w": "伤口",
+         "py": "shāng kǒu"
+        },
+        {
+         "w": "伤心",
+         "py": "shāng xīn"
+        }
+       ],
+       "sentence": "小鸟的翅膀受伤了，我们把它送去救治。",
+       "sentenceWord": "受伤"
+      },
+      {
+       "char": "陆",
+       "pinyin": "lù",
+       "radical": "阝",
+       "strokes": 7,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "陆地",
+         "py": "lù dì"
+        },
+        {
+         "w": "大陆",
+         "py": "dà lù"
+        },
+        {
+         "w": "陆续",
+         "py": "lù xù"
+        }
+       ],
+       "sentence": "同学们陆续走进了教室。",
+       "sentenceWord": "陆续"
+      },
+      {
+       "char": "血",
+       "pinyin": "xuè",
+       "radical": "血",
+       "strokes": 6,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "血液",
+         "py": "xuè yè"
+        },
+        {
+         "w": "鲜血",
+         "py": "xiān xuè"
+        },
+        {
+         "w": "心血",
+         "py": "xīn xuè"
+        }
+       ],
+       "sentence": "血液在我们的身体里流动。",
+       "sentenceWord": "血液"
+      },
+      {
+       "char": "取",
+       "pinyin": "qǔ",
+       "radical": "耳",
+       "strokes": 8,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "取得",
+         "py": "qǔ dé"
+        },
+        {
+         "w": "取出",
+         "py": "qǔ chū"
+        },
+        {
+         "w": "提取",
+         "py": "tí qǔ"
+        }
+       ],
+       "sentence": "他在比赛中取得了第一名。",
+       "sentenceWord": "取得"
+      },
+      {
+       "char": "盘",
+       "pinyin": "pán",
+       "radical": "皿",
+       "strokes": 11,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "盘子",
+         "py": "pán zi"
+        },
+        {
+         "w": "圆盘",
+         "py": "yuán pán"
+        },
+        {
+         "w": "方向盘",
+         "py": "fāng xiàng pán"
+        }
+       ],
+       "sentence": "我帮妈妈把盘子摆上桌。",
+       "sentenceWord": "盘子"
+      },
+      {
+       "char": "匆",
+       "pinyin": "cōng",
+       "radical": "勹",
+       "strokes": 5,
+       "structure": "独体",
+       "words": [
+        {
+         "w": "匆忙",
+         "py": "cōng máng"
+        },
+        {
+         "w": "匆匆",
+         "py": "cōng cōng"
+        }
+       ],
+       "sentence": "他匆匆忙忙地跑出了家门。",
+       "sentenceWord": "匆忙"
+      },
+      {
+       "char": "医",
+       "pinyin": "yī",
+       "radical": "匚",
+       "strokes": 7,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "医生",
+         "py": "yī shēng"
+        },
+        {
+         "w": "医院",
+         "py": "yī yuàn"
+        },
+        {
+         "w": "医疗",
+         "py": "yī liáo"
+        }
+       ],
+       "sentence": "医生叔叔帮我看病。",
+       "sentenceWord": "医生"
+      },
+      {
+       "char": "迅",
+       "pinyin": "xùn",
+       "radical": "辶",
+       "strokes": 6,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "迅速",
+         "py": "xùn sù"
+        },
+        {
+         "w": "迅猛",
+         "py": "xùn měng"
+        }
+       ],
+       "sentence": "听到铃声，同学们迅速回到座位。",
+       "sentenceWord": "迅速"
+      },
+      {
+       "char": "速",
+       "pinyin": "sù",
+       "radical": "辶",
+       "strokes": 10,
+       "structure": "半包围",
+       "words": [
+        {
+         "w": "速度",
+         "py": "sù dù"
+        },
+        {
+         "w": "迅速",
+         "py": "xùn sù"
+        },
+        {
+         "w": "快速",
+         "py": "kuài sù"
+        }
+       ],
+       "sentence": "小汽车的速度真快。",
+       "sentenceWord": "速度"
+      },
+      {
+       "char": "夺",
+       "pinyin": "duó",
+       "radical": "大",
+       "strokes": 6,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "夺取",
+         "py": "duó qǔ"
+        },
+        {
+         "w": "争夺",
+         "py": "zhēng duó"
+        },
+        {
+         "w": "抢夺",
+         "py": "qiǎng duó"
+        }
+       ],
+       "sentence": "我们班夺取了拔河比赛的冠军。",
+       "sentenceWord": "夺取"
+      },
+      {
+       "char": "秒",
+       "pinyin": "miǎo",
+       "radical": "禾",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "秒针",
+         "py": "miǎo zhēn"
+        },
+        {
+         "w": "秒钟",
+         "py": "miǎo zhōng"
+        },
+        {
+         "w": "分秒",
+         "py": "fēn miǎo"
+        }
+       ],
+       "sentence": "钟表上的秒针走得最快。",
+       "sentenceWord": "秒针"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "受伤",
+       "py": "shòu shāng"
+      },
+      {
+       "w": "陆续",
+       "py": "lù xù"
+      },
+      {
+       "w": "匆匆",
+       "py": "cōng cōng"
+      },
+      {
+       "w": "鲜血",
+       "py": "xiān xuè"
+      },
+      {
+       "w": "医院",
+       "py": "yī yuàn"
+      },
+      {
+       "w": "提取",
+       "py": "tí qǔ"
+      },
+      {
+       "w": "玉盘",
+       "py": "yù pán"
+      },
+      {
+       "w": "迅速",
+       "py": "xùn sù"
+      },
+      {
+       "w": "抢夺",
+       "py": "qiǎng duó"
+      },
+      {
+       "w": "秒针",
+       "py": "miǎo zhēn"
+      },
+      {
+       "w": "木棒",
+       "py": "mù bàng"
+      },
+      {
+       "w": "陆地",
+       "py": "lù dì"
+      },
+      {
+       "w": "方向盘",
+       "py": "fāng xiàng pán"
+      },
+      {
+       "w": "手术台",
+       "py": "shǒu shù tái"
+      }
+     ]
+    },
+    {
+     "id": "L26",
+     "title": "第26课* 一个粗瓷大碗",
+     "chars": [],
+     "tingxie": [
+      {
+       "w": "故事",
+       "py": "gù shi"
+      },
+      {
+       "w": "泪花",
+       "py": "lèi huā"
+      },
+      {
+       "w": "连忙",
+       "py": "lián máng"
+      },
+      {
+       "w": "为难",
+       "py": "wéi nán"
+      },
+      {
+       "w": "艰苦",
+       "py": "jiān kǔ"
+      },
+      {
+       "w": "容易",
+       "py": "róng yì"
+      },
+      {
+       "w": "同志",
+       "py": "tóng zhì"
+      },
+      {
+       "w": "感动",
+       "py": "gǎn dòng"
+      },
+      {
+       "w": "战士",
+       "py": "zhàn shì"
+      },
+      {
+       "w": "友爱",
+       "py": "yǒu ài"
+      },
+      {
+       "w": "消灭",
+       "py": "xiāo miè"
+      },
+      {
+       "w": "清楚",
+       "py": "qīng chu"
+      },
+      {
+       "w": "通讯员",
+       "py": "tōng xùn yuán",
+       "given": [
+        1
+       ]
+      },
+      {
+       "w": "乡亲们",
+       "py": "xiāng qīn men"
+      }
+     ]
+    },
+    {
+     "id": "Y8",
+     "title": "语文园地八",
+     "chars": [
+      {
+       "char": "睁",
+       "pinyin": "zhēng",
+       "radical": "目",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "睁开",
+         "py": "zhēng kāi"
+        },
+        {
+         "w": "睁眼",
+         "py": "zhēng yǎn"
+        }
+       ],
+       "sentence": "早上，我睁开眼睛就看见了太阳。",
+       "sentenceWord": "睁开"
+      },
+      {
+       "char": "眨",
+       "pinyin": "zhǎ",
+       "radical": "目",
+       "strokes": 9,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "眨眼",
+         "py": "zhǎ yǎn"
+        },
+        {
+         "w": "眨巴",
+         "py": "zhǎ ba"
+        }
+       ],
+       "sentence": "星星在天上眨眼睛。",
+       "sentenceWord": "眨眼"
+      },
+      {
+       "char": "瞪",
+       "pinyin": "dèng",
+       "radical": "目",
+       "strokes": 17,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "瞪眼",
+         "py": "dèng yǎn"
+        },
+        {
+         "w": "瞪着",
+         "py": "dèng zhe"
+        }
+       ],
+       "sentence": "小猫瞪着圆圆的眼睛看着我。",
+       "sentenceWord": "瞪着"
+      },
+      {
+       "char": "瞅",
+       "pinyin": "chǒu",
+       "radical": "目",
+       "strokes": 14,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "瞅见",
+         "py": "chǒu jiàn"
+        },
+        {
+         "w": "瞅瞅",
+         "py": "chǒu chou"
+        }
+       ],
+       "sentence": "我瞅见一只松鼠跳上了树。",
+       "sentenceWord": "瞅见"
+      },
+      {
+       "char": "怒",
+       "pinyin": "nù",
+       "radical": "心",
+       "strokes": 9,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "愤怒",
+         "py": "fèn nù"
+        },
+        {
+         "w": "怒气",
+         "py": "nù qì"
+        },
+        {
+         "w": "发怒",
+         "py": "fā nù"
+        },
+        {
+         "w": "怒火",
+         "py": "nù huǒ"
+        }
+       ],
+       "sentence": "他很生气，满脸怒气。",
+       "sentenceWord": "怒气"
+      },
+      {
+       "char": "眶",
+       "pinyin": "kuàng",
+       "radical": "目",
+       "strokes": 11,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "眼眶",
+         "py": "yǎn kuàng"
+        },
+        {
+         "w": "热泪盈眶",
+         "py": "rè lèi yíng kuàng"
+        }
+       ],
+       "sentence": "听完这个故事，我的眼眶湿了。",
+       "sentenceWord": "眼眶"
+      },
+      {
+       "char": "呆",
+       "pinyin": "dāi",
+       "radical": "口",
+       "strokes": 7,
+       "structure": "上下",
+       "words": [
+        {
+         "w": "发呆",
+         "py": "fā dāi"
+        },
+        {
+         "w": "呆板",
+         "py": "dāi bǎn"
+        }
+       ],
+       "sentence": "他坐在窗边发呆。",
+       "sentenceWord": "发呆"
+      },
+      {
+       "char": "睹",
+       "pinyin": "dǔ",
+       "radical": "目",
+       "strokes": 13,
+       "structure": "左右",
+       "words": [
+        {
+         "w": "目睹",
+         "py": "mù dǔ"
+        },
+        {
+         "w": "熟视无睹",
+         "py": "shú shì wú dǔ"
+        }
+       ],
+       "sentence": "看到地上的垃圾，我们不能熟视无睹。",
+       "sentenceWord": "熟视无睹"
+      }
+     ],
+     "tingxie": [
+      {
+       "w": "眨眼",
+       "py": "zhǎ yǎn"
+      },
+      {
+       "w": "眼眶",
+       "py": "yǎn kuàng"
+      },
+      {
+       "w": "瞅见",
+       "py": "chǒu jiàn"
+      },
+      {
+       "w": "瞪眼",
+       "py": "dèng yǎn"
+      },
+      {
+       "w": "睁开",
+       "py": "zhēng kāi"
+      },
+      {
+       "w": "怒火",
+       "py": "nù huǒ"
+      },
+      {
+       "w": "发呆",
+       "py": "fā dāi"
+      },
+      {
+       "w": "目睹",
+       "py": "mù dǔ"
+      },
+      {
+       "w": "考试",
+       "py": "kǎo shì"
+      },
+      {
+       "w": "迅速",
+       "py": "xùn sù"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="单词小达人" />
-  <title>单词小达人 · 课本词汇</title>
-  <link rel="stylesheet" href="style.css?v=7" />
+  <title>单词小达人 · 英文 + 语文</title>
+  <link rel="stylesheet" href="style.css?v=8" />
 </head>
 <body>
   <header class="app-header">
@@ -17,7 +17,10 @@
         <div class="small muted" id="app-status">加载中…</div>
       </div>
     </div>
-    <button type="button" class="profile-chip" id="btn-profile-chip" hidden>Alex ▾</button>
+    <div class="header-chips">
+      <button type="button" class="profile-chip subject-chip" id="btn-subject-chip" hidden>换科目</button>
+      <button type="button" class="profile-chip" id="btn-profile-chip" hidden>Alex ▾</button>
+    </div>
   </header>
 
   <!-- PROFILE SELECT -->
@@ -26,6 +29,26 @@
       <h2>谁来练习？</h2>
       <p class="muted small">每个人有自己的进度、星星和听写最好成绩。</p>
       <div class="profile-grid" id="profile-grid"></div>
+    </div>
+  </section>
+
+  <!-- SUBJECT SELECT -->
+  <section id="screen-subject" class="screen">
+    <div class="card">
+      <h2 id="subject-title">今天学什么？</h2>
+      <p class="muted small">点一个大按钮开始。随时可以点右上角「换科目」切换。</p>
+      <div class="subject-grid">
+        <button type="button" class="subject-card en" id="btn-subject-en">
+          <span class="subject-emoji">🔤</span>
+          <span class="subject-name">英文 English</span>
+          <span class="subject-desc">单词 · 句子 · 拼写 · 听写</span>
+        </button>
+        <button type="button" class="subject-card zh" id="btn-subject-zh">
+          <span class="subject-emoji">🀄</span>
+          <span class="subject-name">中文 语文</span>
+          <span class="subject-desc" id="subject-zh-desc">生字 · 读音 · 组词 · 写字 · 听写</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -179,7 +202,136 @@
     </div>
   </section>
 
+  <!-- ===== 中文 语文 ===== -->
+  <nav class="nav-tabs zh-nav" id="zh-nav" aria-label="语文导航" hidden>
+    <button type="button" data-zhnav="home" class="active">学习</button>
+    <button type="button" data-zhnav="list">生字表</button>
+    <button type="button" data-zhnav="progress">进度</button>
+  </nav>
+
+  <section id="screen-zh-home" class="screen">
+    <div class="card" id="zh-units-card">
+      <h2>① 选单元</h2>
+      <p class="muted small">可以选一个，也可以多选几个单元一起练。</p>
+      <div class="action-row" style="margin-bottom:10px">
+        <button type="button" class="secondary" id="zh-select-all">全选</button>
+        <button type="button" class="ghost" id="zh-select-none">清空</button>
+      </div>
+      <div class="unit-grid" id="zh-unit-grid"></div>
+      <p class="muted" id="zh-selected-count" style="margin-top:10px">请先点选单元</p>
+    </div>
+    <div class="card" id="zh-modes-card">
+      <h2>② 选模式</h2>
+      <p class="muted small">每关大约 10 题，做完得星星。写字用手指在格子里写。</p>
+      <div class="mode-grid zh-mode-grid">
+        <button type="button" class="mode-btn" data-zhmode="cards"><span class="emoji">📇</span><span class="label">认字卡</span><span class="desc">看大字 · 听读音 · 看笔顺</span></button>
+        <button type="button" class="mode-btn" data-zhmode="sound"><span class="emoji">🔊</span><span class="label">读音</span><span class="desc">选拼音 · 听音选字</span></button>
+        <button type="button" class="mode-btn" data-zhmode="zuci"><span class="emoji">🧩</span><span class="label">组词</span><span class="desc">选对的字组成词</span></button>
+        <button type="button" class="mode-btn" data-zhmode="fill"><span class="emoji">📝</span><span class="label">选词填空</span><span class="desc">把词语放进句子</span></button>
+        <button type="button" class="mode-btn" data-zhmode="trace"><span class="emoji">🖍️</span><span class="label">描红</span><span class="desc">照着灰色字写</span></button>
+        <button type="button" class="mode-btn" data-zhmode="moxie"><span class="emoji">✏️</span><span class="label">默写</span><span class="desc">看拼音自己写</span></button>
+        <button type="button" class="mode-btn wide" data-zhmode="tingxie"><span class="emoji">🎧</span><span class="label">听写挑战</span><span class="desc">听词语写汉字 · 计时 · 冲击纪录</span></button>
+        <button type="button" class="mode-btn wide" data-zhmode="review"><span class="emoji">🔁</span><span class="label">错字复习</span><span class="desc" id="zh-review-desc">优先练最近写错、选错的字</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="screen-zh-play" class="screen">
+    <div class="card">
+      <div class="stats-row">
+        <span id="zh-play-mode">练习</span>
+        <span id="zh-play-count">1 / 10</span>
+        <span id="zh-play-timer" class="timer-badge" hidden>0:00</span>
+        <span id="zh-play-score" class="stars">★ 0</span>
+      </div>
+      <div class="progress-bar"><span id="zh-play-progress"></span></div>
+      <div id="zh-play-area"></div>
+      <div id="zh-feedback" class="feedback"></div>
+      <div id="zh-explain-card" class="explain-card" hidden>
+        <div class="explain-title">💡 小讲解</div>
+        <div class="zh-explain-top">
+          <div id="zh-explain-writer" class="zh-mini-writer"></div>
+          <div id="zh-explain-body" class="explain-body"></div>
+        </div>
+        <button type="button" id="zh-explain-ok">明白了，继续</button>
+      </div>
+      <div class="action-row" id="zh-next-row" hidden>
+        <button type="button" id="zh-next-q">下一题 →</button>
+      </div>
+      <div class="action-row">
+        <button type="button" class="ghost" id="zh-quit">结束并看成绩</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="screen-zh-score" class="screen">
+    <div class="card score-card" style="text-align:center">
+      <div class="cele" id="zh-score-cele">🎉</div>
+      <div class="star-row" id="zh-score-stars" aria-label="星星评分"></div>
+      <h2 id="zh-score-title">本关完成！</h2>
+      <p id="zh-score-pb" class="pb-banner" hidden>🏆 新纪录！</p>
+      <div class="score-big" id="zh-score-big">100%</div>
+      <p id="zh-score-detail" class="muted"></p>
+      <p id="zh-score-best" class="best-line muted small"></p>
+      <div id="zh-score-review" class="zh-score-review"></div>
+      <p id="zh-score-msg" style="font-weight:700;margin:12px 0"></p>
+      <div class="action-row">
+        <button type="button" id="zh-again">再来一关</button>
+        <button type="button" class="secondary" id="zh-back-home">回语文首页</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="screen-zh-list" class="screen">
+    <div class="card" id="zh-list-pick">
+      <h2>生字表 · 选范围</h2>
+      <p class="muted small">先选单元，再看生字。点生字：听读音、看笔顺、组词和例句。</p>
+      <div class="action-row" style="margin-bottom:10px">
+        <button type="button" class="secondary" id="zh-list-all">全选</button>
+        <button type="button" class="ghost" id="zh-list-none">清空</button>
+      </div>
+      <div class="unit-grid" id="zh-list-unit-grid"></div>
+      <p class="muted" id="zh-list-count" style="margin-top:10px">请先点选单元</p>
+      <div class="action-row"><button type="button" id="zh-list-enter" disabled>进入生字表</button></div>
+    </div>
+    <div class="card" id="zh-list-card" hidden>
+      <div class="action-row" style="margin-bottom:10px">
+        <button type="button" class="ghost" id="zh-list-back">← 重选单元</button>
+      </div>
+      <h2>生字表</h2>
+      <p class="muted small" id="zh-list-hint"></p>
+      <div id="zh-list-body"></div>
+    </div>
+  </section>
+
+  <section id="screen-zh-progress" class="screen">
+    <div class="card">
+      <h2>语文进度</h2>
+      <p>练对过的生字：<strong id="zh-prog-known">0</strong> / <span id="zh-prog-total">0</span></p>
+      <div class="progress-bar"><span id="zh-prog-bar"></span></div>
+      <h3 style="margin-top:18px">要多练的字</h3>
+      <div id="zh-weak-list" class="zh-weak-list muted">还没有错字，真棒！</div>
+      <h3 style="margin-top:18px">听写最好成绩</h3>
+      <div id="zh-tingxie-best" class="best-box muted">还没有听写纪录，去挑战一次吧！</div>
+      <h3 style="margin-top:18px">最近练习</h3>
+      <div id="zh-history-list"></div>
+      <div class="action-row">
+        <button type="button" class="ghost" id="zh-clear-progress">清空语文进度（家长）</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 生字卡片弹层 -->
+  <div id="zh-modal" class="zh-modal" hidden>
+    <div class="zh-modal-inner card">
+      <div id="zh-modal-body"></div>
+      <div class="action-row"><button type="button" id="zh-modal-close">关闭</button></div>
+    </div>
+  </div>
+
   <p class="footer-note">离线可用 · 进度按档案保存在本机 · 适合 iPad</p>
-  <script src="app.js?v=7"></script>
+  <script src="lib/hanzi-writer.min.js?v=8"></script>
+  <script src="app.js?v=8"></script>
+  <script src="hanzi.js?v=8"></script>
 </body>
 </html>
