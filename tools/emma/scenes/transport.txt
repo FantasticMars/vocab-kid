@@ -1,0 +1,161 @@
+# transport | 交通出行 | 🚌 | 坐公交地铁、问路认路、坐校车和骑自行车
+## bus | 坐公交和地铁
+W: bus driver | 公交司机 | The bus driver told me where to get off. | 公交司机告诉我在哪里下车。
+W: fare | 车费；票价
+W: transit card | 交通卡
+W: tap | 刷（卡）；轻触
+W: cash | 现金
+W: exact change | 正好的零钱
+W: coin | 硬币
+W: stop | 车站；站
+W: get off | 下车
+W: get on | 上车
+W: press the button | 按按钮
+W: line | （地铁）线路
+W: transfer | 换乘
+W: ticket machine | 自动售票机
+W: one-way ticket | 单程票
+W: day pass | 一日通票
+W: platform | 站台
+W: subway | 地铁
+W: how long does it take | 需要多长时间
+W: route | 路线
+W: downtown | 市中心
+W: mind the gap | 小心站台间隙
+P: Does this bus go to the library? | 这趟公交车去图书馆吗？ | 上车前你想确认公交车的方向
+P: How much is the fare? | 车费多少钱？ | 你想知道坐车要花多少钱
+P: Can I pay with cash? | 我可以付现金吗？ | 你没有交通卡，只带了现金
+P: Could you tell me when to get off? | 到站时能告诉我一声吗？ | 你不知道该在哪一站下车
+P: Where do I transfer to the green line? | 我在哪里换乘绿线？ | 你要换乘另一条地铁线
+P: How long does it take to get downtown? | 去市中心要多长时间？ | 你想知道路上要花多久
+P: Which platform is the train to the zoo? | 去动物园的车在哪个站台？ | 你在地铁站找不到站台
+P: I'd like a day pass, please. | 我想买一张一日通票。 | 你今天要坐好几次车
+D: 坐公交车 | B=Bus driver/公交司机, E=Emma/艾玛
+E: Excuse me, does this bus go to the library? | 打扰一下，这趟车去图书馆吗？
+B: Yes, it does. Hop on! | 去的，上来吧！
+E: How much is the fare? | 车费多少钱？
+B: It's three dollars. You can tap your transit card here. | 三美元。你可以在这里刷交通卡。
+E: I don't have a transit card yet. Can I pay with cash? | 我还没有交通卡。我可以付现金吗？
+B: Sure, but I need exact change. Put the coins in this box. | 可以，但要正好的零钱。把硬币投进这个箱子。
+E: Here you go. Could you tell me when to get off? | 给您。到站时能告诉我一声吗？
+B: No problem. The library is the fifth stop. | 没问题。图书馆是第五站。
+E: How will I know it's my stop? | 我怎么知道到站了？
+B: Just press the button when you see the library. Then the bus will stop. | 看到图书馆时按一下按钮，车就会停。
+E: Thank you so much! | 太谢谢您了！
+D: 坐地铁 | S=Station staff/地铁站工作人员, E=Emma/艾玛
+E: Hi, how do I buy a ticket for the subway? | 你好，地铁票怎么买？
+S: You can use the ticket machine over there. | 你可以用那边的自动售票机。
+E: Should I get a one-way ticket or a day pass? | 我应该买单程票还是一日通票？
+S: If you're taking more than two trips today, the day pass is cheaper. | 如果你今天坐两次以上，一日通票更便宜。
+E: Then I'd like a day pass, please. I'm going to the zoo. | 那我想买一日通票。我要去动物园。
+S: Take the red line and transfer to the green line at Union Station. | 坐红线，在联合站换乘绿线。
+E: Which platform is the train to the zoo? | 去动物园的车在哪个站台？
+S: Platform two, down the stairs. Mind the gap when you get on the train. | 二号站台，下楼梯就是。上车时小心站台间隙。
+E: How long does it take to get there? | 到那里要多长时间？
+S: About thirty minutes. This route is quick. | 大约三十分钟。这条路线很快。
+E: Great. Is the zoo far from downtown? | 太好了。动物园离市中心远吗？
+S: Not really. Enjoy your day! | 不太远。祝你玩得开心！
+## directions | 问路
+W: go straight | 直走
+W: block | 街区
+W: turn right | 右转
+W: traffic lights | 红绿灯
+W: on your left | 在你的左边
+W: far from here | 离这里远
+W: ten-minute walk | 走路十分钟的距离
+W: across from | 在……对面
+W: you can't miss it | 你一定能看到
+W: building | 大楼；建筑
+W: lost | 迷路的
+W: map | 地图
+W: the way we came | 我们来时的路
+W: cross the street | 过马路
+W: crosswalk | 人行横道
+W: corner | 拐角
+W: walk signal | 行人通行信号灯
+W: next to | 在……旁边
+W: gas station | 加油站
+W: around the corner | 就在附近；拐个弯就到
+W: avenue | 大街；大道
+P: Excuse me, how do I get to the science museum? | 打扰一下，去科学博物馆怎么走？ | 你找不到科学博物馆
+P: Is it far from here? | 离这里远吗？ | 你想知道要走多远
+P: Go straight for two blocks and turn right. | 直走两个街区然后右转。 | 有人问你路，你来指路
+P: It's across from the park. | 它在公园对面。 | 你在描述一个地方的位置
+P: I think we're lost. | 我觉得我们迷路了。 | 你和朋友找不到路了
+P: Can you show me on the map? | 你能在地图上指给我看吗？ | 你听不太懂路线，想看地图
+P: Wait for the walk signal before you cross the street. | 等行人信号灯亮了再过马路。 | 你提醒朋友注意安全
+P: It's just around the corner. | 拐个弯就到了。 | 目的地就在附近
+D: 向路人问路 | M=Man/路人, E=Emma/艾玛
+E: Excuse me, how do I get to the science museum? | 打扰一下，去科学博物馆怎么走？
+M: Sure. Go straight for two blocks and turn right at the traffic lights. | 好的。直走两个街区，在红绿灯处右转。
+E: Two blocks, then turn right at the traffic lights? | 两个街区，然后在红绿灯处右转？
+M: That's right. Then the museum is on your left. | 对。然后博物馆就在你的左边。
+E: Is it far from here? | 离这里远吗？
+M: No, it's about a ten-minute walk. | 不远，走路大约十分钟。
+E: What does the building look like? | 那栋楼是什么样子的？
+M: It's a big white building across from the park. You can't miss it. | 是一栋白色的大楼，在公园对面。你一定能看到。
+E: Thank you very much! | 非常感谢您！
+M: You're welcome. Have fun at the museum! | 不客气。在博物馆玩得开心！
+D: 看地图找路 | J=Jack/杰克, E=Emma/艾玛
+J: Emma, I think we're lost. Where is the ice cream shop? | 艾玛，我觉得我们迷路了。冰淇淋店在哪儿？
+E: Don't worry. Let me check the map on my phone. | 别担心。我看看手机上的地图。
+J: Should we go back the way we came? | 我们要不要按原路返回？
+E: No, we just need to cross the street and walk to the corner. | 不用，我们只要过马路，走到拐角就行。
+J: OK. Let's use the crosswalk. | 好。我们走人行横道吧。
+E: Wait for the walk signal before you cross the street. | 等行人信号灯亮了再过马路。
+J: It's green now. Let's go. | 现在绿灯了。走吧。
+E: Look, the shop is next to the gas station on Main Avenue. | 看，那家店就在主街加油站旁边。
+J: I see it! It's just around the corner. | 我看到了！拐个弯就到了。
+E: Great. Next time, let's look at the map first. | 太好了。下次我们先看地图吧。
+## schoolbus | 校车与骑车
+W: school bus | 校车
+W: pick up | 接（某人） | The bus will pick up students at 7:40. | 校车七点四十来接学生。
+W: drop off | 把……放下车；送到 | The bus will drop off students at the same stop. | 校车会在同一个车站让学生下车。
+W: seat | 座位
+W: stay in your seat | 坐在座位上别动
+W: miss the bus | 错过校车
+W: ride | 搭便车；搭乘
+W: ride your bike | 骑自行车
+W: bike lane | 自行车道
+W: helmet | 头盔
+W: wear | 戴；穿
+W: lock | 锁上 | Always lock your bike at school. | 在学校一定要把自行车锁好。
+W: bike lock | 自行车锁
+W: garage | 车库
+W: flat tire | 瘪了的轮胎
+W: safely | 安全地
+W: how far | 多远
+W: be back | 回来
+W: after school | 放学后
+W: on time | 准时
+W: bus stop | 公交车站；校车站
+P: What time does the school bus pick us up? | 校车几点来接我们？ | 你想知道早上几点等校车
+P: Where does the bus drop us off? | 校车在哪里放我们下车？ | 你想知道校车停在哪里
+P: What should I do if I miss the bus? | 如果我错过了校车该怎么办？ | 你担心早上赶不上校车
+P: Can I ride my bike to my friend's house? | 我可以骑车去朋友家吗？ | 你想骑车去同学家
+P: Don't forget to wear your helmet. | 别忘了戴头盔。 | 家长提醒你注意骑车安全
+P: My bike has a flat tire. | 我的自行车轮胎瘪了。 | 你的自行车出了问题
+P: I'll be back by five. | 我五点前回来。 | 出门前你告诉寄宿家庭回来的时间
+P: Could you give me a ride to school? | 你能开车送我去学校吗？ | 你想请大人开车送你
+D: 第一次坐校车 | J=Mr. Jones/琼斯先生（校车司机）, E=Emma/艾玛
+J: Good morning! You must be the new student. | 早上好！你一定是新同学吧。
+E: Yes, I'm Emma. Is this the school bus to Maple Middle School? | 是的，我叫艾玛。这是去枫叶中学的校车吗？
+J: It sure is. Find a free seat and stay in your seat while the bus is moving. | 没错。找个空座位，车开的时候请坐着别动。
+E: OK. What time does the school bus pick us up every day? | 好的。校车每天几点来接我们？
+J: I pick you up at this bus stop at 7:40. Please be on time. | 我每天七点四十在这个车站接你。请准时。
+E: And where does the bus drop us off after school? | 放学后校车在哪里放我们下车？
+J: Right here, at the same stop, around 3:30. | 就在这里，同一个车站，三点半左右。
+E: What should I do if I miss the bus? | 如果我错过了校车该怎么办？
+J: Then ask your host family to give you a ride to school. | 那就请你的寄宿家庭开车送你去学校。
+E: Got it. Thank you, Mr. Jones. | 明白了。谢谢您，琼斯先生。
+D: 骑车去同学家 | V=Dave/戴夫（寄宿爸爸）, E=Emma/艾玛
+E: Dave, can I ride my bike to Mia's house after school? | 戴夫，放学后我可以骑车去米娅家吗？
+V: Sure. How far is it? | 可以。有多远？
+E: It's about ten minutes. There's a bike lane on the way. | 大约十分钟。路上有自行车道。
+V: Good. Don't forget to wear your helmet. | 好。别忘了戴头盔。
+E: I won't. Where is my bike lock? | 不会忘的。我的自行车锁在哪儿？
+V: It's in the garage. Lock your bike when you get there. | 在车库里。到了以后把车锁好。
+E: Oh no, my bike has a flat tire! | 哦不，我的自行车轮胎瘪了！
+V: Don't worry. I can fix it in five minutes. | 别担心，我五分钟就能修好。
+E: Thanks! I'll be back by five. | 谢谢！我五点前回来。
+V: OK. Ride safely and have fun! | 好的。骑车注意安全，玩得开心！

@@ -1,0 +1,164 @@
+# emergency | 求助与紧急情况 | 🆘 | 冷静求助：拨打911、身体不适、丢失证件和物品、在城市里迷路
+## call911 | 拨打911与身体不适
+W: emergency | 紧急情况
+W: call 911 | 拨打911 | If someone is badly hurt, call 911 right away. | 如果有人伤得很重，马上拨打911。
+W: ambulance | 救护车
+W: address | 地址
+W: fell down | 摔倒了
+W: breathing | 呼吸
+W: awake | 醒着的
+W: stay calm | 保持冷静
+W: stay with him | 陪在他身边
+W: on the way | 在路上
+W: hurt | 疼；受伤
+W: school nurse | 校医 | If you feel sick at school, go to the school nurse. | 在学校不舒服就去找校医。
+W: stomachache | 肚子疼
+W: dizzy | 头晕的
+W: fever | 发烧
+W: lie down | 躺下
+W: temperature | 体温
+W: pick you up | 来接你
+W: rest | 休息
+W: feel better | 感觉好些
+W: allergic to | 对……过敏
+W: tell an adult | 告诉大人
+P: Please send an ambulance. | 请派一辆救护车来。 | 你拨打911，有人需要医生
+P: The address is 25 Maple Street. | 地址是枫树街25号。 | 911接线员问你在哪里
+P: He fell down and can't get up. | 他摔倒了，站不起来。 | 你向接线员说明发生了什么
+P: I'll stay with him until help comes. | 我会陪着他，直到救援人员来。 | 接线员请你留在现场
+P: I don't feel well. | 我不舒服。 | 你在学校突然觉得身体不舒服
+P: I have a stomachache and I feel dizzy. | 我肚子疼，还头晕。 | 校医问你哪里不舒服
+P: I'm allergic to peanuts. | 我对花生过敏。 | 你告诉大人你的过敏情况
+P: Can you call my host mom, please? | 你能给我的寄宿妈妈打电话吗？ | 你身体不舒服，想让家人来接
+D: 冷静拨打911 | O=Operator/911接线员, E=Emma/艾玛
+O: 911, what's your emergency? | 这里是911，请问有什么紧急情况？
+E: Hi. An old man fell down in the park. He can't get up. Please send an ambulance. | 你好。公园里有位老爷爷摔倒了，站不起来。请派一辆救护车来。
+O: OK. You're doing great. What's the address? | 好的，你做得很好。地址是哪里？
+E: It's Maple Park, next to 25 Maple Street. | 是枫树公园，就在枫树街25号旁边。
+O: Is he awake and breathing? | 他醒着吗？有呼吸吗？
+E: Yes. He's awake and talking, but his leg hurts. | 是的。他醒着，还能说话，但是腿疼。
+O: Good. An ambulance is on the way. Please stay calm and stay with him. | 好。救护车已经在路上了。请保持冷静，陪在他身边。
+E: OK. I'll stay with him until help comes. My friend is here too. | 好的。我会陪着他，直到救援人员来。我的朋友也在这里。
+O: Thank you. Tell him help is coming. You can hang up when the paramedics arrive. | 谢谢你。告诉他救援马上就到。医护人员到了以后你就可以挂电话了。
+E: The ambulance is here now. Thank you! | 救护车现在到了。谢谢您！
+D: 在学校不舒服 | N=Nurse/校医, E=Emma/艾玛
+N: Hi, sweetie. What's wrong? | 你好，孩子。怎么了？
+E: I don't feel well. I have a stomachache and I feel dizzy. | 我不舒服。我肚子疼，还头晕。
+N: I'm sorry. Why don't you lie down here for a few minutes? | 真难受。你先在这里躺几分钟吧？
+E: Thank you. Should I tell my teacher? | 谢谢。我要告诉老师吗？
+N: I already called your teacher. Let me take your temperature. | 我已经给你老师打过电话了。我来给你量一下体温。
+E: Do I have a fever? | 我发烧了吗？
+N: Just a little. Did you eat anything unusual today? Are you allergic to anything? | 有一点点。你今天吃了什么特别的东西吗？你对什么东西过敏吗？
+E: I'm not allergic to anything. I just ate a sandwich at lunch. | 我不对什么过敏。我午饭只吃了一个三明治。
+N: OK. Can I call your host mom to pick you up? | 好的。我可以给你的寄宿妈妈打电话来接你吗？
+E: Yes, please. Can you call my host mom? Her number is in my file. | 好的，麻烦了。你能给我的寄宿妈妈打电话吗？她的号码在我的档案里。
+N: Sure. Go home and get some rest. You'll feel better soon. And remember, always tell an adult when you feel sick. | 好的。回家好好休息，你很快就会好起来的。记住，不舒服时一定要告诉大人。
+## lostitems | 丢了证件或东西
+W: lost | 丢失；丢了
+W: passport | 护照
+W: police station | 警察局 | My host mom took me to the police station. | 寄宿妈妈带我去了警察局。
+W: report | 报告；报案
+W: police report | 报案记录
+W: last saw | 最后一次看到
+W: backpack | 书包；双肩包
+W: stolen | 被偷的
+W: consulate | 领事馆
+W: emergency travel document | 紧急旅行证件
+W: copy | 复印件
+W: photo | 照片
+W: lost and found | 失物招领处
+W: left my phone | 把手机落下了
+W: describe | 描述
+W: phone case | 手机壳
+W: turned in | 上交；交来
+W: belongs to | 属于
+W: prove | 证明
+W: lock screen | 锁屏画面
+W: lucky | 幸运的
+W: keep an eye on | 看好；照看
+P: I lost my passport. | 我的护照丢了。 | 你发现护照不见了
+P: I'd like to report a lost passport. | 我想报失一本护照。 | 你到警察局报失
+P: I last saw it on the train. | 我最后一次看到它是在火车上。 | 警察问你在哪里丢的
+P: Can I have a copy of the police report? | 我可以要一份报案记录的复印件吗？ | 办新证件需要报案证明
+P: I left my phone on the bus. | 我把手机落在公交车上了。 | 你下车后发现手机不见了
+P: Has anyone turned in a black phone? | 有人交来一部黑色手机吗？ | 你到失物招领处询问
+P: It has a blue phone case with stars on it. | 它有一个带星星的蓝色手机壳。 | 工作人员请你描述你的手机
+P: How can I prove it belongs to me? | 我怎么证明它是我的？ | 你想拿回你的东西
+D: 护照丢了 | O=Police officer/警察, E=Emma/艾玛, K=Karen/凯伦（寄宿妈妈）
+O: Hello. How can I help you today? | 你好。今天有什么可以帮你？
+E: Hi. I lost my passport. I'd like to report a lost passport. | 你好。我的护照丢了。我想报失一本护照。
+O: I'm sorry to hear that. Don't worry, we'll help you. When did you last see it? | 很遗憾。别担心，我们会帮你的。你最后一次看到它是什么时候？
+E: I last saw it on the train yesterday. It was in my backpack. | 我最后一次看到它是昨天在火车上，它在我的书包里。
+O: Do you think it was lost or stolen? | 你觉得是丢了还是被偷了？
+E: I think I dropped it. | 我觉得是我弄掉了。
+O: OK. I'll write a police report for you now. | 好的。我现在给你写一份报案记录。
+K: Thank you. Can I have a copy of the police report? | 谢谢。我可以要一份报案记录的复印件吗？
+O: Of course. Next, contact the Chinese consulate. They can give her an emergency travel document or a new passport. | 当然。接下来，请联系中国领事馆。他们可以给她办紧急旅行证件或新护照。
+E: What should I bring to the consulate? | 我去领事馆该带什么？
+O: Bring this report, a photo of you, and a copy of your passport if you have one. | 带上这份报告、一张你的照片，如果有护照复印件也带上。
+K: We have a copy at home. Thank you so much, officer. | 我们家里有复印件。非常感谢您，警官。
+D: 失物招领处 | S=Staff/工作人员, E=Emma/艾玛
+E: Hi. Is this the lost and found? | 你好。这里是失物招领处吗？
+S: Yes, it is. What did you lose? | 是的。你丢了什么？
+E: I left my phone on the bus this morning. Has anyone turned in a black phone? | 我今天早上把手机落在公交车上了。有人交来一部黑色手机吗？
+S: Let me check. Can you describe it? | 我查一下。你能描述一下吗？
+E: It has a blue phone case with stars on it. | 它有一个带星星的蓝色手机壳。
+S: Is this it? Someone turned it in an hour ago. | 是这个吗？一个小时前有人交来的。
+E: Yes, that's mine! How can I prove it belongs to me? | 是的，那是我的！我怎么证明它是我的？
+S: Can you tell me what's on the lock screen? | 你能告诉我锁屏画面是什么吗？
+E: It's a picture of my dog in China. | 是我在中国的狗的照片。
+S: That's right. Here you go. You're lucky! | 对了。给你。你真幸运！
+E: Thank you so much! I'll keep an eye on my things from now on. | 太谢谢了！从现在起我会看好自己的东西。
+## citylost | 在城市迷路
+W: field trip | 校外参观；研学旅行
+W: separated from | 和……走散了
+W: my class | 我的班级
+W: police officer | 警察 | If you are lost, you can ask a police officer for help. | 如果你迷路了，可以向警察求助。
+W: I'm lost | 我迷路了
+W: stay where you are | 待在原地
+W: meeting point | 集合地点
+W: name tag | 名牌；姓名牌
+W: phone number | 电话号码
+W: safe | 安全的
+W: wrong stop | 错误的车站
+W: street sign | 路牌
+W: coffee shop | 咖啡店
+W: share my location | 共享我的位置
+W: come and get you | 过来找你
+W: landmark | 地标
+W: tall | 高的
+W: clock tower | 钟楼
+W: charged | 充好电的
+W: worry | 担心
+W: good thinking | 想得好；做得对
+W: ask for help | 求助
+P: Excuse me, I'm lost. Can you help me? | 打扰一下，我迷路了。你能帮帮我吗？ | 你在城市里找不到路了
+P: I got separated from my class. | 我和班级走散了。 | 校外参观时你找不到老师和同学了
+P: Our meeting point is the front gate of the museum. | 我们的集合地点是博物馆正门。 | 警察问你们在哪里集合
+P: My teacher's phone number is on my name tag. | 我老师的电话号码在我的名牌上。 | 警察想联系你的老师
+P: I think I got off at the wrong stop. | 我觉得我下错站了。 | 你下车后发现不认识这里
+P: I can see a clock tower and a coffee shop. | 我能看到一座钟楼和一家咖啡店。 | 家人问你附近有什么
+P: I'll share my location with you. | 我把我的位置共享给你。 | 你想让家人知道你在哪里
+P: I'll wait inside the coffee shop. | 我在咖啡店里面等。 | 你在一个安全的地方等人来接
+D: 研学时和班级走散 | O=Police officer/警察, E=Emma/艾玛
+E: Excuse me, I'm lost. Can you help me? | 打扰一下，我迷路了。你能帮帮我吗？
+O: Of course. Don't worry, you're safe now. What happened? | 当然。别担心，你现在很安全。发生什么事了？
+E: I'm on a field trip, and I got separated from my class. | 我在参加校外参观，和班级走散了。
+O: OK. Do you remember your meeting point? | 好的。你记得你们的集合地点吗？
+E: Our meeting point is the front gate of the museum. | 我们的集合地点是博物馆正门。
+O: Good. Do you have a way to contact your teacher? | 很好。你有办法联系你的老师吗？
+E: Yes. My teacher's phone number is on my name tag. | 有。我老师的电话号码在我的名牌上。
+O: Great. I'll call her now. Please stay where you are with me. | 太好了。我现在给她打电话。请和我一起待在原地。
+E: Thank you. My teacher must be worried. | 谢谢。我的老师一定很着急。
+O: She's coming. You did the right thing. It's always OK to ask for help. | 她马上过来。你做得对。需要帮助的时候，求助永远没问题。
+D: 下错站了 | K=Karen/凯伦（寄宿妈妈）, E=Emma/艾玛
+E: Hi, Karen. I think I got off at the wrong stop. I don't know where I am. | 喂，凯伦。我觉得我下错站了，不知道自己在哪里。
+K: Don't worry, Emma. Is your phone charged? | 别担心，艾玛。你的手机有电吗？
+E: Yes, it's at eighty percent. | 有，还有百分之八十。
+K: Good. Can you see a street sign or a landmark? | 很好。你能看到路牌或者地标吗？
+E: I can see a clock tower and a coffee shop. The street sign says King Street. | 我能看到一座钟楼和一家咖啡店。路牌上写着国王街。
+K: I know that tall clock tower. I'll come and get you. | 我知道那座高高的钟楼。我去接你。
+E: I'll share my location with you. | 我把我的位置共享给你。
+K: Good thinking. Please wait inside the coffee shop. It's safe there. | 想得真周到。请在咖啡店里面等，那里安全。
+E: OK. I'll wait inside the coffee shop. | 好的。我在咖啡店里面等。
+K: I'll be there in fifteen minutes. Don't worry, you did everything right. | 我十五分钟后到。别担心，你做得都对。

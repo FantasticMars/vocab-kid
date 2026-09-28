@@ -90,7 +90,7 @@ def ipa(w):
     return '/' + ' '.join(res) + '/'
 
 
-IPA_OVR = {'gp': '/ˌdʒiˈpi/', 'emoji': '/ɪˈmoʊdʒi/', 'pin': '/pɪn/', 'e-ticket': '/ˈiˌtɪkət/', 'lead': '/lid/', 'live': '/lɪv/', 'wind': '/wɪnd/', 'tear': '/tɪr/', 'use': '/juz/', 'close': '/kloʊs/',
+IPA_OVR = {'gp': '/ˌdʒiˈpi/', 'atm': '/ˌeɪtiˈem/', 'wi-fi': '/ˈwaɪfaɪ/', 'call 911': '/kɔl ˌnaɪn wʌn ˈwʌn/', 'emoji': '/ɪˈmoʊdʒi/', 'pin': '/pɪn/', 'e-ticket': '/ˈiˌtɪkət/', 'lead': '/lid/', 'live': '/lɪv/', 'wind': '/wɪnd/', 'tear': '/tɪr/', 'use': '/juz/', 'close': '/kloʊs/',
            'read': '/rid/', 'record': '/ˈrekərd/', 'present': '/ˈprezənt/', 'object': '/ˈɑbdʒekt/', 'minute': '/ˈmɪnət/',
            'desert': '/ˈdezərt/', 'content': '/ˈkɑntent/', 'row': '/roʊ/', 'bow': '/baʊ/', 'wound': '/wund/',
            'p.m.': '/ˌpiˈem/', 'a.m.': '/ˌeɪˈem/', 'o.k.': '/ˌoʊˈkeɪ/', 'ok': '/ˌoʊˈkeɪ/', 'tv': '/ˌtiˈvi/', 'dvd': '/ˌdiviˈdi/',

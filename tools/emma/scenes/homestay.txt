@@ -1,0 +1,165 @@
+# homestay | 寄宿家庭与宿舍 | 🏠 | 认识寄宿家庭、了解家规和家务、住校宿舍生活
+## arrival | 初到寄宿家庭
+W: host mom | 寄宿妈妈
+W: host family | 寄宿家庭
+W: welcome to | 欢迎来到
+W: thank you for having me | 谢谢你们接待我
+W: flight | 航班；飞行
+W: tired | 累的
+W: suitcase | 行李箱
+W: husband | 丈夫
+W: excited | 兴奋的；期待的
+W: gift | 礼物
+W: bedroom | 卧室
+W: closet | 衣柜
+W: drawer | 抽屉
+W: bathroom | 卫生间
+W: across the hall | 在走廊对面
+W: share | 共用；分享
+W: password | 密码
+W: fridge | 冰箱
+W: help yourself to | 随便吃；随便用
+W: arrive safely | 平安到达
+W: unpack | 打开行李整理
+W: set the table | 摆餐具
+P: Thank you for having me. | 谢谢你们接待我。 | 刚见到寄宿家庭，你想表达感谢
+P: I'm staying with a host family in Toronto. | 我住在多伦多的一个寄宿家庭。 | 新同学问你住在哪里
+P: Where can I put my clothes? | 我的衣服放在哪里？ | 你想整理行李，但不知道衣服放哪
+P: What's the Wi-Fi password, please? | 请问Wi-Fi密码是多少？ | 你想连网
+P: I'd like to call my parents to tell them I arrived safely. | 我想给爸妈打个电话，告诉他们我平安到了。 | 你想给爸妈报平安
+P: I brought some gifts from China for your family. | 我从中国给你们家带了些礼物。 | 你想把从中国带的礼物送给寄宿家庭
+P: Do you need any help with dinner? | 晚饭需要我帮忙吗？ | 寄宿妈妈在做饭，你想帮忙
+P: I'm a bit tired after the long flight. | 长途飞行后我有点累。 | 寄宿家庭问你感觉怎么样
+D: 见到寄宿家庭 | K=Karen/凯伦（寄宿妈妈）, E=Emma/艾玛
+K: Hi, you must be Emma! Welcome to Canada. I'm Karen, your host mom. | 嗨，你一定是艾玛！欢迎来到加拿大。我是凯伦，你的寄宿妈妈。
+E: Hi, Karen. Nice to meet you. Thank you for having me. | 嗨，凯伦，很高兴见到你。谢谢你们接待我。
+K: How was your flight? You must be tired. | 飞行怎么样？你一定累了吧。
+E: It was long, but I'm OK. I slept a little on the plane. | 很长，但我还好。我在飞机上睡了一会儿。
+K: Let me help you with your suitcase. The car is just outside. | 我来帮你拿行李箱。车就在外面。
+E: Thanks. Is it far to your house? | 谢谢。到你家远吗？
+K: About twenty minutes. You'll meet my husband, Dave, and our son, Jack. | 大约二十分钟。你会见到我丈夫戴夫和我们的儿子杰克。
+E: How old is Jack? | 杰克几岁了？
+K: He's ten. He's really excited to meet you. We also have a dog called Max. | 他十岁。他特别期待见到你。我们还有一只叫麦克斯的狗。
+E: I love dogs! I brought some gifts from China for your family. | 我喜欢狗！我从中国给你们家带了些礼物。
+K: Oh, that's so sweet of you. Let's go home. | 哦，你真贴心。我们回家吧。
+D: 参观新家 | K=Karen/凯伦（寄宿妈妈）, E=Emma/艾玛
+K: This is your bedroom. I hope you like it. | 这是你的卧室，希望你喜欢。
+E: It's lovely! Where can I put my clothes? | 太好了！我的衣服放在哪里？
+K: There's a closet here and some drawers under the bed. | 这里有一个衣柜，床下还有几个抽屉。
+E: Great. Where is the bathroom? | 好的。卫生间在哪里？
+K: It's across the hall. You'll share it with Jack. | 在走廊对面。你和杰克共用。
+E: OK. What's the Wi-Fi password, please? | 好的。请问Wi-Fi密码是多少？
+K: It's on the fridge. Help yourself to snacks in the kitchen anytime. | 在冰箱上。厨房里的零食你随时可以吃。
+E: Thank you. I'd like to call my parents to tell them I arrived safely. | 谢谢。我想给爸妈打个电话，告诉他们我平安到了。
+K: Of course. Take your time and unpack. Dinner is at six. | 当然。你慢慢整理行李。六点吃晚饭。
+E: Do you need any help with dinner? | 晚饭需要我帮忙吗？
+K: That's kind of you. You can set the table later. | 你真好。你一会儿可以摆餐具。
+## houserules | 家规与家务
+W: house rules | 家规
+W: school night | 第二天要上学的晚上
+W: be home by | 在……之前到家
+W: after-school club | 课后社团
+W: let me know | 告诉我一声
+W: curfew | 门禁时间
+W: laundry | 洗衣；要洗的衣服
+W: washing machine | 洗衣机
+W: basement | 地下室
+W: front door | 前门
+W: chores | 家务活
+W: take out the recycling | 把可回收垃圾拿出去
+W: garbage | （普通）垃圾
+W: bin | 垃圾桶
+W: make your bed | 整理床铺
+W: tidy | 整洁的
+W: microwave | 微波炉
+W: metal | 金属
+W: sleep well | 睡得好
+W: help around the house | 帮家里干活
+W: explain | 解释；讲清楚
+P: Is there a curfew on weekends? | 周末有门禁时间吗？ | 你想知道周末几点前要回家
+P: Can I do my own laundry? | 我可以自己洗衣服吗？ | 你的衣服脏了，想自己洗
+P: What can I do to help around the house? | 我能帮家里做点什么？ | 你想主动帮寄宿家庭做家务
+P: Should I take off my shoes in the house? | 在家里我需要脱鞋吗？ | 你不确定进屋要不要脱鞋
+P: I'll be home late because I have a club after school. | 我有课后社团，会晚点回家。 | 你今天要晚回家，给寄宿妈妈发消息
+P: Can I use the microwave for lunch? | 午饭我可以用微波炉吗？ | 你想热一下午饭
+P: Where does the garbage go? | 普通垃圾放哪里？ | 你不知道垃圾该扔哪里
+P: Thanks for explaining everything. | 谢谢你把一切都讲清楚。 | 寄宿爸爸给你讲完了家规
+D: 了解家规 | K=Karen/凯伦（寄宿妈妈）, E=Emma/艾玛
+K: Emma, can we talk about a few house rules? | 艾玛，我们聊聊几条家规好吗？
+E: Sure. I want to do things the right way. | 当然。我想把事情做对。
+K: On school nights, we like everyone to be home by six for dinner. | 上学的晚上，我们希望大家六点前回家吃晚饭。
+E: OK. What if I have an after-school club? | 好的。如果我有课后社团怎么办？
+K: Just text me and let me know. That's fine. | 发短信告诉我一声就行，没关系。
+E: Got it. Is there a curfew on weekends? | 明白了。周末有门禁时间吗？
+K: Nine o'clock, and please tell us where you're going. | 九点，而且请告诉我们你去哪里。
+E: No problem. Can I do my own laundry? | 没问题。我可以自己洗衣服吗？
+K: Yes. The washing machine is in the basement. I'll show you how to use it. | 可以。洗衣机在地下室，我教你怎么用。
+E: Thank you. And should I take off my shoes in the house? | 谢谢。在家里我需要脱鞋吗？
+K: Yes, please. Just leave them by the front door. | 是的，请把鞋放在前门旁边。
+D: 帮忙做家务 | V=Dave/戴夫（寄宿爸爸）, E=Emma/艾玛
+V: Morning, Emma! Did you sleep well? | 早上好，艾玛！睡得好吗？
+E: Yes, thanks. What can I do to help around the house? | 睡得好，谢谢。我能帮家里做点什么？
+V: Everyone has chores here. Could you take out the recycling on Tuesdays? | 这里每个人都有家务。你能每周二把可回收垃圾拿出去吗？
+E: Sure. Where does the garbage go? | 当然。普通垃圾放哪里？
+V: The garbage goes in the black bin, and the recycling goes in the blue bin. | 普通垃圾放黑色垃圾桶，可回收的放蓝色垃圾桶。
+E: OK. Should I make my bed every morning? | 好的。我需要每天早上整理床铺吗？
+V: That would be great. And please keep your room tidy. | 那就太好了。也请保持房间整洁。
+E: I will. Can I use the microwave for lunch? | 我会的。午饭我可以用微波炉吗？
+V: Of course. Just don't put anything metal in it. | 当然。只是别把金属东西放进去。
+E: Thanks for explaining everything. | 谢谢你把一切都讲清楚。
+V: No problem. Let us know if you need anything. | 不客气。需要什么就告诉我们。
+## dorm | 住校宿舍
+W: roommate | 室友
+W: dorm | 宿舍
+W: by the window | 靠窗
+W: view | 景色
+W: desk | 书桌
+W: neat | 整齐的
+W: do you mind if | 你介意……吗
+W: photo | 照片
+W: wall | 墙
+W: lights out | 熄灯
+W: weeknight | 工作日的晚上
+W: go to bed early | 早睡
+W: get along | 相处融洽
+W: dorm parent | 宿管老师
+W: room key | 房间钥匙
+W: spare key | 备用钥匙
+W: heater | 暖气；取暖器
+W: maintenance | 维修部门
+W: laundry room | 洗衣房
+W: common room | 公共休息室
+W: clean up after yourself | 用完自己收拾干净
+W: turn down | 把（音量）调小 | Please turn down the TV after ten. | 十点以后请把电视声音调小。
+P: Hi! Are you my new roommate? | 嗨！你是我的新室友吗？ | 你走进宿舍，看到一个不认识的同学
+P: Do you mind if I put a photo on the wall? | 你介意我在墙上贴张照片吗？ | 你想在墙上贴家人的照片
+P: I think I lost my room key. | 我好像把房间钥匙弄丢了。 | 你找不到房间钥匙
+P: The heater in our room isn't working. | 我们房间的暖气坏了。 | 宿舍里很冷，暖气不热
+P: Which floor is my dorm room on? | 我的宿舍在几楼？ | 你刚到宿舍楼，不知道房间在哪层
+P: I'll ask the dorm parent for help. | 我去找宿管老师帮忙。 | 室友问遇到问题该怎么办
+P: Could you turn the music down a little, please? | 你能把音乐声调小一点吗？ | 室友音乐太大声，你想学习
+P: I think we'll get along well. | 我觉得我们会相处得很好。 | 第一次见室友，聊得很开心
+D: 认识室友 | S=Sophie/索菲（室友）, E=Emma/艾玛
+S: Hi! Are you my new roommate? I'm Sophie. | 嗨！你是我的新室友吗？我是索菲。
+E: Yes, I'm Emma. Nice to meet you! Which bed is mine? | 是的，我是艾玛，很高兴认识你！哪张床是我的？
+S: The one by the window. I hope that's OK. | 靠窗的那张，希望你不介意。
+E: That's perfect. I like the view. | 太好了，我喜欢这个景色。
+S: We share the desk, so let's keep it neat. | 我们共用书桌，所以要保持整齐哦。
+E: Sure. Do you mind if I put a photo on the wall? | 当然。你介意我在墙上贴张照片吗？
+S: Not at all. Is that your family? | 一点也不介意。那是你的家人吗？
+E: Yes, that's my mom, my dad and my little brother. | 是的，这是我妈妈、爸爸和弟弟。
+S: Cute! By the way, lights out is at ten on weeknights. | 真可爱！顺便说一下，工作日晚上十点熄灯。
+E: OK. I usually go to bed early anyway. | 好的。反正我一般睡得早。
+S: Great. I think we'll get along well. | 太好了，我觉得我们会相处得很好。
+D: 找宿管老师帮忙 | L=Ms. Lee/李老师（宿管）, E=Emma/艾玛
+E: Excuse me, Ms. Lee. Do you have a minute? | 打扰一下，李老师。您有空吗？
+L: Of course, Emma. What's up? | 当然，艾玛。怎么了？
+E: I think I lost my room key. I can't find it anywhere. | 我好像把房间钥匙弄丢了，到处都找不到。
+L: Don't worry. I have a spare key. Let me open the door for you. | 别担心，我有备用钥匙。我来帮你开门。
+E: Thank you so much. Also, the heater in our room isn't working. | 太感谢了。还有，我们房间的暖气坏了。
+L: I'll report it to maintenance today. They'll fix it tomorrow. | 我今天就报修，他们明天会修好。
+E: And where is the laundry room? | 洗衣房在哪里？
+L: It's on the first floor, next to the common room. | 在一楼，公共休息室旁边。
+E: Can I use the kitchen in the evening? | 晚上我可以用厨房吗？
+L: Yes, until nine thirty. Please clean up after yourself. | 可以，到九点半为止。用完请自己收拾干净。
+E: Got it. Thanks for your help, Ms. Lee. | 明白了。谢谢您的帮助，李老师。

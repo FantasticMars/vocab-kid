@@ -29,10 +29,30 @@
   },
   {
    "id": "homestay",
-   "title": "宿舍与寄宿家庭",
+   "title": "寄宿家庭与宿舍",
    "emoji": "🏠",
-   "ready": false,
-   "subs": []
+   "purpose": "认识寄宿家庭、了解家规和家务、住校宿舍生活",
+   "ready": true,
+   "subs": [
+    {
+     "id": "arrival",
+     "title": "初到寄宿家庭",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "houserules",
+     "title": "家规与家务",
+     "words": 21,
+     "dialogues": 2
+    },
+    {
+     "id": "dorm",
+     "title": "住校宿舍",
+     "words": 22,
+     "dialogues": 2
+    }
+   ]
   },
   {
    "id": "restaurant",
@@ -92,8 +112,28 @@
    "id": "transport",
    "title": "交通出行",
    "emoji": "🚌",
-   "ready": false,
-   "subs": []
+   "purpose": "坐公交地铁、问路认路、坐校车和骑自行车",
+   "ready": true,
+   "subs": [
+    {
+     "id": "bus",
+     "title": "坐公交和地铁",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "directions",
+     "title": "问路",
+     "words": 21,
+     "dialogues": 2
+    },
+    {
+     "id": "schoolbus",
+     "title": "校车与骑车",
+     "words": 21,
+     "dialogues": 2
+    }
+   ]
   },
   {
    "id": "airport",
@@ -153,15 +193,55 @@
    "id": "bank",
    "title": "银行与手机卡",
    "emoji": "💳",
-   "ready": false,
-   "subs": []
+   "purpose": "开银行账户、存钱取钱、处理银行卡问题、办手机卡",
+   "ready": true,
+   "subs": [
+    {
+     "id": "account",
+     "title": "开银行账户",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "card",
+     "title": "刷卡与取钱",
+     "words": 21,
+     "dialogues": 2
+    },
+    {
+     "id": "phone",
+     "title": "办手机卡",
+     "words": 22,
+     "dialogues": 2
+    }
+   ]
   },
   {
    "id": "renting",
    "title": "租房",
    "emoji": "🔑",
-   "ready": false,
-   "subs": []
+   "purpose": "陪家人看房、签租约和搬家、报修和认识邻居",
+   "ready": true,
+   "subs": [
+    {
+     "id": "viewing",
+     "title": "看房",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "lease",
+     "title": "签租约与搬家",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "repairs",
+     "title": "报修与邻居",
+     "words": 22,
+     "dialogues": 2
+    }
+   ]
   },
   {
    "id": "social",
@@ -194,15 +274,55 @@
    "id": "sports",
    "title": "运动娱乐",
    "emoji": "⚽",
-   "ready": false,
-   "subs": []
+   "purpose": "加入运动队、看电影和演出、周末和寄宿家庭出去玩",
+   "ready": true,
+   "subs": [
+    {
+     "id": "team",
+     "title": "加入运动队",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "movies",
+     "title": "看电影与演出",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "weekend",
+     "title": "周末去玩",
+     "words": 22,
+     "dialogues": 2
+    }
+   ]
   },
   {
    "id": "emergency",
    "title": "求助与紧急情况",
    "emoji": "🆘",
-   "ready": false,
-   "subs": []
+   "purpose": "冷静求助：拨打911、身体不适、丢失证件和物品、在城市里迷路",
+   "ready": true,
+   "subs": [
+    {
+     "id": "call911",
+     "title": "拨打911与身体不适",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "lostitems",
+     "title": "丢了证件或东西",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "citylost",
+     "title": "在城市迷路",
+     "words": 22,
+     "dialogues": 2
+    }
+   ]
   }
  ]
 }

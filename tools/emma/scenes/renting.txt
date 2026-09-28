@@ -1,0 +1,167 @@
+# renting | 租房 | 🔑 | 陪家人看房、签租约和搬家、报修和认识邻居
+## viewing | 看房
+W: apartment | 公寓
+W: for rent | 出租
+W: landlord | 房东 | The landlord showed us the apartment. | 房东带我们看了公寓。
+W: rent | 房租 | The rent is 1,800 dollars a month. | 房租是每月一千八百美元。
+W: per month | 每月
+W: utilities | 水电燃气费
+W: included | 包括在内的
+W: two-bedroom | 两居室的
+W: furnished | 带家具的
+W: living room | 客厅
+W: bright | 明亮的
+W: quiet | 安静的
+W: neighborhood | 街区；社区
+W: close to | 离……近
+W: laundry room | 洗衣房
+W: parking | 停车位
+W: pets | 宠物
+W: allowed | 被允许的
+W: real estate agent | 房产中介
+W: townhouse | 联排别墅
+W: backyard | 后院
+W: available | 可入住的；可用的
+P: We're looking for an apartment near the school. | 我们在找学校附近的公寓。 | 你帮妈妈跟房东说明来意
+P: How much is the rent per month? | 每月房租多少钱？ | 你想知道房子贵不贵
+P: Are utilities included? | 水电燃气费包括在内吗？ | 你想知道房租里包括什么
+P: Is the apartment furnished? | 公寓带家具吗？ | 你想知道要不要自己买家具
+P: Is it close to a bus stop? | 离公交车站近吗？ | 你想知道出行方不方便
+P: Are pets allowed? | 可以养宠物吗？ | 你们家想养一只小狗
+P: When is it available? | 什么时候可以入住？ | 你想知道什么时候能搬进去
+P: Can we have a look around? | 我们可以四处看看吗？ | 你想参观房子的各个房间
+D: 和房东看公寓 | L=Landlord/房东, E=Emma/艾玛
+L: Hi, you must be here about the apartment for rent. | 你好，你们一定是来看出租的公寓的吧。
+E: Yes. I'm Emma, and this is my mom. She's learning English, so I'll help translate. | 是的。我叫艾玛，这是我妈妈。她在学英语，所以我帮她翻译。
+L: No problem. Come on in. This is a two-bedroom apartment. | 没问题，请进。这是一套两居室的公寓。
+E: The living room is really bright. How much is the rent per month? | 客厅真亮堂。每月房租多少钱？
+L: It's 1,800 dollars a month. | 每月一千八百美元。
+E: Are utilities included? | 水电燃气费包括在内吗？
+L: Water and heat are included, but you pay for electricity. | 水和暖气费包括在内，但电费要自己付。
+E: Is the apartment furnished? | 公寓带家具吗？
+L: Yes, it comes with beds, a sofa, and a table. There's a laundry room in the basement too. | 带的，有床、沙发和桌子。地下室还有洗衣房。
+E: Is it close to a bus stop? | 离公交车站近吗？
+L: Yes, the bus stop is just across the street, and it's a quiet neighborhood. | 近，公交车站就在马路对面，而且这个街区很安静。
+E: Thank you. My mom says she likes it a lot. | 谢谢。我妈妈说她很喜欢。
+D: 和中介看联排别墅 | A=Agent/房产中介, E=Emma/艾玛
+A: Hello! I'm Linda, the real estate agent. Welcome to the townhouse. | 你好！我是房产中介琳达。欢迎来看这套联排别墅。
+E: Hi, Linda. Can we have a look around? | 你好，琳达。我们可以四处看看吗？
+A: Of course. There are three bedrooms upstairs and a small backyard. | 当然。楼上有三间卧室，还有一个小后院。
+E: A backyard! Are pets allowed? We want to get a dog. | 有后院！可以养宠物吗？我们想养一只狗。
+A: Small pets are allowed, but you need to tell the owner first. | 可以养小型宠物，但要先告诉房主。
+E: Is there parking? My mom is going to buy a car. | 有停车位吗？我妈妈打算买车。
+A: Yes, there's a garage and one parking space in front. | 有的，有一个车库，门前还有一个停车位。
+E: When is it available? | 什么时候可以入住？
+A: It's available on September first, just before school starts. | 九月一号就可以入住，正好在开学之前。
+E: That's perfect. We're looking for a home near the school. | 太好了。我们正在找学校附近的房子。
+A: Your school is only a five-minute walk from here. | 你的学校离这里走路只要五分钟。
+## lease | 签租约与搬家
+W: lease | 租约；租房合同
+W: sign the lease | 签租约
+W: one-year lease | 一年期的租约
+W: security deposit | 押金
+W: first month's rent | 第一个月的房租
+W: move in | 搬进
+W: move out | 搬出
+W: keys | 钥匙
+W: mailbox | 信箱
+W: in good condition | 状况良好
+W: damage | 损坏
+W: take photos | 拍照
+W: moving truck | 搬家卡车
+W: movers | 搬家工人
+W: box | 箱子
+W: fragile | 易碎的
+W: heavy | 重的
+W: be careful | 小心
+W: upstairs | 在楼上
+W: furniture | 家具
+W: carry | 搬；提
+W: tip | 小费
+P: We'd like to rent the apartment. | 我们想租这套公寓。 | 你和妈妈决定租下房子
+P: How long is the lease? | 租约是多长时间的？ | 你想知道要住多久
+P: How much is the security deposit? | 押金是多少？ | 签约前你想知道要先付多少钱
+P: When can we move in? | 我们什么时候能搬进来？ | 你想知道哪天可以搬家
+P: Could we take photos of the apartment first? | 我们可以先给公寓拍些照片吗？ | 你想记录房子现在的样子
+P: Please be careful with this box. It's fragile. | 请小心这个箱子，里面的东西易碎。 | 搬家工人在搬你的东西
+P: This box goes upstairs, please. | 这个箱子请搬到楼上。 | 你告诉搬家工人箱子放哪里
+P: Thank you for all your hard work. | 谢谢你们这么辛苦。 | 搬完家你想感谢搬家工人
+D: 签租约 | L=Landlord/房东, E=Emma/艾玛
+E: Hi again. My mom and I would like to rent the apartment. | 又见面了。我和妈妈想租这套公寓。
+L: Great news! Here's the lease. Please read it before you sign the lease. | 好消息！这是租约。签租约之前请先读一下。
+E: How long is the lease? | 租约是多长时间的？
+L: It's a one-year lease, from September to August. | 是一年期的租约，从九月到八月。
+E: How much is the security deposit? | 押金是多少？
+L: One month's rent. You pay the deposit and the first month's rent today. | 一个月的房租。你们今天付押金和第一个月的房租。
+E: Will we get the deposit back when we move out? | 我们搬走的时候押金会退吗？
+L: Yes, if the apartment is still in good condition and there's no damage. | 会的，只要公寓状况良好、没有损坏。
+E: Could we take photos of the apartment first? | 我们可以先给公寓拍些照片吗？
+L: That's a smart idea. Here are your keys. This small one is for the mailbox. | 好主意。这是你们的钥匙。这把小的是开信箱的。
+E: When can we move in? | 我们什么时候能搬进来？
+L: You can move in this Saturday. | 你们这周六就可以搬进来。
+D: 搬家那天 | M=Mover/搬家工人, E=Emma/艾玛
+M: Good morning! The moving truck is outside. Where should we start? | 早上好！搬家卡车在外面了。我们从哪里开始？
+E: Hi! Please start with the big furniture, like the sofa and the beds. | 你好！请先搬大件家具，比如沙发和床。
+M: Sure. Is this box heavy? | 好的。这个箱子重吗？
+E: Yes, it's full of books. This box goes upstairs, please. | 重，里面全是书。这个箱子请搬到楼上。
+M: No problem. What about this one? | 没问题。那这个呢？
+E: Please be careful with this box. It's fragile. There are cups and plates inside. | 请小心这个箱子，里面的东西易碎，装着杯子和盘子。
+M: Don't worry. We'll carry it by hand. | 别担心，我们会用手抱着搬。
+E: Thank you. Would you like some water? | 谢谢。你们要喝点水吗？
+M: Yes, please. We're almost done. The movers will bring in the last boxes now. | 好的，谢谢。我们快搬完了，工人们现在把最后几个箱子搬进来。
+E: Thank you for all your hard work. My mom has a tip for you. | 谢谢你们这么辛苦。我妈妈给你们准备了小费。
+M: That's very kind. Enjoy your new home! | 你们真好。祝你们在新家生活愉快！
+## repairs | 报修与邻居
+W: repair | 报修；维修
+W: fix | 修好；修理
+W: leaking | 漏水的
+W: sink | 水槽；洗手池
+W: under the sink | 在水槽下面
+W: towel | 毛巾
+W: plumber | 水管工
+W: heater | 暖气；取暖器
+W: not working | 坏了；不运转 | The washing machine is not working. | 洗衣机坏了。
+W: light bulb | 灯泡
+W: burned out | 烧坏了
+W: smoke alarm | 烟雾报警器
+W: beeping | 发出哔哔声
+W: battery | 电池
+W: neighbor | 邻居 | Our new neighbor is very friendly. | 我们的新邻居很友好。
+W: next door | 在隔壁
+W: moved in | 刚搬进来
+W: garbage day | 收垃圾的日子
+W: noise | 噪音
+W: knock on | 敲（门）
+W: hang out | 一起玩；闲逛
+W: anytime | 随时
+P: The kitchen sink is leaking. | 厨房的水槽漏水了。 | 你给房东打电话报修
+P: Could you send someone to fix it? | 你能派人来修一下吗？ | 你请房东安排维修
+P: The heater isn't working. | 暖气坏了。 | 冬天家里突然很冷
+P: A light bulb in the bathroom burned out. | 卫生间的一个灯泡烧坏了。 | 你告诉房东灯不亮了
+P: The smoke alarm keeps beeping. | 烟雾报警器一直在哔哔响。 | 报警器可能没电了
+P: Hi, I'm Emma. We just moved in next door. | 你好，我叫艾玛。我们刚搬到隔壁。 | 你向新邻居介绍自己
+P: When is garbage day? | 哪天收垃圾？ | 你想知道什么时候把垃圾放出去
+P: Please knock on our door if you need anything. | 如果你需要什么，请敲我们的门。 | 你想对邻居表示友好
+D: 给房东打电话报修 | C=Mr. Clark/克拉克先生（房东）, E=Emma/艾玛
+C: Hello, this is Bob Clark. | 你好，我是鲍勃·克拉克。
+E: Hi, Mr. Clark. This is Emma from apartment 3B. I need to report a repair. | 你好，克拉克先生。我是3B的艾玛。我需要报修。
+C: Sure. What's the problem? | 好的。出什么问题了？
+E: The kitchen sink is leaking. There's water under the sink. | 厨房的水槽漏水了，水槽下面有水。
+C: Put a towel there for now. I'll send a plumber tomorrow morning. | 先在那里放一条毛巾。我明天早上派水管工过去。
+E: Thank you. Also, the heater isn't working in my bedroom. | 谢谢。还有，我卧室的暖气坏了。
+C: OK, the plumber can check that too. Anything else? | 好的，水管工也可以顺便检查一下。还有别的吗？
+E: A light bulb in the bathroom burned out. | 卫生间的一个灯泡烧坏了。
+C: I'll bring a new bulb. Could you be home around nine? | 我会带一个新灯泡来。你们九点左右在家吗？
+E: My mom will be home. Could you send someone to fix it before noon? | 我妈妈会在家。你能在中午之前派人来修吗？
+C: Yes, we'll fix everything before noon. | 可以，我们中午之前会全部修好。
+D: 认识新邻居 | N=Maria/玛丽亚（邻居）, E=Emma/艾玛
+E: Hi, I'm Emma. We just moved in next door. | 你好，我叫艾玛。我们刚搬到隔壁。
+N: Oh, hi, Emma! I'm Maria. Welcome to the neighborhood! | 哦，你好，艾玛！我是玛丽亚。欢迎来到这个社区！
+E: Thank you. Our smoke alarm keeps beeping. Do you know why? | 谢谢。我们家的烟雾报警器一直在哔哔响。你知道为什么吗？
+N: It probably needs a new battery. That happened to me last month. | 可能需要换新电池了。我上个月也遇到过。
+E: Oh, I see. When is garbage day? | 哦，明白了。哪天收垃圾？
+N: Every Tuesday morning. Put your bins out on Monday night. | 每周二早上。周一晚上把垃圾桶放出去。
+E: Got it. I hope our moving didn't make too much noise yesterday. | 知道了。希望我们昨天搬家没有太吵。
+N: Not at all. My daughter Lily is twelve too. Maybe you two can hang out sometime. | 一点也不吵。我女儿莉莉也十二岁。也许你们俩可以找时间一起玩。
+E: That would be great! Please knock on our door if you need anything. | 太好了！如果你需要什么，请敲我们的门。
+N: Thanks, Emma. You can come over anytime. | 谢谢，艾玛。你随时可以过来玩。

@@ -1,0 +1,169 @@
+# bank | 银行与手机卡 | 💳 | 开银行账户、存钱取钱、处理银行卡问题、办手机卡
+## account | 开银行账户
+W: bank account | 银行账户
+W: open an account | 开户 | You need a passport to open an account. | 开户需要护照。
+W: teller | 银行柜员 | The teller helped me fill out the form. | 银行柜员帮我填了表。
+W: student account | 学生账户
+W: passport | 护照
+W: proof of address | 地址证明
+W: parent | 父亲或母亲；家长
+W: sign | 签名；签字
+W: form | 表格
+W: savings account | 储蓄账户
+W: save money | 攒钱；存钱
+W: debit card | 借记卡
+W: deposit | 存钱；存款
+W: exchange | 兑换
+W: Chinese yuan | 人民币
+W: Canadian dollars | 加元
+W: exchange rate | 汇率
+W: receipt | 收据；小票
+W: balance | 余额
+W: PIN | 密码（银行卡）
+W: pocket money | 零花钱
+W: in the mail | 通过邮寄
+P: I'd like to open a bank account, please. | 我想开一个银行账户。 | 你第一次去银行开户
+P: Do you have an account for students? | 你们有学生账户吗？ | 你想问有没有适合学生的账户
+P: What do I need to bring? | 我需要带什么？ | 你想知道开户要准备哪些材料
+P: I'd like to deposit some money. | 我想存一些钱。 | 你想把现金存进账户
+P: Can I exchange Chinese yuan for Canadian dollars? | 我可以把人民币换成加元吗？ | 你带了人民币，想换成当地的钱
+P: What's the exchange rate today? | 今天的汇率是多少？ | 你想知道能换多少钱
+P: Could I have a receipt, please? | 请给我一张收据好吗？ | 存完钱你想要一张凭证
+P: How can I check my balance? | 我怎么查余额？ | 你想知道账户里还有多少钱
+D: 开学生账户 | T=Teller/银行柜员, E=Emma/艾玛, K=Karen/凯伦（寄宿妈妈）
+T: Good morning. How can I help you today? | 早上好。今天有什么可以帮您？
+E: Hi. I'd like to open a bank account, please. Do you have an account for students? | 你好。我想开一个银行账户。你们有学生账户吗？
+T: Yes, we do. The student account has no monthly fee. How old are you? | 有的。学生账户没有月费。你多大了？
+E: I'm twelve. My host mom Karen is here with me. | 我十二岁。我的寄宿妈妈凯伦陪我来的。
+K: Hi. What do we need to bring? | 你好。我们需要带些什么？
+T: Her passport and a proof of address. Because she's under eighteen, a parent or guardian needs to sign the form too. | 她的护照和一份地址证明。因为她未满十八岁，家长或监护人也需要在表格上签字。
+K: No problem. Here's her passport and a letter with our address. | 没问题。这是她的护照和一封写有我们地址的信。
+T: Thank you. Would you also like a savings account? | 谢谢。你还想开一个储蓄账户吗？
+E: Yes, please. I want to save money for a new bike. | 好的。我想攒钱买一辆新自行车。
+T: Great idea. Your debit card will come in the mail next week. | 好主意。你的借记卡下周会寄过来。
+E: Thank you very much! | 非常感谢！
+D: 存钱和换钱 | T=Teller/银行柜员, E=Emma/艾玛
+E: Hi. I'd like to deposit some money into my account. | 你好。我想往账户里存一些钱。
+T: Sure. How much would you like to deposit? | 好的。你想存多少？
+E: Fifty dollars. It's my pocket money from this month. | 五十加元。这是我这个月的零花钱。
+T: Good for you! Anything else today? | 真棒！今天还需要办别的吗？
+E: Can I exchange Chinese yuan for Canadian dollars? | 我可以把人民币换成加元吗？
+T: Yes. How much do you have? | 可以。你有多少？
+E: Five hundred yuan. What's the exchange rate today? | 五百元人民币。今天的汇率是多少？
+T: Today one yuan is about nineteen cents, so you'll get about ninety-five dollars. | 今天一元人民币大约兑十九分，所以你大概能换到九十五加元。
+E: OK. Could I have a receipt, please? | 好的。请给我一张收据好吗？
+T: Here you go. It also shows your new balance. | 给你。上面也有你的新余额。
+E: How can I check my balance later? | 以后我怎么查余额？
+T: You can use our app or any of our ATMs. Just remember your PIN. | 你可以用我们的应用程序，或者我们的任何一台取款机。记住你的密码就行。
+## card | 刷卡与取钱
+W: ATM | 自动取款机
+W: insert | 插入
+W: keypad | 数字键盘
+W: cover | 遮住；挡住
+W: withdraw | 取（钱）
+W: amount | 金额；数额
+W: fee | 手续费；费用
+W: keep track of | 记录；了解……的情况
+W: spending | 花销；开支
+W: tap your card | 刷卡（感应支付）
+W: lost my card | 我的卡丢了
+W: freeze | 冻结
+W: full name | 全名
+W: date of birth | 出生日期
+W: payment | 付款；支付
+W: normal | 正常的
+W: pay with your phone | 用手机付款
+W: branch | 分行；支行
+W: ID | 身份证件
+W: strange | 奇怪的；可疑的
+W: credit card | 信用卡
+P: How do I take money out of the ATM? | 怎么从取款机取钱？ | 你第一次用取款机
+P: Cover the keypad when you enter your PIN. | 输密码时遮住键盘。 | 大人提醒你用卡安全
+P: I'd like to withdraw forty dollars. | 我想取四十美元。 | 你需要一些现金
+P: Is there a fee for using this ATM? | 用这台取款机要手续费吗？ | 你想知道取钱要不要额外花钱
+P: Can I tap my card here? | 我可以在这里刷卡吗？ | 你在商店结账
+P: I think I lost my card. | 我觉得我的卡丢了。 | 你找不到你的银行卡了
+P: Can you freeze my card, please? | 请帮我冻结我的卡好吗？ | 你担心别人用你丢的卡
+P: I didn't make this payment. | 这笔付款不是我付的。 | 你在账单上看到一笔奇怪的钱
+D: 用取款机取钱 | K=Karen/凯伦（寄宿妈妈）, E=Emma/艾玛
+E: Karen, how do I take money out of the ATM? | 凯伦，怎么从取款机取钱？
+K: First, insert your card here. Then enter your PIN on the keypad. | 先把卡插在这里，然后在键盘上输入密码。
+E: Should I cover the keypad? | 我要遮住键盘吗？
+K: Yes. Always cover the keypad when you enter your PIN. | 是的。输密码的时候一定要遮住键盘。
+E: OK. I'd like to withdraw forty dollars. | 好的。我想取四十加元。
+K: Choose "Withdraw," then type the amount. | 选"取款"，然后输入金额。
+E: Is there a fee for using this ATM? | 用这台取款机要手续费吗？
+K: Not at your own bank. Other banks may charge you two or three dollars. | 在你自己的银行不用。别的银行可能收两三加元。
+E: Here's my money. Should I take the receipt? | 钱出来了。我要拿收据吗？
+K: Yes. It helps you keep track of your spending. | 要。它能帮你记录自己的花销。
+E: Can I tap my card at the grocery store too? | 我在超市也可以刷卡吗？
+K: Yes, you can. You can even pay with your phone. | 可以。你甚至可以用手机付款。
+D: 银行卡丢了 | B=Bank worker/银行工作人员, E=Emma/艾玛
+B: Hello, Maple Bank. How can I help you? | 您好，枫叶银行。有什么可以帮您？
+E: Hi. I think I lost my card. I can't find it anywhere. | 你好。我觉得我的卡丢了，哪里都找不到。
+B: I'm sorry to hear that. Don't worry, I can help. Can I have your full name and date of birth? | 很遗憾听到这个消息。别担心，我可以帮你。请告诉我你的全名和出生日期。
+E: Emma Wang. My date of birth is May 3rd, 2014. | 王艾玛。我的出生日期是2014年5月3日。
+B: Thank you, Emma. Would you like me to freeze your card now? | 谢谢你，艾玛。需要我现在帮你冻结这张卡吗？
+E: Yes, please. Can you freeze my card right away? | 好的。请马上帮我冻结我的卡。
+B: Done. Nobody can use it now. Do you see any strange payments on your account? | 好了，现在没人能用它了。你的账户上有奇怪的付款吗？
+E: Let me check. No, everything looks normal. | 我看一下。没有，一切正常。
+B: Good. Please visit your branch with your ID to get a new card. | 很好。请带上你的身份证件到你的支行领一张新卡。
+E: Can I use a credit card instead? | 我可以改用信用卡吗？
+B: Sorry, you need to be eighteen for a credit card. Your new debit card will be ready in a few days. | 抱歉，满十八岁才能办信用卡。你的新借记卡几天后就能办好。
+E: OK. Thank you for your help. | 好的。谢谢你的帮助。
+## phone | 办手机卡
+W: SIM card | 手机卡；SIM卡
+W: unlocked | 未锁定的（可用任何运营商）
+W: prepaid | 预付费的
+W: monthly plan | 月套餐
+W: difference | 区别；差别
+W: top up | 充值
+W: run out of | 用完 | Try not to run out of data before the end of the month. | 尽量别在月底前把流量用完。
+W: contract | 合同
+W: data | 流量；数据
+W: unlimited | 无限的；不限量的
+W: calls and texts | 电话和短信
+W: set up | 设置；安装
+W: phone number | 电话号码
+W: video | 视频
+W: Wi-Fi | 无线网络
+W: signal | 信号
+W: weak | 弱的
+W: download | 下载
+W: charge | 收费
+W: camping trip | 露营旅行
+W: online | 在网上；联网
+W: plan | 套餐；计划
+P: I'd like to get a SIM card, please. | 我想办一张手机卡。 | 你到了国外，想办当地的手机卡
+P: Is my phone unlocked? | 我的手机是解锁的吗？ | 你不确定国内的手机能不能用这里的卡
+P: What's the difference between prepaid and a monthly plan? | 预付费和月套餐有什么区别？ | 你不知道选哪种套餐
+P: How much data do I get? | 我有多少流量？ | 你想知道套餐里包括多少上网流量
+P: I ran out of data. | 我的流量用完了。 | 你的手机突然上不了网
+P: How do I top up my phone? | 我怎么给手机充值？ | 你的预付费卡没钱了
+P: The signal is weak here. | 这里信号很弱。 | 你打电话听不清楚
+P: Can I use the Wi-Fi to download it? | 我可以用无线网下载吗？ | 你想省流量
+D: 办一张手机卡 | S=Salesperson/店员, E=Emma/艾玛
+S: Hi there! What can I do for you? | 你好！有什么可以帮你？
+E: Hi. I'd like to get a SIM card, please. I just moved here from China. | 你好。我想办一张手机卡。我刚从中国搬过来。
+S: Welcome! Is your phone unlocked? | 欢迎！你的手机是解锁的吗？
+E: I think so. My dad checked before I left. | 我想是的。我走之前爸爸检查过了。
+S: Great. Do you want prepaid or a monthly plan? | 太好了。你想要预付费还是月套餐？
+E: What's the difference between prepaid and a monthly plan? | 预付费和月套餐有什么区别？
+S: With prepaid, you pay first and top up when you need more. A monthly plan usually needs a contract. | 预付费就是先付钱，不够了再充值。月套餐通常需要签合同。
+E: I think prepaid is better for me. How much data do I get? | 我觉得预付费更适合我。我有多少流量？
+S: This one has ten gigs of data and unlimited calls and texts for thirty dollars a month. | 这个套餐每月三十美元，有十G流量，电话和短信不限量。
+E: That sounds good. Can you help me set up the SIM card? | 听起来不错。你能帮我装一下手机卡吗？
+S: Sure. Here's your new phone number. | 当然。这是你的新电话号码。
+D: 流量用完了 | K=Karen/凯伦（寄宿妈妈）, E=Emma/艾玛
+E: Karen, I can't open any apps. I think I ran out of data. | 凯伦，我什么应用都打不开。我觉得我的流量用完了。
+K: Did you watch a lot of videos this week? | 你这周是不是看了很多视频？
+E: Yes, and I had a video call with my parents every day. | 是的，而且我每天都和爸妈视频通话。
+K: Try to use the Wi-Fi at home for video calls. It won't use your data. | 在家视频通话尽量用无线网，这样不会用你的流量。
+E: Good idea. How do I top up my phone? | 好主意。我怎么给手机充值？
+K: You can do it online or with the company's app. | 你可以在网上或者用运营商的应用程序充值。
+E: The app is new. Can I use the Wi-Fi to download it? | 那个应用程序我还没有。我可以用无线网下载吗？
+K: Of course. Also, we're going on a camping trip next weekend. | 当然。还有，我们下周末要去露营。
+E: Will my phone work there? | 我的手机在那里能用吗？
+K: The signal is weak in the mountains, so download your music before we go. | 山里信号很弱，所以出发前把音乐下载好。
+E: OK. Will they charge me extra for that? | 好的。下载会额外收费吗？
+K: Not if you use the Wi-Fi at home. | 如果用家里的无线网就不会。

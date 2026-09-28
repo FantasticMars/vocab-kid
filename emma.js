@@ -4,7 +4,7 @@
  * (own engine below: no spelling / dictation). Leitner SRS stored in profile.emma. */
 (function () {
   "use strict";
-  const DATA_V = "12";
+  const DATA_V = "13";
   const BASE = "data/emma/";
   const INT = [0, 1, 2, 4, 7, 15, 30, 60]; // Leitner box intervals (days)
   const MASTER_BOX = 5;
@@ -599,6 +599,7 @@
     const mm = /^(.*?)(man|woman|child|tooth|foot|leaf|wife|knife)$/.exec(pt);
     if (mm && mm[1] && IRR[mm[2]] && st === mm[1] + IRR[mm[2]].split(" ")[0]) return true;
     if (st.indexOf(pt) === 0 && /^(s|es|ed|d|ing|er|est|ly)$/.test(st.slice(pt.length))) return true;
+    if (/[^aeiou]y$/.test(pt) && (st === pt.slice(0, -1) + "ied" || st === pt.slice(0, -1) + "ies")) return true;
     if (pt === "be") return BE.includes(st);
     if (PRON.includes(pt)) return PRON.includes(st);
     const stem = pt.replace(/(e|y)$/, "");
@@ -607,9 +608,9 @@
   /** [start, end] of the phrase in the sentence, tolerant of inflection (gets worse), be-forms (am from),
    *  pronouns (take off my shoes) and a split object (show me around). */
   function phraseSpan(sentence, phrase) {
-    const low = sentence.toLowerCase();
-    const i = low.indexOf(phrase.toLowerCase());
-    if (i >= 0) return [i, i + phrase.length];
+    // whole-word direct match (so "ID" doesn't hit "did", "tap" doesn't hit "tape")
+    const dm = new RegExp("(^|[^A-Za-z0-9])(" + phrase.replace(/[.*+?^$()|[\]\\]/g, "\\$&") + ")((?:s|es|ed|d|ing|er|est|ly)?)(?![A-Za-z0-9])", "i").exec(sentence);
+    if (dm) { const i = dm.index + dm[1].length; return [i, i + dm[2].length + dm[3].length]; }
     const toks = [];
     const re = /[A-Za-z]+(?:[-'][A-Za-z]+)*|'[a-z]+/g;
     let m;
@@ -1202,7 +1203,10 @@
     const newS = [];
     if (s.scenePerDay > 0) {
       const idx = await loadSceneIndex();
-      for (const sc of idx.filter((x) => x.ready)) {
+      // rotate the starting scene by day so all 12 scenes get their turn in 今日任务
+      const ready = idx.filter((x) => x.ready);
+      const r0 = ready.length ? t % ready.length : 0;
+      for (const sc of ready.slice(r0).concat(ready.slice(0, r0))) {
         if (newS.length >= s.scenePerDay) break;
         const S = await loadScene(sc.id);
         for (const sb of S.subs) {

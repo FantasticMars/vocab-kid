@@ -62,8 +62,8 @@ W: receptionist | 接待员
 W: available | 有空的
 W: urgent | 紧急的
 W: waiting room | 候诊室
-W: check-up | 检查
-W: examine | 检查
+W: check-up | 体检（例行检查）
+W: examine | （医生）检查，诊察
 W: prescription | 处方
 W: take your temperature | 量体温
 W: blood test | 验血

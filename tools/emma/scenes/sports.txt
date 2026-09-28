@@ -1,0 +1,162 @@
+# sports | 运动娱乐 | ⚽ | 加入运动队、看电影和演出、周末和寄宿家庭出去玩
+## team | 加入运动队
+W: coach | 教练
+W: tryouts | 选拔赛
+W: join the team | 加入球队
+W: practice | 训练；练习
+W: position | 位置
+W: goalie | 守门员
+W: defense | 防守
+W: shin guards | 护腿板
+W: cleats | 钉鞋；足球鞋
+W: water bottle | 水壶
+W: warm up | 热身
+W: pass the ball | 传球
+W: kick | 踢
+W: score a goal | 进球
+W: teammate | 队友
+W: win | 赢
+W: lose | 输
+W: tie | 平局
+W: good game | 打得好（比赛后的问候）
+W: nice shot | 射得好
+W: next time | 下次
+W: give it a try | 试一试
+P: How can I join the team? | 我怎么才能加入球队？ | 你想参加学校的运动队
+P: When are the tryouts? | 选拔赛是什么时候？ | 你想知道什么时候去参加选拔
+P: What should I bring to practice? | 训练要带什么？ | 第一次训练前你想做好准备
+P: I usually play defense. | 我通常打防守。 | 教练问你打什么位置
+P: Pass the ball to me! | 把球传给我！ | 比赛中你有好的机会
+P: Good game, everyone! | 大家打得好！ | 比赛结束后你和对手握手
+P: We'll win next time. | 我们下次会赢的。 | 输了比赛，你鼓励队友
+P: I've never played before, but I'd like to give it a try. | 我以前没玩过，但我想试一试。 | 朋友邀请你玩一项新运动
+D: 参加足球选拔 | C=Coach Taylor/泰勒教练, E=Emma/艾玛
+E: Excuse me, Coach Taylor. How can I join the team? | 打扰一下，泰勒教练。我怎么才能加入球队？
+C: Hi! Are you interested in soccer? We have tryouts next Monday after school. | 你好！你对足球感兴趣吗？我们下周一放学后有选拔赛。
+E: Yes! I played soccer in China for two years. | 是的！我在中国踢了两年足球。
+C: Great. What position do you play? | 太好了。你打什么位置？
+E: I usually play defense, but I can be goalie too. | 我通常打防守，但我也能当守门员。
+C: Wonderful. For tryouts, please bring shin guards, cleats, and a water bottle. | 太好了。参加选拔请带上护腿板、足球鞋和一个水壶。
+E: What should I bring to practice if I make the team? | 如果我入选了，训练要带什么？
+C: The same things. Practice is on Tuesdays and Thursdays. We always warm up for ten minutes first. | 一样的东西。每周二和周四训练。我们总是先热身十分钟。
+E: OK. I'll be there on Monday. | 好的，我周一会去的。
+C: See you then, Emma. Don't be nervous. Just have fun! | 到时见，艾玛。别紧张，玩得开心就好！
+D: 比赛之后 | A=Ava/艾娃（队友）, E=Emma/艾玛
+A: Good game, Emma! That was a nice shot in the second half. | 打得好，艾玛！你下半场那一脚射得真好。
+E: Thanks, Ava! But I didn't score a goal. | 谢谢，艾娃！但我没进球。
+A: It was so close! You kicked the ball really hard. | 就差一点！你踢得很有力。
+E: You passed the ball to me at the perfect time. You're a great teammate. | 你传球的时机太好了。你是个很棒的队友。
+A: Thanks! Too bad we didn't win. | 谢谢！可惜我们没赢。
+E: At least we didn't lose. A tie is not bad. | 至少我们没输。平局也不错。
+A: True. We'll win next time. | 没错。我们下次会赢的。
+E: Do you want to practice kicking together this weekend? | 这周末你想一起练习射门吗？
+A: Sure! Let's meet at the park on Saturday. | 好啊！我们周六在公园见吧。
+E: Sounds good. See you then! | 好的，到时见！
+## movies | 看电影与演出
+W: movie theater | 电影院
+W: showtime | 放映时间
+W: ticket | 票
+W: kid's ticket | 儿童票
+W: sold out | 卖完了
+W: popcorn | 爆米花
+W: small | 小号的
+W: medium | 中号的
+W: large | 大号的
+W: snack | 零食
+W: seat | 座位
+W: row | 排
+W: in the middle | 在中间
+W: screen | 屏幕；银幕
+W: funny | 好笑的
+W: scary | 吓人的
+W: favorite part | 最喜欢的部分
+W: ending | 结局
+W: animated movie | 动画电影
+W: school play | 学校话剧
+W: concert | 音乐会
+W: recommend | 推荐
+P: Two tickets for the 4:30 show, please. | 请给我两张四点半场的票。 | 你在电影院买票
+P: What time does the movie start? | 电影几点开始？ | 你想知道放映时间
+P: Can we sit in the middle? | 我们可以坐中间吗？ | 你想选一个好座位
+P: I'd like a medium popcorn, please. | 我想要一份中号爆米花。 | 你在电影院买零食
+P: Is it too scary for kids? | 这部电影对小孩来说会太吓人吗？ | 你担心电影太恐怖
+P: What was your favorite part? | 你最喜欢哪一部分？ | 看完电影你和朋友聊天
+P: I'd recommend it to everyone. | 我会推荐给所有人。 | 你觉得这部电影很好看
+P: Do you want to come to the school play with me? | 你想和我一起去看学校话剧吗？ | 你想邀请朋友去看演出
+D: 在电影院买票 | T=Cashier/售票员, E=Emma/艾玛
+T: Hi! Welcome to the movie theater. What can I get for you? | 你好！欢迎来到电影院。要买什么？
+E: Hi. Two tickets for the new animated movie, please. What time does the movie start? | 你好。两张新动画电影的票。电影几点开始？
+T: The showtime is 4:30 or 7:00. The 7:00 show is almost sold out. | 放映时间是四点半或七点。七点那场快卖完了。
+E: Then two tickets for the 4:30 show, please. One adult and one kid's ticket. | 那请给我两张四点半场的票。一张成人票，一张儿童票。
+T: Sure. Where would you like to sit? | 好的。你们想坐哪里？
+E: Can we sit in the middle? | 我们可以坐中间吗？
+T: How about row F, seats 8 and 9? You'll see the screen really well. | F排8号和9号座怎么样？看屏幕很清楚。
+E: Perfect. And I'd like a medium popcorn, please. | 太好了。我还想要一份中号爆米花。
+T: Small, medium, or large drink with that? | 要小杯、中杯还是大杯的饮料？
+E: A small drink, please. Can I bring the snack into the movie? | 小杯的，谢谢。我可以把零食带进去吗？
+T: Of course. Enjoy the show! | 当然可以。祝观影愉快！
+D: 看完电影聊天 | M=Mia/米娅, E=Emma/艾玛
+M: That movie was so funny! | 那部电影太好笑了！
+E: I know! What was your favorite part? | 就是！你最喜欢哪一部分？
+M: My favorite part was when the little robot danced. | 我最喜欢小机器人跳舞的那段。
+E: Me too! I was worried it would be scary, but it wasn't. | 我也是！我还担心它会很吓人，结果一点也不。
+M: And the ending was so sweet. | 而且结局好温馨。
+E: I'd recommend it to everyone. My host brother Jack would love it. | 我会推荐给所有人。我的寄宿弟弟杰克一定会喜欢。
+M: By the way, do you want to come to the school play with me on Friday? | 对了，你周五想和我一起去看学校话剧吗？
+E: I'd love to! There's also a concert at the park on Sunday. | 我很想去！周日公园里还有一场音乐会。
+M: Cool! Let's ask our parents. | 太酷了！我们问问家长吧。
+E: OK. I'll text you tonight. | 好的，我今晚给你发消息。
+## weekend | 周末去玩
+W: amusement park | 游乐园 | We spent the whole day at the amusement park. | 我们在游乐园玩了一整天。
+W: roller coaster | 过山车
+W: height limit | 身高限制
+W: tall enough | 足够高
+W: line up | 排队
+W: wait | 等待
+W: Ferris wheel | 摩天轮
+W: brave | 勇敢的
+W: souvenir | 纪念品
+W: bowling | 保龄球
+W: barbecue | 烧烤
+W: go hiking | 去徒步
+W: go skating | 去滑冰
+W: ice rink | 滑冰场
+W: rent skates | 租冰鞋
+W: plans | 计划；安排
+W: free | 有空的
+W: sounds like fun | 听起来很好玩
+W: I'm in | 算我一个
+W: sunscreen | 防晒霜
+W: pack a lunch | 带午饭
+W: weather | 天气
+P: Do you have any plans this weekend? | 你这周末有什么安排吗？ | 你想约朋友出去玩
+P: That sounds like fun! | 听起来很好玩！ | 别人邀请你参加活动
+P: Am I tall enough to ride the roller coaster? | 我的身高够坐过山车吗？ | 你在游乐园看到身高限制
+P: How long is the wait? | 要排多久？ | 你看到很长的队伍
+P: Let's line up for the Ferris wheel. | 我们去排队坐摩天轮吧。 | 你想和朋友玩另一个项目
+P: I've never been bowling before. | 我以前从来没打过保龄球。 | 寄宿家庭邀请你去打保龄球
+P: What should I bring? | 我该带些什么？ | 出发前你想做好准备
+P: I'm free on Saturday. | 我周六有空。 | 朋友问你什么时候有时间
+D: 在游乐园 | J=Jack/杰克, E=Emma/艾玛
+J: Emma, look at that roller coaster! Let's go! | 艾玛，快看那个过山车！我们去玩吧！
+E: Wait, there's a height limit. Am I tall enough to ride the roller coaster? | 等等，有身高限制。我的身高够坐过山车吗？
+J: You need to be 140 centimeters. You're taller than that! | 要一百四十厘米。你比这个高！
+E: OK. How long is the wait? | 好的。要排多久？
+J: The sign says twenty minutes. Let's line up. | 牌子上写着二十分钟。我们去排队吧。
+E: I'm a little nervous. It looks so fast! | 我有点紧张，看起来好快！
+J: Don't worry. You're brave. I'll sit next to you. | 别担心，你很勇敢。我坐你旁边。
+E: That was amazing! Let's line up for the Ferris wheel next. | 太棒了！我们接下来去排队坐摩天轮吧。
+J: Good idea. Then we can buy a souvenir for my mom. | 好主意。然后我们可以给我妈妈买个纪念品。
+E: Sure. Let's get her a cute key chain. | 好啊。我们给她买个可爱的钥匙扣吧。
+D: 周末计划 | K=Karen/凯伦（寄宿妈妈）, E=Emma/艾玛
+K: Emma, do you have any plans this weekend? | 艾玛，你这周末有什么安排吗？
+E: Not yet. I'm free on Saturday. | 还没有。我周六有空。
+K: We're thinking of going bowling on Saturday, and having a barbecue with friends on Sunday. | 我们打算周六去打保龄球，周日和朋友们一起烧烤。
+E: That sounds like fun! I've never been bowling before. | 听起来很好玩！我以前从来没打过保龄球。
+K: It's easy. We'll teach you. Next month, we can go skating at the ice rink too. | 很简单，我们教你。下个月我们还可以去滑冰场滑冰。
+E: I don't have skates. | 我没有冰鞋。
+K: No problem. You can rent skates there. | 没关系，你可以在那里租冰鞋。
+E: Great! What should I bring to the barbecue? | 太好了！去烧烤我该带些什么？
+K: Bring a hat and sunscreen. The weather will be sunny. | 带一顶帽子和防晒霜，那天是晴天。
+E: I'm in! Can we go hiking some time too? | 算我一个！我们也可以找时间去徒步吗？
+K: Of course. We can pack a lunch and go hiking at the lake next month. | 当然。下个月我们可以带上午饭去湖边徒步。

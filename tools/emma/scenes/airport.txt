@@ -13,7 +13,7 @@ W: weigh | 称重
 W: overweight | 超重的
 W: window seat | 靠窗座位
 W: aisle seat | 靠过道座位
-W: gate | 登机口
+W: gate | 登机口；（机场）闸口
 W: boarding time | 登机时间
 W: departure | 出发；起飞
 W: fragile | 易碎的
