@@ -20,7 +20,7 @@
   const LEVEL_MAIN = [
     { id: "learn", emoji: "🌟", label: "学习", desc: "一次 6 个词：认词卡 → 选意思 → 拼写 → 听写" },
     { id: "mix", emoji: "🎯", label: "练习", desc: "混合一小关：英↔中、拼写、听写、词形 / 搭配" },
-    { id: "test", emoji: "🏅", label: "测试", desc: "25 题 · 每题马上看对错 · 最后出 100 分成绩单", test: true },
+    { id: "test", emoji: "🏅", label: "测试", desc: "20–25 题 · 每题马上看对错 · 最后出 100 分成绩单", test: true },
   ];
   const SCENE_MAIN = [
     { id: "slearn", emoji: "📖", label: "学习", desc: "词组卡片 + 看对话（点一句，听一句）" },
