@@ -10,10 +10,10 @@
   const shuffle = V.shuffle;
   const esc = V.escapeHtml;
 
-  const SIZES = { cards: 10, sound: 10, zuci: 10, fill: 10, trace: 8, moxie: 8, tingxie: 6, review: 10 };
+  const SIZES = { cards: 10, sound: 10, zuci: 10, fill: 10, trace: 8, moxie: 8, tingxie: 6, review: 10, test: 12 };
   const MODE_NAMES = {
     cards: "认字卡", sound: "读音", zuci: "组词", fill: "选词填空",
-    trace: "描红", moxie: "默写", tingxie: "听写挑战", review: "错字复习",
+    trace: "描红", moxie: "默写", tingxie: "听写挑战", review: "错字复习", test: "综合测试",
   };
   const WRITE_OK_MISTAKES = 3; // ≤3 wrong strokes in one char still counts as 写对
   const LENIENCY = 1.4;
@@ -375,10 +375,27 @@
       });
       items = shuffle(items);
     }
+    else if (mode === "test") {
+      // 综合测试: 读音 + 组词 + 选词填空 + 默写 + 听写. Writing is strict: NO outline, NO hint flashes, NO 描红.
+      const cs = pickChars(pool, 30);
+      const used = new Set();
+      const take = (k, ok) => {
+        const out = [];
+        for (const c of cs) { if (out.length >= k) break; if (!used.has(c.char) && ok(c)) { used.add(c.char); out.push(c); } }
+        return out;
+      };
+      items = []
+        .concat(take(2, () => true).map((c, i) => ({ type: i ? "hear" : "py", c })))
+        .concat(take(2, (c) => mainWord(c)).map((c) => ({ type: "zuci", c })))
+        .concat(take(2, (c) => c.sentenceWord).map((c) => ({ type: "fill", c })))
+        .concat(take(4, () => true).map((c) => ({ type: "write", c, outline: false, strict: true })));
+      const tw = shuffle(tingxieIn(selUnits)).filter((t) => t.w.length <= 3).slice(0, 2);
+      items = shuffle(items).concat(tw.map((t) => ({ type: "tingxie", t, strict: true })));
+    }
     if (!items.length) return;
     S = {
       mode, items, index: 0, correct: 0, answered: 0, mistakes: 0, writtenChars: 0,
-      startedAt: Date.now(), timed: mode === "tingxie", wrongChars: [], unitIds: selUnits.slice(),
+      startedAt: Date.now(), timed: mode === "tingxie" || mode === "test", wrongChars: [], unitIds: selUnits.slice(),
     };
     show("zh-play");
     startTimer();
@@ -740,8 +757,9 @@
   // ----- 描红 / 默写 -----
   function renderWrite(host, it) {
     const c = it.c;
-    const trace = !!it.outline;
-    host.appendChild(el("p", "hint", trace ? "描红：照着灰色的字，一笔一笔写" : "默写：看拼音和词语，自己写出这个字"));
+    const trace = !!it.outline && !it.strict;
+    const strict = !!it.strict;
+    host.appendChild(el("p", "hint", trace ? "描红：照着灰色的字，一笔一笔写" : strict ? "测试 · 默写：看拼音和词语，自己写出这个字" : "默写：看拼音和词语，自己写出这个字"));
     const q = el("div", "zh-write-q");
     const wd = mainWord(c);
     const py = el("div", "zh-cc-py", c.pinyin);
@@ -761,8 +779,8 @@
     const bHint = el("button", "secondary", "💡 提示一下");
     const bRedo = el("button", "ghost", "↺ 重写");
     [bAnim, bHint, bRedo].forEach((b) => (b.type = "button"));
-    tools.appendChild(bAnim);
-    if (!trace) tools.appendChild(bHint);
+    if (!strict) tools.appendChild(bAnim);
+    if (!trace && !strict) tools.appendChild(bHint);
     tools.appendChild(bRedo);
     host.appendChild(tools);
     const gen = advGen;
@@ -770,12 +788,12 @@
       if (!w) return;
       w.quiz({
         leniency: LENIENCY,
-        showHintAfterMisses: trace ? 2 : 3,
+        showHintAfterMisses: strict ? false : trace ? 2 : 3,
         markStrokeCorrectAfterMisses: 5,
         highlightOnComplete: true,
         onMistake: () => {
           mistakesNow++;
-          if (mistakesNow === 3 && !trace) fb("慢慢来～格子里会闪出提示笔画", "gentle");
+          if (mistakesNow === 3 && !trace && !strict) fb("慢慢来～格子里会闪出提示笔画", "gentle");
         },
         onCorrectStroke: () => { if (!S || gen !== advGen) return; fb(""); },
         onComplete: (sum) => {
@@ -828,6 +846,7 @@
   function tingxieSpeech(t) { return [t.w, t.w]; }
   function renderTingxie(host, it) {
     const t = it.t;
+    const strict = !!it.strict;
     const chars = Array.from(t.w);
     const given = t.given || [];
     host.appendChild(el("p", "hint", "听写：听词语，把每个字写在格子里"));
@@ -854,7 +873,7 @@
     const bHint = el("button", "secondary", "💡 提示一下");
     const bSkip = el("button", "ghost", "这个字不会，跳过");
     bHint.type = bSkip.type = "button";
-    tools.appendChild(bHint);
+    if (!strict) tools.appendChild(bHint);
     tools.appendChild(bSkip);
     host.appendChild(tools);
     const results = [];
@@ -875,7 +894,7 @@
       activeWriter = w;
       w.quiz({
         leniency: LENIENCY,
-        showHintAfterMisses: 3,
+        showHintAfterMisses: strict ? false : 3,
         markStrokeCorrectAfterMisses: 5,
         onMistake: () => { mist++; },
         onComplete: (sum) => {
@@ -955,11 +974,12 @@
       result = { stars, accuracy: acc };
     }
     let isPB = false;
-    if (S.mode === "tingxie") {
+    if (S.mode === "tingxie" || S.mode === "test") {
+      const bkey = S.mode;
       const rec = { stars: result.stars, accuracy: result.accuracy, elapsedSec, correct: S.correct, total, mistakes: S.mistakes, units: S.unitIds.slice(), at: Date.now() };
-      const prev = zstore().bests.tingxie;
+      const prev = zstore().bests[bkey];
       const better = !prev || rec.stars > prev.stars || (rec.stars === prev.stars && (rec.mistakes < (prev.mistakes || 0) || (rec.mistakes === prev.mistakes && rec.elapsedSec < prev.elapsedSec)));
-      if (better) { isPB = true; zupdate((h) => { h.bests.tingxie = rec; }); }
+      if (better) { isPB = true; zupdate((h) => { h.bests[bkey] = rec; }); }
     }
     zupdate((h) => {
       h.history = [{ at: Date.now(), mode: S.mode, units: S.unitIds.slice(), correct: S.correct, total, stars: result.stars, accuracy: result.accuracy, elapsedSec: S.timed ? elapsedSec : null, mistakes: S.mistakes }].concat(h.history).slice(0, 50);
@@ -967,15 +987,15 @@
     show("zh-score");
     V.renderStarRow($("#zh-score-stars"), result.stars, result.stars >= 5);
     $("#zh-score-cele").textContent = result.stars >= 5 ? "🎊" : result.stars >= 3 ? "🎉" : "🌱";
-    $("#zh-score-title").textContent = S.mode === "tingxie" ? "听写完成！" : S.mode === "cards" ? "认字卡学完啦！" : "本关完成！";
+    $("#zh-score-title").textContent = S.mode === "tingxie" ? "听写完成！" : S.mode === "test" ? "综合测试完成！" : S.mode === "cards" ? "认字卡学完啦！" : "本关完成！";
     $("#zh-score-big").textContent = S.mode === "cards" ? `${S.correct} / ${total}` : result.accuracy + "%";
     let detail = S.mode === "cards" ? `认识了 ${S.correct} 个字 · ${V.starsLabel(result.stars)}` : `答对 ${S.correct} / ${total} · ${V.starsLabel(result.stars)}`;
     if (S.writtenChars) detail += ` · 写了 ${S.writtenChars} 个字`;
     if (S.timed) detail += ` · 用时 ${V.formatMMSS(elapsedSec)}`;
     $("#zh-score-detail").textContent = detail;
     $("#zh-score-pb").hidden = !isPB;
-    const best = zstore().bests.tingxie;
-    $("#zh-score-best").textContent = S.mode === "tingxie" && best ? `最好成绩：${V.starsLabel(best.stars)} · ${best.accuracy}% · ${V.formatMMSS(best.elapsedSec)}` : "";
+    const best = zstore().bests[S.mode];
+    $("#zh-score-best").textContent = (S.mode === "tingxie" || S.mode === "test") && best ? `最好成绩：${V.starsLabel(best.stars)} · ${best.accuracy}% · ${V.formatMMSS(best.elapsedSec)}` : "";
     const rv = $("#zh-score-review");
     rv.innerHTML = "";
     const uniq = Array.from(new Set(S.wrongChars));
@@ -1098,6 +1118,12 @@
       bb.innerHTML = `<strong>${V.starsLabel(best.stars)}</strong> · 正确率 ${best.accuracy}% · 用时 ${V.formatMMSS(best.elapsedSec)}` +
         `<div class="small muted" style="margin-top:4px">${esc(new Date(best.at).toLocaleString("zh-CN", { hour12: false }))}</div>`;
     } else { bb.classList.add("muted"); bb.textContent = "还没有听写纪录，去挑战一次吧！"; }
+    const tb = zstore().bests.test;
+    if (tb) {
+      const d = el("div", "small", `综合测试最好：${V.starsLabel(tb.stars)} · 正确率 ${tb.accuracy}% · 用时 ${V.formatMMSS(tb.elapsedSec)}`);
+      d.style.marginTop = "6px";
+      bb.appendChild(d);
+    }
     const host = $("#zh-history-list");
     host.innerHTML = "";
     const hist = zstore().history;
@@ -1155,6 +1181,7 @@
     // test hooks
     _state: () => ({ S, selUnits, chars: CHARS.length }),
     _writer: () => activeWriter,
+    _goto: (i) => { if (S) { S.index = i; renderQ(); } },
     _toneVariants: toneVariants,
   };
 })();

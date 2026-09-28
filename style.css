@@ -366,7 +366,8 @@ img.profile-avatar { padding: 0; border: 3px solid #fff; box-shadow: 0 4px 12px 
 .zh-mode-grid .mode-btn:nth-child(6) { border-color: #81ecec; }
 .zh-mode-grid .mode-btn.wide { grid-column: 1 / -1; }
 .zh-mode-grid .mode-btn:nth-child(7) { border-color: #fdcb6e; }
-.zh-mode-grid .mode-btn:nth-child(8) { border-color: #ff7675; }
+.zh-mode-grid .mode-btn:nth-child(8) { border-color: #6c5ce7; }
+.zh-mode-grid .mode-btn:nth-child(9) { border-color: #ff7675; }
 
 .zh-pad {
   position: relative; margin: 10px auto; touch-action: none; -ms-touch-action: none;
