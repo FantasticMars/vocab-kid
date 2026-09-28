@@ -5,7 +5,7 @@ REPO = sys.argv[1]
 EC = sys.argv[2] if len(sys.argv) > 2 and not sys.argv[2].startswith('--') else None
 csv.field_size_limit(10**9)
 lv = os.path.join(REPO, 'data', 'emma', 'levels'); sc = os.path.join(REPO, 'data', 'emma', 'scenes')
-levels = {f[:-5]: json.load(open(os.path.join(lv, f))) for f in sorted(os.listdir(lv)) if f.endswith('.json')}
+levels = {f[:-5]: json.load(open(os.path.join(lv, f))) for f in sorted(os.listdir(lv)) if f.endswith('.json') and f != 'index.json'}
 need = set(w['w'].lower() for d in levels.values() for g in d['groups'] for w in g['words'])
 INFL = collections.defaultdict(set)
 if EC:
@@ -79,7 +79,8 @@ for f in sorted(os.listdir(sc)):
 print(json.dumps(sres, ensure_ascii=False, indent=1))
 if '--sample' in sys.argv:
     n = int(sys.argv[sys.argv.index('--sample') + 1]); random.seed(2026)
-    allw = [(lid, w) for lid, d in levels.items() for g in d['groups'] for w in g['words']]
+    only = sys.argv[sys.argv.index('--only') + 1] if '--only' in sys.argv else None
+    allw = [(lid, w) for lid, d in levels.items() if not only or lid == only for g in d['groups'] for w in g['words']]
     for lid, w in random.sample(allw, n):
         print('%s\t%s\t%s\t%s\t%s\t%s\t%s' % (lid, w['w'], w['p'], w['i'], w['z'], w.get('e'), w.get('c')))
 print('TOTAL HARD FAILURES:', total_fail)

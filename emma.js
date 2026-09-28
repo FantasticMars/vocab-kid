@@ -4,7 +4,7 @@
  * (own engine below: no spelling / dictation). Leitner SRS stored in profile.emma. */
 (function () {
   "use strict";
-  const DATA_V = "13";
+  const DATA_V = "14";
   const BASE = "data/emma/";
   const INT = [0, 1, 2, 4, 7, 15, 30, 60]; // Leitner box intervals (days)
   const MASTER_BOX = 5;

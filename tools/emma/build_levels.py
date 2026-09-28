@@ -25,7 +25,7 @@ ket = json.load(open(P('raw/ket2025.json')))
 pet = json.load(open(P('raw/pet2025.json')))
 awl = json.load(open(P('raw/awl.json')))
 
-FIX_SPLIT = {'ruleseason': ['rule', 'season'], 'searchshock': ['search', 'shock']}
+FIX_SPLIT = {'ruleseason': ['rule', 'season'], 'searchshock': ['search', 'shock'], 'humourous': ['humorous'], 'café': ['cafe']}
 def expand(w):
     return FIX_SPLIT.get(w.lower(), [w])
 
@@ -110,7 +110,7 @@ def forms(w):
     if ' ' not in k:
         fs |= {k + 's', k + 'es', k + 'ed', k + 'd', k + 'ing'}
         if k.endswith('y'): fs |= {k[:-1] + 'ies', k[:-1] + 'ied'}
-        if k.endswith('e'): fs.add(k[:-1] + 'ing')
+        if k.endswith('e') and not k.endswith('ee'): fs.add(k[:-1] + 'ing')
     return fs
 
 CMU = {}
@@ -458,13 +458,14 @@ for q, v in PH_CNT.items():
     t = q.split()
     for n in range(2, len(t)):
         LONGER[' '.join(t[:n])] += v
-IPA_OVR = {'maths': '/mæθs/', 'lead': '/lid/', 'live': '/lɪv/', 'wind': '/wɪnd/', 'tear': '/tɪr/', 'use': '/juz/', 'close': '/kloʊs/',
+IPA_OVR = {'maths': '/mæθs/', 'analyse': '/ˈænəˌlaɪz/', 'gramme': '/ɡræm/', 'bce': '/ˌbiˌsiˈi/', 'ce': '/ˌsiˈi/', 'wi-fi': '/ˈwaɪfaɪ/', 'cafe': '/kæˈfeɪ/', 'lead': '/lid/', 'live': '/lɪv/', 'wind': '/wɪnd/', 'tear': '/tɪr/', 'use': '/juz/', 'close': '/kloʊs/',
            'read': '/rid/', 'record': '/ˈrekərd/', 'present': '/ˈprezənt/', 'object': '/ˈɑbdʒekt/', 'minute': '/ˈmɪnət/',
            'desert': '/ˈdezərt/', 'content': '/ˈkɑntent/', 'row': '/roʊ/', 'bow': '/baʊ/', 'wound': '/wund/',
            'p.m.': '/ˌpiˈem/', 'a.m.': '/ˌeɪˈem/', 'o.k.': '/ˌoʊˈkeɪ/', 'ok': '/ˌoʊˈkeɪ/', 'tv': '/ˌtiˈvi/', 'dvd': '/ˌdiviˈdi/',
            'cd': '/ˌsiˈdi/', 'pe': '/ˌpiˈi/', 'ai': '/ˌeɪˈaɪ/', 'id': '/ˌaɪˈdi/', 'it': '/ɪt/', 'cv': '/ˌsiˈvi/', 'dj': '/ˈdiˌdʒeɪ/',
            'duvet': '/duˈveɪ/', 'cookery': '/ˈkʊkəri/', 'the': '/ðə/', 'a': '/ə/', 'an': '/ən/', 'mr': '/ˈmɪstər/', 'mrs': '/ˈmɪsɪz/', 'ms': '/mɪz/', 'dr': '/ˈdɑktər/',
            'refuse': '/rɪˈfjuz/', 'produce': '/prəˈdus/', 'contract': '/ˈkɑntrækt/', 'permit': '/pərˈmɪt/', 'suspect': '/səˈspekt/', 'conduct': '/kənˈdʌkt/', 'contrast': '/ˈkɑntræst/', 'invalid': '/ɪnˈvælɪd/', 'estimate': '/ˈestəmət/', 'approximate': '/əˈprɑksəmət/', 'alternate': '/ˈɔltərnət/', 'separate': '/ˈsepərət/', 'graduate': '/ˈɡrædʒuət/', 'subject': '/ˈsʌbdʒekt/', 'project': '/ˈprɑdʒekt/', 'progress': '/ˈprɑɡres/', 'increase': '/ɪnˈkris/', 'export': '/ˈekspɔrt/', 'import': '/ˈɪmpɔrt/', 'address': '/ˈædres/', 'perfect': '/ˈpɜrfɪkt/', 'polish': '/ˈpɑlɪʃ/', 'excuse': '/ɪkˈskjuz/'}
+IPA_OVR.update({'recall': '/rɪˈkɔl/', 'estimate': '/ˈestəˌmeɪt/', 'advocate': '/ˈædvəˌkeɪt/', 'protest': '/prəˈtest/', 'discount': '/ˈdɪskaʊnt/', 'transport': '/ˈtrænspɔrt/', 'sow': '/soʊ/', 'document': '/ˈdɑkjəmənt/', 'imply': '/ɪmˈplaɪ/'})  # v14 L3 stress fixes
 def collocs(w):
     k = w.lower(); out = []
     e = KB.get(k)
@@ -537,9 +538,10 @@ only = sys.argv[3].split(',') if len(sys.argv) > 3 else None
 plan = [
   ('L1', '小学核心', '义务教育英语课程标准(2022) 二级词汇 + 数词/月份/星期', L1, 3500, None),
   ('L2', '初中课标', '义务教育英语课程标准(2022) 三级词汇(初中新增)', L2, 5500, None),
-  ('L3', '高中课标', '普通高中英语课程标准 必修+选择性必修词汇', L3, 7000, None),
   ('L4-ket', 'KET · A2 Key', 'Cambridge A2 Key Vocabulary List (2025)', ketw, 5500, ketpos),
   ('L4-pet', 'PET · B1 Preliminary', 'Cambridge B1 Preliminary Vocabulary List (2025) 中 KET 以外的词', petw, 8000, petpos),
+  # L3 is built after KET/PET so it never takes a Tatoeba sentence those (earlier-shipped) lists already use
+  ('L3', '高中课标', '普通高中英语课程标准(2017年版2025年修订) 必修+选择性必修词汇(初中以外新增)', L3, 7000, None),
   ('L5-awl', 'AWL 学术词汇', 'Academic Word List (Coxhead 2000) 570 词族', [w for w, s in awlw], 8000, None),
 ]
 dump_missing = {}
