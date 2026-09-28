@@ -4,7 +4,7 @@
  * (own engine below: no spelling / dictation). Leitner SRS stored in profile.emma. */
 (function () {
   "use strict";
-  const DATA_V = "11";
+  const DATA_V = "12";
   const BASE = "data/emma/";
   const INT = [0, 1, 2, 4, 7, 15, 30, 60]; // Leitner box intervals (days)
   const MASTER_BOX = 5;
@@ -16,28 +16,19 @@
   const shuffle = (a) => VK().shuffle(a.slice());
   const sample = (a, n) => shuffle(a).slice(0, n);
 
-  // ---------- modes (each track has its own set, with a one-line purpose) ----------
-  const LEVEL_MODES = [
-    { id: "guided", emoji: "🌟", label: "闯关（推荐）", desc: "理解 → 拼写 → 听写，一条龙", engine: "app", wide: true },
-    { id: "card", emoji: "📖", label: "认词卡", desc: "音标 · 中文 · 例句 · 搭配，先认识", engine: "emma" },
-    { id: "en2zh", emoji: "🔤", label: "EN → CN", desc: "看英文选意思，检查理解", engine: "app" },
-    { id: "zh2en", emoji: "🀄", label: "CN → EN", desc: "看中文选单词，分清形近词", engine: "app" },
-    { id: "spell", emoji: "🔠", label: "拼写", desc: "用字母拼出单词，记牢拼法", engine: "app" },
-    { id: "dictation", emoji: "🎧", label: "听写", desc: "只听发音写单词，最能检验拼写", engine: "app" },
-    { id: "form", emoji: "🧩", label: "词形 / 搭配", desc: "选对词形或固定搭配（介词、动词）", engine: "emma" },
-    { id: "test", emoji: "🏅", label: "综合测试", desc: "25 题，拼写 + 听写占一半以上", engine: "app", wide: true, test: true },
+  // ---------- entry buttons: 3 for a level group, 4 for a sub-scene (all question types live inside) ----------
+  const LEVEL_MAIN = [
+    { id: "learn", emoji: "🌟", label: "学习", desc: "一次 6 个词：认词卡 → 选意思 → 拼写 → 听写" },
+    { id: "mix", emoji: "🎯", label: "练习", desc: "混合一小关：英↔中、拼写、听写、词形 / 搭配" },
+    { id: "test", emoji: "🏅", label: "测试", desc: "25 题 · 每题马上看对错 · 最后出 100 分成绩单", test: true },
   ];
-  const SCENE_MODES = [
-    { id: "scard", emoji: "🗂️", label: "场景词卡", desc: "词组 + 对话里的原句，看懂怎么用" },
-    { id: "ctx", emoji: "🔍", label: "语境选义", desc: "这句话里的它是什么意思？" },
-    { id: "sit", emoji: "💡", label: "情景选句", desc: "遇到这种情况，该怎么说？" },
-    { id: "gap", emoji: "🧏", label: "听对话补全", desc: "听一段对话，选出缺的那句" },
-    { id: "resp", emoji: "💬", label: "听一句选回应", desc: "听对方说话，选最合适的回答" },
-    { id: "order", emoji: "🔢", label: "对话排序", desc: "把打乱的对话排回正确顺序" },
-    { id: "role", emoji: "🎭", label: "角色扮演", desc: "选一个角色，电脑读对方台词" },
-    { id: "shadow", emoji: "🗣️", label: "跟读", desc: "一句一句听，跟着大声说" },
-    { id: "stest", emoji: "🏅", label: "场景综合测试", desc: "语境 + 回应 + 情景 + 听力，约 24 题", wide: true, test: true },
+  const SCENE_MAIN = [
+    { id: "slearn", emoji: "📖", label: "学习", desc: "词组卡片 + 看对话（点一句，听一句）" },
+    { id: "smix", emoji: "🎯", label: "练习", desc: "混合：语境选义 · 情景选句 · 选回应 · 对话补全 · 排序" },
+    { id: "dialog", emoji: "🎭", label: "对话", desc: "角色扮演 / 跟读：点一句听一句，自己控制节奏" },
+    { id: "stest", emoji: "🏅", label: "测试", desc: "约 24 题 · 每题马上看对错 · 最后出成绩单", test: true },
   ];
+  const LEARN_N = 6;
   const TRACKS = [
     { id: "daily", emoji: "📅", name: "今日任务", desc: "新词练拼写，短语练用法，到期的自动复习" },
     { id: "levels", emoji: "🪜", name: "分级词汇", desc: "小学 → 初中 → KET → PET：重拼写和词义" },
@@ -128,62 +119,13 @@
     return { learned, mastered, due };
   }
 
-  // ---------- TTS (en-US, a different voice per dialogue role when available) ----------
-  let voices = [];
-  function refreshVoices() {
-    try {
-      voices = speechSynthesis.getVoices().filter((v) => /^en[-_]US/i.test(v.lang));
-    } catch (e) { voices = []; }
-  }
-  if (typeof speechSynthesis !== "undefined") {
-    refreshVoices();
-    try { speechSynthesis.addEventListener("voiceschanged", refreshVoices); } catch (e) {}
-  }
-  let speakGen = 0;
+  // ---------- TTS: the SAME voice + engine as the rest of the app (app.js speakQueue). ----------
+  // Never chain dialogue lines automatically: every line is tap-to-read.
   function stopSpeak() {
-    speakGen++;
-    try { if (typeof speechSynthesis !== "undefined") speechSynthesis.cancel(); } catch (e) {}
-  }
-  /** speak one line; resolves when done (or after an estimated time if the engine is silent) */
-  function say(text, opt) {
-    opt = opt || {};
-    return new Promise((resolve) => {
-      const est = Math.min(9000, 700 + String(text).length * 65 / (opt.rate || 0.92));
-      let done = false;
-      const fin = () => { if (!done) { done = true; resolve(); } };
-      try {
-        if (typeof speechSynthesis === "undefined" || typeof SpeechSynthesisUtterance === "undefined") return setTimeout(fin, 300);
-        const u = new SpeechSynthesisUtterance(text);
-        u.lang = "en-US";
-        u.rate = opt.rate || 0.92;
-        const vi = opt.voice || 0;
-        if (voices.length) u.voice = voices[vi % voices.length];
-        if (voices.length < 2 && vi % 2 === 1) u.pitch = 1.3;
-        u.onend = fin;
-        u.onerror = fin;
-        speechSynthesis.speak(u);
-      } catch (e) {}
-      setTimeout(fin, est + 1500);
-    });
+    VK().stopSpeak();
   }
   function sayOne(text, opt) {
-    stopSpeak();
-    return say(text, opt);
-  }
-  async function sayLines(lines, roleVoice, opt) {
-    stopSpeak();
-    const gen = speakGen;
-    for (const ln of lines) {
-      if (gen !== speakGen) return;
-      if (ln.gap) { await new Promise((r) => setTimeout(r, 1200)); continue; }
-      await say(ln.en, Object.assign({ voice: roleVoice(ln.r) }, opt || {}));
-      if (gen !== speakGen) return;
-      await new Promise((r) => setTimeout(r, 250));
-    }
-  }
-  function roleVoiceFor(dlg) {
-    const ids = Object.keys(dlg.roles || {});
-    return (r) => Math.max(0, ids.indexOf(r));
+    return VK().speakQueue([text], { rate: opt && opt.rate });
   }
 
   // ---------- small DOM helpers ----------
@@ -200,8 +142,9 @@
     return b;
   }
   function speakBtn(text, opt) {
-    const b = btn("🔊", "speak", (e) => { e.stopPropagation(); sayOne(text, opt); });
+    const b = btn("🔊", "speak", (e) => { e.stopPropagation(); sayOne(text, typeof opt === "function" ? opt() : opt); });
     b.title = "听发音";
+    b.setAttribute("aria-label", "听发音");
     return b;
   }
   const stripPos = (z) => String(z || "").replace(/^([a-z]+\.\s*)+/i, "");
@@ -218,16 +161,41 @@
     row.appendChild(btn("← " + label, "ghost", onBack));
     return row;
   }
-  function modeGrid(modes, onPick, disabled) {
-    const grid = h("div", "mode-grid emma-modes");
-    modes.forEach((m) => {
-      const b = btn(`<span class="emoji">${m.emoji}</span><span class="label">${esc(m.label)}</span><span class="desc">${esc(m.desc)}</span>`,
-        "mode-btn" + (m.wide ? " wide" : "") + (m.test ? " test-btn" : ""), () => onPick(m));
+  function bigButtons(list, onPick, disabled) {
+    const wrap = h("div", "big-btns");
+    list.forEach((m) => {
+      const b = btn(`<span class="bb-emoji">${m.emoji}</span><span class="bb-text"><span class="bb-label">${esc(m.label)}</span><span class="bb-desc">${esc(m.desc)}</span></span>`,
+        "big-btn " + m.id + (m.test ? " test" : ""), () => onPick(m));
       b.dataset.emode = m.id;
       b.disabled = !!disabled;
-      grid.appendChild(b);
+      wrap.appendChild(b);
     });
-    return grid;
+    return wrap;
+  }
+  /** One dialogue line; tap the line (or its 🔊) to hear exactly that line. o: {zh, hide, mine, current, rate()} */
+  function lineRow(dlg, ln, o) {
+    o = o || {};
+    const row = h("div", "emma-line" + (ln.gap ? " gap" : " tap") + (o.mine ? " mine" : "") + (o.current ? " current" : ""));
+    const txt = h("div", "emma-line-txt");
+    txt.innerHTML = `<span class="emma-role">${esc(roleName(dlg, ln.r))}${o.mine ? "（你）" : ""}</span>` +
+      (ln.gap ? `<span class="emma-gap">？？？</span>` : `<span class="emma-line-en${o.hide ? " hidden-text" : ""}">${esc(ln.en)}</span>`) +
+      (o.zh && !ln.gap && ln.zh ? `<span class="emma-line-zh small muted">${esc(ln.zh)}</span>` : "");
+    row.appendChild(txt);
+    if (!ln.gap) {
+      const play = () => {
+        const en = row.querySelector(".emma-line-en");
+        if (en) en.classList.remove("hidden-text");
+        document.querySelectorAll(".emma-line.speaking").forEach((x) => x.classList.remove("speaking"));
+        row.classList.add("speaking");
+        sayOne(ln.en, o.rate ? { rate: o.rate() } : null).then(() => row.classList.remove("speaking"));
+      };
+      const sp = btn("🔊", "speak", (e) => { e.stopPropagation(); play(); });
+      sp.title = "听这一句";
+      sp.setAttribute("aria-label", "听这一句");
+      row.appendChild(sp);
+      row.addEventListener("click", play);
+    }
+    return row;
   }
 
   // ================= VIEWS =================
@@ -332,21 +300,20 @@
     card.appendChild(backBar("级别", () => { ui.view = "levels"; render(); }));
     const title = h("h2", "", "…");
     card.appendChild(title);
-    card.appendChild(h("p", "muted small", "点选一个或多个组（可多选）。数字＝已学/掌握。"));
     const tools = h("div", "action-row");
     tools.style.marginBottom = "10px";
     const grid = h("div", "emma-group-grid");
     const sel = h("p", "muted emma-sel");
-    card.appendChild(tools);
-    card.appendChild(grid);
     card.appendChild(sel);
-    r.appendChild(card);
-    const mcard = h("div", "card");
-    mcard.appendChild(h("h2", "", "分级练习模式"));
-    mcard.appendChild(h("p", "muted small", "分级词汇重拼写 + 词义：拼写、听写在闯关和综合测试里占大头。"));
     const mhost = h("div");
-    mcard.appendChild(mhost);
-    r.appendChild(mcard);
+    card.appendChild(mhost);
+    r.appendChild(card);
+    const gcard = h("div", "card");
+    gcard.appendChild(h("h3", "", "换一组 / 多选几组"));
+    gcard.appendChild(h("p", "muted small", "已自动选好下一个没学完的组。点组可以切换（可多选）。数字＝已学/掌握。"));
+    gcard.appendChild(tools);
+    gcard.appendChild(grid);
+    r.appendChild(gcard);
     loadLevel(ui.level).then((L) => {
       title.textContent = L.title + " · " + L.count + " 词";
       status("Emma · " + L.title);
@@ -370,13 +337,21 @@
           grid.appendChild(b);
         });
         const n = ui.groups.length;
-        sel.textContent = n ? `已选 ${groupLabel(L.id, ui.groups)} · ${n * 20} 词左右` : "请先点选一个或多个组";
+        sel.innerHTML = n ? `当前：<strong>${esc(groupLabel(L.id, ui.groups))}</strong> · ${n * 20} 词左右` : "请先在下面点选一个或多个组";
         mhost.innerHTML = "";
-        mhost.appendChild(modeGrid(LEVEL_MODES, (m) => startLevelMode(m.id), !n));
+        mhost.appendChild(bigButtons(LEVEL_MAIN, (m) => startLevelMode(m.id), !n));
+        const lr = h("div", "action-row");
+        const lk = btn("📖 浏览认词卡（所选组全部单词）", "ghost small-link", () => startLevelMode("browse"));
+        lk.dataset.emode = "browse";
+        lk.disabled = !n;
+        lr.appendChild(lk);
+        mhost.appendChild(lr);
       };
+      const firstUnfinished = () => L.groups.find((g) => g.words.some((w) => !(srs[lkey(L.id, w.w)] && srs[lkey(L.id, w.w)].b >= 1)));
+      if (!ui.groups.length) { const g0 = firstUnfinished(); ui.groups = [g0 ? g0.n : L.groups[0].n]; }
       tools.innerHTML = "";
       tools.appendChild(btn("下一个没学完的组", "secondary", () => {
-        const g = L.groups.find((g) => g.words.some((w) => !(srs[lkey(L.id, w.w)] && srs[lkey(L.id, w.w)].b >= 1)));
+        const g = firstUnfinished();
         ui.groups = g ? [g.n] : [];
         redraw();
       }));
@@ -411,12 +386,55 @@
     const L = cache.levels[ui.level];
     const groups = L.groups.filter((g) => ui.groups.includes(g.n));
     if (!groups.length) return;
-    const m = LEVEL_MODES.find((x) => x.id === mode);
-    if (m.engine === "emma") return startEmmaPlay(mode, levelItems(mode, L, groups), { back: () => { ui.view = "groups"; render(); }, label: m.label });
+    const back = () => { ui.view = "groups"; render(); };
+    if (mode === "browse") {
+      const words = groups.flatMap((g) => g.words.map((w) => Object.assign({ lv: L.id }, w)));
+      return startEmmaPlay("card", words.map((w) => ({ type: "card", w, browse: true })), { back, label: "认词卡 · " + groupLabel(L.id, ui.groups), browse: true });
+    }
+    if (mode === "learn") return startLearn(L, groups, back);
+    const units = prepUnits(L, groups);
+    const extra = mode === "mix" ? { __extraItems: (n) => formExtras(L, groups, n) } : {};
+    VK().startSynth(synthData(units, Object.assign({ __emmaReturn: back }, extra)), units.map((u) => u.id), mode);
+  }
+  function prepUnits(L, groups) {
     wordLevel = {};
     groups.forEach((g) => g.words.forEach((w) => (wordLevel[w.w.toLowerCase()] = L.id)));
-    const units = groups.map((g) => unitFromGroup(L, g));
-    VK().startSynth(synthData(units, { __emmaReturn: () => { ui.view = "groups"; render(); } }), units.map((u) => u.id), mode);
+    return groups.map((g) => unitFromGroup(L, g));
+  }
+  /** 学习: 6 words (not yet learned first) → cards (emma engine) → meaning → spell → dictation (shared engine). */
+  function startLearn(L, groups, back) {
+    const srs = store().srs || {};
+    const box = (w) => ((srs[lkey(L.id, w.w)] || {}).b || 0);
+    const all = groups.flatMap((g) => g.words.map((w) => Object.assign({ lv: L.id }, w)));
+    const fresh = all.filter((w) => box(w) < 1);
+    const pick = (fresh.length ? fresh : shuffle(all).sort((a, b) => box(a) - box(b))).slice(0, LEARN_N);
+    const cards = pick.map((w) => ({ type: "card", w, key: lkey(L.id, w.w) }));
+    startEmmaPlay("card", cards, { back, label: "学习 ① 认词卡", then: () => learnDrill(L, groups, pick, back) });
+  }
+  function learnDrill(L, groups, pick, back) {
+    const units = prepUnits(L, groups);
+    const custom = (words) => {
+      const byEn = {};
+      words.forEach((w) => (byEn[w.en] = byEn[w.en] || w));
+      const T = pick.map((p) => byEn[p.w]).filter(Boolean);
+      const sp = (w) => /^[a-zA-Z]+$/.test(w.en);
+      const meaning = shuffle(T).map((w, i) => ({ type: i % 2 ? "zh2en" : "en2zh", word: w }));
+      const spell = shuffle(T.filter(sp)).map((w) => ({ type: "spell", word: w, hard: false }));
+      const dict = shuffle(T.filter(sp)).map((w) => ({ type: "dictation", word: w }));
+      return meaning.concat(spell, dict);
+    };
+    VK().startSynth(synthData(units, { __customItems: custom, __emmaReturn: back, __label: "学习 ② 意思 → 拼写 → 听写", __histMode: "learn" }), units.map((u) => u.id), "custom");
+  }
+  /** 词形 / 搭配 questions for the 练习 mix (rendered by the shared engine as type "mcq"). */
+  function formExtras(L, groups, n) {
+    const words = groups.flatMap((g) => g.words.map((w) => Object.assign({ lv: L.id }, w)));
+    const out = [];
+    for (const w of shuffle(words)) {
+      if (out.length >= n) break;
+      const it = collocItem(w, words) || formItem(w);
+      if (it) out.push(Object.assign(it, { en: w.w, prompt: it.cat + "：" + w.w }));
+    }
+    return out;
   }
   function onLevelResult(en, ok) {
     const lv = wordLevel[String(en).toLowerCase()];
@@ -442,16 +460,6 @@
     const dbl = /^[a-z]*[^aeiou][aeiou][bdgmnprt]$/.test(w) && w.length <= 5 ? w + w.slice(-1) : null;
     const extra = dbl ? [dbl + "ed", dbl + "ing"] : [];
     return { s, ed, ing, all: [w, s, ed, ing, w + "er", w + "est", w + "ly"].concat(extra) };
-  }
-  function levelItems(mode, L, groups) {
-    const words = groups.flatMap((g) => g.words.map((w) => Object.assign({ lv: L.id }, w)));
-    if (mode === "card") return shuffle(words).slice(0, 20).map((w) => ({ type: "card", w, key: lkey(L.id, w.w) }));
-    const items = [];
-    shuffle(words).forEach((w) => {
-      const it = collocItem(w, words) || formItem(w);
-      if (it) items.push(it);
-    });
-    return items.slice(0, 12);
   }
   function collocItem(w, pool) {
     const ks = (w.k || []).filter((k) => /\s/.test(k[0]));
@@ -540,8 +548,7 @@
     card.appendChild(preview);
     r.appendChild(card);
     const mcard = h("div", "card");
-    mcard.appendChild(h("h2", "", "场景练习模式"));
-    mcard.appendChild(h("p", "muted small", "场景学习重理解和运用：全部是选择、排序、听和说，没有拼写。"));
+    mcard.appendChild(h("p", "muted small", "场景学习重理解和运用：选择、排序、听和说，没有拼写。"));
     const mh = h("div");
     mcard.appendChild(mh);
     r.appendChild(mcard);
@@ -561,7 +568,7 @@
         const sb = S.subs.find((x) => x.id === ui.sub);
         preview.textContent = "对话：" + sb.dialogues.map((d) => d.title).join(" / ") + " · 词组：" + sb.words.slice(0, 6).map((w) => w.w).join(", ") + "…";
         mh.innerHTML = "";
-        mh.appendChild(modeGrid(SCENE_MODES, (m) => startSceneMode(m.id)));
+        mh.appendChild(bigButtons(SCENE_MAIN, (m) => startSceneMode(m.id)));
       };
       redraw();
     }).catch(loadFail);
@@ -574,10 +581,61 @@
   function allSceneWords(S) {
     return S.subs.flatMap((x) => sceneWords(S, x));
   }
+  const BE = ["be", "am", "is", "are", "was", "were", "been", "being", "'m", "'s", "'re"];
+  const PRON = ["me", "you", "him", "her", "us", "them", "it", "my", "your", "his", "our", "their", "its", "myself", "yourself", "someone", "somebody", "something", "sb", "sth", "one's"];
+  const IRR = { become: "became", come: "came", fall: "fell fallen", blow: "blew blown", steal: "stole stolen", run: "ran", send: "sent", build: "built", fly: "flew flown flies",
+    go: "went gone going goes", do: "did done does doing", have: "had has having", get: "got gotten", make: "made", take: "took taken", give: "gave given", see: "saw seen", say: "said",
+    tell: "told", think: "thought", buy: "bought", bring: "brought", catch: "caught", teach: "taught", feel: "felt", keep: "kept", leave: "left", lose: "lost", meet: "met",
+    pay: "paid", sell: "sold", sit: "sat", sleep: "slept", speak: "spoke spoken", stand: "stood", understand: "understood", misunderstand: "misunderstood", swim: "swam", wear: "wore worn",
+    win: "won", write: "wrote written", drive: "drove driven", eat: "ate eaten", drink: "drank drunk", begin: "began begun", break: "broke broken", choose: "chose chosen",
+    forget: "forgot forgotten", grow: "grew grown", hide: "hid hidden", know: "knew known", ride: "rode ridden", ring: "rang rung", rise: "rose risen", shake: "shook shaken",
+    sing: "sang sung", throw: "threw thrown", wake: "woke woken", find: "found", hold: "held", hear: "heard", mean: "meant", read: "read", lie: "lay lying", die: "dying", tie: "tying",
+    stick: "stuck", dig: "dug", hang: "hung", shoot: "shot", spend: "spent", lend: "lent", bend: "bent", feed: "fed", lead: "led", light: "lit", shine: "shone",
+    tooth: "teeth", foot: "feet", man: "men", woman: "women", child: "children", mouse: "mice", leaf: "leaves", wolf: "wolves", knife: "knives", life: "lives", wife: "wives", half: "halves", shelf: "shelves", thief: "thieves" };
+  function tokMatch(pt, st) {
+    pt = pt.toLowerCase(); st = st.toLowerCase();
+    if (pt === st) return true;
+    if (IRR[pt] && IRR[pt].split(" ").includes(st)) return true;
+    const mm = /^(.*?)(man|woman|child|tooth|foot|leaf|wife|knife)$/.exec(pt);
+    if (mm && mm[1] && IRR[mm[2]] && st === mm[1] + IRR[mm[2]].split(" ")[0]) return true;
+    if (st.indexOf(pt) === 0 && /^(s|es|ed|d|ing|er|est|ly)$/.test(st.slice(pt.length))) return true;
+    if (pt === "be") return BE.includes(st);
+    if (PRON.includes(pt)) return PRON.includes(st);
+    const stem = pt.replace(/(e|y)$/, "");
+    return stem.length >= 3 && st.indexOf(stem) === 0 && st.length - stem.length <= 4;
+  }
+  /** [start, end] of the phrase in the sentence, tolerant of inflection (gets worse), be-forms (am from),
+   *  pronouns (take off my shoes) and a split object (show me around). */
+  function phraseSpan(sentence, phrase) {
+    const low = sentence.toLowerCase();
+    const i = low.indexOf(phrase.toLowerCase());
+    if (i >= 0) return [i, i + phrase.length];
+    const toks = [];
+    const re = /[A-Za-z]+(?:[-'][A-Za-z]+)*|'[a-z]+/g;
+    let m;
+    while ((m = re.exec(sentence))) toks.push({ t: m[0], a: m.index, b: m.index + m[0].length });
+    // split contractions like I'm → I + 'm
+    const tk = [];
+    toks.forEach((x) => { const c = /^([A-Za-z]+)('(?:m|s|re|ll|ve|d))$/.exec(x.t); if (c) { tk.push({ t: c[1], a: x.a, b: x.a + c[1].length }); tk.push({ t: c[2], a: x.a + c[1].length, b: x.b }); } else tk.push(x); });
+    const ps = phrase.split(/\s+/).filter(Boolean);
+    for (let s0 = 0; s0 < tk.length; s0++) {
+      if (!tokMatch(ps[0], tk[s0].t)) continue;
+      let k = s0, ok = true, gaps = 0;
+      for (let j = 1; j < ps.length; j++) {
+        let f = -1;
+        for (let q = k + 1; q < Math.min(tk.length, k + 4); q++) if (tokMatch(ps[j], tk[q].t)) { f = q; break; }
+        if (f < 0) { ok = false; break; }
+        gaps += f - k - 1;
+        k = f;
+      }
+      if (ok && gaps <= 3) return [tk[s0].a, tk[k].b];
+    }
+    return null;
+  }
   function highlight(sentence, phrase) {
-    const i = sentence.toLowerCase().indexOf(phrase.toLowerCase());
-    if (i < 0) return esc(sentence);
-    return esc(sentence.slice(0, i)) + "<mark>" + esc(sentence.slice(i, i + phrase.length)) + "</mark>" + esc(sentence.slice(i + phrase.length));
+    const sp = phraseSpan(sentence, phrase);
+    if (!sp) return esc(sentence);
+    return esc(sentence.slice(0, sp[0])) + "<mark>" + esc(sentence.slice(sp[0], sp[1])) + "</mark>" + esc(sentence.slice(sp[1]));
   }
   function zhDistract(correct, pool, n) {
     const seen = new Set([correct]);
@@ -591,9 +649,9 @@
     const opts = [w.z].concat(zhDistract(w.z, allSceneWords(S), 3));
     return {
       type: "mcq", cat: "语境选义", key: skey(S.id, w.w),
-      hint: "这句话里，黄色部分是什么意思？",
+      hint: phraseSpan(w.e, w.w) ? "这句话里，黄色部分是什么意思？" : `这句话里的「${w.w}」是什么意思？`,
       promptHtml: `<div class="sentence-box emma-ctx">${highlight(w.e, w.w)}</div>`,
-      speakAuto: w.e,
+      speakTap: w.e,
       options: shuffle(opts).map((o) => ({ text: o, ok: o === w.z })),
       answer: w.w + " = " + w.z, prompt: w.e, speak: w.e,
       explain: `${w.w}：${w.z}\n${w.e}\n${w.c}`,
@@ -633,7 +691,7 @@
     return {
       type: "mcq", cat: "对话补全", dlg,
       hint: "听对话，选出空白处的那一句",
-      dialogue: ctx, speakLinesAuto: true,
+      dialogue: ctx,
       options: shuffle(opts).map((o) => ({ text: o, ok: o === L[i].en })),
       answer: L[i].en, prompt: dlg.title + "：补全对话", speak: L[i].en,
       explain: `${roleName(dlg, L[i].r)}：${L[i].en}\n${L[i].zh}`,
@@ -646,7 +704,7 @@
     return {
       type: "mcq", cat: "最佳回应", dlg,
       hint: `听 ${roleName(dlg, L[i].r)} 说的话，选最合适的回应`,
-      hearLine: L[i], speakLinesAuto: true,
+      hearLine: L[i],
       options: shuffle(Array.from(new Set(opts))).map((o) => ({ text: o, ok: o === L[i + 1].en })),
       answer: L[i + 1].en, prompt: L[i].en, speak: L[i + 1].en,
       explain: `${roleName(dlg, L[i].r)}：${L[i].en}（${L[i].zh}）\n→ ${L[i + 1].en}\n${L[i + 1].zh}`,
@@ -662,22 +720,27 @@
   function respIdx(dlg) {
     return dlg.lines.map((_, i) => i).filter((i) => i < dlg.lines.length - 1 && dlg.lines[i].r !== dlg.lines[i + 1].r);
   }
+  function orderItems(sb) {
+    const out = [];
+    sb.dialogues.forEach((d) => {
+      for (let s = 0; s < d.lines.length; s += 6) {
+        const chunk = d.lines.slice(s, s + 6);
+        if (chunk.length >= 3) out.push({ type: "order", dlg: d, lines: chunk, part: s / 6 + 1, cat: "对话排序" });
+      }
+    });
+    return out;
+  }
   function sceneItems(mode, S, sb) {
     const words = sceneWords(S, sb);
-    if (mode === "scard") return words.map((w) => ({ type: "scard", w, key: skey(S.id, w.w) }));
-    if (mode === "ctx") return shuffle(words).slice(0, 12).map((w) => qCtx(w, S));
-    if (mode === "sit") return shuffle(sb.patterns).map((p) => qSit(p, S));
-    if (mode === "gap") return shuffle(sb.dialogues.flatMap((d) => sample(gapIdx(d), 4).map((i) => qGap(d, i, S)))).slice(0, 8);
-    if (mode === "resp") return shuffle(sb.dialogues.flatMap((d) => sample(respIdx(d), 5).map((i) => qResp(d, i, S)))).slice(0, 10);
-    if (mode === "order") {
-      const out = [];
-      sb.dialogues.forEach((d) => {
-        for (let s = 0; s < d.lines.length; s += 6) {
-          const chunk = d.lines.slice(s, s + 6);
-          if (chunk.length >= 3) out.push({ type: "order", dlg: d, lines: chunk, part: s / 6 + 1 });
-        }
-      });
-      return out;
+    if (mode === "slearn") return words.map((w) => ({ type: "scard", w, key: skey(S.id, w.w) })).concat(sb.dialogues.map((d, k) => ({ type: "dlgview", dlg: d, k })));
+    if (mode === "smix") {
+      const ws = shuffle(words);
+      const ctx = ws.slice(0, 3).map((w) => qCtx(w, S));
+      const sit = sample(sb.patterns, 2).map((p) => qSit(p, S));
+      const resp = shuffle(sb.dialogues.flatMap((d) => sample(respIdx(d), 2).map((i) => qResp(d, i, S)))).slice(0, 2);
+      const gap = shuffle(sb.dialogues.flatMap((d) => sample(gapIdx(d), 2).map((i) => qGap(d, i, S)))).slice(0, 2);
+      const ord = orderItems(sb);
+      return shuffle(ctx.concat(sit, resp, gap)).concat(ord.length ? [sample(ord, 1)[0]] : []);
     }
     if (mode === "stest") {
       const ws = shuffle(words);
@@ -694,10 +757,11 @@
   function startSceneMode(mode) {
     const S = cache.scenes[ui.scene];
     const sb = S.subs.find((x) => x.id === ui.sub);
-    const m = SCENE_MODES.find((x) => x.id === mode);
+    const m = SCENE_MAIN.find((x) => x.id === mode);
     const back = () => { ui.view = "scene"; render(); };
-    if (mode === "role" || mode === "shadow") return startDialogueFlow(mode, S, sb, back);
-    startEmmaPlay(mode, sceneItems(mode, S, sb), { back, label: m.label, test: !!m.test, scene: S, sub: sb });
+    if (mode === "dialog") return startDialogueFlow(S, sb, back);
+    const label = { slearn: "学习 · ", smix: "练习 · ", stest: "测试 · " }[mode] + sb.title;
+    startEmmaPlay(mode, sceneItems(mode, S, sb), { back, label, test: !!m.test, scene: S, sub: sb, regen: () => sceneItems(mode, S, sb) });
   }
 
   // ================= EMMA ENGINE =================
@@ -713,7 +777,8 @@
     const P = play;
     $("#emma-play-mode").textContent = P.opt.label || "";
     $("#emma-play-count").textContent = `${Math.min(P.i + 1, P.items.length)} / ${P.items.length}`;
-    $("#emma-play-score").textContent = P.opt.test ? `✎ 已答 ${P.answered}` : `★ ${P.correct}`;
+    const graded = P.items.some((x) => x.type !== "card" && x.type !== "scard" && x.type !== "dlgview");
+    $("#emma-play-score").textContent = P.opt.test ? `✎ 已答 ${P.answered}` : graded ? `★ ${P.correct}` : "";
     $("#emma-play-progress").style.width = Math.round((P.i / P.items.length) * 100) + "%";
   }
   function renderPlay() {
@@ -731,6 +796,7 @@
     if (it.type === "card") return renderLevelCard(host, it);
     if (it.type === "scard") return renderSceneCard(host, it);
     if (it.type === "order") return renderOrder(host, it);
+    if (it.type === "dlgview") return renderDlgView(host, it);
     return renderMCQ(host, it);
   }
   function nextItem() {
@@ -753,7 +819,7 @@
   }
   function renderLevelCard(host, it) {
     const w = it.w;
-    srsIntro(it.key);
+    if (!it.browse && it.key) srsIntro(it.key);
     const c = h("div", "emma-card");
     const top = h("div", "emma-card-top");
     top.appendChild(h("span", "emma-card-word", esc(w.w)));
@@ -774,7 +840,8 @@
     }
     host.appendChild(c);
     sayOne(w.w);
-    showNext(play.i === play.items.length - 1 ? "完成 ✓" : "认识了，下一个 →");
+    const last = play.i === play.items.length - 1;
+    showNext(last ? (play.opt.then ? "开始练习：意思 → 拼写 → 听写 →" : "完成 ✓") : "认识了，下一个 →");
   }
   function renderSceneCard(host, it) {
     const w = it.w;
@@ -791,51 +858,62 @@
     ex.appendChild(speakBtn(w.e));
     c.appendChild(ex);
     host.appendChild(c);
-    sayOne(w.w).then(() => { if (play && play.items[play.i] === it) say(w.e); });
-    showNext(play.i === play.items.length - 1 ? "完成 ✓" : "下一个 →");
+    sayOne(w.w); // one utterance only; the example sentence is tap-to-read
+    const nxt = play.items[play.i + 1];
+    showNext(!nxt ? "完成 ✓" : nxt.type === "dlgview" ? "看对话 →" : "下一个 →");
   }
   function renderDialogueBox(host, lines, dlg, showText) {
     const box = h("div", "emma-dlg");
-    lines.forEach((ln) => {
-      const row = h("div", "emma-line" + (ln.gap ? " gap" : ""));
-      row.innerHTML = `<span class="emma-role">${esc(roleName(dlg, ln.r))}</span>` +
-        (ln.gap ? `<span class="emma-gap">？？？</span>` : `<span class="emma-line-en${showText ? "" : " hidden-text"}">${esc(ln.en)}</span>`);
-      box.appendChild(row);
-    });
+    lines.forEach((ln) => box.appendChild(lineRow(dlg, ln, { hide: !showText })));
     host.appendChild(box);
     return box;
+  }
+  /** 学习: read-through of a whole dialogue. Nothing plays by itself — tap a line to hear it. */
+  function renderDlgView(host, it) {
+    const d = it.dlg;
+    host.appendChild(h("p", "hint", `📜 对话：${esc(d.title)}<br><span class="small">点任意一句（或 🔊）听这一句，不会自动连读</span>`));
+    const tools = h("div", "action-row emma-tools");
+    let showZh = true;
+    const box = h("div", "emma-dlg");
+    const tz = btn("隐藏中文", "ghost", () => {
+      showZh = !showZh;
+      tz.textContent = showZh ? "隐藏中文" : "显示中文";
+      box.querySelectorAll(".emma-line-zh").forEach((x) => (x.hidden = !showZh));
+    });
+    tz.id = "emma-zh-toggle";
+    tools.appendChild(tz);
+    host.appendChild(tools);
+    d.lines.forEach((ln) => box.appendChild(lineRow(d, ln, { zh: true })));
+    host.appendChild(box);
+    const nxt = play.items[play.i + 1];
+    showNext(!nxt ? "完成 ✓" : "下一段对话 →");
   }
   function renderMCQ(host, it) {
     const P = play;
     host.appendChild(h("p", "hint", esc(it.hint || "")));
-    let replay = null;
+    let autoOnce = null; // only a single prompt line / word may play by itself (listening items)
     if (it.promptHtml) host.appendChild(h("div", "emma-prompt", it.promptHtml));
     if (it.listenOnly) {
       const big = btn("🔊 再听一次", "emma-listen", () => sayOne(it.listenOnly));
       host.appendChild(big);
-      replay = () => sayOne(it.listenOnly);
+      autoOnce = () => sayOne(it.listenOnly);
     }
+    let dbox = null;
     if (it.dialogue) {
-      const box = renderDialogueBox(host, it.dialogue, it.dlg, true);
-      const rv = roleVoiceFor(it.dlg);
-      replay = () => sayLines(it.dialogue, rv);
-      const rb = btn("🔊 听这段对话", "secondary emma-replay", replay);
-      host.insertBefore(rb, box);
+      host.appendChild(h("p", "small muted emma-taphint", "点一句（或 🔊）听这一句"));
+      dbox = renderDialogueBox(host, it.dialogue, it.dlg, true);
     }
     if (it.hearLine) {
-      const rv = roleVoiceFor(it.dlg);
-      replay = () => sayLines([it.hearLine], rv);
-      const box = renderDialogueBox(host, [it.hearLine], it.dlg, false);
+      dbox = renderDialogueBox(host, [it.hearLine], it.dlg, false);
       const row = h("div", "action-row");
-      row.appendChild(btn("🔊 再听一次", "secondary", replay));
-      row.appendChild(btn("👀 显示文字", "ghost", (e) => { box.querySelectorAll(".hidden-text").forEach((x) => x.classList.remove("hidden-text")); e.target.disabled = true; }));
+      row.appendChild(btn("🔊 再听一次", "secondary", () => sayOne(it.hearLine.en)));
+      row.appendChild(btn("👀 显示文字", "ghost", (e) => { dbox.querySelectorAll(".hidden-text").forEach((x) => x.classList.remove("hidden-text")); e.currentTarget.disabled = true; }));
       host.appendChild(row);
+      autoOnce = () => sayOne(it.hearLine.en);
     }
-    if (!replay && it.speakAuto) {
-      const sa = it.speakAuto;
-      replay = () => sayOne(sa);
+    if (it.speakTap) {
       const p = host.querySelector(".emma-prompt");
-      if (p) p.appendChild(speakBtn(sa));
+      if (p) p.appendChild(speakBtn(it.speakTap));
     }
     const ch = h("div", "choices");
     it.options.forEach((o) => {
@@ -843,32 +921,42 @@
         if (P.locked) return;
         P.locked = true;
         record(it, o.ok, o.text);
+        const all = Array.from(ch.children);
+        all.forEach((x) => (x.disabled = true));
+        const right = all[it.options.findIndex((x) => x.ok)];
+        if (right) right.classList.add("correct");
+        if (!o.ok) b.classList.add(P.opt.test ? "wrong-pick" : "wrong-soft");
+        if (dbox) dbox.querySelectorAll(".hidden-text").forEach((x) => x.classList.remove("hidden-text"));
+        const f = $("#emma-feedback");
+        playChrome();
+        const last = P.i === P.items.length - 1;
         if (P.opt.test) {
-          $("#emma-feedback").textContent = "已记录 ✓";
-          setTimeout(() => { if (play === P && play.items[play.i] === it) nextItem(); }, 500);
+          f.textContent = o.ok ? "✓ 答对了！" : "✗ 不对哦，绿色的是正确答案";
+          f.className = "feedback " + (o.ok ? "good" : "gentle");
+          if (!o.ok) {
+            const ex = h("div", "explain-card emma-explain");
+            ex.innerHTML = `<div class="explain-body">${esc(it.explain || it.answer || "")}</div>`;
+            host.appendChild(ex);
+          }
+          sayOne(it.speak || it.answer);
+          showNext(last ? "看成绩单 ✓" : "下一题 →");
+          if (o.ok) setTimeout(() => { if (play === P && P.items[P.i] === it) nextItem(); }, 1300);
           return;
         }
-        ch.querySelectorAll("button").forEach((x) => (x.disabled = true));
-        b.classList.add(o.ok ? "correct" : "wrong-soft");
-        const right = Array.from(ch.children)[it.options.findIndex((x) => x.ok)];
-        if (right) { right.classList.add("correct"); right.disabled = false; }
-        const f = $("#emma-feedback");
         f.textContent = o.ok ? "答对啦！👍" : "再看看正确答案 👇";
         f.className = "feedback " + (o.ok ? "good" : "gentle");
-        playChrome();
         if (!o.ok || it.dialogue || it.hearLine) {
           const ex = h("div", "explain-card emma-explain");
           ex.innerHTML = `<div class="explain-title">💡 小讲解</div><div class="explain-body">${esc(it.explain || "")}</div>`;
           host.appendChild(ex);
         }
         sayOne(it.speak || it.answer);
-        showNext(P.i === P.items.length - 1 ? "看结果 ✓" : "下一题 →");
+        showNext(last ? "看结果 ✓" : "下一题 →");
       });
-      if (o.speakable) b.title = o.text;
       ch.appendChild(b);
     });
     host.appendChild(ch);
-    if (replay && !P.opt.silent) setTimeout(() => { if (play === P && play.items[play.i] === it) replay(); }, 250);
+    if (autoOnce && !P.opt.silent) setTimeout(() => { if (play === P && play.items[play.i] === it && !P.locked) autoOnce(); }, 300);
   }
   function renderOrder(host, it) {
     const P = play;
@@ -878,27 +966,21 @@
     const bank = h("div", "emma-order-bank");
     host.appendChild(bank);
     let next = 0, mistakes = 0;
-    const rv = roleVoiceFor(it.dlg);
     shuffle(it.lines.map((ln, i) => ({ ln, i }))).forEach(({ ln, i }) => {
       const b = btn(`<span class="emma-role">${esc(roleName(it.dlg, ln.r))}</span> ${esc(ln.en)}`, "emma-order-btn", () => {
         if (i === next) {
           next++;
           b.remove();
-          const row = h("div", "emma-line");
-          row.innerHTML = `<span class="emma-role">${esc(roleName(it.dlg, ln.r))}</span><span class="emma-line-en">${esc(ln.en)}</span><span class="emma-line-zh small muted">${esc(ln.zh)}</span>`;
-          done.appendChild(row);
-          sayLines([ln], rv);
+          done.appendChild(lineRow(it.dlg, ln, { zh: true }));
+          sayOne(ln.en);
           if (next === it.lines.length) {
             const ok = mistakes <= 1;
             record({ cat: "对话排序", answer: it.dlg.title, prompt: it.dlg.title + " 排序", explain: it.lines.map((x) => x.en).join("\n") }, ok, mistakes + " 次点错");
             const f = $("#emma-feedback");
-            f.textContent = mistakes === 0 ? "完全正确！🎉" : `完成！点错 ${mistakes} 次`;
+            f.textContent = mistakes === 0 ? "完全正确！🎉 点任意一句可以再听" : `完成！点错 ${mistakes} 次。点任意一句可以再听`;
             f.className = "feedback " + (ok ? "good" : "gentle");
             playChrome();
-            const row2 = h("div", "action-row");
-            row2.appendChild(btn("🔊 完整听一遍", "secondary", () => sayLines(it.lines, rv)));
-            host.appendChild(row2);
-            showNext(P.i === P.items.length - 1 ? "看结果 ✓" : "下一段 →");
+            showNext(P.i === P.items.length - 1 ? "看结果 ✓" : "下一题 →");
           }
         } else {
           mistakes++;
@@ -914,6 +996,7 @@
     stopSpeak();
     const secs = Math.round((Date.now() - P.start) / 1000);
     if (P.opt.onFinish) P.opt.onFinish(P);
+    if (P.opt.then) { play = null; return P.opt.then(); }
     if (P.opt.test) return finishSceneTest(P, secs);
     const host = $("#emma-play-area");
     host.innerHTML = "";
@@ -930,9 +1013,9 @@
     VK().renderStarRow(sr, stars, stars >= 5);
     box.appendChild(h("h2", "", graded ? "本关完成！" : "看完啦！"));
     box.appendChild(h("div", "score-big", graded ? acc + "%" : P.items.length + " 个"));
-    box.appendChild(h("p", "muted", graded ? `答对 ${P.correct} / ${graded} · 用时 ${VK().formatMMSS(secs)}` : "这些词已加入复习计划，明天会再见面～"));
+    box.appendChild(h("p", "muted", graded ? `答对 ${P.correct} / ${graded} · 用时 ${VK().formatMMSS(secs)}` : P.opt.browse ? "想记牢它们，回去点「学习」练拼写和听写～" : "这些词已加入复习计划，之后会再见面～"));
     const row = h("div", "action-row");
-    row.appendChild(btn("再来一轮", "", () => startEmmaPlay(P.mode, P.opt.regen ? P.opt.regen() : P.items, P.opt)));
+    row.appendChild(btn(graded ? "再来一轮" : "再看一遍", "", () => startEmmaPlay(P.mode, P.opt.regen ? P.opt.regen() : P.items, P.opt)));
     row.appendChild(btn("返回", "secondary", () => { play = null; P.opt.back(); }));
     box.appendChild(row);
     host.appendChild(box);
@@ -959,7 +1042,7 @@
       prevScore: prev ? prev.score : null,
       renderStarRow: VK().renderStarRow,
       speak: (t) => sayOne(t),
-      onAgain: () => startSceneMode("stest"),
+      onAgain: () => startEmmaPlay(P.mode, P.opt.regen ? P.opt.regen() : P.items, P.opt),
       onHome: () => { play = null; P.opt.back(); },
     });
   }
@@ -977,127 +1060,110 @@
     P.opt.back();
   }
 
-  // ----- 角色扮演 / 跟读 -----
-  function startDialogueFlow(mode, S, sb, back) {
-    stopSpeak();
-    play = { mode, items: [], i: 0, correct: 0, answered: 0, results: [], opt: { back, label: mode === "role" ? "角色扮演" : "跟读" }, start: Date.now() };
-    VK().showScreen("emma-play");
-    window.scrollTo(0, 0);
-    $("#emma-play-mode").textContent = play.opt.label;
+  // ----- 对话：角色扮演 + 跟读 (one view; nothing plays by itself) -----
+  function dialogueChrome(label) {
+    $("#emma-play-mode").textContent = label;
     $("#emma-play-count").textContent = "";
     $("#emma-play-score").textContent = "";
     $("#emma-play-progress").style.width = "0%";
     $("#emma-next-row").hidden = true;
     $("#emma-feedback").textContent = "";
+    $("#emma-feedback").className = "feedback";
+  }
+  function startDialogueFlow(S, sb, back) {
+    stopSpeak();
+    play = { mode: "dialog", items: [], i: 0, correct: 0, answered: 0, results: [], opt: { back, label: "对话 · " + sb.title, dialog: true }, start: Date.now() };
+    VK().showScreen("emma-play");
+    window.scrollTo(0, 0);
+    dialogueChrome(play.opt.label);
     const host = $("#emma-play-area");
     host.innerHTML = "";
-    host.appendChild(h("p", "hint", mode === "role" ? "选一段对话和你要演的角色。电脑会读对方的台词，轮到你时大声说出来。" : "选一段对话，一句一句听，然后跟着大声说。"));
+    host.appendChild(h("p", "hint", "选一段对话：可以<b>演一个角色</b>，也可以<b>跟读</b>整段。每一句都是点一下才读，不会自动往下读。"));
     sb.dialogues.forEach((d, di) => {
       const c = h("div", "emma-pick");
       c.appendChild(h("div", "emma-pick-title", `${esc(d.title)} <span class="small muted">${d.lines.length} 句</span>`));
-      const row = h("div", "action-row");
-      if (mode === "role") {
-        Object.keys(d.roles).forEach((r) => {
-          const b = btn(`我演 ${esc(d.roles[r].en)}（${esc(d.roles[r].zh)}）`, "", () => runRole(d, r));
-          b.dataset.role = r;
-          b.dataset.dlg = di;
-          row.appendChild(b);
-        });
-      } else {
-        const b = btn("开始跟读", "", () => runShadow(d));
+      const row = h("div", "action-row emma-pick-row");
+      Object.keys(d.roles).forEach((r) => {
+        const b = btn(`🎭 我演 ${esc(d.roles[r].en)}（${esc(d.roles[r].zh)}）`, "", () => runDialog(d, r, S, sb, back));
+        b.dataset.role = r;
         b.dataset.dlg = di;
         row.appendChild(b);
-      }
+      });
+      const sh = btn("🗣️ 跟读整段", "secondary", () => runDialog(d, null, S, sb, back));
+      sh.dataset.shadow = di;
+      row.appendChild(sh);
       c.appendChild(row);
       host.appendChild(c);
     });
   }
-  function runRole(d, me) {
+  function runDialog(d, me, S, sb, back) {
+    stopSpeak();
     const host = $("#emma-play-area");
     host.innerHTML = "";
-    const rv = roleVoiceFor(d);
-    let i = 0;
-    let showMine = false;
-    const top = h("div", "action-row");
-    const tog = btn("👀 显示我的台词", "ghost", () => {
-      showMine = !showMine;
-      tog.textContent = showMine ? "🙈 隐藏我的台词" : "👀 显示我的台词";
-      host.querySelectorAll(".emma-line.mine .emma-line-en").forEach((x) => x.classList.toggle("hidden-text", !showMine));
-    });
-    tog.id = "emma-role-toggle";
-    top.appendChild(tog);
-    host.appendChild(top);
-    host.appendChild(h("p", "hint small", `你是 ${esc(d.roles[me].en)}（${esc(d.roles[me].zh)}）。轮到你时看中文提示，先自己说，再点「听示范」对照。`));
+    dialogueChrome(me ? "角色扮演 · " + d.title : "跟读 · " + d.title);
+    let i = 0, showMine = false, showZh = true, slow = false;
+    const rate = () => (slow ? 0.7 : 0.92);
+    host.appendChild(h("p", "hint small", me
+      ? `你演 <b>${esc(d.roles[me].en)}（${esc(d.roles[me].zh)}）</b>。轮到你（紫色行）时，看中文先自己说出来，再点那一句听示范。对方的台词点一下就读。`
+      : "跟读：点一句（或 🔊）听，然后跟着大声说一遍，再点「下一句」。"));
+    const tools = h("div", "action-row emma-tools");
+    const tSlow = btn("🐢 慢速：关", "ghost", () => { slow = !slow; tSlow.textContent = slow ? "🐢 慢速：开" : "🐢 慢速：关"; tSlow.classList.toggle("on", slow); });
+    tSlow.id = "emma-slow";
+    const tZh = btn("隐藏中文", "ghost", () => { showZh = !showZh; tZh.textContent = showZh ? "隐藏中文" : "显示中文"; draw(); });
+    tools.appendChild(tSlow);
+    tools.appendChild(tZh);
+    if (me) {
+      const tMine = btn("👀 显示我的台词", "ghost", () => { showMine = !showMine; tMine.textContent = showMine ? "🙈 隐藏我的台词" : "👀 显示我的台词"; draw(); });
+      tMine.id = "emma-role-toggle";
+      tools.appendChild(tMine);
+    }
+    host.appendChild(tools);
     const box = h("div", "emma-dlg emma-role-box");
     host.appendChild(box);
     const ctl = h("div", "action-row");
     host.appendChild(ctl);
+    const revealed = new Set();
+    const draw = () => {
+      box.innerHTML = "";
+      d.lines.slice(0, i + 1).forEach((ln, k) => {
+        const mine = !!me && ln.r === me;
+        const row = lineRow(d, ln, { zh: showZh, mine, hide: mine && !showMine && !revealed.has(k), current: k === i, rate });
+        row.addEventListener("click", () => revealed.add(k));
+        box.appendChild(row);
+      });
+      const cur = box.lastElementChild;
+      if (cur && cur.scrollIntoView) cur.scrollIntoView({ block: "nearest" });
+    };
     const step = () => {
       $("#emma-play-count").textContent = `${Math.min(i + 1, d.lines.length)} / ${d.lines.length}`;
-      $("#emma-play-progress").style.width = Math.round((i / d.lines.length) * 100) + "%";
+      $("#emma-play-progress").style.width = Math.round(((i + 1) / d.lines.length) * 100) + "%";
+      draw();
       ctl.innerHTML = "";
-      if (i >= d.lines.length) {
-        $("#emma-play-progress").style.width = "100%";
-        const f = $("#emma-feedback");
-        f.textContent = "演完啦！🎭 换个角色再来一次？";
-        f.className = "feedback good";
-        ctl.appendChild(btn("换个角色", "", () => runRole(d, Object.keys(d.roles).find((r) => r !== me) || me)));
-        ctl.appendChild(btn("🔊 完整听一遍", "secondary", () => sayLines(d.lines, rv)));
-        ctl.appendChild(btn("返回", "ghost", () => { stopSpeak(); startSceneMode("role"); }));
-        return;
-      }
       const ln = d.lines[i];
-      const mine = ln.r === me;
-      const row = h("div", "emma-line" + (mine ? " mine" : ""));
-      row.innerHTML = `<span class="emma-role">${esc(roleName(d, ln.r))}${mine ? "（你）" : ""}</span>` +
-        `<span class="emma-line-en${mine && !showMine ? " hidden-text" : ""}">${esc(ln.en)}</span><span class="emma-line-zh small muted">${esc(ln.zh)}</span>`;
-      box.appendChild(row);
-      row.scrollIntoView({ block: "nearest" });
-      if (mine) {
-        ctl.appendChild(btn("🔊 听示范", "secondary", () => { row.querySelector(".emma-line-en").classList.remove("hidden-text"); say(ln.en, { voice: rv(ln.r) }); }));
-        const nb = btn("我说完了 →", "", () => { i++; step(); });
-        nb.id = "emma-role-next";
+      const mine = !!me && ln.r === me;
+      const hear = btn(mine ? "🔊 听示范" : "🔊 听这一句", "secondary", () => { revealed.add(i); draw(); sayOne(ln.en, { rate: rate() }); });
+      hear.id = "emma-dlg-hear";
+      ctl.appendChild(hear);
+      if (i < d.lines.length - 1) {
+        const nb = btn(mine ? "我说完了，下一句 →" : me ? "下一句 →" : "我跟读了，下一句 →", "", () => { stopSpeak(); i++; step(); });
+        nb.id = "emma-dlg-next";
         ctl.appendChild(nb);
       } else {
-        const nb = btn("⏳ 对方在说…", "", () => { i++; step(); });
-        nb.id = "emma-role-next";
-        ctl.appendChild(btn("🔊 再听", "secondary", () => sayOne(ln.en, { voice: rv(ln.r) })));
-        ctl.appendChild(nb);
-        sayOne(ln.en, { voice: rv(ln.r) }).then(() => {
-          if (nb.isConnected) nb.textContent = "继续 →";
-        });
+        const f = $("#emma-feedback");
+        f.textContent = me ? "演完啦！🎭 可以换个角色再来一次" : "跟读完成！🗣️ 每天一段，口语越来越顺";
+        f.className = "feedback good";
+        if (me) {
+          const other = Object.keys(d.roles).find((r) => r !== me) || me;
+          const sw = btn(`换个角色（演 ${esc(d.roles[other].en)}）`, "", () => runDialog(d, other, S, sb, back));
+          sw.id = "emma-dlg-switch";
+          ctl.appendChild(sw);
+        } else {
+          ctl.appendChild(btn("再读一遍", "", () => runDialog(d, null, S, sb, back)));
+        }
+        const bk = btn("选别的对话", "ghost", () => startDialogueFlow(S, sb, back));
+        bk.id = "emma-dlg-back";
+        ctl.appendChild(bk);
       }
-    };
-    step();
-  }
-  function runShadow(d) {
-    const host = $("#emma-play-area");
-    host.innerHTML = "";
-    const rv = roleVoiceFor(d);
-    let i = 0;
-    const card = h("div", "emma-shadow");
-    host.appendChild(card);
-    const ctl = h("div", "action-row");
-    host.appendChild(ctl);
-    const step = () => {
-      $("#emma-play-count").textContent = `${Math.min(i + 1, d.lines.length)} / ${d.lines.length}`;
-      $("#emma-play-progress").style.width = Math.round((i / d.lines.length) * 100) + "%";
-      ctl.innerHTML = "";
-      if (i >= d.lines.length) {
-        $("#emma-play-progress").style.width = "100%";
-        card.innerHTML = `<div class="cele">🗣️</div><h2>跟读完成！</h2><p class="muted">每天跟读一段，口语会越来越顺。</p>`;
-        ctl.appendChild(btn("再读一遍", "", () => runShadow(d)));
-        ctl.appendChild(btn("返回", "secondary", () => startSceneMode("shadow")));
-        return;
-      }
-      const ln = d.lines[i];
-      card.innerHTML = `<div class="emma-role">${esc(roleName(d, ln.r))}</div><div class="emma-shadow-en">${esc(ln.en)}</div><div class="muted">${esc(ln.zh)}</div><p class="hint small">听完后，跟着大声说一遍 👄</p>`;
-      ctl.appendChild(btn("🔊 再听", "secondary", () => sayOne(ln.en, { voice: rv(ln.r) })));
-      ctl.appendChild(btn("🐢 慢速", "secondary", () => sayOne(ln.en, { voice: rv(ln.r), rate: 0.7 })));
-      const nb = btn("我跟读了，下一句 →", "", () => { i++; step(); });
-      nb.id = "emma-shadow-next";
-      ctl.appendChild(nb);
-      sayOne(ln.en, { voice: rv(ln.r) });
     };
     step();
   }
@@ -1191,9 +1257,17 @@
       sum.textContent = `新词 ${plan.newL.length}（来自 ${lvName}）· 到期复习 ${plan.revL.length + plan.revS.length} · 场景短语 ${plan.newS.length}。按顺序做完即可～`;
       list.innerHTML = "";
       let allDone = true;
-      DAILY_STEPS.forEach((st, idx) => {
+      const nextStep = DAILY_STEPS.find((st) => stepCount(plan, st.id) && !plan.done[st.id]);
+      if (nextStep) {
+        const go = btn(`▶ 开始：${esc(nextStep.name)}`, "emma-daily-go", () => runDailyStep(nextStep.id, plan));
+        go.id = "emma-daily-go";
+        list.appendChild(go);
+      }
+      let num = 0;
+      DAILY_STEPS.forEach((st) => {
         const n = stepCount(plan, st.id);
         if (!n) return;
+        const idx = num++;
         const done = !!plan.done[st.id];
         if (!done) allDone = false;
         const b = btn(`<span class="dstep-emoji">${done ? "✅" : st.emoji}</span><span class="dstep-main"><strong>${idx + 1}. ${esc(st.name)}</strong> <span class="small muted">${n} 个</span><br><span class="small muted">${esc(st.desc)}</span></span><span class="dstep-tag ${st.track}">${st.track === "level" ? "拼写向" : "用法向"}</span>`,

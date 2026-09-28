@@ -6,7 +6,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="单词小达人" />
   <title>单词小达人 · 英文 + 语文</title>
-  <link rel="stylesheet" href="style.css?v=11" />
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="style.css?v=12" />
 </head>
 <body>
   <header class="app-header">
@@ -61,6 +62,7 @@
   <!-- HOME -->
   <section id="screen-home" class="screen">
     <div class="card">
+      <div class="emma-back" id="home-back-row" hidden><button type="button" class="ghost" id="btn-home-back">← 返回</button></div>
       <h2>选单元</h2>
       <p class="muted small">可以选一个，也可以一次选多个单元一起练。</p>
       <div class="action-row" style="margin-bottom:10px">
@@ -69,55 +71,30 @@
       </div>
       <div class="unit-grid" id="unit-grid"></div>
       <p class="muted" id="selected-count" style="margin-top:10px">请先点选单元</p>
-      <div class="action-row">
-        <button type="button" id="btn-guided">🌟 闯关练习（推荐）</button>
-        <button type="button" class="secondary" id="btn-start-modes">只选模式 ↓</button>
+      <div class="big-btns" id="home-main-btns">
+        <button type="button" class="big-btn learn" data-mode="guided"><span class="bb-emoji">🌟</span><span class="bb-text"><span class="bb-label">学习</span><span class="bb-desc">闯关：认意思 → 填空 → 拼写，一步步来</span></span></button>
+        <button type="button" class="big-btn mix" data-mode="mix"><span class="bb-emoji">🎯</span><span class="bb-text"><span class="bb-label">练习</span><span class="bb-desc">混合一小关：英↔中、填空、拼写、听写</span></span></button>
+        <button type="button" class="big-btn test" data-mode="test"><span class="bb-emoji">🏅</span><span class="bb-text"><span class="bb-label">测试</span><span class="bb-desc">约 25 题 · 每题马上知道对错 · 最后出成绩单</span></span></button>
       </div>
+      <div class="action-row"><button type="button" class="ghost small-link" id="btn-home-words" hidden>📋 看单词表</button></div>
     </div>
 
-    <div class="card" id="modes-card">
-      <h2>练习模式</h2>
-      <p class="muted small">大约 12 题一小关。听写会计时，冲击最好成绩！</p>
+    <details class="card" id="modes-card">
+      <summary>单项练习（只练一种题型）</summary>
       <div class="advance-mode" role="group" aria-label="翻页方式">
         <span class="advance-label">翻页</span>
         <button type="button" class="advance-opt active" id="btn-advance-auto">Auto 自动</button>
         <button type="button" class="advance-opt" id="btn-advance-manual">Manual 手动</button>
       </div>
       <p class="muted small" id="advance-hint">Auto：读完后自动下一题 · Manual：要点「下一题」</p>
-
       <div class="mode-grid">
-        <button type="button" class="mode-btn" data-mode="en2zh">
-          <span class="emoji">🔤</span>
-          <span class="label">英 → 中</span>
-          <span class="desc">看英文选中文意思</span>
-        </button>
-        <button type="button" class="mode-btn" data-mode="zh2en">
-          <span class="emoji">🀄</span>
-          <span class="label">中 → 英</span>
-          <span class="desc">看中文选英文单词</span>
-        </button>
-        <button type="button" class="mode-btn" data-mode="fill">
-          <span class="emoji">✏️</span>
-          <span class="label">句子填空</span>
-          <span class="desc">把单词放进简单句子</span>
-        </button>
-        <button type="button" class="mode-btn" data-mode="spell">
-          <span class="emoji">🔠</span>
-          <span class="label">拼写游戏</span>
-          <span class="desc">打乱字母拼出单词</span>
-        </button>
-        <button type="button" class="mode-btn" data-mode="dictation">
-          <span class="emoji">⏱️</span>
-          <span class="label">听写挑战</span>
-          <span class="desc">计时比赛 · 冲击纪录</span>
-        </button>
-        <button type="button" class="mode-btn test-btn" data-mode="test">
-          <span class="emoji">🏅</span>
-          <span class="label">综合测试</span>
-          <span class="desc">约 25 题 · 15 分钟 · 做完看报告</span>
-        </button>
+        <button type="button" class="mode-btn" data-mode="en2zh"><span class="emoji">🔤</span><span class="label">英 → 中</span><span class="desc">看英文选中文意思</span></button>
+        <button type="button" class="mode-btn" data-mode="zh2en"><span class="emoji">🀄</span><span class="label">中 → 英</span><span class="desc">看中文选英文单词</span></button>
+        <button type="button" class="mode-btn" data-mode="fill"><span class="emoji">✏️</span><span class="label">句子填空</span><span class="desc">把单词放进简单句子</span></button>
+        <button type="button" class="mode-btn" data-mode="spell"><span class="emoji">🔠</span><span class="label">拼写游戏</span><span class="desc">打乱字母拼出单词</span></button>
+        <button type="button" class="mode-btn" data-mode="dictation"><span class="emoji">⏱️</span><span class="label">听写挑战</span><span class="desc">计时比赛 · 冲击纪录</span></button>
       </div>
-    </div>
+    </details>
   </section>
 
   <!-- EMMA: tracks / levels / scenes / daily (rendered by emma.js) -->
@@ -403,10 +380,10 @@
   </div>
 
   <p class="footer-note">离线可用 · 进度按档案保存在本机 · 适合 iPad</p>
-  <script src="lib/hanzi-writer.min.js?v=11"></script>
-  <script src="testkit.js?v=11"></script>
-  <script src="app.js?v=11"></script>
-  <script src="emma.js?v=11"></script>
-  <script src="hanzi.js?v=11"></script>
+  <script src="lib/hanzi-writer.min.js?v=12"></script>
+  <script src="testkit.js?v=12"></script>
+  <script src="app.js?v=12"></script>
+  <script src="emma.js?v=12"></script>
+  <script src="hanzi.js?v=12"></script>
 </body>
 </html>

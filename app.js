@@ -233,17 +233,51 @@
   }
 
   // ---- TTS ----
+  // ONE voice for the whole app (textbook, Emma levels, scenes, dialogues, tests).
+  // iPad Safari lists dozens of en-US voices incl. novelty ones (Albert, Bad News, Zarvox,
+  // Eloquence voices like Eddy/Flo/Grandpa…); we pick a natural voice by name, Samantha first.
+  const VOICE_PREF = [/^samantha/i, /^ava\b/i, /^allison/i, /^susan/i, /^zoe/i, /^nicky/i, /^joelle/i, /^evan/i, /^tom\b/i,
+    /google us english/i, /microsoft (aria|jenny|zira|ava)/i, /^karen/i, /^daniel/i, /^moira/i, /^serena/i, /^kate/i];
+  const VOICE_BAD = /albert|bad news|bahh|bells|boing|bubbles|cellos|deranged|good news|hysterical|jester|organ|superstar|trinoids|whisper|wobble|zarvox|junior|ralph|fred|kathy|grandpa|grandma|rocko|shelley|\bflo\b|eddy|reed|sandy|princess|pipe/i;
+  let enVoice = null;
+  let enVoiceKey = "";
+  function pickEnVoice() {
+    let voices = [];
+    try { voices = speechSynthesis.getVoices() || []; } catch (e) { voices = []; }
+    const key = voices.length + ":" + voices.map((v) => v.name).join("|").length;
+    if (enVoice && key === enVoiceKey) return enVoice;
+    enVoiceKey = key;
+    const en = voices.filter((v) => /^en([-_]|$)/i.test(v.lang || ""));
+    const good = en.filter((v) => !VOICE_BAD.test(v.name || ""));
+    const q = (v) => (/(premium|enhanced)/i.test(v.name) ? 0 : 1) + (/^en[-_]US/i.test(v.lang) ? 0 : 2);
+    let best = null;
+    for (const re of VOICE_PREF) {
+      const m = good.filter((v) => re.test(v.name || "")).sort((a, b) => q(a) - q(b));
+      if (m.length) { best = m[0]; break; }
+    }
+    if (!best) best = good.find((v) => v.default && /^en[-_]US/i.test(v.lang)) || good.find((v) => /^en[-_]US/i.test(v.lang)) || good[0] || en[0] || null;
+    enVoice = best;
+    return enVoice;
+  }
   if (typeof speechSynthesis !== "undefined") {
-    speechSynthesis.onvoiceschanged = function () {};
+    try { speechSynthesis.addEventListener("voiceschanged", () => { enVoice = null; pickEnVoice(); }); } catch (e) {}
+    try { pickEnVoice(); } catch (e) {}
+  }
+  let ttsGen = 0;
+  function stopSpeak() {
+    ttsGen++;
+    try { if (typeof speechSynthesis !== "undefined") speechSynthesis.cancel(); } catch (e) {}
   }
 
-  /** Speak texts one-by-one; resolves only after the last utterance fully ends. */
-  function speakQueue(texts) {
+  /** Speak texts one-by-one (always cancels whatever was playing first). Resolves when done. */
+  function speakQueue(texts, opt) {
+    opt = opt || {};
     const list = (Array.isArray(texts) ? texts : [texts])
       .map((t) => String(t || "").trim())
       .filter(Boolean);
+    const gen = ++ttsGen;
     return new Promise((resolve) => {
-      if (!list.length || typeof speechSynthesis === "undefined") {
+      if (!list.length || typeof speechSynthesis === "undefined" || typeof SpeechSynthesisUtterance === "undefined") {
         resolve();
         return;
       }
@@ -255,15 +289,12 @@
       };
       try {
         speechSynthesis.cancel();
-        const voices = speechSynthesis.getVoices();
-        const en =
-          voices.find((v) => /^en(-|_)/i.test(v.lang) && /US|United/i.test(v.lang)) ||
-          voices.find((v) => /^en/i.test(v.lang));
+        const voice = pickEnVoice();
         // Safety only — never use a short estimate (that cut off long sentences).
         const hardStop = setTimeout(finish, 90000);
         let i = 0;
         const waitIdleThenFinish = () => {
-          if (speechSynthesis.speaking || speechSynthesis.pending) {
+          if (gen === ttsGen && (speechSynthesis.speaking || speechSynthesis.pending)) {
             setTimeout(waitIdleThenFinish, 100);
             return;
           }
@@ -271,15 +302,16 @@
           finish();
         };
         const speakNext = () => {
+          if (gen !== ttsGen) { clearTimeout(hardStop); finish(); return; }
           if (i >= list.length) {
             waitIdleThenFinish();
             return;
           }
           const text = list[i++];
           const u = new SpeechSynthesisUtterance(text);
-          u.lang = "en-US";
-          u.rate = 0.92;
-          if (en) u.voice = en;
+          u.lang = voice && voice.lang ? voice.lang : "en-US";
+          u.rate = opt.rate || 0.92;
+          if (voice) u.voice = voice;
           u.onend = () => speakNext();
           u.onerror = () => speakNext();
           speechSynthesis.speak(u);
@@ -428,17 +460,26 @@
     $("#btn-profile-chip").innerHTML = def.avatar
       ? `<img class="profile-chip-av" src="${def.avatar}" alt=""/>${escapeHtml(def.name)} ▾`
       : `${escapeHtml(def.name)} ▾`;
+    // Only one subject (no 语文 data) → skip the subject picker, go straight to English.
+    if (!def.hanziUrl) return enterEnglish();
     showSubjectPicker();
   }
 
   function setSubjectUI(subj) {
     activeSubject = subj;
     $("#main-nav").hidden = subj !== "en";
+    const wt = $('#main-nav button[data-nav="words"]');
+    if (wt) wt.hidden = !!(window.__emma && window.__emma.handles(activeProfileId));
+    const hb = $("#home-back-row");
+    if (hb) hb.hidden = !(window.__emma && window.__emma.handles(activeProfileId));
+    const hw = $("#btn-home-words");
+    if (hw) hw.hidden = !(window.__emma && window.__emma.handles(activeProfileId));
     const zn = $("#zh-nav");
     if (zn) zn.hidden = subj !== "zh";
     const chip = $("#btn-subject-chip");
+    const def = PROFILE_DEFS.find((p) => p.id === activeProfileId);
     if (chip) {
-      chip.hidden = !subj;
+      chip.hidden = !subj || !(def && def.hanziUrl);
       chip.textContent = subj === "zh" ? "🀄 语文 ⇄" : "🔤 英文 ⇄";
     }
   }
@@ -450,7 +491,7 @@
     $("#btn-pause-test").hidden = true;
     session = null;
     try {
-      if (typeof speechSynthesis !== "undefined") speechSynthesis.cancel();
+      stopSpeak();
     } catch (e) {}
     if (window.__zh && window.__zh.leave) window.__zh.leave();
     setSubjectUI(null);
@@ -567,8 +608,8 @@
     $("#selected-count").textContent = selectedUnitIds.length
       ? `已选 ${selectedUnitIds.length} 个单元 · ${allWordsFrom(selectedUnitIds).length} 个单词`
       : "请先点选一个或多个单元";
-    $("#btn-start-modes").disabled = selectedUnitIds.length === 0;
-    $("#btn-guided").disabled = selectedUnitIds.length === 0;
+    const none = selectedUnitIds.length === 0;
+    $$("#home-main-btns button, #modes-card .mode-btn").forEach((b) => (b.disabled = none));
   }
 
   /** Sample for tests: ~70% from not-yet-mastered words, ~30% random (incl. mastered). */
@@ -614,6 +655,42 @@
       .concat(take(W.choice + Math.floor(extra / 2), () => true).map((w) => ({ type: "zh2en", word: w })));
     const nonWrite = shuffle(choice.concat(fillItems));
     return window.__testKit.interleave(nonWrite, shuffle(spellItems.concat(dictItems)));
+  }
+
+  /** 练习: one short mixed round (meaning both ways + fill + spell + dictation [+ Emma 词形/搭配]). */
+  function buildMixItems(words) {
+    const used = new Set();
+    const pool = pickWeighted(words, words.length, (w) => w.en);
+    const take = (k, ok) => {
+      const out = [];
+      for (const w of pool) {
+        if (out.length >= k) break;
+        const key = w.en.toLowerCase();
+        if (!used.has(key) && ok(w)) { used.add(key); out.push(w); }
+      }
+      return out;
+    };
+    const emma = !!(DATA && DATA.__emmaLevel);
+    const extra = emma && typeof DATA.__extraItems === "function" ? DATA.__extraItems(2).slice(0, 2) : [];
+    extra.forEach((x) => x.en && used.add(String(x.en).toLowerCase()));
+    const fills = shuffle(allFillInsFrom(selectedUnitIds)).filter((f) => !used.has(String(f.answer).toLowerCase())).slice(0, emma ? 1 : 2);
+    fills.forEach((f) => used.add(String(f.answer).toLowerCase()));
+    const fillItems = fills.map((f) => ({ type: "fill", fill: f, bankWords: buildFillBank(f, words) }));
+    const nSpell = emma ? 3 : 3, nDict = emma ? 2 : 1;
+    const choice = []
+      .concat(take(emma ? 2 : 3, () => true).map((w) => ({ type: "en2zh", word: w })))
+      .concat(take(2, () => true).map((w) => ({ type: "zh2en", word: w })));
+    const spellItems = take(nSpell, isSpellable).map((w) => ({ type: "spell", word: w, hard: false }));
+    applyAutoHardToSpellItems(spellItems);
+    const dictItems = take(nDict, (w) => isSpellable(w) && w.en.length <= 12).map((w) => ({ type: "dictation", word: w }));
+    let nonWrite = shuffle(choice.concat(fillItems).concat(extra));
+    // top up to ~12 with more meaning questions if the unit is small / has no fill-ins
+    while (nonWrite.length + spellItems.length + dictItems.length < SESSION_SIZE) {
+      const more = take(1, () => true);
+      if (!more.length) break;
+      nonWrite.push({ type: nonWrite.length % 2 ? "zh2en" : "en2zh", word: more[0] });
+    }
+    return window.__testKit.interleave(shuffle(nonWrite), shuffle(spellItems).concat(dictItems));
   }
 
   function startSession(mode) {
@@ -688,6 +765,9 @@
       applyAutoHardToSpellItems(items);
     }
 
+    else if (mode === "mix") {
+      items = buildMixItems(words);
+    }
     else if (mode === "test") {
       items = buildTestItems(words);
     }
@@ -739,10 +819,11 @@
       fill: "句子填空",
       spell: "拼写",
       dictation: "听写挑战",
-      guided: "闯关练习",
+      guided: DATA && DATA.__emmaLevel ? "学习" : "闯关学习",
+      mix: "练习",
       custom: "今日任务",
     };
-    $("#play-mode-label").textContent = modeNames[session.mode] || "";
+    $("#play-mode-label").textContent = (DATA && DATA.__label) || modeNames[session.mode] || "";
   }
 
   function advanceAfter(ms) {
@@ -765,6 +846,7 @@
   }
 
   function buildExplain(opts) {
+    if (opts.text) return opts.text + "\n点「明白了」听正确发音，再继续下一题～";
     const en = opts.en || "";
     const zh = opts.zh || findWordByEn(en).zh || "";
     const chosen = String(opts.chosen || "").trim();
@@ -892,6 +974,7 @@
 
   function renderQuestion() {
     advanceGen++;
+    if ($("#btn-next-q")) $("#btn-next-q").textContent = "下一题 →";
     hideExplain();
     hideNextButton();
     session.locked = false;
@@ -912,6 +995,58 @@
     else if (item.type === "fill") renderFill(host, item);
     else if (item.type === "spell") renderSpell(host, item);
     else if (item.type === "dictation") renderDictation(host, item);
+    else if (item.type === "mcq") renderMcq(host, item);
+  }
+
+  /** Generic multiple choice (Emma 词形 / 搭配 inside 练习). item: {cat, hint, promptHtml, options[{text,ok}], en, answer, speak, explain} */
+  function renderMcq(host, item) {
+    const hint = document.createElement("p");
+    hint.className = "hint";
+    hint.textContent = item.hint || "选出正确答案";
+    host.appendChild(hint);
+    const pr = document.createElement("div");
+    pr.className = "emma-prompt";
+    pr.innerHTML = item.promptHtml || "";
+    host.appendChild(pr);
+    const choices = document.createElement("div");
+    choices.className = "choices";
+    item.options.forEach((o) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "choice";
+      b.textContent = o.text;
+      b.addEventListener("click", () => {
+        if (session.locked) return;
+        const all = $$(".choice", choices);
+        if (session.test) {
+          all.forEach((x) => (x.disabled = true));
+          revealChoice(all, b, o.ok, (x) => item.options[all.indexOf(x)].ok);
+          testRecord(o.ok, { cat: item.cat, kind: "mcq", en: item.en, zh: "", prompt: item.prompt || item.answer, answer: item.answer, chosen: o.text, speak: item.speak, explainText: item.explain });
+          return;
+        }
+        session.locked = true;
+        session.answered++;
+        all.forEach((x) => (x.disabled = true));
+        all.forEach((x, i) => { if (item.options[i].ok) x.classList.add("correct"); });
+        if (o.ok) {
+          session.correct++;
+          $("#feedback").textContent = "答对啦！👍";
+          $("#feedback").className = "feedback good";
+          markKnown(item.en);
+          updatePlayChrome();
+          advanceAfterSpeech(item.speak || item.answer);
+        } else {
+          b.classList.add("wrong-soft");
+          $("#feedback").textContent = "再看看正确答案 👇";
+          $("#feedback").className = "feedback gentle";
+          markSeen(item.en);
+          updatePlayChrome();
+          showExplain({ text: item.explain || ("正确答案：" + item.answer) }, item.speak || item.answer);
+        }
+      });
+      choices.appendChild(b);
+    });
+    host.appendChild(choices);
   }
 
   function makeSpeakBtn(text) {
@@ -1009,8 +1144,9 @@
   function onChoice(btn, ok, enSpeak, zhShow, kind) {
     if (session.locked) return;
     if (session.test) {
-      $$(".choice", btn.parentElement).forEach((b) => (b.disabled = true));
-      btn.classList.add("picked");
+      const all = $$(".choice", btn.parentElement);
+      all.forEach((b) => (b.disabled = true));
+      revealChoice(all, btn, ok, (b) => { const tx = b.textContent.trim(); return kind === "en2zh" ? tx === zhShow : tx === enSpeak; });
       const chosen0 = (btn.textContent || "").trim();
       testRecord(ok, kind === "en2zh"
         ? { cat: "英→中", kind, en: enSpeak, zh: zhShow, prompt: enSpeak, answer: zhShow, chosen: chosen0 }
@@ -1047,31 +1183,53 @@
     }
   }
 
-  /** 综合测试: record silently (no reveal, no 小讲解), then go on. */
+  /** Test option colouring: picked right → green; picked wrong → red + the right one green. */
+  function revealChoice(all, picked, ok, isRight) {
+    all.forEach((x) => { if (isRight(x)) x.classList.add("correct"); });
+    if (!ok) picked.classList.add("wrong-pick");
+  }
+
+  /** 综合测试: record, show right/wrong immediately (answer revealed), then 下一题 (auto after a correct one). */
   function testRecord(ok, r) {
     if (!session || session.locked) return;
     session.locked = true;
     session.answered++;
     if (ok) session.correct++;
-    if (ok) markKnown(r.en);
-    else markSeen(r.en);
-    const explain = ok ? "" : buildExplain({ kind: r.kind, en: r.en, zh: r.zh, chosen: r.chosen, sentence: r.sentence })
-      .split("\n").filter((l) => l.indexOf("明白了") < 0).join("\n");
+    if (r.en) { if (ok) markKnown(r.en); else markSeen(r.en); }
+    const explain = ok ? "" : (r.explainText || buildExplain({ kind: r.kind, en: r.en, zh: r.zh, chosen: r.chosen, sentence: r.sentence })
+      .split("\n").filter((l) => l.indexOf("明白了") < 0).join("\n"));
     session.results.push({
       cat: r.cat, score: ok ? 1 : 0, prompt: r.prompt, py: "", answer: r.answer,
       chosen: ok ? "" : r.chosen, speak: r.speak || r.en, explain,
     });
     updatePlayChrome();
     const f = $("#feedback");
-    f.textContent = "已记录 ✓";
-    f.className = "feedback";
+    if (ok) {
+      f.textContent = "✓ 答对了！";
+      f.className = "feedback good";
+    } else {
+      f.innerHTML = "";
+      f.className = "feedback gentle test-wrong";
+      f.appendChild(document.createTextNode("✗ 不对哦。正确答案："));
+      const b = document.createElement("strong");
+      b.textContent = r.answer + (r.kind !== "en2zh" && r.zh && r.zh !== r.answer ? "（" + r.zh + "）" : "");
+      f.appendChild(b);
+    }
     const gen = ++advanceGen;
-    try { if (typeof speechSynthesis !== "undefined") speechSynthesis.cancel(); } catch (e) {}
-    setTimeout(() => {
-      if (gen !== advanceGen || !session) return;
-      session.index++;
-      renderQuestion();
-    }, 550);
+    speakQueue([r.speak || r.en]);
+    const last = session.index >= session.items.length - 1;
+    $("#btn-next-q").textContent = last ? "看成绩单 ✓" : "下一题 →";
+    showNextButton();
+    if (ok) {
+      setTimeout(() => {
+        if (gen !== advanceGen || !session || session.pauseStart) return;
+        advanceGen++;
+        hideNextButton();
+        stopSpeak();
+        session.index++;
+        renderQuestion();
+      }, 1300);
+    }
   }
 
   function markKnown(en) {
@@ -1126,8 +1284,10 @@
         blank.textContent = en;
         const ok = en.toLowerCase() === answerKey(f);
         if (session.test) {
-          $$(".word-bank button", host).forEach((x) => (x.disabled = true));
-          b.classList.add("picked");
+          const all = $$(".word-bank button", host);
+          all.forEach((x) => (x.disabled = true));
+          revealChoice(all, b, ok, (x) => x.textContent.toLowerCase() === answerKey(f));
+          if (!ok) blank.textContent = f.answer;
           testRecord(ok, {
             cat: "填空", kind: "fill", en: f.answer, zh: f.zh || findWordByEn(f.answer).zh,
             prompt: String(f.template).replace("____", "____"), answer: f.answer, chosen: en,
@@ -1282,7 +1442,12 @@
       if (session.locked) return;
       const guess = built.map((x) => x.ch).join("");
       if (session.test) {
-        testRecord(guess === letters, { cat: "拼写", kind: "spell", en: w.en, zh: w.zh, prompt: w.zh, answer: w.en, chosen: guess });
+        const okT = guess === letters;
+        $$(".letter-slot", slots).forEach((s, i) => {
+          s.textContent = letters[i];
+          s.classList.add(okT ? "correct" : (built[i] && built[i].ch === letters[i] ? "correct" : "wrong-pick"));
+        });
+        testRecord(okT, { cat: "拼写", kind: "spell", en: w.en, zh: w.zh, prompt: w.zh, answer: w.en, chosen: guess });
         return;
       }
       session.locked = true;
@@ -1371,7 +1536,9 @@
       if (session.test) {
         input.disabled = true;
         submit.disabled = true;
-        testRecord(guess === normGuess(w.en), { cat: "听写", kind: "dictation", en: w.en, zh: w.zh, prompt: w.zh, answer: w.en, chosen: guess });
+        const okD = guess === normGuess(w.en);
+        input.classList.add(okD ? "ok" : "bad");
+        testRecord(okD, { cat: "听写", kind: "dictation", en: w.en, zh: w.zh, prompt: w.zh, answer: w.en, chosen: guess });
         return;
       }
       session.locked = true;
@@ -1487,7 +1654,7 @@
     if (DATA && typeof DATA.__onFinish === "function") DATA.__onFinish(session);
     pushHistory({
       at: Date.now(),
-      mode: session.mode,
+      mode: (DATA && DATA.__histMode) || session.mode,
       units: session.unitIds.slice(),
       correct: session.correct,
       total: session.items.length,
@@ -1747,7 +1914,9 @@
       fill: "填空",
       spell: "拼写",
       dictation: "听写",
-      guided: "闯关",
+      guided: "闯关学习",
+      learn: "学习",
+      mix: "练习",
       test: "综合测试",
       custom: "今日任务",
     };
@@ -1829,13 +1998,12 @@
       renderHome();
     });
 
-    $$(".mode-btn[data-mode]").forEach((b) => {
+    $$("#modes-card .mode-btn[data-mode]").forEach((b) => {
       b.addEventListener("click", () => startSession(b.dataset.mode));
     });
-    $("#btn-guided").addEventListener("click", () => startSession("guided"));
-    $("#btn-start-modes").addEventListener("click", () => {
-      $("#modes-card").scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+    $$("#home-main-btns [data-mode]").forEach((b) => b.addEventListener("click", () => startSession(b.dataset.mode)));
+    $("#btn-home-back").addEventListener("click", () => { if (window.__emma) window.__emma.enter(); });
+    $("#btn-home-words").addEventListener("click", () => { showScreen("words"); renderWords(); });
 
     $("#btn-explain-ok").addEventListener("click", () => {
       if (typeof explainContinue === "function") explainContinue();
@@ -1856,7 +2024,7 @@
         hideExplain();
         hideNextButton();
         try {
-          if (typeof speechSynthesis !== "undefined") speechSynthesis.cancel();
+          stopSpeak();
         } catch (e) {}
         session.index++;
         renderQuestion();
@@ -1866,7 +2034,7 @@
     $("#btn-pause-test").addEventListener("click", () => {
       if (!session || !session.test || session.pauseStart) return;
       session.pauseStart = Date.now();
-      try { if (typeof speechSynthesis !== "undefined") speechSynthesis.cancel(); } catch (e) {}
+      stopSpeak();
       window.__testKit.pause({
         onResume: () => {
           if (!session || !session.pauseStart) return;
@@ -1927,7 +2095,9 @@
     enterEnglishTextbook,
     startSynth,
     speak: (t) => speak(t),
-    renderStarRow,
+    speakQueue: (t, o) => speakQueue(t, o),
+    stopSpeak: () => stopSpeak(),
+    pickEnVoice: () => pickEnVoice(),
     setSubjectUI: (s) => setSubjectUI(s),
     stopTimer: () => stopTimer(),
     clearSession: () => { session = null; },

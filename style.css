@@ -583,7 +583,7 @@ mark { background: #ffeaa7; color: inherit; border-radius: 4px; padding: 0 2px; 
 .emma-daily-done { text-align: center; font-size: 1.2rem; font-weight: 800; color: var(--accent); margin-top: 8px; }
 .emma-settings summary { font-weight: 800; cursor: pointer; }
 .emma-settings label { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 10px 0; }
-.emma-settings input, .emma-settings select { font-size: 1rem; padding: 6px 8px; border-radius: 10px; border: 2px solid #dfe6e9; min-width: 120px; }
+.emma-settings input, .emma-settings select { font-size: 1rem; padding: 6px 8px; min-height: 44px; border-radius: 10px; border: 2px solid #dfe6e9; min-width: 120px; }
 .emma-progress { margin: 14px 0; }
 .emma-prog-list { display: grid; gap: 8px; margin-bottom: 14px; }
 .emma-dual { position: relative; }
@@ -595,3 +595,45 @@ mark { background: #ffeaa7; color: inherit; border-radius: 4px; padding: 0 2px; 
   .emma-group-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .emma-sub-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== v12: 3–4 big entry buttons, tap-to-read dialogue lines, test feedback ===== */
+.big-btns { display: grid; gap: 12px; margin-top: 12px; }
+.big-btn {
+  display: flex; align-items: center; gap: 16px; text-align: left; min-height: 92px;
+  background: #fff; color: var(--ink); border: 3px solid #a29bfe; box-shadow: none; padding: 14px 18px;
+}
+.big-btn .bb-emoji { font-size: 2.2rem; flex: none; width: 52px; text-align: center; }
+.big-btn .bb-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.big-btn .bb-label { font-size: 1.45rem; font-weight: 900; color: var(--primary); }
+.big-btn .bb-desc { font-size: 0.95rem; color: var(--muted); font-weight: 500; line-height: 1.35; }
+.big-btn.learn, .big-btn.slearn { border-color: #fdcb6e; background: #fffaf0; }
+.big-btn.mix, .big-btn.smix { border-color: #55efc4; background: #f4fffb; }
+.big-btn.dialog { border-color: #74b9ff; background: #f3f9ff; }
+.big-btn.test, .big-btn.stest { border-color: #6c5ce7; background: #f7f5ff; }
+button.small-link { font-size: 0.98rem; min-height: 48px; color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+details#modes-card > summary { font-weight: 800; cursor: pointer; min-height: 44px; display: flex; align-items: center; color: var(--primary); }
+details#modes-card[open] > summary { margin-bottom: 10px; }
+.emma-track.daily { grid-column: 1 / -1; min-height: 120px; }
+button.correct:disabled, button.wrong-pick:disabled, button.wrong-soft:disabled { opacity: 1; }
+.emma-group-grid { max-height: 34vh; }
+/* dialogue lines: whole row is a tap target */
+.emma-line { align-items: center; flex-wrap: nowrap; gap: 8px; }
+.emma-line-txt { display: flex; flex-wrap: wrap; gap: 2px 8px; align-items: baseline; flex: 1; min-width: 0; }
+.emma-line.tap { cursor: pointer; min-height: 56px; border: 2px solid transparent; }
+.emma-line.tap:active { background: #eef6ff; }
+.emma-line.speaking { border-color: var(--sky); background: #eef6ff; }
+.emma-line.current { border-color: var(--primary-soft); box-shadow: 0 2px 8px rgba(108,92,231,0.15); }
+.emma-line .speak { flex: none; min-width: 48px; min-height: 48px; padding: 6px 10px; font-size: 1.1rem; }
+.emma-line-en { font-size: 1.08rem; overflow-wrap: anywhere; }
+.emma-tools { justify-content: flex-start; flex-wrap: wrap; }
+.emma-tools button.on { color: var(--primary); background: #f3f0ff; }
+.emma-taphint { text-align: center; margin: 0; }
+.emma-pick-row button { flex: 1 1 220px; }
+.emma-daily-go { width: 100%; min-height: 64px; font-size: 1.2rem; }
+/* tests: immediate right / wrong */
+button.wrong-pick, .letter-slot.wrong-pick { background: #ffe0e0 !important; border-color: #ff7675 !important; color: #c0392b !important; }
+.letter-slot.correct { background: #e6fff6; border-color: var(--accent); color: #00896b; }
+.dictation-input.ok { border-color: var(--accent) !important; background: #e6fff6; }
+.dictation-input.bad { border-color: #ff7675 !important; background: #fff0f0; }
+.feedback.test-wrong strong { color: var(--ink); font-size: 1.15rem; }
+@media (min-width: 600px) { #unit-grid, #words-unit-grid { grid-template-columns: 1fr 1fr; } }
