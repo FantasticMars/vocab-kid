@@ -1,0 +1,733 @@
+# headword<TAB>kid-friendly Chinese gloss<TAB>pos (optional). Hand-written fixes for noisy dictionary senses.
+the	art. 这个，那个（特指）	art
+a	art. 一（个）	art
+an	art. 一（个）	art
+of	prep. ……的；属于	prep
+in	prep. 在……里；在（某时）	prep
+on	prep. 在……上；关于	prep
+at	prep. 在（某处/某时）	prep
+to	prep. 到，向；（动词不定式标记）	prep
+for	prep. 为了，给；（时间）达	prep
+by	prep. 在……旁边；通过；被	prep
+with	prep. 和……一起；用	prep
+from	prep. 从，来自	prep
+go	v. 去，走	v
+up	adv. 向上；prep. 沿……向上	adv
+out	adv. 在外，出去	adv
+off	adv. 离开；（电器）关着	adv
+over	prep. 在……上方；超过；adv. 结束	prep
+then	adv. 那时；然后	adv
+when	adv. 什么时候；conj. 当……时	adv
+day	n. 白天，一天	n
+good	adj. 好的	adj
+keep	v. 保持；保存	v
+Mr	n. 先生（用于姓前）	n
+Mrs	n. 太太，夫人（用于姓前）	n
+Ms	n. 女士（用于姓前）	n
+Miss	n. 小姐（用于姓前）；v. 错过，想念	n
+begin	v. 开始	v
+short	adj. 短的；矮的	adj
+wrong	adj. 错误的	adj
+fine	adj. 好的；晴朗的	adj
+hot	adj. 热的；辣的	adj
+left	n. 左边；adj. 左边的	n
+tea	n. 茶	n
+dirty	adj. 脏的	adj
+sock	n. 短袜	n
+sleep	v. 睡觉；n. 睡眠	v
+nice	adj. 好的，美好的	adj
+cute	adj. 可爱的	adj
+watch	v. 观看；n. 手表	v
+call	v. 打电话；叫	v
+use	v. 使用	v
+move	v. 移动；搬家	v
+walk	v. 走，散步	v
+wait	v. 等待	v
+worry	v. 担心	v
+wish	v. 希望；n. 愿望	v
+welcome	int. 欢迎；v. 欢迎	int
+clean	adj. 干净的；v. 打扫	adj
+cold	adj. 冷的；n. 感冒	adj
+live	v. 居住；生活	v
+study	v. 学习；n. 书房	v
+hurt	v. 使受伤；疼	v
+one	num. 一；pron. 一个	num
+which	pron. 哪一个	pron
+lot	n. 许多（a lot of）	n
+last	adj. 最后的；上一个的	adj
+behind	prep. 在……后面	prep
+grape	n. 葡萄	n
+ball	n. 球	n
+room	n. 房间	n
+glass	n. 玻璃；玻璃杯	n
+astronaut	n. 宇航员	n
+fourteen	num. 十四	num
+fourth	num. 第四	num
+twentieth	num. 第二十	num
+first	num. 第一；adv. 首先	num
+second	num. 第二；n. 秒	num
+third	num. 第三	num
+fifth	num. 第五	num
+sixth	num. 第六	num
+seventh	num. 第七	num
+eighth	num. 第八	num
+twelfth	num. 第十二	num
+hundredth	num. 第一百	num
+sixteen	num. 十六	num
+two	num. 二，两个	num
+three	num. 三	num
+four	num. 四	num
+five	num. 五	num
+eleven	num. 十一	num
+twelve	num. 十二	num
+thirteen	num. 十三	num
+fifteen	num. 十五	num
+seventeen	num. 十七	num
+eighteen	num. 十八	num
+nine	num. 九	num
+twenty	num. 二十	num
+thirty	num. 三十	num
+forty	num. 四十	num
+fifty	num. 五十	num
+seventy	num. 七十	num
+eighty	num. 八十	num
+ninety	num. 九十	num
+hundred	num. 百	num
+thousand	num. 千	num
+million	num. 百万	num
+baby	n. 婴儿	n
+now	adv. 现在	adv
+these	pron. 这些	pron
+those	pron. 那些	pron
+many	adj. 许多的	adj
+any	det. 任何；一些（用于疑问/否定）	det
+some	det. 一些	det
+no	det. 没有；adv. 不	det
+here	adv. 这里	adv
+where	adv. 在哪里	adv
+near	prep. 在……附近；adj. 近的	prep
+best	adj. 最好的；adv. 最	adj
+free	adj. 免费的；空闲的；自由的	adj
+half	n. 一半	n
+table	n. 桌子	n
+family	n. 家，家庭	n
+mother	n. 母亲，妈妈	n
+sister	n. 姐姐，妹妹	n
+evening	n. 傍晚，晚上	n
+early	adj. 早的；adv. 早	adj
+old	adj. 老的；旧的	adj
+open	v. 打开；adj. 开着的	v
+house	n. 房子	n
+year	n. 年；岁	n
+month	n. 月	n
+ice	n. 冰	n
+fan	n. 迷，粉丝；电扇	n
+jump	v. 跳	v
+cry	v. 哭；喊	v
+cook	v. 做饭；n. 厨师	v
+slow	adj. 慢的	adj
+thin	adj. 瘦的；薄的	adj
+holiday	n. 假期	n
+great	adj. 很棒的；伟大的	adj
+little	adj. 小的；a little 一点	adj
+kind	adj. 善良的；n. 种类	adj
+light	n. 光；灯；adj. 轻的	n
+right	adj. 对的；右边的	adj
+play	v. 玩；打（球）；演奏	v
+run	v. 跑	v
+back	adv. 回来；n. 后背	adv
+say	v. 说	v
+get	v. 得到；到达；变得	v
+make	v. 做，制作；使	v
+take	v. 拿；带走；乘坐	v
+look	v. 看；看起来	v
+want	v. 想要	v
+think	v. 想；认为	v
+know	v. 知道；认识	v
+like	v. 喜欢；prep. 像	v
+way	n. 路；方法	n
+work	v. 工作；n. 工作	v
+put	v. 放	v
+show	v. 给……看；n. 演出	v
+feel	v. 感觉，觉得	v
+man	n. 男人	n
+woman	n. 女人	n
+child	n. 孩子	n
+people	n. 人们	n
+dress	n. 连衣裙；v. 穿衣	n
+chicken	n. 鸡；鸡肉	n
+park	n. 公园；v. 停车	n
+colour	n. 颜色	n
+orange	n. 橙子；adj. 橙色的	n
+favourite	adj. 最喜欢的	adj
+mouse	n. 老鼠；鼠标	n
+pig	n. 猪	n
+ruler	n. 尺子	n
+cinema	n. 电影院	n
+sunny	adj. 晴朗的	adj
+grandmother	n. 奶奶，外婆	n
+grandfather	n. 爷爷，外公	n
+cousin	n. 堂/表兄弟姐妹	n
+aunt	n. 姑姑，阿姨	n
+apple	n. 苹果	n
+rice	n. 米饭；大米	n
+be	v. 是；在	v
+have	v. 有；吃	v
+do	v. 做	v
+it	pron. 它	pron
+that	pron. 那，那个	pron
+this	pron. 这，这个	pron
+all	det. 全部，所有	det
+about	prep. 关于；adv. 大约	prep
+there	adv. 在那里	adv
+so	adv. 如此；conj. 所以	adv
+how	adv. 怎样；多么	adv
+well	adv. 好；adj. 健康的	adv
+very	adv. 很，非常	adv
+much	adv. 很，非常；det. 许多	adv
+after	prep. 在……之后	prep
+before	prep. 在……之前	prep
+down	adv. 向下	adv
+may	v. 可以；可能	v
+can	v. 能，会，可以	v
+will	v. 将，会	v
+must	v. 必须	v
+should	v. 应该	v
+again	adv. 又，再	adv
+also	adv. 也	adv
+between	prep. 在……之间	prep
+home	n. 家；adv. 在家，回家	n
+book	n. 书；v. 预订	n
+star	n. 星星；明星	n
+space	n. 太空；空间	n
+paper	n. 纸；报纸	n
+phone	n. 电话；手机	n
+picture	n. 图片，照片	n
+film	n. 电影	n
+spring	n. 春天	n
+fish	n. 鱼；v. 钓鱼	n
+bear	n. 熊	n
+bag	n. 包，袋子	n
+box	n. 盒子，箱子	n
+cup	n. 杯子	n
+middle	n. 中间	n
+front	n. 前面	n
+fast	adj. 快的；adv. 快	adj
+pair	n. 一双，一对	n
+exercise	n. 锻炼；练习	n
+visit	v. 参观，拜访	v
+hurry	v. 赶快	v
+sweater	n. 毛衣	n
+beside	prep. 在……旁边	prep
+grass	n. 草	n
+card	n. 卡片	n
+level	n. 水平；级别	n
+model	n. 模型；模特	n
+print	v. 打印；印刷	v
+lake	n. 湖	n
+pasta	n. 意大利面	n
+store	n. 商店	n
+perfect	adj. 完美的	adj
+August	n. 八月	n
+as	conj. 当……时；因为；prep. 作为	conj
+would	v. 将会；（表示客气）愿意	v
+need	v. 需要；n. 需要	v
+while	conj. 当……时；然而	conj
+might	v. 可能，也许	v
+American	adj. 美国的；n. 美国人	adj
+under	prep. 在……下面	prep
+both	pron. 两者都	pron
+line	n. 线；排，行	n
+set	v. 放置；设定；n. 一套	v
+nothing	pron. 没有什么	pron
+lead	v. 带领；领先	v
+force	n. 力量；v. 强迫	n
+sense	n. 感觉；意义	n
+pass	v. 经过；通过（考试）；传递	v
+along	prep. 沿着	prep
+better	adj. 更好的；adv. 更好地	adj
+according	adj. according to 根据	adj
+drive	v. 开车，驾驶	v
+break	v. 打破；n. 课间休息	v
+international	adj. 国际的	adj
+board	n. 木板；（布告）板；v. 登（机/船）	n
+cover	v. 覆盖；n. 封面	v
+material	n. 材料	n
+increase	v. 增加；n. 增长	v
+drop	v. 掉下；放下	v
+push	v. 推；按	v
+sound	n. 声音；v. 听起来	n
+dead	adj. 死的	adj
+thought	n. 想法（think 的过去式）	n
+pressure	n. 压力	n
+character	n. 性格；角色；（汉）字	n
+wonder	v. 想知道；n. 奇迹	v
+lay	v. 放；下（蛋）	v
+forward	adv. 向前	adv
+compare	v. 比较	v
+act	v. 表演；行动	v
+main	adj. 主要的	adj
+shake	v. 摇动；握（手）	v
+deep	adj. 深的	adj
+heat	n. 热；v. 加热	n
+laugh	v. 笑	v
+hang	v. 悬挂	v
+rock	n. 岩石；摇滚乐	n
+notice	v. 注意到；n. 通知	v
+inside	prep. 在……里面	prep
+either	det. 两者之一；adv. 也（用于否定）	det
+able	adj. 能够的	adj
+enough	adj. 足够的；adv. 足够地	adj
+own	adj. 自己的；v. 拥有	adj
+turn	v. 转动；n. 轮流	v
+believe	v. 相信	v
+hope	v. 希望	v
+return	v. 返回；归还	v
+develop	v. 发展；开发	v
+whole	adj. 整个的	adj
+human	adj. 人类的；n. 人	adj
+control	v. 控制；n. 控制	v
+point	n. 要点；分数；v. 指	n
+care	v. 关心；n. 照顾	v
+plan	n. 计划；v. 计划	n
+end	n. 结尾；v. 结束	n
+change	v. 改变；n. 变化；零钱	v
+fall	v. 落下；摔倒；n. 秋天（美）	v
+test	n. 测验，考试	n
+present	n. 礼物；adj. 现在的；出席的	n
+order	n. 顺序；点餐；v. 点（菜）	n
+record	n. 记录；唱片；v. 录制	n
+rest	n. 休息；其余	n
+report	n. 报告；v. 报道	n
+cause	n. 原因；v. 导致	n
+cost	v. 花费；n. 费用	v
+fight	v. 打架；战斗	v
+guess	v. 猜	v
+dark	adj. 黑暗的；深色的	adj
+dream	n. 梦；梦想；v. 做梦	n
+fear	n. 恐惧；v. 害怕	n
+trouble	n. 麻烦	n
+mind	n. 头脑；v. 介意	n
+view	n. 景色；观点	n
+serve	v. 服务；（给……）上菜	v
+state	n. 状态；州	n
+hold	v. 拿着，握住；举行	v
+power	n. 力量；电力	n
+store	n. 商店；v. 储存	n
+past	n. 过去；prep. 经过	n
+top	n. 顶部	n
+deal	v. 处理（deal with）	v
+design	v. 设计；n. 设计	v
+interview	n. 采访；面试	n
+style	n. 风格；样式	n
+adult	n. 成年人	n
+deep	adj. 深的	adj
+challenge	n. 挑战	n
+total	adj. 总的	adj
+beat	v. 打败；敲打	v
+main	adj. 主要的	adj
+compare	v. 比较	v
+pay	v. 付钱	v
+lose	v. 丢失；输	v
+note	n. 笔记；便条	n
+main	adj. 主要的	adj
+born	adj. 出生的（be born 出生）	adj
+account	n. 账户；描述	n
+vote	v. 投票；n. 选票	v
+wood	n. 木头；树林	n
+camp	n. 营地；v. 露营	n
+text	n. 文本；短信；v. 发短信	n
+operate	v. 操作；做手术	v
+block	n. 街区；大块	n
+count	v. 数；计算	v
+worth	adj. 值……的；值得的	adj
+speed	n. 速度	n
+cross	v. 穿过；n. 十字	v
+wave	n. 波浪；v. 挥手	n
+mistake	n. 错误	n
+tie	v. 系；n. 领带	v
+plate	n. 盘子	n
+pool	n. 水池；游泳池	n
+dry	adj. 干的	adj
+ring	n. 戒指；v. （铃）响	n
+mark	n. 记号；分数	n
+except	prep. 除……之外	prep
+afford	v. 买得起；负担得起	v
+master	n. 主人；大师；v. 掌握	n
+fun	n. 乐趣	n
+divide	v. 分开；除	v
+rush	v. 冲；赶紧	v
+tired	adj. 累的；厌倦的	adj
+shall	v. 将；（提建议）……好吗	v
+chip	n. 薯条；芯片	n
+mine	pron. 我的（东西）	pron
+round	adj. 圆的；prep. 围绕	adj
+junior	adj. 初级的；年少的	adj
+weigh	v. 称重；重（多少）	v
+lemon	n. 柠檬	n
+zero	num. 零	num
+ache	v. 疼痛；n. 疼痛	v
+bill	n. 账单	n
+litter	n. 垃圾；v. 乱扔垃圾	n
+spell	v. 拼写	v
+cheat	v. 作弊；欺骗	v
+bleed	v. 流血	v
+glue	n. 胶水	n
+fool	n. 傻瓜；v. 愚弄	n
+elder	adj. 年长的	adj
+dining	n. 用餐	n
+lightning	n. 闪电	n
+magic	n. 魔法；魔术	n
+pardon	int. 请再说一遍；n. 原谅	int
+ski	v. 滑雪；n. 滑雪板	v
+X-ray	n. X光	n
+policewoman	n. 女警察	n
+T-shirt	n. T恤衫	n
+mix	v. 混合	v
+ad	n. 广告	n
+aim	n. 目标；v. 瞄准	n
+copy	v. 复制；抄写	v
+correct	adj. 正确的；v. 改正	adj
+date	n. 日期	n
+attend	v. 出席；上（学）	v
+trust	v. 信任	v
+graduate	v. 毕业；n. 毕业生	v
+passage	n. 文章段落；通道	n
+shock	n. 震惊；v. 使震惊	n
+square	n. 广场；正方形	n
+gym	n. 健身房；体育馆	n
+bath	n. 洗澡；浴缸	n
+found	v. 建立（find 的过去式同形）	v
+paragraph	n. 段落	n
+lab	n. 实验室	n
+universe	n. 宇宙	n
+proper	adj. 恰当的	adj
+era	n. 时代	n
+winner	n. 获胜者	n
+teenage	adj. 十几岁的	adj
+athlete	n. 运动员	n
+pancake	n. 薄煎饼	n
+bin	n. 垃圾箱	n
+hen	n. 母鸡	n
+weekday	n. 工作日	n
+grammar	n. 语法	n
+hostess	n. 女主人	n
+teamwork	n. 团队合作	n
+lantern	n. 灯笼	n
+princess	n. 公主	n
+blouse	n. （女式）衬衫	n
+palace	n. 宫殿	n
+pioneer	n. 先锋	n
+strawberry	n. 草莓	n
+violin	n. 小提琴	n
+pear	n. 梨	n
+onion	n. 洋葱	n
+chocolate	n. 巧克力	n
+coffee	n. 咖啡	n
+weekend	n. 周末	n
+bottle	n. 瓶子	n
+physics	n. 物理	n
+chemistry	n. 化学	n
+safety	n. 安全	n
+Christmas	n. 圣诞节	n
+fresh	adj. 新鲜的	adj
+folk	adj. 民间的；n. 人们	adj
+bright	adj. 明亮的；聪明的	adj
+sore	adj. 疼痛的	adj
+yours	pron. 你的；你们的	pron
+Asian	adj. 亚洲的；n. 亚洲人	adj
+Olympic	adj. 奥林匹克的	adj
+feed	v. 喂	v
+strange	adj. 奇怪的；陌生的	adj
+actor	n. 演员	n
+drama	n. 戏剧	n
+worst	adj. 最差的	adj
+packet	n. 小包，小袋	n
+post	n. 邮政；帖子；v. 邮寄	n
+double	adj. 双的；v. 加倍	adj
+pot	n. 锅；罐	n
+pack	v. 打包，收拾（行李）	v
+blind	adj. 失明的	adj
+god	n. 神	n
+magic	n. 魔法；魔术	n
+spare	adj. 空闲的；备用的	adj
+volunteer	n. 志愿者；v. 自愿做	n
+medium	adj. 中等的	adj
+smoke	n. 烟；v. 抽烟	n
+pound	n. 英镑；磅	n
+press	v. 按；压	v
+object	n. 物体；目标	n
+X-ray	n. X光	n
+ice cream	n. 冰淇淋	n
+kung fu	n. 中国功夫	n
+per cent	n. 百分之……	n
+dirty	adj. 脏的	adj
+lost	adj. 迷路的；丢失的	adj
+electric	adj. 电的；电动的	adj
+square	n. 广场；正方形	n
+suit	n. 西装；v. 适合	n
+pale	adj. 苍白的	adj
+awake	adj. 醒着的	adj
+tape	n. 胶带；磁带	n
+row	n. 排，行	n
+sale	n. 销售；打折	n
+international	adj. 国际的	adj
+program	n. 节目；程序；计划	n
+studies	n. 学业；研究	n
+site	n. 地点；网站	n
+court	n. 球场；法庭	n
+practice	n. 练习	n
+type	n. 类型；v. 打字	n
+available	adj. 可用的；有空的	adj
+glasses	n. 眼镜	n
+directions	n. 方向；指路说明	n
+crowd	n. 人群	n
+interested	adj. 感兴趣的	adj
+deliver	v. 递送	v
+title	n. 标题；称号	n
+okay	adj. 好的，可以	adj
+thanks	int. 谢谢	int
+sheet	n. 一张（纸）；床单	n
+experiment	n. 实验	n
+cream	n. 奶油；乳霜	n
+plus	prep. 加上	prep
+chips	n. 炸薯条（英）；薯片（美）	n
+album	n. 相册；专辑	n
+cycle	v. 骑自行车	v
+sauce	n. 调味汁，酱	n
+creature	n. 生物	n
+wooden	adj. 木制的	adj
+drawing	n. 图画	n
+speaker	n. 说话者；扬声器	n
+assistant	n. 助手；店员	n
+Dr	n. 博士；医生（用于姓前）	n
+badly	adv. 糟糕地；严重地	adv
+cooking	n. 烹饪	n
+identification	n. 身份证明	n
+slice	n. 片；v. 切片	n
+closet	n. 壁橱，衣柜	n
+wow	int. 哇	int
+jazz	n. 爵士乐	n
+kit	n. 成套工具；一套装备	n
+runner	n. 跑步者	n
+purse	n. 钱包	n
+bicycle	n. 自行车	n
+transport	n. 交通；运输	n
+fur	n. 毛皮	n
+dancing	n. 跳舞	n
+blond	adj. 金发的	adj
+rap	n. 说唱乐	n
+indoor	adj. 室内的	adj
+stripes	n. 条纹	n
+crossing	n. 人行横道；十字路口	n
+awesome	adj. 太棒了的，了不起的	adj
+barbecue	n. 烧烤	n
+bracelet	n. 手镯，手链	n
+climbing	n. 攀爬，攀岩	n
+cycling	n. 骑自行车运动	n
+cricket	n. 板球；蟋蟀	n
+tasty	adj. 好吃的	adj
+aged	adj. ……岁的	adj
+curry	n. 咖喱	n
+quiz	n. 小测验；知识竞赛	n
+chemist	n. 药店（英）；化学家	n
+mango	n. 芒果	n
+ID	n. 身份证明	n
+swan	n. 天鹅	n
+alright	adj. 好的，没问题	adj
+delayed	adj. 延误的	adj
+boiled	adj. 煮熟的	adj
+mum	n. 妈妈	n
+hippo	n. 河马	n
+surfboarding	n. 冲浪	n
+roundabout	n. 环岛，环形交叉路	n
+hoodie	n. 连帽衫	n
+advert	n. 广告	n
+harbour	n. 港口	n
+grandad	n. 爷爷，外公	n
+cannot	v. 不能（can not）	v
+by the way	顺便问一下	phr
+look after	照顾	phr
+look out	当心，小心	phr
+main course	主菜	phr
+make-up	n. 化妆品	n
+mineral water	n. 矿泉水	n
+next to	在……旁边	phr
+pick up	捡起；接（人）	phr
+put on	穿上；戴上	phr
+get on	上（车）；相处	phr
+break down	（机器）出故障	phr
+first name	名字	phr
+department store	百货商店	phr
+traffic light	红绿灯	phr
+washing machine	洗衣机	phr
+web page	网页	phr
+wifi	n. 无线网络	n
+work out	算出；锻炼	phr
+text message	短信	phr
+hip hop	n. 嘻哈音乐	n
+fall over	摔倒	phr
+grow up	长大	phr
+for sale	待售	phr
+take part	参加	phr
+close to	靠近	phr
+by post	通过邮寄	phr
+bring back	带回来	phr
+fill in	填写	phr
+DVD	n. 数字光盘	n
+guest-house	n. 家庭旅馆	n
+half-price	adj. 半价的	adj
+board game	棋类游戏	phr
+tax	n. 税	n
+ages	n. 很长时间	n
+yeah	int. 是的（口语）	int
+amount	n. 数量	n
+sex	n. 性别	n
+remove	v. 移除，拿走	v
+charge	n. 费用；v. 收费；充电	n
+bar	n. 条，棒；酒吧	n
+access	n. 使用权；通道	n
+spot	n. 地点；斑点	n
+lack	n. 缺乏；v. 缺少	n
+handle	v. 处理；n. 把手	v
+roll	v. 滚动；n. 面包卷	v
+facilities	n. 设施	n
+hire	v. 租用；雇用	v
+supply	n. 供应；v. 供应	n
+photograph	n. 照片	n
+link	n. 联系；链接	n
+contents	n. 目录；内容	n
+teeth	n. 牙齿（tooth 的复数）	n
+tear	n. 眼泪；v. 撕	n
+tip	n. 小费；提示	n
+iron	n. 铁；熨斗	n
+twin	n. 双胞胎之一	n
+glance	n. 一瞥；v. 看一眼	n
+accompany	v. 陪伴	v
+assist	v. 帮助	v
+phrase	n. 短语	n
+resort	n. 度假胜地	n
+tissue	n. 纸巾	n
+switch	n. 开关；v. 转换	n
+tube	n. 管子；（伦敦）地铁	n
+branch	n. 树枝；分店	n
+figure	n. 数字；人物	n
+section	n. 部分	n
+operation	n. 手术；操作	n
+firm	n. 公司；adj. 坚固的	n
+approach	n. 方法；v. 接近	n
+scene	n. 场景；现场	n
+range	n. 范围	n
+edge	n. 边缘	n
+item	n. 物品；项目	n
+skin	n. 皮肤	n
+credit	n. 信用；赊账	n
+strike	v. 击打；罢工	v
+battle	n. 战斗	n
+display	n. 展示；v. 陈列	n
+dust	n. 灰尘	n
+entry	n. 进入；参赛作品	n
+advance	n. 进步；in advance 提前	n
+peak	n. 山顶；高峰	n
+permit	v. 允许；n. 许可证	v
+routine	n. 日常惯例	n
+backpack	n. 双肩包，背包	n
+cooker	n. 炉灶	n
+tights	n. 连裤袜	n
+cleaner	n. 清洁工；清洁剂	n
+shame	n. 遗憾；羞愧	n
+recording	n. 录音	n
+pump	v. （给……）打气；n. 泵	v
+bitter	adj. 苦的	adj
+southeast	n. 东南方	n
+bold	adj. 粗体的；大胆的	adj
+romance	n. 爱情故事；浪漫	n
+mate	n. 朋友，伙伴	n
+northeast	n. 东北方	n
+spite	n. in spite of 尽管	n
+workout	n. 锻炼	n
+cruise	n. 乘船游览	n
+neat	adj. 整洁的	adj
+grill	v. 烤	v
+logo	n. 标志，商标	n
+reduced	adj. 降价的	adj
+basin	n. 盆，脸盆	n
+pedestrian	n. 行人	n
+butcher	n. 屠夫；肉店	n
+groom	n. 新郎	n
+engaged	adj. 订婚的；（电话）占线的	adj
+baker	n. 面包师	n
+sincerely	adv. 真诚地（Yours sincerely 此致）	adv
+racing	n. 赛车；比赛	n
+cod	n. 鳕鱼	n
+booking	n. 预订	n
+prohibited	adj. 被禁止的	adj
+consonant	n. 辅音（字母）	n
+CV	n. 简历	n
+pullover	n. 套头毛衣	n
+takeaway	n. 外卖	n
+dustbin	n. 垃圾箱	n
+permitted	adj. 被允许的	adj
+at present	目前，现在	phr
+base on	以……为基础	phr
+be over	结束	phr
+booking office	售票处	phr
+call in	顺便拜访	phr
+check out	结账离开，退房	phr
+chill out	放松，冷静	phr
+dial up	拨号	phr
+end up	最终（处于）	phr
+full time	全职地	phr
+give way	让路	phr
+go off	（闹钟）响；离开	phr
+hand out	分发	phr
+hold up	耽搁；举起	phr
+in order	按顺序	phr
+keep in	留下，不让出去	phr
+keep on	继续	phr
+on request	应要求	phr
+on sale	出售；打折	phr
+opening hours	营业时间，开放时间	phr
+part time	兼职地	phr
+pocket money	零花钱	phr
+put through	（电话）接通	phr
+self-service	adj. 自助的	adj
+split up	分开	phr
+step forward	上前一步	phr
+travel agent	旅行社；旅行代理人	phr
+turn into	变成	phr
+up to date	最新的	phr
+waiting room	候诊室；候车室	phr
+wear out	穿坏，用坏	phr
+duty-free	adj. 免税的	adj
+face-to-face	adj. 面对面的	adj
+right-hand	adj. 右边的	adj
+check-in	n. 登记；值机	n
+disc jockey	n. 唱片骑师，DJ	n
+booking office	售票处	phr
+PE	n. 体育（课）	n
+AI	n. 人工智能	n
+o'clock	adv. ……点钟	adv
+credit card	信用卡	phr
+DVD player	DVD播放机	phr
+get fit	强身健体	phr
+give somebody a call	给某人打电话	phr
+grocery store	食品杂货店	phr
+police car	警车	phr
+poor thing	可怜的家伙	phr
+would prefer	宁愿，更想要	phr
+tourist information centre	游客信息中心	phr
+video game	电子游戏	phr
+working hours	工作时间	phr
+cashpoint	n. 自动取款机	n
+cross out	划掉	phr
+extreme sport	极限运动	phr
+full stop	句号	phr
+ice skates	溜冰鞋	phr
+impressed by	对……印象深刻	phr
+in ink	用钢笔（墨水）	phr
+in pencil	用铅笔	phr
+motor-racing	n. 赛车运动	n
+recycling	n. 回收利用	n
+security guard	保安	phr
+stay behind	留下来	phr

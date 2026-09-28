@@ -1,0 +1,163 @@
+# doctor | 看病与药店 | 🏥 | 描述症状、预约看病、买药和紧急情况
+## symptoms | 描述症状
+W: feel ill | 感觉不舒服
+W: headache | 头痛
+W: stomach ache | 胃痛，肚子疼
+W: sore throat | 喉咙痛
+W: cough | 咳嗽
+W: fever | 发烧
+W: temperature | 体温
+W: runny nose | 流鼻涕
+W: cold | 感冒
+W: flu | 流感
+W: dizzy | 头晕的
+W: tired | 疲倦的
+W: hurt | 疼
+W: pain | 疼痛
+W: since | 自从
+W: get worse | 变得更糟
+W: throw up | 呕吐
+W: rash | 皮疹
+W: itchy | 痒的
+W: swollen | 肿的
+W: symptom | 症状
+W: sneeze | 打喷嚏
+P: I don't feel very well. | 我感觉不太舒服。 | 你告诉寄宿家庭妈妈你不舒服
+P: I have a headache and a sore throat. | 我头痛，喉咙也痛。 | 你向医生描述症状
+P: I think I have a fever. | 我觉得我发烧了。 | 你觉得身上很烫
+P: I've had a cough since Monday. | 我从周一开始咳嗽。 | 医生问你咳嗽多久了
+P: It hurts when I swallow. | 我吞咽的时候疼。 | 你想说明喉咙什么时候疼
+P: I feel dizzy. | 我头晕。 | 你站起来时觉得天旋地转
+P: It's getting worse. | 越来越严重了。 | 你的病一直没好反而更严重
+P: My arm is itchy and there's a rash. | 我的胳膊很痒，还起了疹子。 | 你的皮肤出了问题
+D: 告诉寄宿妈妈 | H=Host mum/寄宿妈妈, E=Emma/艾玛
+H: Emma, you look pale. Are you OK? | 艾玛，你脸色苍白。你还好吗？
+E: I don't feel very well. I have a headache and a sore throat. | 我感觉不太舒服。我头痛，喉咙也痛。
+H: Oh dear. How long have you felt like this? | 哎呀。你这样多久了？
+E: Since last night. And I feel really tired. | 从昨晚开始。而且我觉得很累。
+H: Let me check your temperature. ... It's thirty-eight point two. You have a fever. | 我给你量一下体温。……三十八点二度，你发烧了。
+E: Should I go to school today? | 我今天应该去上学吗？
+H: No, you should stay at home and rest. I'll call the school. | 不，你应该在家休息。我给学校打电话。
+E: Thank you. Do we have any medicine? | 谢谢。家里有药吗？
+H: Yes, I'll get you some paracetamol and a glass of water. | 有，我给你拿点扑热息痛和一杯水。
+E: Thanks. I'll go back to bed. | 谢谢。我回床上躺着。
+H: Good idea. If it gets worse, we'll see a doctor. | 好主意。如果更严重了，我们就去看医生。
+D: 向校医描述 | N=School nurse/校医, E=Emma/艾玛
+N: Hello, Emma. What's the matter? | 你好，艾玛。怎么了？
+E: My stomach hurts, and I feel a bit dizzy. | 我肚子疼，还有点头晕。
+N: When did it start? | 什么时候开始的？
+E: About an hour ago, after lunch. | 大约一小时前，午饭后。
+N: Have you thrown up? | 你吐了吗？
+E: No, but I feel sick. | 没有，但我觉得恶心。
+N: Did you eat anything unusual at lunch? | 你午饭吃了什么特别的东西吗？
+E: I had a prawn sandwich. Maybe I'm allergic to prawns. | 我吃了一个虾仁三明治。也许我对虾过敏。
+N: Hmm, maybe. Lie down here for a while, and I'll call your host family. | 嗯，有可能。先在这儿躺一会儿，我给你的寄宿家庭打电话。
+E: Thank you. | 谢谢。
+## appointment | 预约看医生
+W: doctor's surgery | 诊所
+W: GP | 全科医生
+W: appointment | 预约
+W: register | 登记注册
+W: receptionist | 接待员
+W: available | 有空的
+W: urgent | 紧急的
+W: waiting room | 候诊室
+W: check-up | 检查
+W: examine | 检查
+W: prescription | 处方
+W: take your temperature | 量体温
+W: blood test | 验血
+W: infection | 感染
+W: allergy | 过敏
+W: rest | 休息
+W: plenty of water | 多喝水
+W: medical history | 病史
+W: health insurance | 健康保险
+W: serious | 严重的
+W: recover | 康复
+P: I'd like to make an appointment to see a doctor. | 我想预约看医生。 | 你打电话给诊所
+P: Is there anything available today? | 今天有空的号吗？ | 你想今天就看病
+P: It's quite urgent. | 挺紧急的。 | 你的情况比较严重
+P: I'm an international student. Do I need to register? | 我是国际学生，需要注册吗？ | 你第一次去这家诊所
+P: I'm allergic to penicillin. | 我对青霉素过敏。 | 医生要给你开药
+P: How often should I take it? | 我应该多久吃一次？ | 你想知道吃药的频率
+P: Is it serious? | 严重吗？ | 你担心自己的病情
+P: When will I feel better? | 我什么时候会好起来？ | 你想知道多久能康复
+D: 电话预约 | R=Receptionist/接待员, E=Emma/艾玛
+R: Good morning, Park Road Surgery. | 早上好，帕克路诊所。
+E: Hello. I'd like to make an appointment to see a doctor, please. | 你好。我想预约看医生。
+R: Are you registered with us? | 你在我们这里注册过吗？
+E: Yes, I registered last month. My name is Emma Zhang. | 注册过，我上个月注册的。我叫张艾玛。
+R: What's your date of birth? | 你的出生日期是？
+E: The third of March, 2014. | 2014年3月3日。
+R: Thank you. What's the problem? | 谢谢。哪里不舒服？
+E: I've had a bad cough for a week, and now I have a fever. | 我咳嗽得厉害一个星期了，现在还发烧。
+R: Let me check. We have a doctor available at four fifteen today. | 我查一下。今天四点十五分有一位医生有空。
+E: Four fifteen is perfect. | 四点十五分正好。
+R: Please arrive ten minutes early. | 请提前十分钟到。
+E: I will. Thank you very much. | 我会的，非常感谢。
+D: 看医生 | G=Doctor/医生, E=Emma/艾玛
+G: Hello, Emma. What seems to be the problem? | 你好，艾玛。哪里不舒服？
+E: I've had a cough for a week, and since yesterday I've had a fever. | 我咳嗽一个星期了，从昨天开始发烧。
+G: Let me listen to your chest. Take a deep breath. ... And again. | 我听一下你的胸部。深呼吸。……再来一次。
+E: Is it serious? | 严重吗？
+G: Don't worry. It's a chest infection, but it's not serious. | 别担心。是胸部感染，但不严重。
+E: Do I need any medicine? | 我需要吃药吗？
+G: Yes. Are you allergic to anything? | 需要。你对什么过敏吗？
+E: I'm allergic to penicillin. | 我对青霉素过敏。
+G: Thanks for telling me. I'll give you a different medicine. Here's your prescription. | 谢谢你告诉我。我给你开另一种药。这是你的处方。
+E: When will I feel better? | 我什么时候会好起来？
+G: In three or four days. Get plenty of rest and drink plenty of water. | 三四天吧。多休息，多喝水。
+## pharmacy | 药店买药
+W: pharmacy | 药店
+W: pharmacist | 药剂师
+W: medicine | 药
+W: painkiller | 止痛药
+W: tablet | 药片
+W: capsule | 胶囊
+W: cough syrup | 止咳糖浆
+W: plaster | 创可贴
+W: dose | 剂量
+W: twice a day | 一天两次
+W: after meals | 饭后
+W: on an empty stomach | 空腹
+W: side effect | 副作用
+W: drowsy | 昏昏欲睡的
+W: over the counter | 非处方的
+W: pick up | 取
+W: cream | 药膏
+W: sunburn | 晒伤
+W: cut | 伤口；割伤
+W: insect bite | 虫咬
+W: instructions | 说明
+P: I'd like to pick up my prescription. | 我想取处方药。 | 你拿着医生开的处方到药店
+P: Do you have anything for a sore throat? | 你们有治喉咙痛的药吗？ | 你喉咙痛，想买药
+P: How many tablets should I take? | 我应该吃几片？ | 你想知道每次吃多少
+P: Should I take it before or after meals? | 我应该饭前吃还是饭后吃？ | 你不知道什么时候吃药
+P: Does it have any side effects? | 它有副作用吗？ | 你担心吃药后会不舒服
+P: Will it make me drowsy? | 它会让我犯困吗？ | 你明天要考试，不想犯困
+P: Can I buy this without a prescription? | 这个不用处方可以买吗？ | 你没有医生的处方
+D: 取处方药 | C=Pharmacist/药剂师, E=Emma/艾玛
+E: Hi. I'd like to pick up my prescription, please. | 你好，我想取处方药。
+C: Sure. What's your name? | 好的。你叫什么名字？
+E: Emma Zhang. | 张艾玛。
+C: Here you are. These are the tablets the doctor gave you. | 给你。这是医生给你开的药片。
+E: How many tablets should I take? | 我应该吃几片？
+C: One tablet, twice a day, after meals. | 一次一片，一天两次，饭后吃。
+E: Will it make me drowsy? I have a test tomorrow. | 它会让我犯困吗？我明天有考试。
+C: No, it shouldn't make you drowsy. But finish the whole box, even if you feel better. | 不会让你犯困。不过即使好了，也要把一整盒吃完。
+E: OK, I'll remember that. Do I need to pay? | 好的，我会记住的。需要付钱吗？
+C: You're under sixteen, so it's free. | 你未满十六岁，所以免费。
+E: Great. Thank you! | 太好了，谢谢！
+D: 买非处方药 | C=Pharmacist/药剂师, E=Emma/艾玛
+E: Excuse me, do you have anything for a sore throat? | 打扰一下，你们有治喉咙痛的药吗？
+C: Yes. How long have you had it? | 有。你痛多久了？
+E: Two days. It hurts when I swallow. | 两天了。吞咽的时候疼。
+C: Do you have a fever? | 你发烧吗？
+E: No, I don't. | 不发烧。
+C: Then these throat sweets should help. Take one every three hours. | 那这些润喉糖应该有用。每三小时吃一颗。
+E: Do they have any side effects? | 它们有副作用吗？
+C: No, but don't take more than eight a day. | 没有，但一天不要超过八颗。
+E: OK. And do you have plasters? I cut my finger. | 好的。你们有创可贴吗？我割破了手指。
+C: They're on the shelf behind you. | 在你身后的货架上。
+E: Thanks for your help. | 谢谢你的帮助。

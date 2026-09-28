@@ -482,3 +482,116 @@ img.profile-avatar { padding: 0; border: 3px solid #fff; box-shadow: 0 4px 12px 
 .tr-item-btns button { min-height: 44px; }
 .tr-explain { margin-top: 8px; cursor: default; }
 .tr-trend { background: #fafbff; border: 1px solid #eee; border-radius: 14px; padding: 8px; margin-bottom: 8px; }
+
+/* ===== Emma English system ===== */
+.emma-back { margin: -6px 0 4px -8px; }
+.emma-back button { min-height: 40px; padding: 6px 10px; }
+.emma-track-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.emma-track {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 4px; text-align: left;
+  background: #fff; color: var(--ink); border: 3px solid #eee; box-shadow: none; min-height: 150px; padding: 16px;
+}
+.emma-track.daily { border-color: #fdcb6e; background: #fffaf0; }
+.emma-track.levels { border-color: #a29bfe; }
+.emma-track.scenes { border-color: #55efc4; }
+.emma-track.textbook { border-color: #74b9ff; }
+.emma-track-emoji { font-size: 2rem; }
+.emma-track-name { font-size: 1.25rem; font-weight: 800; color: var(--primary); }
+.emma-track-desc { font-size: 0.9rem; color: var(--muted); font-weight: 500; line-height: 1.35; }
+.emma-track-extra { margin-top: auto; }
+.emma-level-grid, .emma-scene-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+.emma-level, .emma-scene {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 4px; text-align: left;
+  background: #fff; color: var(--ink); border: 3px solid #e8e6ff; box-shadow: none; padding: 14px; min-height: 120px;
+}
+.emma-level .bar-mini { width: 100%; }
+.emma-level.soon, .emma-scene.soon { opacity: 0.55; border-style: dashed; background: #fafafa; }
+.emma-level:disabled, .emma-scene:disabled { opacity: 0.55; }
+.lv-name, .sc-title { font-size: 1.12rem; font-weight: 800; color: var(--primary); }
+.lv-meta { font-weight: 700; }
+.lv-soon { background: #dfe6e9; color: var(--muted); border-radius: 999px; padding: 2px 10px; font-size: 0.85rem; }
+.sc-emoji { font-size: 1.8rem; }
+.emma-group-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; max-height: 46vh; overflow: auto; padding: 2px; }
+.emma-group { min-width: 0;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 2px; text-align: left; padding: 8px 10px;
+  background: #fff; color: var(--ink); border: 3px solid #f1f2f6; box-shadow: none; min-height: 74px; font-size: 0.95rem;
+}
+.emma-group .small { font-size: 0.72rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 100%; }
+.emma-group .gp { color: var(--accent); font-weight: 700; }
+.emma-group.done { background: #f0fff9; }
+.emma-group.selected { border-color: var(--primary); background: #f3f0ff; }
+.emma-sel { margin-top: 10px; }
+.emma-modes .mode-btn:nth-child(5) { grid-column: auto; }
+.emma-modes .mode-btn.wide { grid-column: 1 / -1; }
+.emma-sub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0; }
+.emma-sub {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 4px; text-align: left; padding: 10px;
+  background: #fff; color: var(--ink); border: 3px solid #f1f2f6; box-shadow: none;
+}
+.emma-sub.selected { border-color: var(--accent); background: #effff9; }
+.emma-preview { line-height: 1.4; }
+.emma-card { border: 3px solid #e8e6ff; border-radius: 18px; padding: 16px; background: #fcfbff; }
+.emma-card.scene { border-color: #b8f5e0; background: #f7fffc; }
+.emma-card-top { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.emma-card-word { font-size: 2.2rem; font-weight: 900; color: var(--primary); }
+.emma-ipa { text-align: center; color: var(--muted); font-size: 1.1rem; margin: 2px 0 8px; }
+.emma-zh { text-align: center; font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; }
+.emma-pos { background: var(--primary-soft); color: #fff; border-radius: 8px; padding: 1px 7px; font-size: 0.85rem; vertical-align: middle; }
+.emma-ex { position: relative; background: #fff; border-radius: 14px; padding: 10px 52px 10px 12px; border: 2px solid #f1f2f6; margin-top: 8px; }
+.emma-ex .speak { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); }
+.emma-ex .ex-en { font-weight: 700; font-size: 1.08rem; }
+.emma-ex .ex-zh { color: var(--muted); margin-top: 2px; }
+.emma-colloc { margin-top: 10px; background: #fff; border-radius: 14px; padding: 10px 12px; border: 2px dashed #e8e6ff; line-height: 1.6; }
+.emma-colloc-title { font-size: 0.85rem; color: var(--primary); font-weight: 800; margin-bottom: 2px; }
+mark { background: #ffeaa7; color: inherit; border-radius: 4px; padding: 0 2px; }
+.emma-prompt { text-align: center; margin-bottom: 8px; }
+.emma-prompt .speak { margin-top: 6px; }
+.emma-big { font-size: 1.7rem; font-weight: 800; color: var(--primary); }
+.emma-ctx { font-size: 1.2rem; }
+.emma-sit { font-size: 1.2rem; font-weight: 700; background: #fffaf0; border: 2px solid #fdcb6e; border-radius: 14px; padding: 12px; }
+.emma-listen { display: block; margin: 8px auto 12px; font-size: 1.3rem; min-width: 220px; }
+.emma-replay { display: block; margin: 0 auto 8px; }
+.emma-dlg { display: grid; gap: 6px; margin: 8px 0; }
+.emma-line { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; background: #f8f9fb; border-radius: 12px; padding: 8px 10px; }
+.emma-line.gap { background: #fff3e0; border: 2px dashed #fdcb6e; }
+.emma-line.mine { background: #f3f0ff; }
+.emma-role { font-weight: 800; color: var(--primary); font-size: 0.9rem; }
+.emma-line-en { font-weight: 600; }
+.emma-line-zh { flex-basis: 100%; }
+.emma-gap { color: #e17055; font-weight: 800; letter-spacing: 2px; }
+.hidden-text { color: transparent !important; background: #dfe6e9; border-radius: 6px; user-select: none; }
+.emma-order-bank { display: grid; gap: 8px; margin-top: 10px; }
+.emma-order-btn { text-align: left; background: #fff; color: var(--ink); border: 2px solid #dfe6e9; box-shadow: none; font-weight: 600; }
+.shake { animation: emmaShake 0.35s; border-color: #e17055 !important; }
+@keyframes emmaShake { 0%,100% { transform: none; } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+.emma-done { text-align: center; }
+.emma-pick { border: 2px solid #f1f2f6; border-radius: 16px; padding: 12px; margin-bottom: 10px; }
+.emma-pick-title { font-weight: 800; }
+.emma-shadow { text-align: center; padding: 18px 10px; border: 3px solid #b8f5e0; border-radius: 18px; background: #f7fffc; }
+.emma-shadow-en { font-size: 1.5rem; font-weight: 800; margin: 8px 0; }
+.emma-daily-list { display: grid; gap: 10px; margin-top: 10px; }
+.emma-dstep {
+  display: flex; align-items: center; gap: 12px; text-align: left; background: #fff; color: var(--ink);
+  border: 3px solid #f1f2f6; box-shadow: none; padding: 12px 14px; width: 100%;
+}
+.emma-dstep.done { background: #f0fff9; border-color: #b8f5e0; }
+.dstep-emoji { font-size: 1.7rem; }
+.dstep-main { flex: 1; }
+.dstep-tag { font-size: 0.78rem; border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
+.dstep-tag.level { background: #f3f0ff; color: var(--primary); }
+.dstep-tag.scene { background: #e6fff6; color: #00a383; }
+.emma-daily-done { text-align: center; font-size: 1.2rem; font-weight: 800; color: var(--accent); margin-top: 8px; }
+.emma-settings summary { font-weight: 800; cursor: pointer; }
+.emma-settings label { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 10px 0; }
+.emma-settings input, .emma-settings select { font-size: 1rem; padding: 6px 8px; border-radius: 10px; border: 2px solid #dfe6e9; min-width: 120px; }
+.emma-progress { margin: 14px 0; }
+.emma-prog-list { display: grid; gap: 8px; margin-bottom: 14px; }
+.emma-dual { position: relative; }
+.emma-dual > span { position: absolute; left: 0; top: 0; height: 100%; }
+.emma-dual .learned { background: var(--accent-soft); }
+.emma-dual .mastered { background: var(--accent); }
+@media (max-width: 560px) {
+  .emma-track-grid, .emma-level-grid, .emma-scene-grid { grid-template-columns: 1fr; }
+  .emma-group-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .emma-sub-grid { grid-template-columns: 1fr; }
+}

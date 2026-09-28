@@ -1,0 +1,158 @@
+# campus | 校园与课堂 | 🏫 | 报到、上课发言、找老师和同学合作
+## firstday | 开学报到
+W: timetable | 课程表
+W: reception | 前台；接待处
+W: register | 登记；点名
+W: form tutor | 班主任
+W: classroom | 教室
+W: subject | 科目
+W: locker | 储物柜
+W: uniform | 校服
+W: canteen | 学校食堂
+W: library | 图书馆
+W: main building | 主楼
+W: upstairs | 在楼上
+W: downstairs | 在楼下
+W: corridor | 走廊
+W: school rules | 校规
+W: student card | 学生卡
+W: welcome pack | 欢迎资料包
+W: new student | 新生
+W: be late for | ……迟到
+W: show around | 带（某人）参观
+W: nervous | 紧张的
+P: Hi, I'm a new student. My name is Emma Zhang. | 你好，我是新生，我叫张艾玛。 | 第一天到学校前台介绍自己
+P: Could you tell me where Room 12 is? | 你能告诉我12教室在哪里吗？ | 你找不到要去的教室
+P: Where can I get my timetable? | 我在哪里可以拿到课程表？ | 你还没有课程表
+P: Who is my form tutor? | 我的班主任是谁？ | 你想知道谁是你的班主任
+P: Is it OK if I sit here? | 我坐这里可以吗？ | 你想坐在一个空位上
+P: Sorry I'm late. I got lost. | 对不起我迟到了，我迷路了。 | 你第一天找教室迟到了
+P: What do we have next? | 我们下节课上什么？ | 你想知道下一节是什么课
+D: 在学校前台 | R=Receptionist/前台老师, E=Emma/艾玛
+R: Good morning. Can I help you? | 早上好。有什么可以帮你的吗？
+E: Good morning. I'm a new student. My name is Emma Zhang. | 早上好。我是新生，我叫张艾玛。
+R: Welcome, Emma! Let me find your name. ... Yes, here you are. | 欢迎你，艾玛！我找找你的名字。……有了，在这里。
+E: Where can I get my timetable? | 我在哪里可以拿到课程表？
+R: It's in your welcome pack, with your student card. | 在你的欢迎资料包里，和学生卡在一起。
+E: Thank you. Who is my form tutor? | 谢谢。我的班主任是谁？
+R: Mr Brown. His classroom is Room 12, upstairs. | 布朗老师。他的教室是楼上的12教室。
+E: How do I get there? | 我怎么去那里？
+R: Go up the stairs and turn left. It's at the end of the corridor. | 上楼后左转，在走廊尽头。
+E: Great, thanks for your help. | 好的，谢谢您的帮助。
+R: You're welcome. Have a lovely first day! | 不客气。祝你第一天愉快！
+D: 同学带我参观 | L=Lily/莉莉, E=Emma/艾玛
+L: Hi, you must be Emma. I'm Lily. Mr Brown asked me to show you around. | 嗨，你一定是艾玛吧。我是莉莉。布朗老师让我带你参观一下。
+E: Hi, Lily. Nice to meet you. Thanks for doing this. | 嗨，莉莉，很高兴认识你。谢谢你带我参观。
+L: No problem. This is the library. You can borrow books here with your student card. | 不客气。这是图书馆，你可以用学生卡在这里借书。
+E: Cool. Where's the canteen? | 酷。食堂在哪里？
+L: It's downstairs, next to the sports hall. Lunch is at twelve thirty. | 在楼下，体育馆旁边。十二点半吃午饭。
+E: And where do I put my things? | 我的东西放在哪里？
+L: You'll get a locker. Yours is number 48, just here. | 你会有一个储物柜。你的是48号，就在这儿。
+E: Thanks. I'm a bit nervous, to be honest. | 谢谢。说实话，我有点紧张。
+L: Don't worry. Everyone is really friendly. You can sit with me at lunch. | 别担心，大家都很友好。午饭你可以和我坐一起。
+E: That would be great! | 那太好了！
+## inclass | 课堂互动
+W: put up your hand | 举手
+W: question | 问题
+W: answer | 回答；答案
+W: repeat | 重复
+W: explain | 解释
+W: spell | 拼写
+W: pronounce | 发音
+W: mean | 意思是
+W: page | 页
+W: worksheet | 练习纸
+W: homework | 家庭作业
+W: due | 到期的
+W: hand in | 上交
+W: deadline | 截止日期
+W: group work | 小组活动
+W: presentation | 展示；演讲
+W: take notes | 记笔记
+W: understand | 理解
+W: slowly | 慢慢地
+W: example | 例子
+W: whiteboard | 白板
+W: pair up | 两人一组
+P: Sorry, could you repeat that, please? | 抱歉，您能再说一遍吗？ | 老师说得太快，你没听清
+P: What does this word mean? | 这个词是什么意思？ | 你遇到一个不认识的词
+P: How do you spell that? | 那个怎么拼写？ | 你不会拼老师说的词
+P: How do you pronounce this word? | 这个词怎么读？ | 你不知道一个词的发音
+P: Could you explain it again, please? | 您能再解释一遍吗？ | 你没听懂老师的讲解
+P: When is the homework due? | 作业什么时候交？ | 你想知道作业的截止时间
+P: Could you give me an example? | 您能给我举个例子吗？ | 你想更好地理解一个用法
+P: Which page are we on? | 我们在第几页？ | 你走神了，找不到在第几页
+D: 课堂上提问 | T=Teacher/老师, E=Emma/艾玛
+T: OK, everyone, please open your books to page forty-two. | 好的，同学们，请把书翻到第四十二页。
+E: Sorry, which page did you say? | 抱歉，您说的是第几页？
+T: Page forty-two, Emma. Look at the word in the box. | 第四十二页，艾玛。看方框里的那个词。
+E: What does "ancient" mean? | "ancient"是什么意思？
+T: It means very, very old. For example, the pyramids are ancient. | 意思是非常非常古老。比如，金字塔是古老的。
+E: I see. How do you pronounce it again? | 我明白了。它怎么读来着？
+T: "AYN-shunt". Can you repeat it? | "AYN-shunt"。你能跟着读一遍吗？
+E: Ancient. | Ancient。
+T: Perfect! Now, please answer the questions on the worksheet. | 完美！现在请回答练习纸上的问题。
+E: When is the homework due? | 作业什么时候交？
+T: Please hand it in on Friday. | 请在星期五交。
+D: 小组活动 | J=Jack/杰克, E=Emma/艾玛
+J: Emma, do you want to pair up for the project? | 艾玛，你想和我一组做这个项目吗？
+E: Sure! What's the topic again? | 当然！题目是什么来着？
+J: We need to make a presentation about a festival. | 我们要做一个关于节日的展示。
+E: How about the Spring Festival? I know a lot about it. | 春节怎么样？我对它很了解。
+J: Great idea! You could explain the traditions, and I could make the slides. | 好主意！你来讲解传统习俗，我来做幻灯片。
+E: Sounds good. When is the deadline? | 听起来不错。截止日期是什么时候？
+J: Next Wednesday. Shall we meet in the library after school tomorrow? | 下周三。我们明天放学后在图书馆碰头好吗？
+E: OK. I'll take notes tonight and bring some photos. | 好的。我今晚先整理笔记，再带些照片。
+J: Perfect. See you tomorrow! | 太好了。明天见！
+E: See you! | 再见！
+## teacherhelp | 找老师与请假
+W: office hours | 办公时间
+W: appointment | 约定；预约
+W: extension | 延期
+W: be absent | 缺席
+W: sick note | 病假条
+W: miss a class | 缺一节课
+W: catch up | 赶上
+W: grade | 成绩；年级
+W: feedback | 反馈意见
+W: improve | 提高
+W: essay | 短文，作文
+W: mistake | 错误
+W: advice | 建议
+W: struggle with | 在……方面有困难
+W: extra help | 额外的帮助
+W: exam | 考试
+W: revise | 复习
+W: permission | 许可
+W: school nurse | 校医
+W: trip | 短途旅行
+W: consent form | 家长同意书
+P: Do you have a minute, Ms Clark? | 克拉克老师，您有空吗？ | 你想找老师说几句话
+P: I'm struggling with my maths homework. | 我的数学作业有困难。 | 你做作业遇到了困难
+P: Could I have an extension on my essay? | 我的作文可以延期交吗？ | 你生病了，没能按时写完作文
+P: I was absent yesterday because I was ill. | 我昨天因为生病缺课了。 | 你向老师解释为什么没来
+P: How can I catch up on what I missed? | 我怎样才能补上落下的内容？ | 你缺了课，想补上
+P: Could you give me some feedback on my essay? | 您能给我的作文提些意见吗？ | 你想知道作文怎样改进
+P: May I go to the school nurse? I don't feel well. | 我可以去找校医吗？我不太舒服。 | 上课时你突然不舒服
+D: 请老师帮忙 | T=Ms Clark/克拉克老师, E=Emma/艾玛
+E: Excuse me, Ms Clark. Do you have a minute? | 打扰一下，克拉克老师。您有空吗？
+T: Of course, Emma. What's up? | 当然，艾玛。怎么了？
+E: I was absent yesterday because I was ill. How can I catch up? | 我昨天生病缺课了。我怎么才能补上？
+T: I'm sorry you were ill. Here's the worksheet from yesterday's class. | 很遗憾你生病了。这是昨天课上的练习纸。
+E: Thank you. Also, could I have an extension on my essay? | 谢谢。另外，我的作文可以延期交吗？
+T: Yes, you can hand it in next Monday instead. | 可以，你可以改为下周一交。
+E: That's really helpful. I'm also struggling with the grammar in unit three. | 这真帮了大忙。我还觉得第三单元的语法很难。
+T: Why don't you come to my office hours on Thursday? We can go through it together. | 你星期四来我的办公时间吧？我们可以一起过一遍。
+E: Great. What time? | 太好了。几点？
+T: Three thirty, in Room 20. | 三点半，在20教室。
+E: Thank you so much, Ms Clark. | 太感谢您了，克拉克老师。
+D: 作文反馈 | T=Mr Brown/布朗老师, E=Emma/艾玛
+E: Mr Brown, could you give me some feedback on my essay? | 布朗老师，您能给我的作文提些意见吗？
+T: Sure. Your ideas are really interesting, and your story is clear. | 当然。你的想法很有意思，故事也很清楚。
+E: Thank you. What can I improve? | 谢谢。我哪里可以改进？
+T: Watch your past tense. You wrote "I go to the park yesterday." | 注意过去时。你写了"I go to the park yesterday"。
+E: Oh, it should be "I went to the park yesterday." | 哦，应该是"I went to the park yesterday"。
+T: Exactly. Also, try to use more linking words, like "however" and "because". | 没错。另外，试着多用一些连接词，比如"however"和"because"。
+E: OK. Should I rewrite it? | 好的。我需要重写吗？
+T: Yes, if you like. I can check it again next week. | 你愿意的话可以。我下周可以再帮你看看。
+E: I'll do that. Thanks for your advice! | 我会的。谢谢您的建议！

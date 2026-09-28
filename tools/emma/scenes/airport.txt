@@ -1,0 +1,166 @@
+# airport | 机场与入境 | ✈️ | 值机、安检登机、入境海关，一个人出国也不慌
+## checkin | 值机与托运
+W: check in | 办理登机手续
+W: passport | 护照
+W: flight | 航班
+W: check-in desk | 值机柜台
+W: boarding pass | 登机牌
+W: suitcase | 行李箱
+W: luggage | 行李
+W: carry-on bag | 随身行李
+W: check a bag | 托运行李
+W: weigh | 称重
+W: overweight | 超重的
+W: window seat | 靠窗座位
+W: aisle seat | 靠过道座位
+W: gate | 登机口
+W: boarding time | 登机时间
+W: departure | 出发；起飞
+W: fragile | 易碎的
+W: liquid | 液体
+W: label | 标签
+W: e-ticket | 电子机票
+W: destination | 目的地
+W: delayed | 延误的
+P: I'd like to check in for my flight to London. | 我想办理去伦敦航班的登机手续。 | 你到值机柜台，要办理登机
+P: Could I have a window seat, please? | 请问我可以要一个靠窗的座位吗？ | 你想坐在窗边看风景
+P: How many bags can I check? | 我可以托运几件行李？ | 你想知道能托运几件行李
+P: Is my suitcase overweight? | 我的行李箱超重了吗？ | 你担心箱子太重
+P: Can I take this bag on the plane? | 这个包可以带上飞机吗？ | 你想确认包能不能随身带
+P: What time does boarding start? | 几点开始登机？ | 你想知道什么时候开始登机
+P: Which gate do I go to? | 我应该去哪个登机口？ | 你不知道该去哪个登机口
+P: Is the flight on time? | 航班准点吗？ | 你想确认航班会不会晚
+D: 在值机柜台 | A=Check-in agent/值机员, E=Emma/艾玛
+A: Good morning. Where are you flying to today? | 早上好。您今天飞往哪里？
+E: Good morning. I'm flying to London. | 早上好。我飞伦敦。
+A: May I see your passport, please? | 请出示一下您的护照好吗？
+E: Sure, here you are. | 好的，给您。
+A: Thank you. Are you checking any bags today? | 谢谢。您今天要托运行李吗？
+E: Yes, just this suitcase. | 要，就这一个行李箱。
+A: Please put it on the scale. It's twenty-two kilos, so that's fine. | 请把它放到秤上。二十二公斤，没问题。
+E: Great. Could I have a window seat, please? | 太好了。请问我可以要一个靠窗的座位吗？
+A: Of course. Here's your boarding pass. Your seat is 24A. | 当然。这是您的登机牌，座位是24A。
+E: Thank you. Which gate do I go to? | 谢谢。我应该去哪个登机口？
+A: Gate 15. Boarding starts at ten forty. | 15号登机口。十点四十开始登机。
+E: Thanks a lot! | 非常感谢！
+D: 行李超重了 | A=Check-in agent/值机员, E=Emma/艾玛
+A: I'm afraid your suitcase is overweight. It's twenty-six kilos. | 恐怕您的行李箱超重了，有二十六公斤。
+E: Oh no. What's the limit? | 哦不。限重是多少？
+A: The limit is twenty-three kilos. You can pay a fee or take some things out. | 限重二十三公斤。您可以付费，或者拿出一些东西。
+E: I'll take some things out and put them in my carry-on bag. | 我拿些东西出来放到随身行李里。
+A: That's fine. Remember, no liquids over one hundred millilitres in your carry-on. | 可以。记住，随身行李里不能有超过一百毫升的液体。
+E: OK. I'll move my books, then. | 好的，那我把书挪过去。
+A: Let's weigh it again. Twenty-three kilos. Perfect! | 我们再称一下。二十三公斤，正好！
+E: Phew! Is the flight on time? | 呼！航班准点吗？
+A: Yes, it's on time. Have a good flight! | 是的，准点。祝您旅途愉快！
+E: Thank you very much. | 非常感谢。
+## security | 安检与登机
+W: security check | 安检
+W: tray | 托盘
+W: laptop | 笔记本电脑
+W: take off your shoes | 脱鞋
+W: belt | 腰带
+W: jacket | 夹克
+W: empty your pockets | 把口袋掏空
+W: scanner | 扫描仪
+W: bottle of water | 一瓶水
+W: throw away | 扔掉
+W: boarding gate | 登机口
+W: announcement | 广播通知
+W: final call | 最后一次登机广播
+W: queue | 排队；队伍
+W: row | 排
+W: seat belt | 安全带
+W: overhead locker | 头顶行李舱
+W: flight attendant | 空乘人员
+W: blanket | 毯子
+W: land | 降落
+W: take off | 起飞
+W: crew | 机组人员
+P: Do I need to take my laptop out? | 我需要把笔记本电脑拿出来吗？ | 安检时你不确定电脑要不要拿出来
+P: Should I take off my shoes? | 我需要脱鞋吗？ | 你不知道安检要不要脱鞋
+P: Sorry, I forgot about this bottle of water. | 抱歉，我忘了这瓶水。 | 安检员在你包里发现了一瓶水
+P: Excuse me, is this the queue for Gate 15? | 打扰一下，这是15号登机口的队伍吗？ | 你想确认自己排对了队
+P: Excuse me, I think you're in my seat. | 打扰一下，我想您坐了我的座位。 | 你发现有人坐在你的座位上
+P: Could you help me put my bag up there? | 您能帮我把包放上去吗？ | 你够不着头顶的行李舱
+P: Could I have a blanket, please? | 请给我一条毯子好吗？ | 你在飞机上觉得冷
+P: What time do we land? | 我们几点降落？ | 你想知道飞机几点到
+D: 过安检 | O=Security officer/安检员, E=Emma/艾玛
+O: Please put your bag and jacket in the tray. | 请把您的包和夹克放进托盘。
+E: OK. Do I need to take my laptop out? | 好的。我需要把笔记本电脑拿出来吗？
+O: Yes, put it in a separate tray, please. | 是的，请放到单独的托盘里。
+E: Should I take off my shoes too? | 我也要脱鞋吗？
+O: No, that's fine. Please empty your pockets and walk through the scanner. | 不用。请把口袋掏空，然后走过扫描仪。
+E: Sure. | 好的。
+O: Is this your bag? There's a bottle of water in it. | 这是您的包吗？里面有一瓶水。
+E: Oh, sorry, I forgot about it. | 哦，对不起，我忘了。
+O: You can drink it now or throw it away. | 您可以现在喝掉或者扔掉。
+E: I'll throw it away. Can I go now? | 我扔掉吧。我可以走了吗？
+O: Yes, you're all done. Have a nice trip. | 可以，都好了。祝您旅途愉快。
+D: 登机找座位 | F=Flight attendant/空乘, M=Passenger/乘客, E=Emma/艾玛
+F: Welcome on board. May I see your boarding pass? | 欢迎登机。请出示您的登机牌好吗？
+E: Here it is. | 给您。
+F: 24A. It's down this aisle on the left. | 24A，沿着这条过道往前走，在左边。
+E: Excuse me, I think you're in my seat. It's 24A. | 打扰一下，我想您坐了我的座位，是24A。
+M: Oh, I'm so sorry. I'm in 24C. | 哦，真抱歉，我是24C。
+E: No problem. Could you help me put my bag in the overhead locker? | 没关系。您能帮我把包放进头顶的行李舱吗？
+M: Of course. There you go. | 当然。放好了。
+E: Thank you so much. | 太谢谢您了。
+F: Please fasten your seat belt. We'll take off in five minutes. | 请系好安全带。我们五分钟后起飞。
+E: Excuse me, what time do we land in London? | 打扰一下，我们几点在伦敦降落？
+F: At about six p.m. local time. | 大约当地时间下午六点。
+## immigration | 入境与海关
+W: immigration | 入境检查
+W: border officer | 边检官员
+W: purpose of your visit | 访问目的
+W: student visa | 学生签证
+W: stay | 停留
+W: host family | 寄宿家庭
+W: address | 地址
+W: return ticket | 返程票
+W: fingerprint | 指纹
+W: customs | 海关
+W: declare | 申报
+W: nothing to declare | 无申报物品
+W: baggage claim | 行李提取处
+W: carousel | 行李转盘
+W: lost luggage | 丢失的行李
+W: arrivals hall | 到达大厅
+W: pick up | 接（人）
+W: local time | 当地时间
+W: foreign | 外国的
+W: form | 表格
+W: currency | 货币
+P: I'm here to study English for a year. | 我来这里学一年英语。 | 边检官员问你来干什么
+P: I'm staying with a host family. | 我住在寄宿家庭。 | 官员问你住在哪里
+P: Here's the address of my host family. | 这是我寄宿家庭的地址。 | 官员要看你住处的地址
+P: I'll stay for about three months. | 我会待大约三个月。 | 官员问你要待多久
+P: I have nothing to declare. | 我没有要申报的物品。 | 海关问你有没有要申报的东西
+P: Where is the baggage claim? | 行李提取处在哪里？ | 你下飞机后找不到取行李的地方
+P: My suitcase didn't come out. | 我的行李箱没有出来。 | 行李转盘停了，你的箱子还没出现
+P: Someone is picking me up. | 有人来接我。 | 有人问你怎么离开机场
+D: 边检问话 | B=Border officer/边检官员, E=Emma/艾玛
+B: Next, please. Passport, please. | 下一位。请出示护照。
+E: Here you are. | 给您。
+B: What's the purpose of your visit? | 您来访的目的是什么？
+E: I'm here to study. I'm going to a summer school. | 我来学习，我要去上暑期学校。
+B: How long are you staying? | 您要待多久？
+E: Four weeks. | 四周。
+B: Where will you stay? | 您住在哪里？
+E: With a host family. Here's their address. | 住在寄宿家庭。这是他们的地址。
+B: Do you have a return ticket? | 您有返程机票吗？
+E: Yes, I fly back on August the twentieth. | 有，我八月二十日飞回去。
+B: OK. Please look at the camera. ... Welcome to the UK. | 好的，请看摄像头。……欢迎来到英国。
+E: Thank you! | 谢谢！
+D: 行李没出来 | S=Staff/工作人员, E=Emma/艾玛
+E: Excuse me, my suitcase didn't come out. | 打扰一下，我的行李箱没有出来。
+S: I'm sorry to hear that. Which flight were you on? | 很抱歉。您坐的是哪个航班？
+E: Flight CA 937 from Beijing. | 从北京来的CA937航班。
+S: Can I see your baggage tag? It's usually on your boarding pass. | 我能看看您的行李牌吗？一般贴在登机牌上。
+E: Here it is. | 在这儿。
+S: What does your suitcase look like? | 您的行李箱是什么样子的？
+E: It's a big blue suitcase with a yellow label. | 是一个大的蓝色行李箱，上面有黄色标签。
+S: Please fill in this form with your address and phone number. | 请在这张表格上填写您的地址和电话号码。
+E: OK. When will I get it back? | 好的。我什么时候能拿回来？
+S: Usually within two days. We'll deliver it to your address. | 通常两天之内。我们会送到您的地址。
+E: That's a relief. Thank you for your help. | 那我就放心了。谢谢您的帮助。

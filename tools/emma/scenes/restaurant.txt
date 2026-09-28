@@ -1,0 +1,157 @@
+# restaurant | 餐厅点餐 | 🍽️ | 订位、点餐、特殊要求和结账
+## booking | 订位与入座
+W: book a table | 订位
+W: reservation | 预订
+W: table for two | 两人桌
+W: under the name | 以……的名字
+W: fully booked | 订满了
+W: wait | 等待
+W: waiting list | 等候名单
+W: inside | 室内
+W: outside | 室外
+W: menu | 菜单
+W: host | 领位员
+W: waiter | 服务员（男）
+W: waitress | 服务员（女）
+W: high chair | 儿童高脚椅
+W: busy | 忙碌的
+W: quiet | 安静的
+W: corner | 角落
+W: this way | 这边请
+W: ready to order | 准备好点餐
+W: special | 特色菜
+P: I'd like to book a table for four at seven o'clock. | 我想订一张七点钟的四人桌。 | 你打电话给餐厅订位
+P: We have a reservation under the name Zhang. | 我们以"张"的名字订了位。 | 你到了餐厅，告诉服务员你订过位
+P: A table for three, please. | 请给我们一张三人桌。 | 你们三个人没订位就进了餐厅
+P: How long is the wait? | 要等多久？ | 餐厅很忙，你想知道要等多久
+P: Could we sit by the window? | 我们可以坐在窗边吗？ | 你想坐靠窗的位置
+P: Could we have the menu, please? | 请给我们菜单好吗？ | 你坐下后想看菜单
+P: We need a few more minutes. | 我们还需要几分钟。 | 服务员来点餐，但你还没决定
+D: 打电话订位 | H=Host/餐厅接待, E=Emma/艾玛
+H: Good afternoon, Luigi's Restaurant. How can I help you? | 下午好，路易吉餐厅。有什么可以帮您？
+E: Hi, I'd like to book a table for Saturday evening, please. | 你好，我想订周六晚上的位子。
+H: Sure. For how many people? | 好的。几位？
+E: Four people. At seven o'clock, if possible. | 四位。如果可以的话，七点钟。
+H: Let me check. ... I'm sorry, seven is fully booked. We have a table at seven thirty. | 我查一下。……抱歉，七点已经订满了。七点半有一张桌子。
+E: Seven thirty is fine. | 七点半可以。
+H: Great. What name is it under? | 好的。用什么名字预订？
+E: Zhang. Z-H-A-N-G. | 张。Z-H-A-N-G。
+H: And a phone number, please? | 请留个电话号码？
+E: It's 07700 900123. Could we sit by the window? | 07700 900123。我们可以坐在窗边吗？
+H: I'll make a note. See you on Saturday! | 我记下了。周六见！
+D: 到店入座 | S=Waiter/服务员, E=Emma/艾玛
+S: Good evening. Do you have a reservation? | 晚上好。您有预订吗？
+E: Yes, we have a reservation under the name Zhang, for seven thirty. | 有，我们用"张"的名字订了七点半。
+S: Let me see. ... Yes, a table for four. This way, please. | 我看看。……有，四人桌。这边请。
+E: Thank you. Is this table by the window? | 谢谢。这张桌子靠窗吗？
+S: Yes, it is. Here are your menus. Today's special is mushroom soup. | 是的。这是你们的菜单。今天的特色菜是蘑菇汤。
+E: That sounds nice. Could we have some water first? | 听起来不错。能先给我们一些水吗？
+S: Of course. Still or sparkling? | 当然。普通水还是气泡水？
+E: Still, please. | 普通水，谢谢。
+S: I'll be right back. Are you ready to order, or do you need a few minutes? | 我马上回来。你们准备好点餐了吗，还是需要几分钟？
+E: We need a few more minutes, please. | 我们还需要几分钟，谢谢。
+## ordering | 点餐与特殊要求
+W: order | 点餐
+W: starter | 前菜
+W: main course | 主菜
+W: dessert | 甜点
+W: side dish | 配菜
+W: drink | 饮料
+W: recommend | 推荐
+W: vegetarian | 素食的
+W: allergic to | 对……过敏
+W: nuts | 坚果
+W: spicy | 辣的
+W: without | 不要，没有
+W: on the side | 另外放
+W: medium | 中等（熟度）的
+W: portion | 一份
+W: share | 分享
+W: salad | 沙拉
+W: grilled | 烤的
+W: fried | 油炸的
+W: still water | 不含气的水
+W: sparkling water | 气泡水
+W: taste | 味道；尝起来
+P: I'll have the chicken salad, please. | 我要鸡肉沙拉，谢谢。 | 你决定点鸡肉沙拉
+P: What do you recommend? | 你推荐什么？ | 你不知道点什么好
+P: I'm allergic to nuts. Does this have nuts in it? | 我对坚果过敏，这个里面有坚果吗？ | 你对坚果过敏，想确认菜里有没有
+P: Is this dish spicy? | 这道菜辣吗？ | 你不太能吃辣
+P: Could I have it without onions? | 我可以不要洋葱吗？ | 你不喜欢洋葱
+P: Could I have the sauce on the side? | 酱汁可以另外放吗？ | 你想自己决定放多少酱汁
+P: Do you have any vegetarian dishes? | 你们有素菜吗？ | 你的朋友吃素
+P: Can we share a dessert? | 我们可以分一份甜点吗？ | 你们吃得很饱，只想点一份甜点
+D: 点主菜 | S=Waitress/服务员, E=Emma/艾玛
+S: Are you ready to order? | 可以点餐了吗？
+E: Yes. What do you recommend? | 可以。你推荐什么？
+S: The grilled salmon is very popular, and the pasta is homemade. | 烤三文鱼很受欢迎，意面是店里自己做的。
+E: Is the pasta spicy? | 意面辣吗？
+S: It's a little spicy, but not too much. | 有一点辣，但不太辣。
+E: I'll have the grilled salmon, then. But I'm allergic to nuts. Is that OK? | 那我要烤三文鱼。不过我对坚果过敏，没问题吧？
+S: Good question. The salmon comes with a nut sauce, but we can make it without. | 问得好。三文鱼配的是坚果酱，但我们可以不放。
+E: Yes, please make it without nuts. | 好的，请不要放坚果。
+S: No problem. Would you like a side dish? | 没问题。要配菜吗？
+E: A green salad, please, with the dressing on the side. | 一份蔬菜沙拉，谢谢，沙拉酱另外放。
+S: Sure. Anything to drink? | 好的。喝点什么？
+E: An orange juice, please. | 一杯橙汁，谢谢。
+D: 点甜点 | S=Waiter/服务员, E=Emma/艾玛
+S: How was everything? | 一切都还好吗？
+E: It was delicious, thank you. The salmon was great. | 很好吃，谢谢。三文鱼很棒。
+S: I'm glad you liked it. Would you like to see the dessert menu? | 很高兴您喜欢。要看看甜点菜单吗？
+E: Yes, please. ... What's the chocolate cake like? | 好的。……巧克力蛋糕怎么样？
+S: It's warm and served with vanilla ice cream. It's our most popular dessert. | 是热的，配香草冰淇淋。这是我们最受欢迎的甜点。
+E: It sounds great, but I'm quite full. Can we share one? | 听起来很棒，但我挺饱的。我们可以分一份吗？
+S: Of course. I'll bring two spoons. | 当然。我拿两把勺子来。
+E: Perfect. Could we also have some more water? | 太好了。能再给我们一些水吗？
+S: Sure, I'll bring it right away. | 好的，我马上拿来。
+## paying | 结账与问题处理
+W: bill | 账单
+W: check | 账单（美）
+W: pay | 付钱
+W: by card | 用卡
+W: in cash | 用现金
+W: split the bill | 分摊账单，AA
+W: tip | 小费
+W: service charge | 服务费
+W: receipt | 收据
+W: change | 零钱；找零
+W: included | 包括在内的
+W: mistake | 错误
+W: wrong order | 上错的菜
+W: cold | 凉的
+W: complain | 投诉，抱怨
+W: take away | 带走，外带
+W: box | 打包盒
+W: leftovers | 剩菜
+W: total | 总数
+W: contactless | 非接触式（支付）的
+P: Could we have the bill, please? | 请给我们结账好吗？ | 你们吃完了想结账
+P: Can I pay by card? | 我可以刷卡吗？ | 你想用银行卡付款
+P: Could we split the bill? | 我们可以分开付吗？ | 你和朋友想AA
+P: Is service included? | 服务费包含在内了吗？ | 你不确定要不要另付小费
+P: Excuse me, I think there's a mistake on the bill. | 打扰一下，账单好像有错。 | 你发现账单上多算了一道菜
+P: Sorry, this isn't what I ordered. | 抱歉，这不是我点的。 | 服务员上错了菜
+P: Could I have a box for the leftovers? | 可以给我一个盒子装剩菜吗？ | 你吃不完想打包
+D: 结账AA | S=Waiter/服务员, E=Emma/艾玛
+E: Excuse me, could we have the bill, please? | 打扰一下，请给我们结账好吗？
+S: Of course. Here you are. | 好的，给您。
+E: Could we split the bill? There are two of us. | 我们可以分开付吗？我们两个人。
+S: Sure. That's twelve pounds fifty each. | 当然。每人十二英镑五十。
+E: Is service included? | 服务费包含在内了吗？
+S: No, it isn't. A tip is up to you. | 不包含，小费随您。
+E: OK. Can I pay by card? | 好的。我可以刷卡吗？
+S: Yes. You can tap your card here. It's contactless. | 可以。把卡在这里碰一下就行，非接触式的。
+E: Great. Could I have a receipt, please? | 太好了。可以给我一张收据吗？
+S: Here's your receipt. Thank you, and have a nice evening! | 这是您的收据。谢谢，祝您晚上愉快！
+D: 上错菜了 | S=Waitress/服务员, E=Emma/艾玛
+S: Here's your burger. Enjoy! | 这是您的汉堡。请慢用！
+E: Sorry, this isn't what I ordered. I ordered the chicken wrap. | 抱歉，这不是我点的。我点的是鸡肉卷。
+S: Oh, I'm so sorry about that. I'll change it right away. | 哦，真是抱歉。我马上给您换。
+E: Thank you. No problem. | 谢谢，没关系。
+S: Here's your chicken wrap. Sorry again for the mistake. | 这是您的鸡肉卷。再次为出错道歉。
+E: That's OK. It looks great. | 没事，看起来很棒。
+S: The drinks are free today because of the mix-up. | 因为弄错了，今天的饮料免费。
+E: Oh, that's very kind of you. Thank you! | 哦，你们太好了，谢谢！
+S: You're welcome. Just let me know if you need anything else. | 不客气。需要什么再告诉我。
+E: Actually, could I have a box for the leftovers later? | 对了，一会儿可以给我一个盒子装剩菜吗？
+S: Of course. Just ask when you're finished. | 当然，吃完了说一声就行。

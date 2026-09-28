@@ -41,3 +41,26 @@ python3 -m http.server 8765
   已放在 `data/hanzi/<字>.json`，不依赖 CDN。
 - 模式：认字卡、读音、组词、选词填空、描红、默写、听写挑战（计时+最好成绩）、错字复习。
 - 语文进度保存在同一个 localStorage 档案下的 `hanzi` 字段，与英文进度互不影响。
+
+## Emma English 系统（v11）
+Emma 选「英文」后进入四条路线：
+- **今日任务**：每天 N 个新词（家长设置，默认 20，可选来源级别）+ 到期复习（Leitner，间隔 0/1/2/4/7/15/30/60 天，第 5 盒＝掌握）。
+  新词走拼写向步骤（词卡 → 选意思 + 拼写 → 听写），场景短语走用法向步骤（场景词卡 → 语境选义 → 情景选句）。
+- **分级词汇**（重拼写 + 词义）：L1 小学 / L2 初中 / L4 KET / L4 PET（L3 高中、L5 AWL、FCE 即将上线），每组 20 词可多选。
+  模式：闯关、认词卡、EN→CN、CN→EN、拼写、听写、词形/搭配、综合测试（拼写 + 听写占一半以上）。
+- **场景学习**（重语境 + 用法，不考拼写）：机场、校园、餐厅、超市、看病、社交，各 3 个小场景 + 2 段对话。
+  模式：场景词卡、语境选义、情景选句、听对话补全、听一句选回应、对话排序、角色扮演、跟读、场景综合测试。
+- **课本 & PET**：原来的 `data/emma-pet.json` 单元练习。
+
+SRS 存在 localStorage 档案的 `emma` 字段（`srs` / `settings` / `daily`）。Alex 不受影响。
+
+### Emma English 数据管线
+原始资料放在 `/workspace/emma-src`（不入库）：课标 markdown、Cambridge PDF 文本、ECDICT csv、cmudict.dict、Tatoeba tsv、KyleBing json。
+```
+python3 tools/emma/parse_lists.py SRC SRC/raw          # 课标 / KET / PET / AWL 词表 → raw/*.json
+python3 tools/emma/build_levels.py SRC . L1,L2,L4-ket,L4-pet   # 释义、IPA、例句、搭配 → data/emma/levels/*.json
+python3 tools/emma/make_level_index.py .               # data/emma/levels/index.json
+python3 tools/emma/build_scenes.py SRC/cmudict.dict .  # tools/emma/scenes/*.txt → data/emma/scenes/*.json
+python3 tools/emma/qc.py . SRC/ecdict/ecdict.csv       # 质检（必须 TOTAL HARD FAILURES: 0）
+```
+来源与许可见 `data/SOURCES.md`。

@@ -1,0 +1,208 @@
+{
+ "scenes": [
+  {
+   "id": "campus",
+   "title": "校园与课堂",
+   "emoji": "🏫",
+   "purpose": "报到、上课发言、找老师和同学合作",
+   "ready": true,
+   "subs": [
+    {
+     "id": "firstday",
+     "title": "开学报到",
+     "words": 21,
+     "dialogues": 2
+    },
+    {
+     "id": "inclass",
+     "title": "课堂互动",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "teacherhelp",
+     "title": "找老师与请假",
+     "words": 21,
+     "dialogues": 2
+    }
+   ]
+  },
+  {
+   "id": "homestay",
+   "title": "宿舍与寄宿家庭",
+   "emoji": "🏠",
+   "ready": false,
+   "subs": []
+  },
+  {
+   "id": "restaurant",
+   "title": "餐厅点餐",
+   "emoji": "🍽️",
+   "purpose": "订位、点餐、特殊要求和结账",
+   "ready": true,
+   "subs": [
+    {
+     "id": "booking",
+     "title": "订位与入座",
+     "words": 20,
+     "dialogues": 2
+    },
+    {
+     "id": "ordering",
+     "title": "点餐与特殊要求",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "paying",
+     "title": "结账与问题处理",
+     "words": 20,
+     "dialogues": 2
+    }
+   ]
+  },
+  {
+   "id": "supermarket",
+   "title": "超市购物",
+   "emoji": "🛒",
+   "purpose": "找商品、比较价格、结账和退换",
+   "ready": true,
+   "subs": [
+    {
+     "id": "finding",
+     "title": "找商品",
+     "words": 21,
+     "dialogues": 2
+    },
+    {
+     "id": "prices",
+     "title": "价格与优惠",
+     "words": 21,
+     "dialogues": 2
+    },
+    {
+     "id": "checkout",
+     "title": "结账与退换",
+     "words": 21,
+     "dialogues": 2
+    }
+   ]
+  },
+  {
+   "id": "transport",
+   "title": "交通出行",
+   "emoji": "🚌",
+   "ready": false,
+   "subs": []
+  },
+  {
+   "id": "airport",
+   "title": "机场与入境",
+   "emoji": "✈️",
+   "purpose": "值机、安检登机、入境海关，一个人出国也不慌",
+   "ready": true,
+   "subs": [
+    {
+     "id": "checkin",
+     "title": "值机与托运",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "security",
+     "title": "安检与登机",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "immigration",
+     "title": "入境与海关",
+     "words": 21,
+     "dialogues": 2
+    }
+   ]
+  },
+  {
+   "id": "doctor",
+   "title": "看病与药店",
+   "emoji": "🏥",
+   "purpose": "描述症状、预约看病、买药和紧急情况",
+   "ready": true,
+   "subs": [
+    {
+     "id": "symptoms",
+     "title": "描述症状",
+     "words": 22,
+     "dialogues": 2
+    },
+    {
+     "id": "appointment",
+     "title": "预约看医生",
+     "words": 21,
+     "dialogues": 2
+    },
+    {
+     "id": "pharmacy",
+     "title": "药店买药",
+     "words": 21,
+     "dialogues": 2
+    }
+   ]
+  },
+  {
+   "id": "bank",
+   "title": "银行与手机卡",
+   "emoji": "💳",
+   "ready": false,
+   "subs": []
+  },
+  {
+   "id": "renting",
+   "title": "租房",
+   "emoji": "🔑",
+   "ready": false,
+   "subs": []
+  },
+  {
+   "id": "social",
+   "title": "交友社交",
+   "emoji": "🤝",
+   "purpose": "自我介绍、找共同话题、约朋友和线上交流",
+   "ready": true,
+   "subs": [
+    {
+     "id": "meeting",
+     "title": "认识新朋友",
+     "words": 21,
+     "dialogues": 2
+    },
+    {
+     "id": "plans",
+     "title": "约朋友出去玩",
+     "words": 21,
+     "dialogues": 2
+    },
+    {
+     "id": "online",
+     "title": "线上交流与礼貌",
+     "words": 21,
+     "dialogues": 2
+    }
+   ]
+  },
+  {
+   "id": "sports",
+   "title": "运动娱乐",
+   "emoji": "⚽",
+   "ready": false,
+   "subs": []
+  },
+  {
+   "id": "emergency",
+   "title": "求助与紧急情况",
+   "emoji": "🆘",
+   "ready": false,
+   "subs": []
+  }
+ ]
+}

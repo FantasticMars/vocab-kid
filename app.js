@@ -471,10 +471,21 @@
   }
 
   function enterEnglish() {
+    if (window.__emma && window.__emma.handles(activeProfileId)) {
+      setSubjectUI("en");
+      window.__emma.enter();
+      return;
+    }
+    enterEnglishTextbook();
+  }
+
+  /** Load the profile's textbook word list (data/*.json) and show the unit picker. */
+  function enterEnglishTextbook(after) {
     const def = PROFILE_DEFS.find((p) => p.id === activeProfileId);
     if (!def) return;
     setSubjectUI("en");
     if (DATA && DATA_PROFILE === def.id) {
+      if (after) return after();
       showScreen("home");
       renderHome();
       const n0 = DATA.units.reduce((a, u) => a + u.words.length, 0);
@@ -493,6 +504,7 @@
         selectedUnitIds = data.units[0] ? [data.units[0].id] : [];
         wordsUnitIds = [];
         wordsPhase = "pick";
+        if (after) return after();
         showScreen("home");
         renderHome();
         const n = data.units.reduce((a, u) => a + u.words.length, 0);
@@ -512,6 +524,23 @@
     session = null;
     setSubjectUI("zh");
     if (window.__zh && window.__zh.enter) window.__zh.enter(def);
+  }
+
+  /** Where to go after a session ends / is quit. Emma's level groups return to their own screen. */
+  function goHome() {
+    if (window.__emma && window.__emma.backFromSession && window.__emma.backFromSession(DATA)) return;
+    showScreen("home");
+    renderHome();
+  }
+
+  /** Emma: run the shared quiz engine on synthetic units built from level groups. */
+  function startSynth(data, unitIds, mode) {
+    DATA = data;
+    DATA_PROFILE = "emma-synth";
+    selectedUnitIds = unitIds.slice();
+    wordsUnitIds = [];
+    wordsPhase = "pick";
+    startSession(mode);
   }
 
   function renderHome() {
@@ -569,16 +598,20 @@
       }
       return out;
     };
-    const fills = pickWeighted(allFillInsFrom(selectedUnitIds), 5, (f) => f.answer).slice(0, 5);
+    // Emma level groups: spelling + dictation weighted heavily (8 spell + 6 dictation of 25)
+    const W = DATA && DATA.__emmaLevel
+      ? { fill: 3, spell: 8, dict: 6, dictMax: 12, choice: 4 }
+      : { fill: 5, spell: 4, dict: 2, dictMax: 9, choice: 7 };
+    const fills = pickWeighted(allFillInsFrom(selectedUnitIds), W.fill, (f) => f.answer).slice(0, W.fill);
     fills.forEach((f) => used.add(String(f.answer).toLowerCase()));
     const fillItems = fills.map((f) => ({ type: "fill", fill: f, bankWords: buildFillBank(f, words) }));
-    const extra = 5 - fillItems.length; // if a unit has few fill-ins, give more choice questions
-    const spellItems = take(4, isSpellable).map((w) => ({ type: "spell", word: w, hard: false }));
+    const extra = W.fill - fillItems.length; // if a unit has few fill-ins, give more choice questions
+    const spellItems = take(W.spell, isSpellable).map((w) => ({ type: "spell", word: w, hard: false }));
     applyAutoHardToSpellItems(spellItems);
-    const dictItems = take(2, (w) => isSpellable(w) && w.en.length <= 9).map((w) => ({ type: "dictation", word: w }));
+    const dictItems = take(W.dict, (w) => isSpellable(w) && w.en.length <= W.dictMax).map((w) => ({ type: "dictation", word: w }));
     const choice = []
-      .concat(take(7 + Math.ceil(extra / 2), () => true).map((w) => ({ type: "en2zh", word: w })))
-      .concat(take(7 + Math.floor(extra / 2), () => true).map((w) => ({ type: "zh2en", word: w })));
+      .concat(take(W.choice + Math.ceil(extra / 2), () => true).map((w) => ({ type: "en2zh", word: w })))
+      .concat(take(W.choice + Math.floor(extra / 2), () => true).map((w) => ({ type: "zh2en", word: w })));
     const nonWrite = shuffle(choice.concat(fillItems));
     return window.__testKit.interleave(nonWrite, shuffle(spellItems.concat(dictItems)));
   }
@@ -616,6 +649,22 @@
       const dictable = words.filter(isSpellable);
       const pool = shuffle(dictable.length ? dictable : words).slice(0, SESSION_SIZE);
       items = pool.map((w) => ({ type: "dictation", word: w }));
+    } else if (mode === "guided" && DATA.__emmaLevel) {
+      // Emma level guided flow: understand -> spell -> dictate (spelling-heavy)
+      const spellable = shuffle(words.filter(isSpellable));
+      const pool = shuffle(words);
+      const fills = shuffle(allFillInsFrom(selectedUnitIds));
+      items = []
+        .concat(pool.slice(0, 2).map((w) => ({ type: "en2zh", word: w })))
+        .concat(pool.slice(2, 4).map((w) => ({ type: "zh2en", word: w })))
+        .concat(fills.slice(0, 1).map((f) => ({ type: "fill", fill: f, bankWords: buildFillBank(f, words) })));
+      items = shuffle(items)
+        .concat(spellable.slice(0, 5).map((w) => ({ type: "spell", word: w, hard: false })))
+        .concat(spellable.slice(5, 8).map((w) => ({ type: "dictation", word: w })));
+      applyAutoHardToSpellItems(items);
+    } else if (mode === "custom" && DATA.__customItems) {
+      items = DATA.__customItems(words, buildFillBank);
+      applyAutoHardToSpellItems(items);
     } else if (mode === "guided") {
       const spellable = shuffle(words.filter(isSpellable));
       const pool = shuffle(words);
@@ -691,6 +740,7 @@
       spell: "拼写",
       dictation: "听写挑战",
       guided: "闯关练习",
+      custom: "今日任务",
     };
     $("#play-mode-label").textContent = modeNames[session.mode] || "";
   }
@@ -1033,6 +1083,7 @@
       p.progress[key].seen += 1;
       p.progress[key].last = Date.now();
     });
+    if (window.__emma && DATA && DATA.__emmaLevel) window.__emma.onLevelResult(en, true);
   }
   function markSeen(en) {
     updateProfile((p) => {
@@ -1042,6 +1093,7 @@
       p.progress[key].seen += 1;
       p.progress[key].last = Date.now();
     });
+    if (window.__emma && DATA && DATA.__emmaLevel) window.__emma.onLevelResult(en, false);
   }
 
   function renderFill(host, item) {
@@ -1381,7 +1433,7 @@
       renderStarRow,
       speak: (t) => speak(t),
       onAgain: () => startSession("test"),
-      onHome: () => { showScreen("home"); renderHome(); },
+      onHome: () => goHome(),
     });
   }
 
@@ -1395,8 +1447,7 @@
       stopTimer();
       $("#btn-pause-test").hidden = true;
       session = null;
-      showScreen("home");
-      renderHome();
+      goHome();
     }
   }
 
@@ -1433,6 +1484,7 @@
       }
     }
 
+    if (DATA && typeof DATA.__onFinish === "function") DATA.__onFinish(session);
     pushHistory({
       at: Date.now(),
       mode: session.mode,
@@ -1651,8 +1703,16 @@
 
 
   function renderProgress() {
+    const ep = $("#emma-progress");
+    if (ep) {
+      const emma = window.__emma && window.__emma.handles(activeProfileId);
+      ep.hidden = !emma;
+      if (emma) window.__emma.renderProgress(ep);
+    }
+    const tb = $("#prog-textbook");
+    if (tb) tb.hidden = !DATA || DATA_PROFILE === "emma-synth";
     const progress = getProgress();
-    const all = DATA.units.flatMap((u) => u.words);
+    const all = DATA ? DATA.units.flatMap((u) => u.words) : [];
     const known = all.filter((w) => (progress[w.en.toLowerCase()] || {}).known > 0).length;
     $("#prog-known").textContent = String(known);
     $("#prog-total").textContent = String(all.length);
@@ -1689,12 +1749,13 @@
       dictation: "听写",
       guided: "闯关",
       test: "综合测试",
+      custom: "今日任务",
     };
     hist.slice(0, 20).forEach((h) => {
       const div = document.createElement("div");
       div.className = "history-item";
       const when = new Date(h.at).toLocaleString("zh-CN", { hour12: false });
-      const unitTitles = DATA.units
+      const unitTitles = (DATA ? DATA.units : [])
         .filter((u) => (h.units || []).includes(u.id))
         .map((u) => u.title)
         .join("、");
@@ -1703,7 +1764,7 @@
       if (h.stars != null) extra = `${starsLabel(h.stars)} · ` + extra;
       if (h.elapsedSec != null) extra += ` · ${formatMMSS(h.elapsedSec)}`;
       div.innerHTML =
-        `<strong>${escapeHtml(when)}</strong> · ${escapeHtml(unitTitles || "单元")}<br>` +
+        `<strong>${escapeHtml(when)}</strong> · ${escapeHtml(unitTitles || (h.units || []).join("、") || "单元")}<br>` +
         `<span class="small muted">${escapeHtml(modeLabel)} · ${escapeHtml(extra)}</span>` +
         `<div class="bar-mini"><span style="width:${h.score ?? h.accuracy ?? 0}%"></span></div>`;
       host.appendChild(div);
@@ -1723,12 +1784,15 @@
     $$(".nav-tabs button").forEach((b) => {
       b.addEventListener("click", () => {
         const id = b.dataset.nav;
+        const emma = window.__emma && window.__emma.handles(activeProfileId);
         if (id === "home") {
+          if (emma) return window.__emma.enter();
           showScreen("home");
           renderHome();
         } else if (id === "words") {
-          showScreen("words");
-          renderWords();
+          const go = () => { showScreen("words"); renderWords(); };
+          if (!DATA) return enterEnglishTextbook(go);
+          go();
         } else if (id === "progress") {
           showScreen("progress");
           renderProgress();
@@ -1820,17 +1884,13 @@
       if (session && session.answered > 0) finishSession();
       else {
         stopTimer();
-        showScreen("home");
-        renderHome();
+        goHome();
       }
     });
     $("#btn-again").addEventListener("click", () => {
       startSession(session ? session.mode : "guided");
     });
-    $("#btn-back-home").addEventListener("click", () => {
-      showScreen("home");
-      renderHome();
-    });
+    $("#btn-back-home").addEventListener("click", () => goHome());
     $("#btn-clear-progress").addEventListener("click", () => {
       const name = (PROFILE_DEFS.find((p) => p.id === activeProfileId) || {}).name || "当前";
       if (confirm(`确定清空「${name}」的进度、历史和听写纪录吗？（单词表不会删）`)) {
@@ -1839,6 +1899,7 @@
           p.history = [];
           p.bests = { dictation: null };
           p.tests = [];
+          if (p.emma) p.emma = { settings: p.emma.settings };
         });
         renderProgress();
       }
@@ -1863,6 +1924,13 @@
     getAdvanceMode,
     showSubjectPicker,
     getActiveProfileId: () => activeProfileId,
+    enterEnglishTextbook,
+    startSynth,
+    speak: (t) => speak(t),
+    renderStarRow,
+    setSubjectUI: (s) => setSubjectUI(s),
+    stopTimer: () => stopTimer(),
+    clearSession: () => { session = null; },
     _session: () => session,
   };
 

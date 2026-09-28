@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="单词小达人" />
   <title>单词小达人 · 英文 + 语文</title>
-  <link rel="stylesheet" href="style.css?v=10" />
+  <link rel="stylesheet" href="style.css?v=11" />
 </head>
 <body>
   <header class="app-header">
@@ -120,6 +120,31 @@
     </div>
   </section>
 
+  <!-- EMMA: tracks / levels / scenes / daily (rendered by emma.js) -->
+  <section id="screen-emma" class="screen">
+    <div id="emma-root"></div>
+  </section>
+
+  <!-- EMMA PLAY (card / choice / order / role-play / shadowing) -->
+  <section id="screen-emma-play" class="screen">
+    <div class="card">
+      <div class="stats-row">
+        <span id="emma-play-mode">练习</span>
+        <span id="emma-play-count">1 / 10</span>
+        <span id="emma-play-score" class="stars">★ 0</span>
+      </div>
+      <div class="progress-bar"><span id="emma-play-progress"></span></div>
+      <div id="emma-play-area"></div>
+      <div id="emma-feedback" class="feedback"></div>
+      <div class="action-row" id="emma-next-row" hidden>
+        <button type="button" id="emma-next">下一题 →</button>
+      </div>
+      <div class="action-row">
+        <button type="button" class="ghost" id="emma-quit">结束本轮</button>
+      </div>
+    </div>
+  </section>
+
   <!-- PLAY -->
   <section id="screen-play" class="screen">
     <div class="card">
@@ -194,9 +219,12 @@
   <section id="screen-progress" class="screen">
     <div class="card">
       <h2>我的进度</h2>
+      <div id="prog-textbook">
       <p>认识过的词：<strong id="prog-known">0</strong> / <span id="prog-total">0</span></p>
       <div class="progress-bar"><span id="prog-bar"></span></div>
+      </div>
 
+      <div id="emma-progress" class="emma-progress" hidden></div>
       <h3 style="margin-top:18px">听写最好成绩</h3>
       <div id="dictation-best" class="best-box muted">还没有听写纪录，去挑战一次吧！</div>
 
@@ -375,9 +403,10 @@
   </div>
 
   <p class="footer-note">离线可用 · 进度按档案保存在本机 · 适合 iPad</p>
-  <script src="lib/hanzi-writer.min.js?v=10"></script>
-  <script src="testkit.js?v=10"></script>
-  <script src="app.js?v=10"></script>
-  <script src="hanzi.js?v=10"></script>
+  <script src="lib/hanzi-writer.min.js?v=11"></script>
+  <script src="testkit.js?v=11"></script>
+  <script src="app.js?v=11"></script>
+  <script src="emma.js?v=11"></script>
+  <script src="hanzi.js?v=11"></script>
 </body>
 </html>

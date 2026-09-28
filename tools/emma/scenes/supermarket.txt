@@ -1,0 +1,154 @@
+# supermarket | 超市购物 | 🛒 | 找商品、比较价格、结账和退换
+## finding | 找商品
+W: aisle | 货架通道
+W: shelf | 货架
+W: trolley | 购物车（英）
+W: basket | 购物篮
+W: fresh | 新鲜的
+W: frozen | 冷冻的
+W: dairy | 乳制品
+W: bakery | 烘焙区
+W: fruit and vegetables | 果蔬区
+W: snacks | 零食
+W: household | 家居用品
+W: toiletries | 洗漱用品
+W: toothpaste | 牙膏
+W: shampoo | 洗发水
+W: out of stock | 缺货
+W: in stock | 有货
+W: sold out | 卖完了
+W: storeroom | 仓库
+W: brand | 品牌
+W: section | 区域
+W: look for | 寻找
+P: Excuse me, where can I find the milk? | 打扰一下，牛奶在哪里？ | 你找不到牛奶
+P: Which aisle is the toothpaste in? | 牙膏在哪个通道？ | 你想买牙膏
+P: Do you have any more of these? | 这个还有吗？ | 货架上你要的东西空了
+P: Is this out of stock? | 这个缺货了吗？ | 你在货架上找不到某样商品
+P: When will you have more? | 什么时候会再进货？ | 店员说暂时没货
+P: I'm looking for gluten-free bread. | 我在找无麸质面包。 | 你需要一种特别的面包
+P: Is this fresh today? | 这是今天新鲜的吗？ | 你想确认面包是不是新鲜的
+D: 找东西 | S=Shop assistant/店员, E=Emma/艾玛
+E: Excuse me, where can I find the milk? | 打扰一下，牛奶在哪里？
+S: It's in the dairy section, aisle six, next to the cheese. | 在乳制品区，六号通道，奶酪旁边。
+E: Thanks. And which aisle is the toothpaste in? | 谢谢。牙膏在哪个通道？
+S: Toiletries are in aisle ten, at the back of the shop. | 洗漱用品在十号通道，商店后面。
+E: Great. Do you sell phone chargers too? | 太好了。你们也卖手机充电器吗？
+S: Yes, but only a few. They're near the checkouts. | 卖，不过不多，在收银台附近。
+E: Perfect. One more thing: do you have a basket? | 太好了。还有一件事：有购物篮吗？
+S: Yes, the baskets are by the entrance. | 有，购物篮在入口旁边。
+E: Thank you for your help. | 谢谢你的帮助。
+S: No problem. Enjoy your shopping! | 不客气。购物愉快！
+D: 缺货了 | S=Shop assistant/店员, E=Emma/艾玛
+E: Excuse me, I'm looking for this cereal, but the shelf is empty. | 打扰一下，我在找这种麦片，但货架空了。
+S: Let me check. I'm afraid it's out of stock today. | 我查一下。恐怕今天缺货了。
+E: Oh no. When will you have more? | 哦不。什么时候会再有货？
+S: We get a delivery every Tuesday, so probably tomorrow. | 我们每周二进货，所以应该明天有。
+E: OK. Is there anything similar? | 好的。有类似的吗？
+S: This brand is very similar, and it's on offer this week. | 这个牌子很像，而且本周在打折。
+E: Is it sweet? I don't like cereal with too much sugar. | 甜吗？我不喜欢太甜的麦片。
+S: It's less sweet than the other one. Look, it says "low sugar". | 比那个少甜一些。你看，上面写着"低糖"。
+E: Great, I'll try it. Thanks! | 太好了，我试试。谢谢！
+## prices | 价格与优惠
+W: price | 价格
+W: cost | 花费
+W: cheap | 便宜的
+W: expensive | 贵的
+W: on offer | 在促销
+W: buy one get one free | 买一送一
+W: discount | 折扣
+W: half price | 半价
+W: loyalty card | 会员卡
+W: points | 积分
+W: per kilo | 每公斤
+W: weigh | 称重
+W: price tag | 价签
+W: best before | 最好在……之前食用
+W: organic | 有机的
+W: value | 实惠
+W: compare | 比较
+W: pack | 包，盒
+W: bargain | 便宜货
+W: save | 节省
+W: worth it | 值得
+P: How much is this? | 这个多少钱？ | 你看不到价签
+P: Is this on offer? | 这个在促销吗？ | 你看到一个黄色促销标签
+P: Is it buy one get one free? | 是买一送一吗？ | 你想确认优惠方式
+P: Which one is better value? | 哪一个更划算？ | 你在比较两种包装
+P: What does "best before" mean? | "best before"是什么意思？ | 你看不懂包装上的日期说明
+P: Do I need a loyalty card for this price? | 这个价格需要会员卡吗？ | 标签上写着会员价
+P: That's a real bargain! | 真是太便宜了！ | 你发现一件很划算的东西
+D: 比价格 | K=Kate/凯特（寄宿家庭姐姐）, E=Emma/艾玛
+E: Kate, which one is better value, the big pack or the small pack? | 凯特，哪个更划算，大包还是小包？
+K: Let's compare. The big one is three pounds for one kilo. | 我们比较一下。大包一公斤三英镑。
+E: And the small one is two pounds for five hundred grams. | 小包五百克两英镑。
+K: So the big pack is better value. | 所以大包更划算。
+E: But look, this yellow label says "buy one get one free" on the small pack. | 但是你看，小包上的黄色标签写着"买一送一"。
+K: Oh, you're right! Then two small packs cost two pounds. That's a bargain! | 哦，你说得对！那两小包才两英镑，太便宜了！
+E: Great. What does "best before" mean on the pack? | 太好了。包装上的"best before"是什么意思？
+K: It means it's best to eat it before that date. | 意思是最好在那个日期之前吃。
+E: It says the fifth of next month, so that's fine. | 上面写着下个月五号，那没问题。
+K: Perfect. Let's take them. | 太好了，我们拿这个。
+D: 称水果 | S=Shop assistant/店员, E=Emma/艾玛
+E: Excuse me, how much are these apples? | 打扰一下，这些苹果多少钱？
+S: They're two pounds per kilo. | 每公斤两英镑。
+E: Do I weigh them myself? | 要我自己称吗？
+S: Yes, put them on the scale over there and press the apple button. | 是的，放到那边的秤上，按苹果的按钮。
+E: OK. It printed a price tag. Do I stick it on the bag? | 好的。打出了一张价签。我把它贴在袋子上吗？
+S: That's right. | 对。
+E: Are these organic? | 这些是有机的吗？
+S: No, the organic ones are on the left. They cost a bit more. | 不是，有机的在左边，贵一点。
+E: I'll take these, then. Thanks! | 那我就要这些吧。谢谢！
+S: You're welcome. | 不客气。
+## checkout | 结账与退换
+W: checkout | 收银台
+W: self-checkout | 自助结账
+W: cashier | 收银员
+W: scan | 扫描
+W: barcode | 条形码
+W: bag | 袋子
+W: bring your own bag | 自带购物袋
+W: card machine | 刷卡机
+W: PIN | 密码
+W: insert | 插入
+W: tap | 轻触（支付）
+W: receipt | 收据
+W: return | 退货
+W: exchange | 换货
+W: refund | 退款
+W: faulty | 有毛病的
+W: broken | 坏了的
+W: unexpected item | 意外物品
+W: approval | 确认；批准
+W: age check | 年龄核查
+W: queue | 排队
+P: Can I pay by card? | 我可以刷卡吗？ | 你没有现金
+P: No, thanks. I've got my own bag. | 不用了，谢谢，我自己带了袋子。 | 收银员问你要不要袋子
+P: The machine says "unexpected item in the bagging area". | 机器显示"装袋区有意外物品"。 | 自助结账机出了问题
+P: Excuse me, could you help me? It won't scan. | 打扰一下，你能帮帮我吗？扫不上。 | 条形码扫不出来
+P: I'd like to return this, please. It's faulty. | 我想退这个，它有质量问题。 | 你买的东西坏了
+P: Can I get a refund? | 我可以退款吗？ | 你想要回钱，而不是换货
+P: Here's my receipt. | 这是我的收据。 | 店员问你要购物凭证
+D: 自助结账 | S=Staff/工作人员, E=Emma/艾玛
+E: Excuse me, could you help me? The machine won't scan this. | 打扰一下，你能帮帮我吗？机器扫不上这个。
+S: Sure. Let me try. ... The barcode is a bit wet. There, it's done. | 好的，我试试。……条形码有点湿。好了，扫上了。
+E: Thanks. Now it says "unexpected item in the bagging area". | 谢谢。现在显示"装袋区有意外物品"。
+S: That's because your own bag is on the scale. I'll fix it. | 那是因为你自己的袋子放在秤上了。我来处理。
+E: Sorry, I didn't know. | 抱歉，我不知道。
+S: No problem. It happens a lot. Now you can pay. | 没关系，经常这样。现在可以付款了。
+E: Can I pay by card here? | 这里可以刷卡吗？
+S: Yes. Just tap your card on the card machine. | 可以。把卡在刷卡机上碰一下就行。
+E: Done! Do I need the receipt? | 好了！我需要收据吗？
+S: It's a good idea to keep it, in case you need to return something. | 最好留着，万一要退东西。
+E: OK. Thanks for your help! | 好的。谢谢你的帮助！
+D: 退货 | C=Customer service/客服, E=Emma/艾玛
+C: Hello. How can I help you? | 你好。有什么可以帮你的？
+E: Hi. I'd like to return these headphones. They're faulty. | 你好。我想退这副耳机，它有质量问题。
+C: I'm sorry about that. What's wrong with them? | 很抱歉。有什么问题？
+E: The left side doesn't work. | 左边没有声音。
+C: Do you have the receipt? | 你有收据吗？
+E: Yes, here it is. I bought them last Saturday. | 有，在这儿。我上周六买的。
+C: Would you like an exchange or a refund? | 你想换货还是退款？
+E: Can I get a refund, please? | 请问我可以退款吗？
+C: Sure. The money will go back to your card in three to five days. | 可以。钱会在三到五天内退回你的卡上。
+E: Great. Thank you! | 太好了。谢谢！
