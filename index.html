@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="单词小达人" />
   <title>单词小达人 · 英文 + 语文</title>
-  <link rel="stylesheet" href="style.css?v=9" />
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 <body>
   <header class="app-header">
@@ -111,6 +111,11 @@
           <span class="label">听写挑战</span>
           <span class="desc">计时比赛 · 冲击纪录</span>
         </button>
+        <button type="button" class="mode-btn test-btn" data-mode="test">
+          <span class="emoji">🏅</span>
+          <span class="label">综合测试</span>
+          <span class="desc">约 25 题 · 15 分钟 · 做完看报告</span>
+        </button>
       </div>
     </div>
   </section>
@@ -136,6 +141,7 @@
         <button type="button" id="btn-next-q">下一题 →</button>
       </div>
       <div class="action-row">
+        <button type="button" class="secondary" id="btn-pause-test" hidden>⏸ 暂停</button>
         <button type="button" class="ghost" id="btn-quit-play">结束并看成绩</button>
       </div>
     </div>
@@ -194,6 +200,9 @@
       <h3 style="margin-top:18px">听写最好成绩</h3>
       <div id="dictation-best" class="best-box muted">还没有听写纪录，去挑战一次吧！</div>
 
+      <h3 style="margin-top:18px">综合测试记录</h3>
+      <div id="en-test-history"></div>
+
       <h3 style="margin-top:18px">最近练习</h3>
       <div id="history-list"></div>
       <div class="action-row">
@@ -231,7 +240,7 @@
         <button type="button" class="mode-btn" data-zhmode="trace"><span class="emoji">🖍️</span><span class="label">描红</span><span class="desc">照着灰色字写</span></button>
         <button type="button" class="mode-btn" data-zhmode="moxie"><span class="emoji">✏️</span><span class="label">默写</span><span class="desc">看拼音自己写</span></button>
         <button type="button" class="mode-btn wide" data-zhmode="tingxie"><span class="emoji">🎧</span><span class="label">听写挑战</span><span class="desc">听词语写汉字 · 计时 · 冲击纪录</span></button>
-        <button type="button" class="mode-btn wide" data-zhmode="test"><span class="emoji">🏅</span><span class="label">综合测试</span><span class="desc">读音 · 组词 · 填空 · 默写 · 听写（不描红、无提示）· 计时</span></button>
+        <button type="button" class="mode-btn wide" data-zhmode="test"><span class="emoji">🏅</span><span class="label">综合测试</span><span class="desc">约 25 题 · 15 分钟 · 读音/组词/填空/默写/听写 · 做完看报告</span></button>
         <button type="button" class="mode-btn wide" data-zhmode="review"><span class="emoji">🔁</span><span class="label">错字复习</span><span class="desc" id="zh-review-desc">优先练最近写错、选错的字</span></button>
       </div>
     </div>
@@ -260,6 +269,7 @@
         <button type="button" id="zh-next-q">下一题 →</button>
       </div>
       <div class="action-row">
+        <button type="button" class="secondary" id="zh-pause" hidden>⏸ 暂停</button>
         <button type="button" class="ghost" id="zh-quit">结束并看成绩</button>
       </div>
     </div>
@@ -314,6 +324,8 @@
       <div id="zh-weak-list" class="zh-weak-list muted">还没有错字，真棒！</div>
       <h3 style="margin-top:18px">听写最好成绩</h3>
       <div id="zh-tingxie-best" class="best-box muted">还没有听写纪录，去挑战一次吧！</div>
+      <h3 style="margin-top:18px">综合测试记录</h3>
+      <div id="zh-test-history"></div>
       <h3 style="margin-top:18px">最近练习</h3>
       <div id="zh-history-list"></div>
       <div class="action-row">
@@ -321,6 +333,38 @@
       </div>
     </div>
   </section>
+
+  <!-- 综合测试报告（英文 / 语文 共用） -->
+  <section id="screen-test-report" class="screen">
+    <div class="card" style="text-align:center">
+      <div class="cele" id="tr-cele">🎉</div>
+      <div class="star-row" id="tr-stars" aria-label="星星评分"></div>
+      <h2 id="tr-title">综合测试完成！</h2>
+      <div class="score-big" id="tr-score">0</div>
+      <p id="tr-detail" class="muted"></p>
+      <p id="tr-prev" class="pb-banner" hidden></p>
+      <div id="tr-cats" class="tr-cats"></div>
+      <p id="tr-summary" class="tr-summary"></p>
+      <h3 id="tr-wrong-title" style="text-align:left;margin-top:14px"></h3>
+      <div id="tr-wrong" class="tr-wrong"></div>
+      <div class="action-row">
+        <button type="button" id="tr-again">再测一次</button>
+        <button type="button" class="secondary" id="tr-home">回首页</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="test-pause" class="zh-modal" hidden>
+    <div class="zh-modal-inner card" style="text-align:center">
+      <div class="cele">⏸</div>
+      <h2>休息一下</h2>
+      <p class="muted">计时已暂停，准备好了再继续。</p>
+      <div class="action-row">
+        <button type="button" id="test-pause-resume">▶ 继续测试</button>
+        <button type="button" class="ghost" id="test-pause-quit">结束测试</button>
+      </div>
+    </div>
+  </div>
 
   <!-- 生字卡片弹层 -->
   <div id="zh-modal" class="zh-modal" hidden>
@@ -331,8 +375,9 @@
   </div>
 
   <p class="footer-note">离线可用 · 进度按档案保存在本机 · 适合 iPad</p>
-  <script src="lib/hanzi-writer.min.js?v=9"></script>
-  <script src="app.js?v=9"></script>
-  <script src="hanzi.js?v=9"></script>
+  <script src="lib/hanzi-writer.min.js?v=10"></script>
+  <script src="testkit.js?v=10"></script>
+  <script src="app.js?v=10"></script>
+  <script src="hanzi.js?v=10"></script>
 </body>
 </html>

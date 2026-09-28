@@ -370,6 +370,13 @@
     }
   }
 
+  function activeElapsedMs() {
+    if (!session) return 0;
+    const now = session.endedAt || Date.now();
+    const paused = (session.pausedMs || 0) + (session.pauseStart ? now - session.pauseStart : 0);
+    return Math.max(0, now - session.startedAt - paused);
+  }
+
   function startTimerUI() {
     stopTimer();
     const badge = $("#play-timer");
@@ -379,7 +386,8 @@
     }
     badge.hidden = false;
     const tick = () => {
-      const sec = Math.floor((Date.now() - session.startedAt) / 1000);
+      if (!session) return;
+      const sec = Math.floor(activeElapsedMs() / 1000);
       badge.textContent = formatMMSS(sec);
     };
     tick();
@@ -439,6 +447,7 @@
     const def = PROFILE_DEFS.find((p) => p.id === activeProfileId);
     if (!def) return renderProfileSelect();
     stopTimer();
+    $("#btn-pause-test").hidden = true;
     session = null;
     try {
       if (typeof speechSynthesis !== "undefined") speechSynthesis.cancel();
@@ -533,6 +542,47 @@
     $("#btn-guided").disabled = selectedUnitIds.length === 0;
   }
 
+  /** Sample for tests: ~70% from not-yet-mastered words, ~30% random (incl. mastered). */
+  function pickWeighted(list, n, keyFn) {
+    const prog = getProgress();
+    const scored = shuffle(list).map((w) => {
+      const st = prog[String(keyFn(w)).toLowerCase()] || { known: 0, seen: 0 };
+      const miss = (st.seen || 0) - (st.known || 0);
+      return { w, s: (st.known || 0) - miss * 2 + (st.seen ? 0 : -1) + Math.random() * 2 };
+    });
+    scored.sort((a, b) => a.s - b.s);
+    const weakN = Math.ceil(n * 0.7);
+    const out = scored.slice(0, weakN).map((x) => x.w);
+    shuffle(scored.slice(weakN)).slice(0, n - out.length).forEach((x) => out.push(x.w));
+    return out;
+  }
+
+  function buildTestItems(words) {
+    const used = new Set();
+    const pool = pickWeighted(words, words.length, (w) => w.en);
+    const take = (k, ok) => {
+      const out = [];
+      for (const w of pool) {
+        if (out.length >= k) break;
+        const key = w.en.toLowerCase();
+        if (!used.has(key) && ok(w)) { used.add(key); out.push(w); }
+      }
+      return out;
+    };
+    const fills = pickWeighted(allFillInsFrom(selectedUnitIds), 5, (f) => f.answer).slice(0, 5);
+    fills.forEach((f) => used.add(String(f.answer).toLowerCase()));
+    const fillItems = fills.map((f) => ({ type: "fill", fill: f, bankWords: buildFillBank(f, words) }));
+    const extra = 5 - fillItems.length; // if a unit has few fill-ins, give more choice questions
+    const spellItems = take(4, isSpellable).map((w) => ({ type: "spell", word: w, hard: false }));
+    applyAutoHardToSpellItems(spellItems);
+    const dictItems = take(2, (w) => isSpellable(w) && w.en.length <= 9).map((w) => ({ type: "dictation", word: w }));
+    const choice = []
+      .concat(take(7 + Math.ceil(extra / 2), () => true).map((w) => ({ type: "en2zh", word: w })))
+      .concat(take(7 + Math.floor(extra / 2), () => true).map((w) => ({ type: "zh2en", word: w })));
+    const nonWrite = shuffle(choice.concat(fillItems));
+    return window.__testKit.interleave(nonWrite, shuffle(spellItems.concat(dictItems)));
+  }
+
   function startSession(mode) {
     const words = allWordsFrom(selectedUnitIds);
     if (!words.length) return;
@@ -589,9 +639,13 @@
       applyAutoHardToSpellItems(items);
     }
 
+    else if (mode === "test") {
+      items = buildTestItems(words);
+    }
+
     if (!items.length) return;
 
-    const timed = !!TIMED_MODES[mode];
+    const timed = !!TIMED_MODES[mode] || mode === "test";
     session = {
       mode,
       unitIds: selectedUnitIds.slice(),
@@ -603,7 +657,12 @@
       endedAt: null,
       locked: false,
       timed,
+      test: mode === "test",
+      results: [],
+      pausedMs: 0,
+      pauseStart: null,
     };
+    $("#btn-pause-test").hidden = mode !== "test";
     showScreen("play");
     startTimerUI();
     renderQuestion();
@@ -623,8 +682,9 @@
     const pct = total ? Math.round((i / total) * 100) : 0;
     $("#play-progress").style.width = pct + "%";
     $("#play-count").textContent = `${Math.min(i + 1, total)} / ${total}`;
-    $("#play-score").textContent = `★ ${session.correct}`;
+    $("#play-score").textContent = session.test ? `✎ 已答 ${session.answered}` : `★ ${session.correct}`;
     const modeNames = {
+      test: "综合测试",
       en2zh: "英→中",
       zh2en: "中→英",
       fill: "句子填空",
@@ -898,6 +958,15 @@
 
   function onChoice(btn, ok, enSpeak, zhShow, kind) {
     if (session.locked) return;
+    if (session.test) {
+      $$(".choice", btn.parentElement).forEach((b) => (b.disabled = true));
+      btn.classList.add("picked");
+      const chosen0 = (btn.textContent || "").trim();
+      testRecord(ok, kind === "en2zh"
+        ? { cat: "英→中", kind, en: enSpeak, zh: zhShow, prompt: enSpeak, answer: zhShow, chosen: chosen0 }
+        : { cat: "中→英", kind, en: enSpeak, zh: zhShow, prompt: zhShow, answer: enSpeak, chosen: chosen0 });
+      return;
+    }
     session.locked = true;
     session.answered++;
     const siblings = $$(".choice", btn.parentElement);
@@ -926,6 +995,33 @@
         enSpeak
       );
     }
+  }
+
+  /** 综合测试: record silently (no reveal, no 小讲解), then go on. */
+  function testRecord(ok, r) {
+    if (!session || session.locked) return;
+    session.locked = true;
+    session.answered++;
+    if (ok) session.correct++;
+    if (ok) markKnown(r.en);
+    else markSeen(r.en);
+    const explain = ok ? "" : buildExplain({ kind: r.kind, en: r.en, zh: r.zh, chosen: r.chosen, sentence: r.sentence })
+      .split("\n").filter((l) => l.indexOf("明白了") < 0).join("\n");
+    session.results.push({
+      cat: r.cat, score: ok ? 1 : 0, prompt: r.prompt, py: "", answer: r.answer,
+      chosen: ok ? "" : r.chosen, speak: r.speak || r.en, explain,
+    });
+    updatePlayChrome();
+    const f = $("#feedback");
+    f.textContent = "已记录 ✓";
+    f.className = "feedback";
+    const gen = ++advanceGen;
+    try { if (typeof speechSynthesis !== "undefined") speechSynthesis.cancel(); } catch (e) {}
+    setTimeout(() => {
+      if (gen !== advanceGen || !session) return;
+      session.index++;
+      renderQuestion();
+    }, 550);
   }
 
   function markKnown(en) {
@@ -977,6 +1073,16 @@
         }
         blank.textContent = en;
         const ok = en.toLowerCase() === answerKey(f);
+        if (session.test) {
+          $$(".word-bank button", host).forEach((x) => (x.disabled = true));
+          b.classList.add("picked");
+          testRecord(ok, {
+            cat: "填空", kind: "fill", en: f.answer, zh: f.zh || findWordByEn(f.answer).zh,
+            prompt: String(f.template).replace("____", "____"), answer: f.answer, chosen: en,
+            sentence: fillCompletedSentence(f), speak: fillCompletedSentence(f),
+          });
+          return;
+        }
         session.locked = true;
         session.answered++;
         $$(".word-bank button", host).forEach((x) => {
@@ -1111,7 +1217,7 @@
       });
       redrawSlots();
     });
-    actions.appendChild(hear);
+    if (!session.test) actions.appendChild(hear); // no hints in 综合测试
     actions.appendChild(clear);
     host.appendChild(actions);
 
@@ -1123,6 +1229,10 @@
     function checkSpell() {
       if (session.locked) return;
       const guess = built.map((x) => x.ch).join("");
+      if (session.test) {
+        testRecord(guess === letters, { cat: "拼写", kind: "spell", en: w.en, zh: w.zh, prompt: w.zh, answer: w.en, chosen: guess });
+        return;
+      }
       session.locked = true;
       session.answered++;
       const ok = guess === letters;
@@ -1206,6 +1316,12 @@
         $("#feedback").className = "feedback gentle";
         return;
       }
+      if (session.test) {
+        input.disabled = true;
+        submit.disabled = true;
+        testRecord(guess === normGuess(w.en), { cat: "听写", kind: "dictation", en: w.en, zh: w.zh, prompt: w.zh, answer: w.en, chosen: guess });
+        return;
+      }
       session.locked = true;
       session.answered++;
       input.disabled = true;
@@ -1232,7 +1348,60 @@
     }
   }
 
+  function getTests() {
+    return profileStore().tests || [];
+  }
+
+  function finishTest() {
+    stopTimer();
+    session.endedAt = Date.now();
+    $("#btn-pause-test").hidden = true;
+    const TK = window.__testKit;
+    const res = session.results;
+    const n = res.length;
+    const pts = res.reduce((a, r) => a + r.score, 0);
+    const score = n ? Math.round((pts / n) * 100) : 0;
+    const stars = TK.starsFromScore(score, n);
+    const elapsedSec = Math.round(activeElapsedMs() / 1000);
+    const cats = ["英→中", "中→英", "填空", "拼写", "听写"].map((name) => {
+      const rs = res.filter((r) => r.cat === name);
+      return { name, got: rs.reduce((a, r) => a + r.score, 0), total: rs.length };
+    });
+    const unitsLabel = TK.unitsLabel(unitsByIds(session.unitIds).map((u) => u.title), DATA.units.length);
+    const prev = getTests()[0];
+    const rec = { at: Date.now(), units: session.unitIds.slice(), unitsLabel, score, stars, elapsedSec, answered: n, total: session.items.length, cats };
+    updateProfile((p) => { p.tests = [rec].concat(p.tests || []).slice(0, 50); });
+    pushHistory({ at: Date.now(), mode: "test", units: session.unitIds.slice(), correct: session.correct, total: n, score, stars, elapsedSec, timed: true, mins: Math.max(1, Math.round(elapsedSec / 60)) });
+    showScreen("test-report");
+    window.scrollTo(0, 0);
+    TK.renderReport({
+      title: "英文综合测试完成！",
+      score, stars, elapsedSec, answered: n, total: session.items.length, cats, items: res, unitsLabel,
+      prevScore: prev ? prev.score : null,
+      renderStarRow,
+      speak: (t) => speak(t),
+      onAgain: () => startSession("test"),
+      onHome: () => { showScreen("home"); renderHome(); },
+    });
+  }
+
+  function quitTestFlow() {
+    if (!session) return;
+    if (session.answered > 0) {
+      session.items = session.items.slice(0, Math.max(session.answered, 1));
+      advanceGen++;
+      finishTest();
+    } else {
+      stopTimer();
+      $("#btn-pause-test").hidden = true;
+      session = null;
+      showScreen("home");
+      renderHome();
+    }
+  }
+
   function finishSession() {
+    if (session && session.test) return finishTest();
     stopTimer();
     session.endedAt = Date.now();
     const elapsedSec = Math.max(0, Math.round((session.endedAt - session.startedAt) / 1000));
@@ -1502,6 +1671,9 @@
       bestBox.textContent = "还没有听写纪录，去挑战一次吧！";
     }
 
+    const th = $("#en-test-history");
+    if (th && window.__testKit) window.__testKit.renderHistory(th, getTests());
+
     const host = $("#history-list");
     host.innerHTML = "";
     const hist = getHistory();
@@ -1516,6 +1688,7 @@
       spell: "拼写",
       dictation: "听写",
       guided: "闯关",
+      test: "综合测试",
     };
     hist.slice(0, 20).forEach((h) => {
       const div = document.createElement("div");
@@ -1626,7 +1799,24 @@
       });
     }
 
+    $("#btn-pause-test").addEventListener("click", () => {
+      if (!session || !session.test || session.pauseStart) return;
+      session.pauseStart = Date.now();
+      try { if (typeof speechSynthesis !== "undefined") speechSynthesis.cancel(); } catch (e) {}
+      window.__testKit.pause({
+        onResume: () => {
+          if (!session || !session.pauseStart) return;
+          session.pausedMs += Date.now() - session.pauseStart;
+          session.pauseStart = null;
+        },
+        onQuit: () => quitTestFlow(),
+      });
+    });
     $("#btn-quit-play").addEventListener("click", () => {
+      if (session && session.test) {
+        if (window.__testKit.confirmQuit()) quitTestFlow();
+        return;
+      }
       if (session && session.answered > 0) finishSession();
       else {
         stopTimer();
@@ -1648,6 +1838,7 @@
           p.progress = {};
           p.history = [];
           p.bests = { dictation: null };
+          p.tests = [];
         });
         renderProgress();
       }
@@ -1672,6 +1863,7 @@
     getAdvanceMode,
     showSubjectPicker,
     getActiveProfileId: () => activeProfileId,
+    _session: () => session,
   };
 
   function boot() {

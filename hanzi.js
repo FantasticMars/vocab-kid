@@ -10,7 +10,7 @@
   const shuffle = V.shuffle;
   const esc = V.escapeHtml;
 
-  const SIZES = { cards: 10, sound: 10, zuci: 10, fill: 10, trace: 8, moxie: 8, tingxie: 6, review: 10, test: 12 };
+  const SIZES = { cards: 10, sound: 10, zuci: 10, fill: 10, trace: 8, moxie: 8, tingxie: 6, review: 10, test: 24 };
   const MODE_NAMES = {
     cards: "认字卡", sound: "读音", zuci: "组词", fill: "选词填空",
     trace: "描红", moxie: "默写", tingxie: "听写挑战", review: "错字复习", test: "综合测试",
@@ -57,6 +57,7 @@
       history: h.history || [],
       bests: h.bests || {},
       settings: h.settings || {},
+      tests: h.tests || [],
     };
   }
   function zupdate(fn) {
@@ -286,6 +287,8 @@
   }
   function leave() {
     stopTimer();
+    const pz = $("#zh-pause");
+    if (pz) pz.hidden = true;
     advGen++;
     S = null;
     closeModal();
@@ -339,6 +342,123 @@
       .sort((a, b) => need(b.char) - need(a.char));
   }
 
+  // ---------- 综合测试 ----------
+  /** ~70% from not-yet-mastered chars, ~30% random from the rest (mastered included) */
+  function pickMix(pool, n) {
+    const scored = shuffle(pool).map((c) => ({ c, s: need(c.char) + Math.random() * 1.5 }));
+    scored.sort((a, b) => b.s - a.s);
+    const weakN = Math.ceil(n * 0.7);
+    const out = scored.slice(0, weakN).map((x) => x.c);
+    shuffle(scored.slice(weakN)).slice(0, n - out.length).forEach((x) => out.push(x.c));
+    return shuffle(out);
+  }
+  function buildTest(pool) {
+    // 5 读音 + 6 组词 + 6 选词填空 + 4 默写 + 3 听写(5–6 字); strict: no 描红/outline/hints/小讲解 during the test
+    const cs = pickMix(pool, Math.min(pool.length, 40));
+    const used = new Set();
+    const take = (k, ok) => {
+      const out = [];
+      for (const c of cs) { if (out.length >= k) break; if (!used.has(c.char) && ok(c)) { used.add(c.char); out.push(c); } }
+      if (out.length < k) for (const c of shuffle(pool)) { if (out.length >= k) break; if (!used.has(c.char) && ok(c)) { used.add(c.char); out.push(c); } }
+      return out;
+    };
+    const sound = take(5, () => true).map((c, i) => ({ type: i % 2 ? "hear" : "py", c }));
+    const zuci = take(6, (c) => mainWord(c)).map((c) => ({ type: "zuci", c }));
+    const fill = take(6, (c) => c.sentenceWord).map((c) => ({ type: "fill", c }));
+    const write = take(4, () => true).map((c) => ({ type: "write", c, outline: false, strict: true }));
+    const words = tingxieIn(selUnits).filter((t) => t.w.length === 2 && !Array.from(t.w).some((ch) => used.has(ch)));
+    const scoredW = shuffle(words).map((t) => ({ t, s: Array.from(t.w).reduce((a, ch) => a + (CHAR_MAP[ch] ? Math.max(0, need(ch)) : 0), 0) + Math.random() * 2 }));
+    scoredW.sort((a, b) => b.s - a.s);
+    const seenW = {};
+    const tx = [];
+    const topW = scoredW.slice(0, 2).concat(shuffle(scoredW.slice(2)));
+    for (const x of topW) { if (tx.length >= 3) break; if (!seenW[x.t.w]) { seenW[x.t.w] = 1; tx.push({ type: "tingxie", t: x.t, strict: true }); } }
+    const nonWrite = shuffle(sound.concat(zuci, fill));
+    return window.__testKit.interleave(nonWrite, shuffle(write.concat(tx)));
+  }
+  function writeScore(mistakes, skipped) {
+    if (skipped) return 0;
+    if (mistakes <= 2) return 1;
+    if (mistakes <= 4) return 0.5;
+    return 0;
+  }
+  const TEST_CAT = { py: "读音", hear: "读音", zuci: "组词", fill: "填空", write: "默写", tingxie: "听写" };
+  /** record silently: no reveal, no 小讲解; wrong answers get an extra boost for 错字复习 */
+  function testRecord(score, r) {
+    if (!S || S.locked) return;
+    S.locked = true;
+    S.answered++;
+    if (score >= 1) S.correct++;
+    (r.chars || []).forEach((x) => {
+      if (!CHAR_MAP[x.ch]) return;
+      mark(x.ch, x.score >= 1, { mistakes: x.mistakes });
+      if (x.score <= 0) zupdate((h) => { const q = h.progress[x.ch]; if (q) { q.wrong += 1; q.lastOk = false; } });
+    });
+    S.results.push({
+      cat: r.cat, score, prompt: r.prompt, py: r.py || "", answer: r.answer, chosen: score >= 1 ? "" : r.chosen || "",
+      speak: r.speak, explain: score >= 1 ? "" : r.explain || "", char: r.char,
+    });
+    chrome();
+    fb("已记录 ✓", "");
+    const gen = ++advGen;
+    try { speechSynthesis.cancel(); } catch (e) {}
+    setTimeout(() => { if (gen === advGen && S) { S.index++; renderQ(); } }, r.delay || 550);
+  }
+  function finishTest() {
+    stopTimer();
+    $("#zh-pause").hidden = true;
+    S.endedAt = Date.now();
+    const TK = window.__testKit;
+    const res = S.results;
+    const n = res.length;
+    const pts = res.reduce((a, r) => a + r.score, 0);
+    const score = n ? Math.round((pts / n) * 100) : 0;
+    const stars = TK.starsFromScore(score, n);
+    const elapsedSec = Math.round(activeMs() / 1000);
+    const cats = ["读音", "组词", "填空", "默写", "听写"].map((name) => {
+      const rs = res.filter((r) => r.cat === name);
+      return { name, got: rs.reduce((a, r) => a + r.score, 0), total: rs.length };
+    });
+    const unitsLabel = TK.unitsLabel(ZH.units.filter((u) => S.unitIds.includes(u.id)).map((u) => u.title), ZH.units.length);
+    const prev = (zstore().tests || [])[0];
+    const rec = { at: Date.now(), units: S.unitIds.slice(), unitsLabel, score, stars, elapsedSec, answered: n, total: S.items.length, cats };
+    zupdate((h) => {
+      h.tests = [rec].concat(h.tests || []).slice(0, 50);
+      h.history = [{ at: Date.now(), mode: "test", units: S.unitIds.slice(), correct: S.correct, total: n, stars, accuracy: score, elapsedSec, mistakes: S.mistakes }].concat(h.history).slice(0, 50);
+    });
+    show("test-report");
+    const again = S.unitIds.slice();
+    S.done = true;
+    TK.renderReport({
+      title: "语文综合测试完成！",
+      score, stars, elapsedSec, answered: n, total: S.items.length, cats, items: res, unitsLabel,
+      prevScore: prev ? prev.score : null,
+      renderStarRow: V.renderStarRow,
+      speak: (t) => speakZh(t),
+      renderExtra: (it, host) => {
+        if (!it.char) return;
+        host.className = "zh-mini-writer";
+        const t = makePad(host, 110);
+        const w = createWriter(t, it.char, 110, { showCharacter: true, showOutline: true });
+        if (w) setTimeout(() => { try { w.animateCharacter(); } catch (e) {} }, 300);
+        host.onclick = (e) => { e.stopPropagation(); if (w) w.animateCharacter(); };
+      },
+      onAgain: () => { selUnits = again; startMode("test"); },
+      onHome: () => goHome(),
+    });
+  }
+  function activeMs() {
+    if (!S) return 0;
+    const now = S.endedAt || Date.now();
+    const paused = (S.pausedMs || 0) + (S.pauseStart ? now - S.pauseStart : 0);
+    return Math.max(0, now - S.startedAt - paused);
+  }
+  function quitTest() {
+    if (!S) return;
+    if (S.answered > 0) { S.items = S.items.slice(0, S.answered); advGen++; finishTest(); }
+    else goHome();
+  }
+
   // ---------- session ----------
   function startMode(mode) {
     const pool = charsIn(selUnits);
@@ -376,27 +496,15 @@
       items = shuffle(items);
     }
     else if (mode === "test") {
-      // 综合测试: 读音 + 组词 + 选词填空 + 默写 + 听写. Writing is strict: NO outline, NO hint flashes, NO 描红.
-      const cs = pickChars(pool, 30);
-      const used = new Set();
-      const take = (k, ok) => {
-        const out = [];
-        for (const c of cs) { if (out.length >= k) break; if (!used.has(c.char) && ok(c)) { used.add(c.char); out.push(c); } }
-        return out;
-      };
-      items = []
-        .concat(take(2, () => true).map((c, i) => ({ type: i ? "hear" : "py", c })))
-        .concat(take(2, (c) => mainWord(c)).map((c) => ({ type: "zuci", c })))
-        .concat(take(2, (c) => c.sentenceWord).map((c) => ({ type: "fill", c })))
-        .concat(take(4, () => true).map((c) => ({ type: "write", c, outline: false, strict: true })));
-      const tw = shuffle(tingxieIn(selUnits)).filter((t) => t.w.length <= 3).slice(0, 2);
-      items = shuffle(items).concat(tw.map((t) => ({ type: "tingxie", t, strict: true })));
+      items = buildTest(pool);
     }
     if (!items.length) return;
     S = {
       mode, items, index: 0, correct: 0, answered: 0, mistakes: 0, writtenChars: 0,
       startedAt: Date.now(), timed: mode === "tingxie" || mode === "test", wrongChars: [], unitIds: selUnits.slice(),
+      test: mode === "test", results: [], pausedMs: 0, pauseStart: null,
     };
+    $("#zh-pause").hidden = mode !== "test";
     show("zh-play");
     startTimer();
     renderQ();
@@ -407,7 +515,7 @@
     const badge = $("#zh-play-timer");
     if (!S || !S.timed) { badge.hidden = true; return; }
     badge.hidden = false;
-    const tick = () => { if (S) badge.textContent = V.formatMMSS((Date.now() - S.startedAt) / 1000); };
+    const tick = () => { if (S) badge.textContent = V.formatMMSS(activeMs() / 1000); };
     tick();
     timer = setInterval(tick, 250);
   }
@@ -418,7 +526,7 @@
     const i = S.index;
     $("#zh-play-progress").style.width = Math.round((i / total) * 100) + "%";
     $("#zh-play-count").textContent = `${Math.min(i + 1, total)} / ${total}`;
-    $("#zh-play-score").textContent = `★ ${S.correct}`;
+    $("#zh-play-score").textContent = S.test ? `✎ 已答 ${S.answered}` : `★ ${S.correct}`;
     $("#zh-play-mode").textContent = MODE_NAMES[S.mode] || "";
   }
   function fb(text, kind) {
@@ -440,7 +548,7 @@
     chrome();
     const host = $("#zh-play-area");
     host.innerHTML = "";
-    if (S.index >= S.items.length) return finish();
+    if (S.index >= S.items.length) return S.test ? finishTest() : finish();
     const it = S.items[S.index];
     if (it.type === "card") renderCard(host, it);
     else if (it.type === "py") renderPy(host, it);
@@ -555,6 +663,20 @@
   }
   function answer(ok, c, kind, chosen, btn, g, correctLabel, speakOk) {
     if (S.locked) return;
+    if (S.test) {
+      $$(".choice", g).forEach((b) => (b.disabled = true));
+      btn.classList.add("picked");
+      const wd = kind === "zuci" ? (speakOk && speakOk[0]) || mainWord(c) : "";
+      const wpy = wd ? ((c.words || []).find((x) => x.w === wd) || {}).py || "" : "";
+      const info = {
+        py: { prompt: `「${c.char}」读什么？`, answer: c.pinyin, py: "", speak: charSpeech(c) },
+        hear: { prompt: `听音选字（${mainWord(c) || c.char}）`, answer: c.char, py: c.pinyin, speak: charSpeech(c) },
+        zuci: { prompt: wd.split(c.char).join("□"), answer: c.char + "（" + wd + "）", py: wpy, speak: [wd] },
+        fill: { prompt: c.sentence.split(c.sentenceWord).join("（  ）"), answer: c.sentenceWord, py: ((c.words || []).find((x) => x.w === c.sentenceWord) || {}).py || "", speak: [c.sentence] },
+      }[kind];
+      testRecord(ok ? 1 : 0, Object.assign({ cat: TEST_CAT[kind], chosen, char: c.char, explain: explainText(c, kind, chosen), chars: [{ ch: c.char, score: ok ? 1 : 0 }] }, info));
+      return;
+    }
     S.locked = true;
     S.answered++;
     lockChoices(g, correctLabel);
@@ -716,7 +838,7 @@
     const opts = shuffle([c.char].concat(ds));
     choiceGrid(host, opts, (b, o, g) => {
       const blank = $(".zh-word-cell.blank .ch", box);
-      if (blank) blank.textContent = c.char;
+      if (blank) blank.textContent = S.test ? o : c.char;
       answer(o === c.char, c, "zuci", o, b, g, c.char, [wd.w]);
     }, "char-choices");
   }
@@ -746,7 +868,7 @@
       b.type = "button";
       b.addEventListener("click", () => {
         if (S.locked) { speakZh(o); return; }
-        blank.textContent = sw;
+        blank.textContent = S.test ? o : sw;
         answer(o === sw, c, "fill", o, b, g, sw, [c.sentence]);
       });
       g.appendChild(b);
@@ -782,6 +904,16 @@
     if (!strict) tools.appendChild(bAnim);
     if (!trace && !strict) tools.appendChild(bHint);
     tools.appendChild(bRedo);
+    if (strict) {
+      const bSkip = el("button", "ghost", "不会，跳过");
+      bSkip.type = "button";
+      bSkip.addEventListener("click", () => {
+        if (!S || S.locked) return;
+        try { w && w.cancelQuiz(); } catch (e) {}
+        writeDone(c, 99, false, false, true);
+      });
+      tools.appendChild(bSkip);
+    }
     host.appendChild(tools);
     const gen = advGen;
     const startQuiz = () => {
@@ -821,8 +953,19 @@
     startQuiz();
     if (!w) fb("写字板加载失败", "gentle");
   }
-  function writeDone(c, mistakes, helped, trace) {
+  function writeDone(c, mistakes, helped, trace, skipped) {
     if (S.locked) return;
+    if (S.test) {
+      const sc = writeScore(mistakes, skipped);
+      S.mistakes += skipped ? 0 : mistakes;
+      S.writtenChars++;
+      testRecord(sc, {
+        cat: "默写", prompt: `${c.pinyin} · ${(mainWord(c) || c.char).split(c.char).join("（ ）")}`, py: c.pinyin,
+        answer: c.char, chosen: skipped ? "跳过" : `错了 ${mistakes} 笔`, speak: charSpeech(c), char: c.char,
+        explain: explainText(c, "write"), chars: [{ ch: c.char, score: sc, mistakes }], delay: 900,
+      });
+      return;
+    }
     S.locked = true;
     S.answered++;
     S.mistakes += mistakes;
@@ -930,6 +1073,24 @@
       padHost.innerHTML = "";
       tools.hidden = true;
       pyLine.style.visibility = "visible";
+      if (S.test) {
+        S.locked = false;
+        const scs = results.map((r) => ({ ch: r.ch, mistakes: r.mistakes, score: writeScore(r.mistakes, r.skipped) }));
+        const sc = scs.length ? scs.reduce((a, x) => a + x.score, 0) / scs.length : 1;
+        S.writtenChars += results.length;
+        S.mistakes += results.reduce((a, r) => a + (r.skipped ? 0 : r.mistakes), 0);
+        S.answered--; // testRecord counts it
+        const worst = scs.slice().sort((a, b) => a.score - b.score)[0];
+        const wc = worst && CHAR_MAP[worst.ch];
+        testRecord(Math.round(sc * 100) / 100, {
+          cat: "听写", prompt: `听写：${t.py}`, py: t.py, answer: t.w,
+          chosen: scs.map((x) => x.ch + (x.score >= 1 ? "✓" : x.score > 0 ? "△" : "✗")).join(" "),
+          speak: [t.w], char: worst ? worst.ch : null, chars: scs, delay: 900,
+          explain: `「${t.w}」${t.py}\n` + scs.filter((x) => x.score < 1).map((x) => `「${x.ch}」` + (x.mistakes >= 9 ? "跳过了" : `错了 ${x.mistakes} 笔`)).join("，") +
+            (wc ? `\n${explainText(wc, "write")}` : ""),
+        });
+        return;
+      }
       const bad = results.filter((r) => r.skipped || r.mistakes > WRITE_OK_MISTAKES);
       const m = results.reduce((a, r) => a + (r.skipped ? 0 : r.mistakes), 0);
       S.mistakes += m;
@@ -1124,6 +1285,7 @@
       d.style.marginTop = "6px";
       bb.appendChild(d);
     }
+    window.__testKit.renderHistory($("#zh-test-history"), zstore().tests);
     const host = $("#zh-history-list");
     host.innerHTML = "";
     const hist = zstore().history;
@@ -1154,7 +1316,17 @@
     $$("#zh-modes-card .mode-btn").forEach((b) => b.addEventListener("click", () => startMode(b.dataset.zhmode)));
     $("#zh-explain-ok").addEventListener("click", () => { hideExplain(); goNext(); });
     $("#zh-next-q").addEventListener("click", goNext);
+    $("#zh-pause").addEventListener("click", () => {
+      if (!S || !S.test || S.pauseStart) return;
+      S.pauseStart = Date.now();
+      try { speechSynthesis.cancel(); } catch (e) {}
+      window.__testKit.pause({
+        onResume: () => { if (S && S.pauseStart) { S.pausedMs += Date.now() - S.pauseStart; S.pauseStart = null; } },
+        onQuit: () => quitTest(),
+      });
+    });
     $("#zh-quit").addEventListener("click", () => {
+      if (S && S.test) { if (window.__testKit.confirmQuit()) quitTest(); return; }
       if (S && S.answered > 0) { S.items = S.items.slice(0, S.answered); advGen++; finish(); }
       else goHome();
     });
@@ -1168,7 +1340,7 @@
     $("#zh-modal").addEventListener("click", (e) => { if (e.target.id === "zh-modal") closeModal(); });
     $("#zh-clear-progress").addEventListener("click", () => {
       if (confirm("确定清空语文的进度、错字和听写纪录吗？（英文进度不受影响）")) {
-        zupdate((h) => { h.progress = {}; h.history = []; h.bests = {}; });
+        zupdate((h) => { h.progress = {}; h.history = []; h.bests = {}; h.tests = []; });
         renderProgress();
       }
     });

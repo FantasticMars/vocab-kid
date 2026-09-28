@@ -456,3 +456,29 @@ img.profile-avatar { padding: 0; border: 3px solid #fff; box-shadow: 0 4px 12px 
   display: flex; align-items: flex-start; justify-content: center; padding: 20px 12px; overflow: auto;
 }
 .zh-modal-inner { width: 100%; max-width: 680px; margin-top: 20px; }
+
+/* ===== v10: 综合测试 ===== */
+.mode-grid .mode-btn.test-btn { grid-column: 1 / -1; border-color: #6c5ce7; background: #f7f5ff; }
+.choice.picked, .word-bank button.picked { background: #dfe6ff !important; border-color: var(--primary-soft) !important; color: var(--ink) !important; }
+.tr-of { font-size: 1.2rem; color: var(--muted); font-weight: 700; }
+.tr-cats { display: grid; gap: 8px; margin: 12px 0 6px; text-align: left; }
+.tr-cat { display: grid; grid-template-columns: 5.5em 1fr 3.6em; gap: 10px; align-items: center; }
+.tr-cat-name { font-weight: 800; color: var(--primary); }
+.tr-cat-bar { height: 14px; background: #eee; border-radius: 999px; overflow: hidden; }
+.tr-cat-bar > span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--sky)); border-radius: 999px; }
+.tr-cat-num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+.tr-summary { font-weight: 700; margin: 10px 0; line-height: 1.5; }
+.tr-wrong { display: grid; gap: 8px; text-align: left; }
+.tr-item { background: #fafbff; border: 1px solid #eee; border-radius: 14px; padding: 10px 12px; cursor: pointer; }
+.tr-item-top { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.tr-tag { background: var(--primary-soft); color: #fff; border-radius: 999px; padding: 2px 10px; font-size: 0.8rem; font-weight: 700; }
+.tr-half { background: var(--warn); border-radius: 999px; padding: 2px 8px; font-size: 0.8rem; font-weight: 700; }
+.tr-prompt { font-size: 1.1rem; font-weight: 700; }
+.tr-item-ans { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; margin-top: 6px; }
+.tr-py { color: #d35400; font-weight: 700; }
+.tr-correct { color: var(--accent); font-weight: 800; font-size: 1.2rem; }
+.tr-chosen { color: var(--muted); font-size: 0.92rem; }
+.tr-item-btns { display: flex; gap: 8px; margin-top: 8px; }
+.tr-item-btns button { min-height: 44px; }
+.tr-explain { margin-top: 8px; cursor: default; }
+.tr-trend { background: #fafbff; border: 1px solid #eee; border-radius: 14px; padding: 8px; margin-bottom: 8px; }
