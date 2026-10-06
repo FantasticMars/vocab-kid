@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-title" content="单词小达人" />
   <title>单词小达人 · 英文 + 语文</title>
   <link rel="icon" href="data:," />
-  <link rel="stylesheet" href="style.css?v=14" />
+  <link rel="stylesheet" href="style.css?v=15" />
 </head>
 <body>
   <header class="app-header">
@@ -76,6 +76,9 @@
         <button type="button" class="big-btn mix" data-mode="mix"><span class="bb-emoji">🎯</span><span class="bb-text"><span class="bb-label">练习</span><span class="bb-desc">混合一小关：英↔中、填空、拼写、听写</span></span></button>
         <button type="button" class="big-btn test" data-mode="test"><span class="bb-emoji">🏅</span><span class="bb-text"><span class="bb-label">测试</span><span class="bb-desc">15–25 题（看单元多少）· 每题马上知道对错 · 最后出成绩单</span></span></button>
       </div>
+      <div class="big-btns" id="home-reading-card">
+        <button type="button" class="big-btn reading" id="btn-home-reading"><span class="bb-emoji">📖</span><span class="bb-text"><span class="bb-label">阅读</span><span class="bb-desc">10 篇小短文 · 长按单词听发音、看意思 · 读完做题</span></span></button>
+      </div>
       <div class="action-row"><button type="button" class="ghost small-link" id="btn-home-words" hidden>📋 看单词表</button></div>
     </div>
 
@@ -100,6 +103,11 @@
   <!-- EMMA: tracks / levels / scenes / daily (rendered by emma.js) -->
   <section id="screen-emma" class="screen">
     <div id="emma-root"></div>
+  </section>
+
+  <!-- 阅读 Reading (rendered by reading.js) -->
+  <section id="screen-reading" class="screen">
+    <div id="reading-root"></div>
   </section>
 
   <!-- EMMA PLAY (card / choice / order / role-play / shadowing) -->
@@ -202,6 +210,7 @@
       </div>
 
       <div id="emma-progress" class="emma-progress" hidden></div>
+      <div id="reading-progress" class="reading-progress"></div>
       <h3 style="margin-top:18px">听写最好成绩</h3>
       <div id="dictation-best" class="best-box muted">还没有听写纪录，去挑战一次吧！</div>
 
@@ -380,10 +389,11 @@
   </div>
 
   <p class="footer-note">离线可用 · 进度按档案保存在本机 · 适合 iPad</p>
-  <script src="lib/hanzi-writer.min.js?v=14"></script>
-  <script src="testkit.js?v=14"></script>
-  <script src="app.js?v=14"></script>
-  <script src="emma.js?v=14"></script>
-  <script src="hanzi.js?v=14"></script>
+  <script src="lib/hanzi-writer.min.js?v=15"></script>
+  <script src="testkit.js?v=15"></script>
+  <script src="app.js?v=15"></script>
+  <script src="emma.js?v=15"></script>
+  <script src="reading.js?v=15"></script>
+  <script src="hanzi.js?v=15"></script>
 </body>
 </html>

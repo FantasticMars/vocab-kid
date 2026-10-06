@@ -1,0 +1,84 @@
+== ALEX ==
+a01  My Cat Mimi                                   90 words  4 paras  15 sent  avg  6.0  FK  0.4  gloss  57 (hand   1)  ph  2  q 4 [detail,tf,detail,detail]  unknown 2.2% tokens / 2 types
+       unknown: meow, lap
+       CAPS (no hand gloss): I
+a02  My Family                                     88 words  4 paras  16 sent  avg  5.5  FK  2.5  gloss  55 (hand   2)  ph  4  q 4 [detail,detail,tf,detail]  unknown 6.8% tokens / 5 types
+       unknown: mom, sick, teach, yummy, picnic
+a03  At School                                     94 words  4 paras  15 sent  avg  6.3  FK  0.4  gloss  59 (hand   5)  ph  5  q 4 [detail,detail,tf,detail]  unknown 4.3% tokens / 4 types
+       unknown: rope, bell, rings, funny
+       CAPS (no hand gloss): English, Friday, Monday
+a04  Lunch Time                                    80 words  4 paras  14 sent  avg  5.7  FK  0.7  gloss  51 (hand   2)  ph  4  q 4 [detail,tf,detail,detail]  unknown 7.5% tokens / 3 types
+       unknown: bean, time, full
+       CAPS (no hand gloss): I
+a05  A Rainy Day                                   93 words  4 paras  18 sent  avg  5.2  FK  1.0  gloss  63 (hand   3)  ph  4  q 4 [detail,detail,detail,tf]  unknown 15.1% tokens / 12 types
+       unknown: pitter-patter, laugh, sky, raincoat, boot, outside, puddle, splash, frog, wet, mom, rainy
+       CAPS (no hand gloss): Saturday
+a06  In the Park                                   93 words  4 paras  15 sent  avg  6.2  FK  0.7  gloss  62 (hand   1)  ph  6  q 4 [detail,detail,tf,detail]  unknown 3.2% tokens / 3 types
+       unknown: pretty, slide, tomorrow
+a07  Happy Birthday, Sam!                          85 words  4 paras  16 sent  avg  5.3  FK  2.4  gloss  57 (hand   6)  ph  5  q 4 [detail,detail,tf,detail]  unknown 4.7% tokens / 4 types
+       unknown: present, dinosaur, blows, ever
+       CAPS (no hand gloss): Birthday, You
+a08  Fun in the Snow                               95 words  4 paras  15 sent  avg  6.3  FK  1.0  gloss  70 (hand   5)  ph  4  q 4 [detail,detail,who,tf]  unknown 13.7% tokens / 10 types
+       unknown: snowman, hat, glove, outside, stone, carrot, funny, snowball, cheek, time
+a09  The Little Red Hen                           113 words  4 paras  20 sent  avg  5.7  FK -1.0  gloss  49 (hand   3)  ph  4  q 4 [detail,who,tf,who]  unknown 8.8% tokens / 6 types
+       unknown: hen, wheat, seed, grow, smells, chick
+a10  A Trip to the Zoo                             95 words  4 paras  17 sent  avg  5.6  FK  1.0  gloss  65 (hand   3)  ph  6  q 4 [detail,detail,tf,detail]  unknown 3.2% tokens / 3 types
+       unknown: sprays, bamboo, noon
+== EMMA ==
+e01  The Lion and the Mouse                       304 words  8 paras  29 sent  avg 10.5  FK  2.4  gloss 146 (hand   8)  ph 13  q 5 [main,detail,vocab,infer,tf]  unknown 3.0% tokens / 6 types
+       unknown: roar, paw, dare, hunter, trap, angrily
+       CAPS (no hand gloss): I
+e02  A New Friend at the Bus Stop                 281 words  10 paras  35 sent  avg  8.0  FK  3.6  gloss 157 (hand   6)  ph 15  q 5 [main,detail,vocab,infer,tf]  unknown 1.8% tokens / 4 types
+       unknown: astronomy, rainy, telescope, saturn
+       CAPS (no hand gloss): Canada, China, English, Hao's, Saturn, Thursday, Tuesday, Vancouver
+e03  Why Do Leaves Change Color?                  264 words  7 paras  24 sent  avg 11.0  FK  5.2  gloss 146 (hand   8)  ph 10  q 5 [main,detail,vocab,infer,tf]  unknown 6.8% tokens / 8 types
+       unknown: chlorophyll, substance, sunlight, maple, layer, carbon, dioxide, cells
+e04  Honeybees: Small but Important               294 words  6 paras  22 sent  avg 13.4  FK  6.1  gloss 162 (hand  15)  ph 12  q 5 [main,detail,vocab,infer,tf]  unknown 7.8% tokens / 16 types
+       unknown: hive, honeybee, colony, nectar, pollen, chemical, centimeter, colonies, wax, drones, waggle, direction, hairy, seed
+e05  The Water Cycle                              286 words  6 paras  23 sent  avg 12.4  FK  5.3  gloss 152 (hand  11)  ph 16  q 5 [main,detail,vocab,infer,tf]  unknown 3.8% tokens / 8 types
+       unknown: vapor, condensation, never-ending, invisible, evaporation, hail, soaks, groundwater
+e06  Octopuses: Clever Animals of the Sea         279 words  6 paras  20 sent  avg 13.9  FK  6.7  gloss 178 (hand  19)  ph 12  q 5 [main,detail,vocab,infer,tf]  unknown 8.6% tokens / 13 types
+       unknown: octopus, cell, aquarium, suckers, solvers, unscrew, squeezed, tank, shell, portable, disguise, texture, seaweed
+       CAPS (no hand gloss): New
+e07  Marie Curie                                  296 words  5 paras  25 sent  avg 11.8  FK  6.6  gloss 163 (hand  20)  ph 12  q 5 [main,detail,vocab,infer,tf]  unknown 2.7% tokens / 8 types
+       unknown: governess, radioactivity, elements, polonium, radium, glowed, battlefield, curiosity
+       CAPS (no hand gloss): Chemistry, First, France, French, Paris, Physics, Poland, Prize, Prizes, University, War, World, X-ray
+e08  Yuan Longping: The Father of Hybrid Rice     303 words  5 paras  22 sent  avg 13.8  FK  6.0  gloss 167 (hand  18)  ph 16  q 5 [main,detail,vocab,infer,tf]  unknown 4.3% tokens / 8 types
+       unknown: hybrid, grains, agriculture, combine, yield, widely, grain, sorghum
+       CAPS (no hand gloss): Africa, Asia, China, Island, Province
+e09  Terry Fox and the Marathon of Hope           297 words  6 paras  24 sent  avg 12.4  FK  6.4  gloss 175 (hand  26)  ph 18  q 5 [main,detail,vocab,infer,tf]  unknown 2.7% tokens / 6 types
+       unknown: artificial, kilometer, province, dipped, marathon, lung
+       CAPS (no hand gloss): April, Atlantic, Canada, Canada's, Hope, I, June, Ocean, Pacific, September
+e10  Helen Keller                                 297 words  5 paras  24 sent  avg 12.4  FK  6.2  gloss 165 (hand  24)  ph 12  q 5 [main,detail,vocab,infer,tf]  unknown 1.7% tokens / 5 types
+       unknown: eyesight, d-o-l-l, movements, w-a-t-e-r, disabilities
+       CAPS (no hand gloss): College, Helen's
+e11  The Mid-Autumn Festival                      292 words  5 paras  22 sent  avg 13.3  FK  6.5  gloss 168 (hand  27)  ph 19  q 5 [main,detail,vocab,infer,tf]  unknown 5.8% tokens / 15 types
+       unknown: mooncakes, lunar, reunion, homesick, mooncake, lotus, seed, nut, yolk, flavors, neighbor, best-known, exploration, spacecraft
+       CAPS (no hand gloss): China, Chinese, Festival, I, October, September
+e12  Thanksgiving in North America                282 words  6 paras  21 sent  avg 13.4  FK  7.3  gloss 166 (hand  23)  ph 19  q 5 [main,detail,vocab,infer,tf]  unknown 2.8% tokens / 8 types
+       unknown: four-day, highway, kilogram, mashed, cranberry, pumpkin, thankful, parade
+       CAPS (no hand gloss): America, American, Americans, Canada, City, Day, Friday, Monday, New, North, November, October, TV, Thursday
+e13  The Dragon Boat Festival                     308 words  5 paras  21 sent  avg 14.7  FK  6.5  gloss 180 (hand  30)  ph 22  q 5 [main,detail,vocab,infer,tf]  unknown 5.2% tokens / 15 types
+       unknown: zongzi, lunar, minister, officials, paddlers, drummer, rhythm, paddle, wrapped, reed, string, salty, yolk, mugwort
+       CAPS (no hand gloss): Australia, Boat, Canada, China, Chinese, Dragon, Festival, June, River
+e14  My First Week at a Canadian Middle School    303 words  7 paras  30 sent  avg 10.1  FK  4.2  gloss 197 (hand  23)  ph 19  q 5 [main,detail,vocab,infer,tf]  unknown 1.7% tokens / 5 types
+       unknown: schedule, hallways, math, lanes, homeroom
+       CAPS (no hand gloss): China, Dad, I, I'm, Middle, Mondays, School, Thank, Tuesday, Wednesdays
+e15  Dinner with My Host Family                   275 words  6 paras  30 sent  avg  9.2  FK  4.5  gloss 148 (hand  25)  ph 16  q 5 [main,detail,vocab,infer,tf]  unknown 1.1% tokens / 3 types
+       unknown: twelve-year-old, cob, wiped
+e16  Notice: New Library Rules                    289 words  10 paras  30 sent  avg  9.6  FK  4.7  gloss 158 (hand  27)  ph 21  q 5 [main,detail,vocab,infer,tf]  unknown 1.4% tokens / 4 types
+       unknown: renew, reference, schoolwork, lid
+       CAPS (no hand gloss): All, Friday, Library, Middle, Monday, Room, School, September, Students, Thursday, Wednesday
+e17  An Email to My Host Family                   304 words  13 paras  31 sent  avg  9.8  FK  3.6  gloss 168 (hand  22)  ph 19  q 5 [main,detail,vocab,infer,tf]  unknown 0.3% tokens / 1 types
+       unknown: allergic
+       CAPS (no hand gloss): China, English, Family, I, July
+e18  Summer Science Camp Schedule                 283 words  10 paras  33 sent  avg  8.6  FK  4.4  gloss 180 (hand  34)  ph 27  q 5 [main,detail,vocab,infer,tf]  unknown 4.6% tokens / 12 types
+       unknown: samples, campers, farthest, microscope, muddy, slime, stretchiest, allergies, slope, sunscreen, rainy, pond
+       CAPS (no hand gloss): Camp, City, Day, Each, Know, Life, Museum, Other, Schedule, Science, Summer, Trip, Tuesday, Wednesday
+e19  The Science Fair Volcano                     306 words  7 paras  36 sent  avg  8.5  FK  4.0  gloss 168 (hand  26)  ph 21  q 5 [main,detail,vocab,infer,tf]  unknown 5.6% tokens / 12 types
+       unknown: soda, erupt, vinegar, volcano, carbon, dioxide, lava, bubbles, stared, foam, volcanoes, ribbon
+       CAPS (no hand gloss): Baking, Experiment, My, Scientific, Sofia's, Work
+e20  Why Sleep Matters for Teenagers              310 words  7 paras  27 sent  avg 11.5  FK  5.1  gloss 170 (hand  18)  ph 18  q 5 [main,detail,vocab,infer,tf]  unknown 1.9% tokens / 6 types
+       unknown: muscles, grumpy, naturally, daytime, ideally, caffeine
+passages: alex 10, emma 20 | glossary entries 3902 | words without gloss: 0 passages affected | entries without IPA: 0
+TOTAL HARD FAILURES: 0

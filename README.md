@@ -43,7 +43,7 @@ python3 -m http.server 8765
 - 语文进度保存在同一个 localStorage 档案下的 `hanzi` 字段，与英文进度互不影响。
 
 ## Emma English 系统（v11，v12 简化入口）
-Emma 选「英文」后进入四条路线：
+Emma 选「英文」后进入五条路线（v15 加了「阅读」）：
 - **今日任务**：每天 N 个新词（家长设置，默认 20，可选来源级别）+ 到期复习（Leitner，间隔 0/1/2/4/7/15/30/60 天，第 5 盒＝掌握）。
   新词走拼写向步骤（词卡 → 选意思 + 拼写 → 听写），场景短语走用法向步骤（场景词卡 → 语境选义 → 情景选句）。
 - **分级词汇**（重拼写 + 词义）：L1 小学 / L2 初中 / L3 高中 / L4 KET / L4 PET（L5 AWL、FCE 即将上线），每组 20 词可多选。
@@ -66,3 +66,24 @@ python3 tools/emma/build_scenes.py SRC/cmudict.dict .  # tools/emma/scenes/*.txt
 python3 tools/emma/qc.py . SRC/ecdict/ecdict.csv       # 质检（必须 TOTAL HARD FAILURES: 0）
 ```
 来源与许可见 `data/SOURCES.md`。
+
+## 阅读 Reading（v15）
+- 入口：Emma 的路线页「📖 阅读」（20 篇，初一 / A2–B1，200–350 词，每篇 5 题：主旨、细节、词义、推断、判断）；
+  Alex 英文首页「📖 阅读」（10 篇，小学一二年级，60–120 词，每篇 3–4 题，带中文题干）。
+- 列表：英文 + 中文标题、难度、词数、完成状态和最好成绩。
+- 读文章：长按任意单词（约 0.45 秒，手指或鼠标）→ 读出这个词 + 弹出音标和中文（在词组里的词还会显示词组意思）；
+  轻点不触发；点别处关闭。文章区域禁止选字 / 放大镜 / 长按菜单。每段右边 🔊 只读这一段，绝不自动朗读、不连读。
+- 做题：读完点「做题」，一次一题，选项打乱；马上显示对错（绿 / 红）和正确答案，答对 1.3 秒后自动下一题，答错显示讲解和「下一题」；
+  做题时可点「📖 看文章」回看（同样可长按查词）。最后出星星、分数和错题回顾。
+- 进度存在档案的 `reading` 字段：`{ id: { read, done, best, bestC, n, lastScore, last, tries } }`；「进度」页显示阅读进度；家长清空进度时一起清掉。
+
+### 阅读数据管线
+```
+pip install nltk && python3 -c "import nltk; nltk.download('averaged_perceptron_tagger_eng')"   # 只在构建时用
+python3 tools/reading/build.py /workspace/emma-src     # src/*.txt → data/reading/*.json，打印质检，必须 TOTAL HARD FAILURES: 0
+```
+- 原文、题目、手写释义：`tools/reading/src/alex.txt`、`emma.txt`（格式见 build.py 顶部说明）。
+- 每篇的词表覆盖文中所有词形：原形、美式音标（CMUdict）、简短中文（手写 G:/PH: > `gloss_common.tsv` > Emma 词表释义 > ECDICT 清洗后），
+  用词性标注挑选上下文里的意思（leaves 叶子 / 离开）。
+- 质检报告：`tools/reading/qc_report.txt`（每篇词数、句长、FK 年级、生词密度〔Alex 对照 L1 + 课本词，Emma 对照 L1/L2/KET/PET〕、
+  无释义 0、每题恰好一个 *、选项无重复、题型齐全）。

@@ -4,7 +4,7 @@
  * (own engine below: no spelling / dictation). Leitner SRS stored in profile.emma. */
 (function () {
   "use strict";
-  const DATA_V = "14";
+  const DATA_V = "15";
   const BASE = "data/emma/";
   const INT = [0, 1, 2, 4, 7, 15, 30, 60]; // Leitner box intervals (days)
   const MASTER_BOX = 5;
@@ -33,6 +33,7 @@
     { id: "daily", emoji: "📅", name: "今日任务", desc: "新词练拼写，短语练用法，到期的自动复习" },
     { id: "levels", emoji: "🪜", name: "分级词汇", desc: "小学 → 初中 → KET → PET：重拼写和词义" },
     { id: "scenes", emoji: "🌍", name: "场景学习", desc: "机场、课堂、餐厅…：重语境、用法和听力" },
+    { id: "reading", emoji: "📖", name: "阅读", desc: "20 篇短文：长按单词查意思，读完做题" },
     { id: "textbook", emoji: "📘", name: "课本 & PET", desc: "原来的课本单元词表和练习" },
   ];
 
@@ -222,7 +223,7 @@
     r.innerHTML = "";
     const card = h("div", "card");
     card.appendChild(h("h2", "", "Emma 的英文"));
-    card.appendChild(h("p", "muted small", "四条路线，各有侧重。每天先做「今日任务」最省心。"));
+    card.appendChild(h("p", "muted small", "五条路线，各有侧重。每天先做「今日任务」最省心。"));
     const grid = h("div", "emma-track-grid");
     TRACKS.forEach((t) => {
       const b = btn(`<span class="emma-track-emoji">${t.emoji}</span><span class="emma-track-name">${esc(t.name)}</span><span class="emma-track-desc">${esc(t.desc)}</span><span class="emma-track-extra small muted" id="emma-extra-${t.id}"></span>`,
@@ -241,9 +242,16 @@
     if (el) el.textContent = `已学 ${st.learned} · 掌握 ${st.mastered}`;
     const es = $("#emma-extra-scenes");
     if (es) es.textContent = `已学短语 ${ss.learned} · 掌握 ${ss.mastered}`;
+    const er = $("#emma-extra-reading");
+    if (er) {
+      const rd = VK().profileStore().reading || {};
+      const n = Object.keys(rd).filter((k) => rd[k] && rd[k].done).length;
+      er.textContent = n ? `已完成 ${n} 篇` : "还没开始";
+    }
   }
   function openTrack(id) {
     if (id === "textbook") return VK().enterEnglishTextbook();
+    if (id === "reading") return window.__reading && window.__reading.enter({ back: enter });
     ui.view = id;
     render();
   }

@@ -1,0 +1,277 @@
+{
+ "v": 15,
+ "alex": [
+  {
+   "id": "a01",
+   "title": "My Cat Mimi",
+   "zh": "我的猫咪米米",
+   "level": "1",
+   "genre": "宠物",
+   "words": 90,
+   "nq": 4
+  },
+  {
+   "id": "a02",
+   "title": "My Family",
+   "zh": "我的家人",
+   "level": "1",
+   "genre": "家庭",
+   "words": 88,
+   "nq": 4
+  },
+  {
+   "id": "a03",
+   "title": "At School",
+   "zh": "在学校",
+   "level": "1",
+   "genre": "学校",
+   "words": 94,
+   "nq": 4
+  },
+  {
+   "id": "a04",
+   "title": "Lunch Time",
+   "zh": "午饭时间",
+   "level": "1",
+   "genre": "食物",
+   "words": 80,
+   "nq": 4
+  },
+  {
+   "id": "a05",
+   "title": "A Rainy Day",
+   "zh": "下雨天",
+   "level": "2",
+   "genre": "天气",
+   "words": 93,
+   "nq": 4
+  },
+  {
+   "id": "a06",
+   "title": "In the Park",
+   "zh": "在公园里",
+   "level": "2",
+   "genre": "公园",
+   "words": 93,
+   "nq": 4
+  },
+  {
+   "id": "a07",
+   "title": "Happy Birthday, Sam!",
+   "zh": "生日快乐，萨姆！",
+   "level": "2",
+   "genre": "生日",
+   "words": 85,
+   "nq": 4
+  },
+  {
+   "id": "a08",
+   "title": "Fun in the Snow",
+   "zh": "雪中乐",
+   "level": "2",
+   "genre": "冬天",
+   "words": 95,
+   "nq": 4
+  },
+  {
+   "id": "a09",
+   "title": "The Little Red Hen",
+   "zh": "小红母鸡",
+   "level": "2",
+   "genre": "童话",
+   "words": 113,
+   "nq": 4
+  },
+  {
+   "id": "a10",
+   "title": "A Trip to the Zoo",
+   "zh": "去动物园",
+   "level": "2",
+   "genre": "动物",
+   "words": 95,
+   "nq": 4
+  }
+ ],
+ "emma": [
+  {
+   "id": "e01",
+   "title": "The Lion and the Mouse",
+   "zh": "狮子和老鼠",
+   "level": "A2",
+   "genre": "寓言故事",
+   "words": 304,
+   "nq": 5
+  },
+  {
+   "id": "e02",
+   "title": "A New Friend at the Bus Stop",
+   "zh": "公交站的新朋友",
+   "level": "A2",
+   "genre": "留学生活 · 故事",
+   "words": 281,
+   "nq": 5
+  },
+  {
+   "id": "e03",
+   "title": "Why Do Leaves Change Color?",
+   "zh": "树叶为什么会变色？",
+   "level": "B1",
+   "genre": "科学",
+   "words": 264,
+   "nq": 5
+  },
+  {
+   "id": "e04",
+   "title": "Honeybees: Small but Important",
+   "zh": "蜜蜂：小身体，大作用",
+   "level": "B1",
+   "genre": "自然",
+   "words": 294,
+   "nq": 5
+  },
+  {
+   "id": "e05",
+   "title": "The Water Cycle",
+   "zh": "水的循环",
+   "level": "B1",
+   "genre": "科学",
+   "words": 286,
+   "nq": 5
+  },
+  {
+   "id": "e06",
+   "title": "Octopuses: Clever Animals of the Sea",
+   "zh": "章鱼：海洋里的聪明家伙",
+   "level": "B1",
+   "genre": "自然",
+   "words": 279,
+   "nq": 5
+  },
+  {
+   "id": "e07",
+   "title": "Marie Curie",
+   "zh": "玛丽·居里",
+   "level": "B1",
+   "genre": "人物传记",
+   "words": 296,
+   "nq": 5
+  },
+  {
+   "id": "e08",
+   "title": "Yuan Longping: The Father of Hybrid Rice",
+   "zh": "袁隆平：杂交水稻之父",
+   "level": "B1",
+   "genre": "人物传记",
+   "words": 303,
+   "nq": 5
+  },
+  {
+   "id": "e09",
+   "title": "Terry Fox and the Marathon of Hope",
+   "zh": "特里·福克斯与\"希望马拉松\"",
+   "level": "B1",
+   "genre": "人物传记 · 北美",
+   "words": 297,
+   "nq": 5
+  },
+  {
+   "id": "e10",
+   "title": "Helen Keller",
+   "zh": "海伦·凯勒",
+   "level": "B1",
+   "genre": "人物传记",
+   "words": 297,
+   "nq": 5
+  },
+  {
+   "id": "e11",
+   "title": "The Mid-Autumn Festival",
+   "zh": "中秋节",
+   "level": "A2+",
+   "genre": "节日文化",
+   "words": 292,
+   "nq": 5
+  },
+  {
+   "id": "e12",
+   "title": "Thanksgiving in North America",
+   "zh": "北美的感恩节",
+   "level": "A2+",
+   "genre": "节日文化 · 北美",
+   "words": 282,
+   "nq": 5
+  },
+  {
+   "id": "e13",
+   "title": "The Dragon Boat Festival",
+   "zh": "端午节",
+   "level": "B1",
+   "genre": "节日文化",
+   "words": 308,
+   "nq": 5
+  },
+  {
+   "id": "e14",
+   "title": "My First Week at a Canadian Middle School",
+   "zh": "我在加拿大中学的第一周",
+   "level": "A2+",
+   "genre": "留学生活",
+   "words": 303,
+   "nq": 5
+  },
+  {
+   "id": "e15",
+   "title": "Dinner with My Host Family",
+   "zh": "和寄宿家庭共进晚餐",
+   "level": "A2",
+   "genre": "留学生活 · 故事",
+   "words": 275,
+   "nq": 5
+  },
+  {
+   "id": "e16",
+   "title": "Notice: New Library Rules",
+   "zh": "通知：图书馆新规定",
+   "level": "A2+",
+   "genre": "实用文 · 通知",
+   "words": 289,
+   "nq": 5
+  },
+  {
+   "id": "e17",
+   "title": "An Email to My Host Family",
+   "zh": "给寄宿家庭的一封邮件",
+   "level": "A2",
+   "genre": "实用文 · 邮件",
+   "words": 304,
+   "nq": 5
+  },
+  {
+   "id": "e18",
+   "title": "Summer Science Camp Schedule",
+   "zh": "暑期科学营日程表",
+   "level": "A2+",
+   "genre": "实用文 · 日程",
+   "words": 283,
+   "nq": 5
+  },
+  {
+   "id": "e19",
+   "title": "The Science Fair Volcano",
+   "zh": "科学展上的\"火山\"",
+   "level": "A2+",
+   "genre": "校园故事",
+   "words": 306,
+   "nq": 5
+  },
+  {
+   "id": "e20",
+   "title": "Why Sleep Matters for Teenagers",
+   "zh": "为什么睡眠对青少年很重要",
+   "level": "B1",
+   "genre": "科普 · 健康",
+   "words": 310,
+   "nq": 5
+  }
+ ]
+}

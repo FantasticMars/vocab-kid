@@ -1,0 +1,376 @@
+# Alex reading passages (US/China grade 1-2). Original text written for this app, except a09 (traditional folk tale, public domain, retold in new words).
+# Format: see tools/reading/build.py
+id: a01
+title: My Cat Mimi
+zh: 我的猫咪米米
+level: 1
+genre: 宠物
+src: original
+sum: 小作者介绍自己的白色小猫米米：爱晒太阳、早上要吃鱼、追红色小球，晚上趴在腿上听故事。
+P: I have a cat. Her name is Mimi. She is small and white. She has big green eyes and a long tail.
+P: Mimi likes to sleep in the sun. She sleeps on my bed, too. In the morning, she says, "Meow!" She wants her breakfast. I give her fish and water.
+P: After school, I play with Mimi. She runs after a little red ball. She is very fast!
+P: At night, Mimi sits on my lap. I read a book, and she listens. I love my cat, and she loves me.
+G: Mimi = 米米（猫的名字）
+PH: runs after = 追赶
+PH: At night = 在晚上
+Q: detail | What color is Mimi? | 米米是什么颜色的？
+* White.
+- Black.
+- Brown.
+E: 第一段：She is small and white.（她又小又白。）
+Q: tf | Mimi likes to sleep in the sun. | 米米喜欢在阳光下睡觉。
+A: T
+E: 第二段：Mimi likes to sleep in the sun.
+Q: detail | What does Mimi eat in the morning? | 米米早上吃什么？
+* Fish.
+- Rice.
+- Cake.
+E: 第二段：I give her fish and water.（我给她鱼和水。）
+Q: detail | What does Mimi run after? | 米米追什么？
+* A little red ball.
+- A big dog.
+- A green bird.
+E: 第三段：She runs after a little red ball.
+=====
+id: a02
+title: My Family
+zh: 我的家人
+level: 1
+genre: 家庭
+src: original
+sum: 一家五口：当医生的爸爸、教音乐的妈妈、会做面条的奶奶和三岁的妹妹莉莉。星期天全家去公园野餐。
+P: This is my family. There are five people in my family: my dad, my mom, my grandma, my little sister and me.
+P: My dad is tall. He is a doctor. He helps sick people. My mom is a teacher. She teaches music. She can sing very well.
+P: My grandma lives with us. She cooks yummy noodles. My little sister is three. Her name is Lily. She likes dolls and toy cars.
+P: On Sundays, we go to the park together. We have a picnic. We are a happy family!
+G: Lily = 莉莉（人名）
+G: Sundays = 星期天（复数：每个星期天）
+PH: little sister = 妹妹
+PH: On Sundays = 每到星期天
+PH: lives with = 和……住在一起
+PH: have a picnic = 去野餐
+Q: detail | How many people are there in the family? | 这个家里有几口人？
+* Five.
+- Four.
+- Three.
+E: 第一段：There are five people in my family.
+Q: detail | What does Dad do? | 爸爸是做什么工作的？
+* He is a doctor.
+- He is a teacher.
+- He is a cook.
+E: 第二段：He is a doctor.（他是医生。）
+Q: tf | Grandma cooks yummy noodles. | 奶奶会做好吃的面条。
+A: T
+E: 第三段：She cooks yummy noodles.
+Q: detail | How old is Lily? | 莉莉几岁？
+* Three.
+- Five.
+- Seven.
+E: 第三段：My little sister is three. Her name is Lily.
+=====
+id: a03
+title: At School
+zh: 在学校
+level: 1
+genre: 学校
+src: original
+sum: 小作者介绍自己的学校：教室在二楼，好朋友本和他坐同桌，最喜欢美术课，课间跳绳打球，格林老师又和蔼又有趣。
+P: I go to school from Monday to Friday. My school is big and new. My classroom is on the second floor.
+P: I have a good friend at school. His name is Ben. We sit together. In English class, we sing songs and read stories. In art class, we draw pictures. I like art best.
+P: At ten o'clock, we go out and play. We jump rope and play ball. Then the bell rings, and we go back to class.
+P: My teacher is Miss Green. She is kind and funny. I like my school very much.
+G: kind = 和蔼的；友善的
+G: rings = （铃）响
+G: Green = 格林（姓）
+G: Ben = 本（人名）
+G: Miss = 小姐；（称呼女老师）……老师
+PH: from Monday to Friday = 从星期一到星期五
+PH: second floor = 二楼
+PH: jump rope = 跳绳
+PH: Miss Green = 格林老师（格林小姐）
+PH: go back to = 回到
+Q: detail | Who is Ben? | 本是谁？
+* The writer's friend.
+- The writer's brother.
+- The writer's teacher.
+E: 第二段：I have a good friend at school. His name is Ben.
+Q: detail | Which class does the writer like best? | 小作者最喜欢哪门课？
+* Art.
+- English.
+- Music.
+E: 第二段：I like art best.
+Q: tf | The classroom is on the first floor. | 教室在一楼。
+A: F
+E: 第一段：My classroom is on the second floor.（在二楼。）
+Q: detail | What do the children do at ten o'clock? | 十点钟孩子们做什么？
+* They go out and play.
+- They eat lunch.
+- They go home.
+E: 第三段：At ten o'clock, we go out and play.
+=====
+id: a04
+title: Lunch Time
+zh: 午饭时间
+level: 1
+genre: 食物
+src: original
+sum: 中午十二点吃午饭：米饭、鸡肉和四季豆。小作者本来不爱吃四季豆，尝了三根发现还不错。
+P: It is twelve o'clock. It is lunch time! I am very hungry.
+P: Today we have rice, chicken and green beans. I like chicken, but I don't like green beans. Mom says, "Green beans are good for you." So I eat three beans. They are not bad!
+P: For a drink, I have milk. My brother has orange juice. After lunch, we have some fruit. I eat a banana, and my brother eats an apple.
+P: Now I am full. Thank you, Mom!
+G: full = 吃饱了的
+G: Mom = 妈妈
+PH: green beans = 四季豆
+PH: good for you = 对你有好处
+PH: not bad = 还不错
+PH: orange juice = 橙汁
+Q: detail | What time is lunch? | 几点吃午饭？
+* Twelve o'clock.
+- Ten o'clock.
+- Six o'clock.
+E: 第一段：It is twelve o'clock. It is lunch time!
+Q: tf | At first, the writer likes green beans. | 一开始，小作者喜欢吃四季豆。
+A: F
+E: 第二段：I don't like green beans.（我不喜欢四季豆。）
+Q: detail | What does the brother drink? | 哥哥（弟弟）喝什么？
+* Orange juice.
+- Milk.
+- Water.
+E: 第三段：My brother has orange juice.
+Q: detail | What fruit does the writer eat? | 小作者吃了什么水果？
+* A banana.
+- An apple.
+- An orange.
+E: 第三段：I eat a banana, and my brother eats an apple.
+=====
+id: a05
+title: A Rainy Day
+zh: 下雨天
+level: 2
+genre: 天气
+src: original
+sum: 星期六下雨不能去公园，小作者很难过。爸爸想了个好主意：穿上雨衣雨靴去踩水坑！下雨天也可以很好玩。
+P: Today is Saturday. I want to go to the park, but it is raining. The sky is gray. I can hear the rain on the window: pitter-patter, pitter-patter.
+P: I am sad. Then Dad has an idea. "Let's put on our raincoats and boots!" he says.
+P: We go outside. I jump in the puddles. Splash! Dad jumps, too. We laugh and laugh. We see a little frog. It is happy in the rain, too.
+P: When we get home, we are wet. Mom gives us hot chocolate. A rainy day can be a fun day!
+G: pitter-patter = 滴答滴答（雨声）
+G: Dad = 爸爸
+G: splash = 啪嗒（溅水声）
+PH: put on = 穿上
+PH: has an idea = 有了一个主意
+PH: get home = 到家
+PH: hot chocolate = 热巧克力（饮料）
+Q: detail | What day is it today? | 今天星期几？
+* Saturday.
+- Sunday.
+- Monday.
+E: 第一段：Today is Saturday.
+Q: detail | Why is the writer sad at first? | 小作者一开始为什么难过？
+* Because it is raining.
+- Because Dad is busy.
+- Because the writer is sick.
+E: 第一段：I want to go to the park, but it is raining.
+Q: detail | What animal do they see? | 他们看到了什么动物？
+* A frog.
+- A duck.
+- A cat.
+E: 第三段：We see a little frog.
+Q: tf | Mom gives them cold juice. | 妈妈给他们喝冷果汁。
+A: F
+E: 第四段：Mom gives us hot chocolate.（是热巧克力。）
+=====
+id: a06
+title: In the Park
+zh: 在公园里
+level: 2
+genre: 公园
+src: original
+sum: 每天傍晚和爷爷去家附近的公园：湖里有鸭子，有人放风筝、遛狗、跳舞，小作者最喜欢滑梯。
+P: There is a big park near my home. I go there with my grandpa every evening.
+P: The park has tall trees and pretty flowers. There is a small lake, too. Ducks swim in the lake. I give them some bread.
+P: Some children fly kites. Some people walk their dogs. Some grandmas dance to music. Grandpa likes to sit on a bench and talk with his friends.
+P: I like the slide best. I go up and down, up and down. When the sun goes down, we walk home. "See you tomorrow, park!" I say.
+G: walk = 走；遛（狗）
+PH: fly kites = 放风筝
+PH: walk their dogs = 遛狗
+PH: dance to music = 随着音乐跳舞
+PH: goes down = （太阳）落山
+PH: up and down = 上上下下
+PH: See you tomorrow = 明天见
+Q: detail | Who goes to the park with the writer? | 谁和小作者一起去公园？
+* Grandpa.
+- Mom.
+- A teacher.
+E: 第一段：I go there with my grandpa every evening.
+Q: detail | What swims in the lake? | 什么在湖里游？
+* Ducks.
+- Fish.
+- Dogs.
+E: 第二段：Ducks swim in the lake.
+Q: tf | Grandpa likes to fly kites. | 爷爷喜欢放风筝。
+A: F
+E: 第三段：放风筝的是 some children（一些孩子）；爷爷喜欢坐在长椅上和朋友聊天。
+Q: detail | What does the writer like best in the park? | 小作者在公园里最喜欢什么？
+* The slide.
+- The lake.
+- The bench.
+E: 第四段：I like the slide best.
+=====
+id: a07
+title: Happy Birthday, Sam!
+zh: 生日快乐，萨姆！
+level: 2
+genre: 生日
+src: original
+sum: 萨姆七岁生日，朋友们带来礼物，妈妈端出插着七根蜡烛的巧克力蛋糕。萨姆许愿、吹蜡烛，说这是最棒的生日。
+P: Today is Sam's birthday. He is seven years old!
+P: In the afternoon, his friends come to his house. They bring presents. Amy gives him a book about dinosaurs. Tom gives him a big blue ball.
+P: Mom brings out a birthday cake. It is a chocolate cake with seven candles. Everyone sings "Happy Birthday to You." Sam makes a wish. Then he blows out the candles. Everyone claps.
+P: They eat cake and play games. Sam is very happy. "This is the best birthday ever!" he says.
+G: blows = 吹（blow out 吹灭）
+G: Sam = 萨姆（人名）
+G: Sam's = 萨姆的
+G: Amy = 埃米（人名）
+G: Tom = 汤姆（人名）
+G: Mom = 妈妈
+PH: brings out = 拿出来
+PH: makes a wish = 许愿
+PH: blows out = 吹灭
+PH: Happy Birthday to You = 祝你生日快乐（歌名）
+PH: the best birthday ever = 有史以来最棒的生日
+Q: detail | How old is Sam now? | 萨姆现在几岁？
+* Seven.
+- Six.
+- Eight.
+E: 第一段：He is seven years old!
+Q: detail | What does Amy give Sam? | 埃米送给萨姆什么？
+* A book about dinosaurs.
+- A big blue ball.
+- A chocolate cake.
+E: 第二段：Amy gives him a book about dinosaurs.（大蓝球是汤姆送的。）
+Q: tf | There are six candles on the cake. | 蛋糕上有六根蜡烛。
+A: F
+E: 第三段：It is a chocolate cake with seven candles.（七根。）
+Q: detail | What does Sam do before he blows out the candles? | 萨姆吹蜡烛之前做了什么？
+* He makes a wish.
+- He eats the cake.
+- He opens the presents.
+E: 第三段：Sam makes a wish. Then he blows out the candles.
+=====
+id: a08
+title: Fun in the Snow
+zh: 雪中乐
+level: 2
+genre: 冬天
+src: original
+sum: 冬天下雪了，米娅和哥哥杰克出门堆雪人、打雪仗，最后在窗边喝着热牛奶看他们的雪人。
+P: It is winter. Last night it snowed. This morning, everything is white!
+P: Mia puts on her warm coat, her hat and her gloves. She runs outside with her brother, Jack.
+P: First, they make a snowman. They give him two black stones for eyes and a carrot for a nose. Jack puts his old hat on the snowman's head. Ha! He looks funny.
+P: Then they make snowballs and play. Mia's cheeks are red, and her hands are cold. "Time to come in!" calls Mom. They drink warm milk by the window and look at their snowman.
+G: Ha = 哈（笑声）
+G: Mia = 米娅（人名）
+G: Mia's = 米娅的
+G: Jack = 杰克（人名）
+G: Mom = 妈妈
+PH: Last night = 昨天晚上
+PH: puts on = 穿上；戴上
+PH: Time to come in = 该进屋了
+PH: look at = 看
+Q: detail | What season is it? | 现在是什么季节？
+* Winter.
+- Summer.
+- Spring.
+E: 第一段：It is winter.
+Q: detail | What do they use for the snowman's nose? | 他们用什么做雪人的鼻子？
+* A carrot.
+- A black stone.
+- An old hat.
+E: 第三段：a carrot for a nose（用胡萝卜当鼻子）。
+Q: who | Who is Jack? | 杰克是谁？
+* Mia's brother.
+- Mia's dad.
+- Mia's friend.
+E: 第二段：She runs outside with her brother, Jack.
+Q: tf | Mia's hands are cold. | 米娅的手很冷。
+A: T
+E: 第四段：her hands are cold.
+=====
+id: a09
+title: The Little Red Hen
+zh: 小红母鸡
+level: 2
+genre: 童话
+src: folk
+sum: 改编自英美传统童话。小红母鸡请猫、狗、鸭子帮忙种麦子、做面包，大家都说"我不"；面包烤好了，大家都想吃，母鸡却只和小鸡们分享。
+P: A little red hen lives on a farm with a cat, a dog and a duck. One day, she finds some wheat seeds.
+P: "Who will help me plant the seeds?" she asks. "Not I," says the cat. "Not I," says the dog. "Not I," says the duck. So she plants them all by herself.
+P: The wheat grows tall. "Who will help me make bread?" she asks. "Not I," they all say. So she makes the bread by herself.
+P: The bread smells good. "Who will help me eat the bread?" asks the hen. "I will!" say the cat, the dog and the duck. "No," says the hen. "I will eat it with my chicks."
+G: smells = 闻起来
+G: Not = 不
+G: I = 我
+PH: Not I = 我不（我才不帮）
+PH: by herself = 她自己（独自）
+PH: smells good = 闻起来很香
+PH: One day = 有一天
+Q: detail | What does the hen find? | 母鸡找到了什么？
+* Some wheat seeds.
+- An egg.
+- A cake.
+E: 第一段：she finds some wheat seeds（麦子的种子）。
+Q: who | Who helps the hen plant the seeds? | 谁帮母鸡种种子？
+* Nobody. She does it by herself.
+- The cat.
+- The duck.
+E: 第二段：So she plants them all by herself.（她自己种。）
+Q: tf | The dog helps the hen make bread. | 狗帮母鸡做面包。
+A: F
+E: 第三段："Not I," they all say. 大家都不帮忙。
+Q: who | Who eats the bread at the end? | 最后谁吃了面包？
+* The hen and her chicks.
+- The cat and the dog.
+- The duck.
+E: 第四段：I will eat it with my chicks.（我和我的小鸡们一起吃。）
+=====
+id: a10
+title: A Trip to the Zoo
+zh: 去动物园
+level: 2
+genre: 动物
+src: original
+sum: 星期五全班坐黄色大巴去动物园：看猴子跳来跳去、大象用鼻子喷水、熊猫吃竹子，中午在树下吃午饭。
+P: On Friday, my class goes to the zoo. We take a big yellow bus.
+P: First, we see the monkeys. They jump from tree to tree. One monkey eats a banana. Next, we see the elephants. They are very big. They have long noses. An elephant sprays water on its back.
+P: Then we see a panda. It is black and white. It sits and eats bamboo all day. It is so cute!
+P: At noon, we eat our lunch under a tree. I take many photos. The zoo is so much fun. I want to go again!
+G: sprays = 喷（水）
+G: take = 乘坐；拍（照片）
+G: Friday = 星期五
+PH: take a big yellow bus = 坐一辆黄色大巴
+PH: from tree to tree = 从一棵树到另一棵树
+PH: all day = 一整天
+PH: At noon = 在中午
+PH: take many photos = 拍很多照片
+PH: so much fun = 非常好玩
+Q: detail | How does the class go to the zoo? | 全班怎么去动物园？
+* By bus.
+- By car.
+- On foot.
+E: 第一段：We take a big yellow bus.
+Q: detail | What does the monkey eat? | 猴子吃什么？
+* A banana.
+- Bamboo.
+- Bread.
+E: 第二段：One monkey eats a banana.
+Q: tf | The panda eats bamboo. | 熊猫吃竹子。
+A: T
+E: 第三段：It sits and eats bamboo all day.
+Q: detail | Where do they eat lunch? | 他们在哪里吃午饭？
+* Under a tree.
+- On the bus.
+- At home.
+E: 第四段：At noon, we eat our lunch under a tree.

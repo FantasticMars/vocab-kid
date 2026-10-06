@@ -474,6 +474,8 @@
     if (hb) hb.hidden = !(window.__emma && window.__emma.handles(activeProfileId));
     const hw = $("#btn-home-words");
     if (hw) hw.hidden = !(window.__emma && window.__emma.handles(activeProfileId));
+    const rc = $("#home-reading-card"); // Alex's 阅读 entry (Emma has it on her tracks page)
+    if (rc) rc.hidden = !!(window.__emma && window.__emma.handles(activeProfileId));
     const zn = $("#zh-nav");
     if (zn) zn.hidden = subj !== "zh";
     const chip = $("#btn-subject-chip");
@@ -1876,6 +1878,8 @@
       ep.hidden = !emma;
       if (emma) window.__emma.renderProgress(ep);
     }
+    const rp = $("#reading-progress");
+    if (rp && window.__reading) window.__reading.renderProgress(rp);
     const tb = $("#prog-textbook");
     if (tb) tb.hidden = !DATA || DATA_PROFILE === "emma-synth";
     const progress = getProgress();
@@ -1954,6 +1958,7 @@
       b.addEventListener("click", () => {
         const id = b.dataset.nav;
         const emma = window.__emma && window.__emma.handles(activeProfileId);
+        if (window.__reading) window.__reading.leave();
         if (id === "home") {
           if (emma) return window.__emma.enter();
           showScreen("home");
@@ -2004,6 +2009,9 @@
     $$("#home-main-btns [data-mode]").forEach((b) => b.addEventListener("click", () => startSession(b.dataset.mode)));
     $("#btn-home-back").addEventListener("click", () => { if (window.__emma) window.__emma.enter(); });
     $("#btn-home-words").addEventListener("click", () => { showScreen("words"); renderWords(); });
+    $("#btn-home-reading").addEventListener("click", () => {
+      if (window.__reading) window.__reading.enter({ back: () => enterEnglishTextbook() });
+    });
 
     $("#btn-explain-ok").addEventListener("click", () => {
       if (typeof explainContinue === "function") explainContinue();
@@ -2061,13 +2069,14 @@
     $("#btn-back-home").addEventListener("click", () => goHome());
     $("#btn-clear-progress").addEventListener("click", () => {
       const name = (PROFILE_DEFS.find((p) => p.id === activeProfileId) || {}).name || "当前";
-      if (confirm(`确定清空「${name}」的进度、历史和听写纪录吗？（单词表不会删）`)) {
+      if (confirm(`确定清空「${name}」的进度、历史、听写和阅读纪录吗？（单词表不会删）`)) {
         updateProfile((p) => {
           p.progress = {};
           p.history = [];
           p.bests = { dictation: null };
           p.tests = [];
           if (p.emma) p.emma = { settings: p.emma.settings };
+          p.reading = {};
         });
         renderProgress();
       }
